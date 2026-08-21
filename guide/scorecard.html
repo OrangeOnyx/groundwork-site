@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI Readiness Scorecard | Groundwork Guide</title>
-<meta name="description" content="A 35-question self-assessment across the five layers of AI readiness. Weighted scoring, a per-layer breakdown, and a recommended path. Runs entirely in your browser.">
+<title>The Readiness Scorecard | Groundwork Guide</title>
+<meta name="description" content="A weighted self-assessment across the six Groundwork layers: Identity, Knowledge, Governance, Continuity, Measurement, and Operating Rhythm. Runs entirely in your browser.">
 <meta name="theme-color" content="#131530">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +25,10 @@
     <a href="layer-1.html">L1</a>
     <a href="layer-2.html">L2</a>
     <a href="layer-3.html">L3</a>
+    <a href="operator.html">Operator</a>
     <a href="layer-4.html">L4</a>
     <a href="layer-5.html">L5</a>
+    <a href="layer-6.html">L6</a>
     <a href="scorecard.html" aria-current="page">Scorecard</a>
     <a class="keep" href="../index.html">Main site</a>
   </div>
@@ -36,7 +38,7 @@
   <header class="page">
     <span class="kicker">WHERE DO YOU STAND</span>
     <h1>The AI Readiness Scorecard.</h1>
-    <p class="lede">The same diagnostic Adam uses in audit sessions: thirty-five questions across the five layers.</p>
+    <p class="lede">Twenty-four questions across the six layers &mdash; the same diagnostic Adam uses in audit sessions. Five minutes, honest answers, a named weakest layer.</p>
   </header>
 
   <style>
@@ -55,487 +57,347 @@
 
   <h2>How the scoring works</h2>
   <div class="card">
-    <p>Thirty-five questions, seven per layer. Eight to ten minutes. Answer honestly. The value is in knowing exactly where you stand, not in getting a high score.</p>
-    <p>Every question is weighted. Standard questions count one point. High impact questions count two and carry a tag. Yes earns the full weight. Partial earns half, rounded up. No earns zero. Fifty-four points total.</p>
-    <p>Open the note under any question to see why it matters and what the fix is. When you finish, the results show your overall percentage, a layer-by-layer breakdown, your top priorities, and the path that fits.</p>
+    <p>Twenty-four questions, four per layer. About five minutes. Answer honestly &mdash; the value is in knowing exactly where you stand, not in getting a high score.</p>
+    <p>Every question is weighted. Standard questions count one point. High impact questions count two and carry a tag. Yes earns the full weight. Partial earns half, rounded up. No earns zero. Thirty-six points total.</p>
+    <p>Open the note under any question to see why it matters and what the fix is. Results show your overall percentage, a layer-by-layer breakdown, your top priorities, and the recommended next move.</p>
   </div>
 
   <noscript><div class="callout">This scorecard needs JavaScript to compute your score. The questions read fine without it, so you can still work through them on paper.</div></noscript>
 
   <form id="scorecard">
 
-    <h2>Layer 1: Data Readiness</h2>
-    <p>Seven questions on whether your information is digitized, findable, and clean. The fixes live in <a href="layer-1.html">Layer 1</a>.</p>
+    <h2>Layer 1: Identity</h2>
+    <p>Would a stranger write like you &mdash; and decide like you &mdash; after reading your files? The fixes live in <a href="layer-1.html">Layer 1</a>.</p>
 
     <fieldset class="q" data-weight="2" data-layer="1">
-      <legend><span class="qn">1.</span> <span class="qt">Are your important business/personal documents digitized (not only on paper)?</span> <span class="tag">High impact</span></legend>
+      <legend><span class="qn">1.</span> <span class="qt">Do you have a written Identity Charter, including what you will never become?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q1" value="yes"> Yes</label>
         <label><input type="radio" name="q1" value="partial"> Partial</label>
         <label><input type="radio" name="q1" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> AI cannot read paper. Every document that exists only in physical form is invisible to your system.</p>
-        <p><strong>The fix.</strong> <span class="fix">Start with your highest-value documents: contracts, financials, insurance. Scan at 300+ DPI with OCR enabled.</span></p>
+        <p><strong>Why it matters.</strong> Without a written identity, the model fills the gap with the average of the internet. That is why AI output feels generic.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 01_Identity/Identity_Charter.md: one honest paragraph, what you stand for, and at least three things you will never become.</span></p>
       </div></details>
     </fieldset>
 
     <fieldset class="q" data-weight="2" data-layer="1">
-      <legend><span class="qn">2.</span> <span class="qt">Do your digital files follow a consistent naming convention?</span> <span class="tag">High impact</span></legend>
+      <legend><span class="qn">2.</span> <span class="qt">Are your voice rules written as enforceable rules, with on-voice and off-voice examples?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q2" value="yes"> Yes</label>
         <label><input type="radio" name="q2" value="partial"> Partial</label>
         <label><input type="radio" name="q2" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Consistent names let AI find documents by pattern. <code>2026-08-01_Lease_AcmeCorp_Executed.pdf</code> tells AI everything. <code>scan_003.pdf</code> tells it nothing.</p>
-        <p><strong>The fix.</strong> <span class="fix">Adopt the format: DATE_DocType_Entity_Status. Apply to new files immediately; backfill priority documents over 2 weeks.</span></p>
+        <p><strong>Why it matters.</strong> &ldquo;Professional but friendly&rdquo; is useless to a machine. Rules plus labeled examples are enforceable; adjectives are not.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 01_Identity/Brand_Voice.md with tone, style rules, vocabulary, and at least one real on-voice and off-voice example.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="1">
-      <legend><span class="qn">3.</span> <span class="qt">Could you find a specific document from 3 years ago in under 60 seconds?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="1">
+      <legend><span class="qn">3.</span> <span class="qt">Are your decision principles written down &mdash; rules that would have changed a real decision this year?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q3" value="yes"> Yes</label>
         <label><input type="radio" name="q3" value="partial"> Partial</label>
         <label><input type="radio" name="q3" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> If you can't find it, AI can't either. Retrieval speed is the test of whether your system actually works.</p>
-        <p><strong>The fix.</strong> <span class="fix">Your folder structure needs work. Layer 1 provides industry-specific templates that solve this.</span></p>
+        <p><strong>Why it matters.</strong> Principles are the tiebreakers the system reaches for when two good options conflict. Unwritten, they get improvised.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 01_Identity/Decision_Principles.md: five to nine rules drawn from hard calls you actually made.</span></p>
       </div></details>
     </fieldset>
 
     <fieldset class="q" data-weight="1" data-layer="1">
-      <legend><span class="qn">4.</span> <span class="qt">Are your files stored in a searchable location (cloud drive, indexed local drive)?</span></legend>
+      <legend><span class="qn">4.</span> <span class="qt">Could a stranger read your identity files and then write and refuse the way you would?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q4" value="yes"> Yes</label>
         <label><input type="radio" name="q4" value="partial"> Partial</label>
         <label><input type="radio" name="q4" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Files on an unindexed external drive or buried in email attachments are functionally lost to AI.</p>
-        <p><strong>The fix.</strong> <span class="fix">Consolidate to one primary location: Google Drive, OneDrive, or a local indexed folder. Cloud sync provides backup + accessibility.</span></p>
+        <p><strong>Why it matters.</strong> This is the pass condition for the whole layer. If a stranger could not do it, neither can an AI.</p>
+        <p><strong>The fix.</strong> <span class="fix">Load the three files into a fresh AI session and ask for a draft. Sharpen the files until the first pass sounds like you.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="1">
-      <legend><span class="qn">5.</span> <span class="qt">Do you have a single source of truth for key business information (not duplicates in 5 places)?</span> <span class="tag">High impact</span></legend>
+    <h2>Layer 2: Knowledge</h2>
+    <p>Can the system tell doctrine from a draft? The fixes live in <a href="layer-2.html">Layer 2</a>.</p>
+
+    <fieldset class="q" data-weight="2" data-layer="2">
+      <legend><span class="qn">5.</span> <span class="qt">Does information you rely on carry an authority level (0&ndash;4), so doctrine outranks drafts?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q5" value="yes"> Yes</label>
         <label><input type="radio" name="q5" value="partial"> Partial</label>
         <label><input type="radio" name="q5" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Duplicates create contradictions. AI doesn't know which version is current. This causes wrong answers.</p>
-        <p><strong>The fix.</strong> <span class="fix">Designate one location as canonical. Archive or delete duplicates. Use version control (date in filename) for evolving documents.</span></p>
+        <p><strong>Why it matters.</strong> Systems hallucinate policy because nothing told them what outranks what. A rumor and a contract must never be equal.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 03_Authority_Rules/Authority_Classification.md and classify documents as you touch them. Higher levels always override lower.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="1">
-      <legend><span class="qn">6.</span> <span class="qt">Are your scanned documents OCR-processed (text is selectable, not just an image)?</span></legend>
+    <fieldset class="q" data-weight="2" data-layer="2">
+      <legend><span class="qn">6.</span> <span class="qt">Do you have a Context Vault &mdash; a short, deliberate always-load list?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q6" value="yes"> Yes</label>
         <label><input type="radio" name="q6" value="partial"> Partial</label>
         <label><input type="radio" name="q6" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> A scan without OCR is just a picture. AI can't read pictures of text. It needs actual text data.</p>
-        <p><strong>The fix.</strong> <span class="fix">Re-process existing scans through an OCR tool (Adobe Acrobat, ABBYY FineReader, or a free OCR tool).</span></p>
+        <p><strong>Why it matters.</strong> A vault that contains everything contains nothing. The briefing packet must be short enough to load on every task.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 02_Current_Context/Context_Vault.md: identity files, priorities, and constraints always load; domain files load on request.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="1">
-      <legend><span class="qn">7.</span> <span class="qt">Do you have a regular process for filing new documents (not a pile-up system)?</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="2">
+      <legend><span class="qn">7.</span> <span class="qt">Are your current priorities &mdash; and explicit non-priorities &mdash; written down and dated?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q7" value="yes"> Yes</label>
         <label><input type="radio" name="q7" value="partial"> Partial</label>
         <label><input type="radio" name="q7" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> A system that works once but isn't maintained degrades immediately. Filing must be habitual, not heroic.</p>
-        <p><strong>The fix.</strong> <span class="fix">Set a daily 5-minute filing habit. Or use automation: cloud folders with auto-naming rules.</span></p>
+        <p><strong>Why it matters.</strong> Without this file, the system optimizes for whatever the last prompt implied. Non-priorities kill whole categories of useless suggestions.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 02_Current_Context/Strategic_Priorities.md, date it, and re-touch it whenever the cycle turns.</span></p>
       </div></details>
     </fieldset>
 
-    <h2>Layer 2: Digital Identity</h2>
-    <p>Seven questions on how you show up to AI answer engines. The fixes live in <a href="layer-2.html">Layer 2</a>.</p>
-
-    <fieldset class="q" data-weight="2" data-layer="2">
-      <legend><span class="qn">8.</span> <span class="qt">Could a stranger understand exactly what you do within 10 seconds of visiting your website?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="2">
+      <legend><span class="qn">8.</span> <span class="qt">Are your key files digitized, consistently named, and findable in under a minute?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q8" value="yes"> Yes</label>
         <label><input type="radio" name="q8" value="partial"> Partial</label>
         <label><input type="radio" name="q8" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> AI answer engines read your website to decide whether to recommend you. If it's unclear to a human, it's unclear to AI.</p>
-        <p><strong>The fix.</strong> <span class="fix">Rewrite your homepage headline: [What you do] for [who you serve] in [where you operate]. Specific, not clever.</span></p>
+        <p><strong>Why it matters.</strong> Classification only works on files the system can read and find. Paper is invisible; <code>scan_003.pdf</code> is nearly so.</p>
+        <p><strong>The fix.</strong> <span class="fix">Name files DATE_DocType_Entity_Status, keep text as text, and give every document one home.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="2">
-      <legend><span class="qn">9.</span> <span class="qt">Is your LinkedIn profile consistent with your website (same services, same language)?</span></legend>
+    <h2>Layer 3: Governance</h2>
+    <p>Does the system know when to act, when to draft, and when to stop? The fixes live in <a href="layer-3.html">Layer 3</a>.</p>
+
+    <fieldset class="q" data-weight="2" data-layer="3">
+      <legend><span class="qn">9.</span> <span class="qt">Is every AI task assigned a zone in writing &mdash; Auto-Execute, Draft &amp; Wait, or Never Automate?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q9" value="yes"> Yes</label>
         <label><input type="radio" name="q9" value="partial"> Partial</label>
         <label><input type="radio" name="q9" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Inconsistency confuses AI. If your website says 'property management' but LinkedIn says 'real estate consulting,' AI can't connect them.</p>
-        <p><strong>The fix.</strong> <span class="fix">Audit both. Pick one set of service descriptions and use them everywhere. Exact same language.</span></p>
+        <p><strong>Why it matters.</strong> An agent without written rules does not have no rules &mdash; it has improvised rules, invented fresh in every session.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 03_Authority_Rules/Automation_Framework.md. Zone your top ten tasks; unlisted work defaults to Draft &amp; Wait.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="2">
-      <legend><span class="qn">10.</span> <span class="qt">Do you have a documented brand voice (how you sound in writing)?</span></legend>
+    <fieldset class="q" data-weight="2" data-layer="3">
+      <legend><span class="qn">10.</span> <span class="qt">Are there written escalation rules the system must follow, including &ldquo;do not proceed on silence&rdquo;?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q10" value="yes"> Yes</label>
         <label><input type="radio" name="q10" value="partial"> Partial</label>
         <label><input type="radio" name="q10" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Without a voice document, AI defaults to generic corporate tone. With one, everything it writes sounds like you.</p>
-        <p><strong>The fix.</strong> <span class="fix">Complete the Brand Voice builder in Layer 2. Takes 20 minutes. Transforms every AI-generated communication.</span></p>
+        <p><strong>Why it matters.</strong> Escalation converts ambiguous situations into paused ones instead of guessed ones &mdash; even mid-task.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 03_Authority_Rules/Escalation_Rules.md: triggers, a named human, and the three-part escalation statement.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="2">
-      <legend><span class="qn">11.</span> <span class="qt">Could an AI accurately describe your business if asked 'Who is [your name] and what do they do?'</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="3">
+      <legend><span class="qn">11.</span> <span class="qt">Is there an explicit allowed-tools list, including what the system may never access?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q11" value="yes"> Yes</label>
         <label><input type="radio" name="q11" value="partial"> Partial</label>
         <label><input type="radio" name="q11" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> This is the GEO/AEO test. If AI can't answer this correctly today, you're invisible to AI-powered search.</p>
-        <p><strong>The fix.</strong> <span class="fix">Test it now: ask Claude or ChatGPT. Document what's wrong. The SEO/GEO/AEO section in Layer 2 shows you how to fix it.</span></p>
+        <p><strong>Why it matters.</strong> The &ldquo;never&rdquo; list is the one that protects you. Money and signatures stay human, permanently.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 04_Capabilities/Allowed_Tools.md. Everything not on a list is off-limits by default.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="2">
-      <legend><span class="qn">12.</span> <span class="qt">Do you have an AI Brand Context File (a single document that tells AI everything about you)?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="3">
+      <legend><span class="qn">12.</span> <span class="qt">Does every external-facing draft have one named human approver who reads the actual artifact?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q12" value="yes"> Yes</label>
         <label><input type="radio" name="q12" value="partial"> Partial</label>
         <label><input type="radio" name="q12" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> This is the single most impactful document you can create. It turns generic AI into YOUR AI in one upload.</p>
-        <p><strong>The fix.</strong> <span class="fix">Build it in Layer 2's AI Context File section. 30 minutes. Immediate transformation in AI output quality.</span></p>
+        <p><strong>Why it matters.</strong> &ldquo;Someone reviews it&rdquo; means nobody reviews it. Draft &amp; Wait only works if the wait is real.</p>
+        <p><strong>The fix.</strong> <span class="fix">Name the approver per category in Agent_Scope.md and keep a one-line approval log: date, item, approver.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="2">
-      <legend><span class="qn">13.</span> <span class="qt">Are your service offerings described specifically (not vaguely) across all platforms?</span></legend>
+    <h2>Layer 4: Continuity</h2>
+    <p>Would this survive the founder being gone for ninety days? The fixes live in <a href="layer-4.html">Layer 4</a>.</p>
+
+    <fieldset class="q" data-weight="2" data-layer="4">
+      <legend><span class="qn">13.</span> <span class="qt">Would your AI system keep behaving as designed if you were gone for ninety days?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q13" value="yes"> Yes</label>
         <label><input type="radio" name="q13" value="partial"> Partial</label>
         <label><input type="radio" name="q13" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Vague descriptions ('We help businesses grow') are useless to AI. Specific descriptions ('Commercial lease negotiation for shopping centers in Lafayette, LA') are indexable.</p>
-        <p><strong>The fix.</strong> <span class="fix">Rewrite every service description to include: what it is, who it's for, where you do it, and what the outcome is.</span></p>
+        <p><strong>Why it matters.</strong> Most setups fail this on day one because everything lives in one head and one vendor's chat history.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 01_Identity/Continuity.md: what must survive, who inherits decision rights, how the system is stopped.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="2">
-      <legend><span class="qn">14.</span> <span class="qt">Do you have a Google Business Profile with accurate, current information?</span></legend>
+    <fieldset class="q" data-weight="2" data-layer="4">
+      <legend><span class="qn">14.</span> <span class="qt">Is your operating context in portable files you control, not trapped in one vendor's history?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q14" value="yes"> Yes</label>
         <label><input type="radio" name="q14" value="partial"> Partial</label>
         <label><input type="radio" name="q14" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Google Business Profile is a primary data source for AI answer engines. Missing or outdated = invisible.</p>
-        <p><strong>The fix.</strong> <span class="fix">Create or update your GBP. Even if you're not a storefront, it helps AI understand your business.</span></p>
+        <p><strong>Why it matters.</strong> Platform independence is continuity. Markdown in a folder you control works with any AI; no platform owns it.</p>
+        <p><strong>The fix.</strong> <span class="fix">Move doctrine out of chat history into the vault. Back the folder up like it is money. Test one cold restore on a fresh platform.</span></p>
       </div></details>
     </fieldset>
 
-    <h2>Layer 3: Personal Intelligence Layer</h2>
-    <p>Seven questions on your knowledge vault and its connection to an LLM. The fixes live in <a href="layer-3.html">Layer 3</a>.</p>
-
-    <fieldset class="q" data-weight="2" data-layer="3">
-      <legend><span class="qn">15.</span> <span class="qt">Do you have a structured knowledge vault (Obsidian, Notion, or equivalent), not just scattered notes?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="4">
+      <legend><span class="qn">15.</span> <span class="qt">Are succession and override rules written with real names &mdash; and does the successor have access?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q15" value="yes"> Yes</label>
         <label><input type="radio" name="q15" value="partial"> Partial</label>
         <label><input type="radio" name="q15" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Scattered notes across 5 apps = no system. A vault is one place where all knowledge lives, connected and searchable.</p>
-        <p><strong>The fix.</strong> <span class="fix">Set up Obsidian (free, local-first). Layer 3's Vault Setup page walks you through the complete structure in 30 minutes.</span></p>
+        <p><strong>Why it matters.</strong> A succession rule naming a role you hope to hire is fiction. Names, access, and a known off-switch are the real thing.</p>
+        <p><strong>The fix.</strong> <span class="fix">Fill the succession and override sections of Continuity.md with names, then verify the passwords and vault access actually work.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="3">
-      <legend><span class="qn">16.</span> <span class="qt">Have you mapped your key entities (people, organizations, properties, accounts) into individual files?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="4">
+      <legend><span class="qn">16.</span> <span class="qt">Is working memory cleared regularly &mdash; promoted into real documents instead of hoarded?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q16" value="yes"> Yes</label>
         <label><input type="radio" name="q16" value="partial"> Partial</label>
         <label><input type="radio" name="q16" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Entity files let AI answer relationship questions: 'What's my history with Acme Corp?' requires an Acme Corp entity file.</p>
-        <p><strong>The fix.</strong> <span class="fix">Start with your top 20 entities. One file each. Name, type, relationship, key facts. Layer 3's Entity Mapping tool generates the structure.</span></p>
+        <p><strong>Why it matters.</strong> Session notes that never get cleared become a second, contradictory source of truth.</p>
+        <p><strong>The fix.</strong> <span class="fix">Keep 05_Working_Memory/Session_Notes.md. After major sessions: promote what matters to a real authority level, archive the rest.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="3">
-      <legend><span class="qn">17.</span> <span class="qt">Can your AI distinguish between your final documents and drafts?</span> <span class="tag">High impact</span></legend>
+    <h2>Layer 5: Measurement</h2>
+    <p>How would you know this is working next month? The fixes live in <a href="layer-5.html">Layer 5</a>.</p>
+
+    <fieldset class="q" data-weight="2" data-layer="5">
+      <legend><span class="qn">17.</span> <span class="qt">Could you answer &ldquo;is this working?&rdquo; with evidence rather than a feeling?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q17" value="yes"> Yes</label>
         <label><input type="radio" name="q17" value="partial"> Partial</label>
         <label><input type="radio" name="q17" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Without authority levels, AI treats a draft contract the same as an executed one. This causes dangerous errors.</p>
-        <p><strong>The fix.</strong> <span class="fix">Add authority frontmatter (authoritative/draft/historical/private) to your vault files. Layer 3's Authority Classification page explains the system.</span></p>
+        <p><strong>Why it matters.</strong> Without evidence you either over-trust (drift goes unnoticed) or under-trust (you redo work the system did well).</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 06_Output_Standards/Measurement_Notes.md with the four signals: on-voice, cites authority, appropriate escalations, trusted drafts.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="3">
-      <legend><span class="qn">18.</span> <span class="qt">Have you connected your vault to at least one LLM (Claude, ChatGPT, etc.)?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="2" data-layer="5">
+      <legend><span class="qn">18.</span> <span class="qt">Do you run a monthly review: what broke, what was wrong, what context was missing?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q18" value="yes"> Yes</label>
         <label><input type="radio" name="q18" value="partial"> Partial</label>
         <label><input type="radio" name="q18" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> A vault without an LLM connection is a library without a librarian. The connection is what makes it useful.</p>
-        <p><strong>The fix.</strong> <span class="fix">Choose one LLM and connect it. Layer 3's LLM Connection page gives step-by-step for 5 different platforms.</span></p>
+        <p><strong>Why it matters.</strong> The review is where drift gets caught before a tenant or client catches it for you.</p>
+        <p><strong>The fix.</strong> <span class="fix">Put thirty minutes on the calendar monthly. Answer the four review questions and write one dated entry.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="3">
-      <legend><span class="qn">19.</span> <span class="qt">Have you documented your preferences so AI doesn't have to ask the same questions repeatedly?</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="5">
+      <legend><span class="qn">19.</span> <span class="qt">Do findings actually change the documents &mdash; miss, trace, edit, retest?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q19" value="yes"> Yes</label>
         <label><input type="radio" name="q19" value="partial"> Partial</label>
         <label><input type="radio" name="q19" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Every time AI asks 'what format do you prefer?', that's a failure of your system. Preferences should be documented once.</p>
-        <p><strong>The fix.</strong> <span class="fix">Create a preferences file in 03-Knowledge/preferences/. Include: communication style, formatting preferences, decision criteria, recurring instructions.</span></p>
+        <p><strong>Why it matters.</strong> Measurement that never edits a file is theater. Three misses with one root cause is a standing order to fix the document.</p>
+        <p><strong>The fix.</strong> <span class="fix">Trace every miss to the file that caused it: tone to Brand Voice, invented policy to doctrine, wrong action to zones or scope.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="3">
-      <legend><span class="qn">20.</span> <span class="qt">Does your AI give answers that reference YOUR specific information (not generic internet knowledge)?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="5">
+      <legend><span class="qn">20.</span> <span class="qt">Do you know what share of drafts ship with light edits versus quiet rewrites?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q20" value="yes"> Yes</label>
         <label><input type="radio" name="q20" value="partial"> Partial</label>
         <label><input type="radio" name="q20" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> This is the ultimate test. If AI still gives generic answers, your vault isn't connected or isn't comprehensive enough.</p>
-        <p><strong>The fix.</strong> <span class="fix">Run the 5 verification tests in Layer 3's LLM Connection page. Identify which test fails and fix the underlying gap.</span></p>
+        <p><strong>Why it matters.</strong> This is the bluntest signal there is. If you quietly rewrite everything, some document is lying to the system.</p>
+        <p><strong>The fix.</strong> <span class="fix">Track it roughly from your approval log: shipped as-is, light edits, or rewritten. The trend matters more than the number.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="3">
-      <legend><span class="qn">21.</span> <span class="qt">Could you switch AI providers (Claude &rarr; ChatGPT or vice versa) without losing any knowledge?</span></legend>
+    <h2>Layer 6: Operating Rhythm</h2>
+    <p>Who owns each layer, and when is it reviewed? The fixes live in <a href="layer-6.html">Layer 6</a>.</p>
+
+    <fieldset class="q" data-weight="2" data-layer="6">
+      <legend><span class="qn">21.</span> <span class="qt">Does every layer have a named owner?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q21" value="yes"> Yes</label>
         <label><input type="radio" name="q21" value="partial"> Partial</label>
         <label><input type="radio" name="q21" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Platform independence is non-negotiable. If your knowledge only exists inside one AI's system, you don't own it.</p>
-        <p><strong>The fix.</strong> <span class="fix">Ensure all knowledge is in Markdown files you control locally. Never store critical information only in a chat history or proprietary format.</span></p>
+        <p><strong>Why it matters.</strong> A foundation nobody owns quietly becomes fiction while the Operator keeps citing it with full confidence.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 06_Output_Standards/Operating_Rhythm.md. In a small operation every line may say the same name &mdash; that is fine, as long as it is written.</span></p>
       </div></details>
     </fieldset>
 
-    <h2>Layer 4: Workflow Automation</h2>
-    <p>Seven questions on what runs without you. The fixes live in <a href="layer-4.html">Layer 4</a>.</p>
-
-    <fieldset class="q" data-weight="1" data-layer="4">
-      <legend><span class="qn">22.</span> <span class="qt">Have you identified which of your routine tasks are repeatable and rule-based?</span></legend>
+    <fieldset class="q" data-weight="2" data-layer="6">
+      <legend><span class="qn">22.</span> <span class="qt">Are weekly, monthly, and quarterly reviews on an actual calendar &mdash; and happening?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q22" value="yes"> Yes</label>
         <label><input type="radio" name="q22" value="partial"> Partial</label>
         <label><input type="radio" name="q22" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> You can't automate what you haven't mapped. The first step is knowing what you repeat.</p>
-        <p><strong>The fix.</strong> <span class="fix">Complete the Opportunity Audit in Layer 4. List every routine task, its frequency, time cost, and risk level.</span></p>
+        <p><strong>Why it matters.</strong> Rhythm is minutes per week, not hours. Without dates, decay wins by default.</p>
+        <p><strong>The fix.</strong> <span class="fix">Fifteen minutes weekly (clear session notes), thirty monthly (measurement review), an hour quarterly (re-score, audit zones, verify succession).</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="4">
-      <legend><span class="qn">23.</span> <span class="qt">Do you have clear rules for what AI can do without asking vs. what requires your approval?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="6">
+      <legend><span class="qn">23.</span> <span class="qt">Is there a written update protocol &mdash; changes proposed, approved by the owner, versioned?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q23" value="yes"> Yes</label>
         <label><input type="radio" name="q23" value="partial"> Partial</label>
         <label><input type="radio" name="q23" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Without an approval framework, you either over-trust AI (dangerous) or under-use it (wasteful). Clear rules solve both.</p>
-        <p><strong>The fix.</strong> <span class="fix">Build your Approval Framework in Layer 4. Three categories: Auto-Execute, Draft &amp; Wait, Never Automate.</span></p>
+        <p><strong>Why it matters.</strong> Foundation edits are Draft &amp; Wait work. The Operator may propose; it may never apply.</p>
+        <p><strong>The fix.</strong> <span class="fix">Add the update protocol to Operating_Rhythm.md: proposed in writing, approved by the layer's owner, versioned with a dated changelog line.</span></p>
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="4">
-      <legend><span class="qn">24.</span> <span class="qt">Do you have at least one workflow fully automated with AI handling it reliably?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="6">
+      <legend><span class="qn">24.</span> <span class="qt">Have you re-scored or audited the whole system in the last quarter?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q24" value="yes"> Yes</label>
         <label><input type="radio" name="q24" value="partial"> Partial</label>
         <label><input type="radio" name="q24" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> One working automation proves the concept and builds confidence. Zero automations means you're still doing everything manually.</p>
-        <p><strong>The fix.</strong> <span class="fix">Pick your highest-time, lowest-risk task from the Opportunity Audit. Automate it this week using Layer 4's First Sprint guide.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="4">
-      <legend><span class="qn">25.</span> <span class="qt">Can you measure how much time your automations save you per week?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q25" value="yes"> Yes</label>
-        <label><input type="radio" name="q25" value="partial"> Partial</label>
-        <label><input type="radio" name="q25" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> If you can't measure it, you can't prove value, to yourself or anyone else. Measurement also reveals which automations to expand.</p>
-        <p><strong>The fix.</strong> <span class="fix">Track time for 1 week: how long did the automated task take before? How long does review take now? The difference is your ROI.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="2" data-layer="4">
-      <legend><span class="qn">26.</span> <span class="qt">Do your automations have error handling (what happens when AI gets it wrong)?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q26" value="yes"> Yes</label>
-        <label><input type="radio" name="q26" value="partial"> Partial</label>
-        <label><input type="radio" name="q26" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Every automation will eventually fail. Without error handling, failures cascade silently. With it, they're caught and corrected.</p>
-        <p><strong>The fix.</strong> <span class="fix">For each automation: define what 'wrong' looks like, what triggers a pause, and how corrections are logged.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="4">
-      <legend><span class="qn">27.</span> <span class="qt">Have you expanded beyond your first automation to at least 3 automated workflows?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q27" value="yes"> Yes</label>
-        <label><input type="radio" name="q27" value="partial"> Partial</label>
-        <label><input type="radio" name="q27" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> One automation is a proof of concept. Three is a system. The compound value comes from multiple workflows running simultaneously.</p>
-        <p><strong>The fix.</strong> <span class="fix">Use your Opportunity Audit rankings. Implement #2 and #3 using the same process that worked for #1.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="4">
-      <legend><span class="qn">28.</span> <span class="qt">Are your agent instructions documented (not just in your head or chat history)?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q28" value="yes"> Yes</label>
-        <label><input type="radio" name="q28" value="partial"> Partial</label>
-        <label><input type="radio" name="q28" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Instructions in chat history disappear. Documented instructions in your vault persist, can be refined, and can be handed to any AI.</p>
-        <p><strong>The fix.</strong> <span class="fix">Move all working prompts/instructions into 05-Automations/agent-instructions/ as .md files. One file per workflow.</span></p>
-      </div></details>
-    </fieldset>
-
-    <h2>Layer 5: AI Ops &amp; Governance</h2>
-    <p>Seven questions on boundaries, verification, and continuity. The fixes live in <a href="layer-5.html">Layer 5</a>.</p>
-
-    <fieldset class="q" data-weight="2" data-layer="5">
-      <legend><span class="qn">29.</span> <span class="qt">Have you defined what information AI can access freely vs. what's restricted?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q29" value="yes"> Yes</label>
-        <label><input type="radio" name="q29" value="partial"> Partial</label>
-        <label><input type="radio" name="q29" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Without access boundaries, AI might include private medical info in a business email or share confidential deal terms.</p>
-        <p><strong>The fix.</strong> <span class="fix">Complete the Access Boundaries builder in Layer 5. Categorize every type of information: full access, read-only, permission-required, never.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="2" data-layer="5">
-      <legend><span class="qn">30.</span> <span class="qt">Do you run monthly verification checks on your AI system's accuracy?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q30" value="yes"> Yes</label>
-        <label><input type="radio" name="q30" value="partial"> Partial</label>
-        <label><input type="radio" name="q30" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Information decays. Contracts expire. People change roles. Without verification, AI gives increasingly stale answers over time.</p>
-        <p><strong>The fix.</strong> <span class="fix">Set a monthly calendar reminder. Run the 5 spot-checks in Layer 5's Verification Protocol. Log results. Fix drift.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="5">
-      <legend><span class="qn">31.</span> <span class="qt">Do you have a correction log (tracking when AI got something wrong and what you fixed)?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q31" value="yes"> Yes</label>
-        <label><input type="radio" name="q31" value="partial"> Partial</label>
-        <label><input type="radio" name="q31" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Patterns in errors reveal systemic gaps. A correction log turns individual mistakes into system improvements.</p>
-        <p><strong>The fix.</strong> <span class="fix">Create 06-Maintenance/correction-log.md. Format: date, what went wrong, root cause, what was fixed. Review monthly.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="2" data-layer="5">
-      <legend><span class="qn">32.</span> <span class="qt">Is there someone besides you who could access and maintain your system if needed?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q32" value="yes"> Yes</label>
-        <label><input type="radio" name="q32" value="partial"> Partial</label>
-        <label><input type="radio" name="q32" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> If you're the only person who knows how the system works, it dies with your availability. This is a business continuity risk.</p>
-        <p><strong>The fix.</strong> <span class="fix">Complete the Digital Estate plan in Layer 5. Designate a successor. Document access. Store securely outside the vault.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="5">
-      <legend><span class="qn">33.</span> <span class="qt">Do you have a process for ingesting new information (not just a growing pile of unfiled items)?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q33" value="yes"> Yes</label>
-        <label><input type="radio" name="q33" value="partial"> Partial</label>
-        <label><input type="radio" name="q33" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> A system that only works for existing information but can't handle new inputs is already decaying.</p>
-        <p><strong>The fix.</strong> <span class="fix">Create an ingestion queue (06-Maintenance/ingestion-queue.md). New items go here first, then get processed into the proper location weekly.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="5">
-      <legend><span class="qn">34.</span> <span class="qt">Could you switch AI providers today without losing any functionality?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q34" value="yes"> Yes</label>
-        <label><input type="radio" name="q34" value="partial"> Partial</label>
-        <label><input type="radio" name="q34" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Platform independence is your insurance policy. If your provider raises prices 5x or shuts down, you need to move without pain.</p>
-        <p><strong>The fix.</strong> <span class="fix">Verify: all knowledge is in local Markdown files. All instructions are documented. No critical data exists only in one provider's system.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="2" data-layer="5">
-      <legend><span class="qn">35.</span> <span class="qt">Do you have documented governance rules that your AI references before acting?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q35" value="yes"> Yes</label>
-        <label><input type="radio" name="q35" value="partial"> Partial</label>
-        <label><input type="radio" name="q35" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Governance rules are the 'operating agreement' for your AI. Without them, AI makes assumptions. With them, it follows your standards.</p>
-        <p><strong>The fix.</strong> <span class="fix">Create 00-System/governance-rules.md. Include: authority levels, access boundaries, approval framework, escalation rules, and banned actions.</span></p>
+        <p><strong>Why it matters.</strong> The score trend is itself a measurement. A foundation that is not re-checked quarterly is drifting unobserved.</p>
+        <p><strong>The fix.</strong> <span class="fix">Re-run this scorecard at each quarterly review and compare layer by layer against last quarter.</span></p>
       </div></details>
     </fieldset>
 
     <div class="card">
-      <p><span id="progress">0</span> of 35 answered.</p>
+      <p><span id="progress">0</span> of 24 answered.</p>
       <div id="warn" class="callout" hidden></div>
       <p><button class="btn" type="button" id="see-score">See my score</button></p>
       <p class="quiet">Your answers stay on this page. Nothing is sent, stored, or tracked.</p>
@@ -567,7 +429,7 @@
     <p class="quiet">Your biggest gaps, heaviest weight first. Up to five.</p>
     <ol id="r-priorities"></ol>
 
-    <h3>Recommended path</h3>
+    <h3>Recommended next move</h3>
     <p id="r-next-intro"></p>
     <ol id="r-next"></ol>
 
@@ -575,21 +437,22 @@
   </section>
 
   <div class="pnav">
-    <a href="layer-5.html">&larr; Layer 5: Operations and Governance</a>
+    <a href="layer-6.html">&larr; Layer 6: Operating Rhythm</a>
     <a href="../index.html">Back to the main site &rarr;</a>
   </div>
 </main>
-<footer class="site">Groundwork. The AI readiness program by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+<footer class="site">Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
 <script>
 (function () {
   "use strict";
 
   var LAYERS = [
-    { key: "1", name: "Layer 1: Data Readiness", href: "layer-1.html" },
-    { key: "2", name: "Layer 2: Digital Identity", href: "layer-2.html" },
-    { key: "3", name: "Layer 3: Personal Intelligence Layer", href: "layer-3.html" },
-    { key: "4", name: "Layer 4: Workflow Automation", href: "layer-4.html" },
-    { key: "5", name: "Layer 5: AI Ops & Governance", href: "layer-5.html" }
+    { key: "1", name: "Layer 1: Identity", href: "layer-1.html" },
+    { key: "2", name: "Layer 2: Knowledge", href: "layer-2.html" },
+    { key: "3", name: "Layer 3: Governance", href: "layer-3.html" },
+    { key: "4", name: "Layer 4: Continuity", href: "layer-4.html" },
+    { key: "5", name: "Layer 5: Measurement", href: "layer-5.html" },
+    { key: "6", name: "Layer 6: Operating Rhythm", href: "layer-6.html" }
   ];
 
   var form = document.getElementById("scorecard");
@@ -612,10 +475,10 @@
   form.addEventListener("submit", function (e) { e.preventDefault(); });
 
   function bandFor(pct) {
-    if (pct >= 85) { return { label: "AI-Ready", tier: "Maintenance", desc: "Exceptional foundation. Your system is compounding daily. Focus on expanding automation and monthly governance reviews." }; }
-    if (pct >= 65) { return { label: "Nearly There", tier: "Self-Guided or Guided", desc: "Strong foundation with specific gaps. You can likely close them yourself with the guide, or accelerate with a Guided session." }; }
-    if (pct >= 40) { return { label: "Foundation Needed", tier: "Guided Program", desc: "Partial progress but significant gaps that are costing you time and quality daily. The Guided Program would give you structure and accountability." }; }
-    return { label: "Not Ready", tier: "AI Readiness Audit", desc: "Your AI is flying blind. You're getting generic answers because you haven't given it your context. An Audit session will map your exact starting point and priorities." };
+    if (pct >= 85) { return { label: "AI-Ready", desc: "Exceptional foundation. Your system is compounding. Hold the rhythm: weekly notes, monthly measurement, quarterly re-score." }; }
+    if (pct >= 65) { return { label: "Nearly There", desc: "Strong foundation with specific gaps. The layer breakdown below names them. Close them with the guide, one layer at a time." }; }
+    if (pct >= 40) { return { label: "Foundation Needed", desc: "Partial progress, but the gaps are costing you time and quality daily. Work the layers in order, starting with your weakest." }; }
+    return { label: "Not Ready", desc: "Your AI is flying blind. You are getting generic answers because you have not given it your context. Start Phase 1 today: Identity, then Knowledge, then Governance." };
   }
 
   function layerStatus(pct) {
@@ -629,9 +492,9 @@
       return {
         intro: "Your foundation needs significant work. Recommended path:",
         steps: [
-          "Start with an AI Readiness Audit session (60 to 90 minutes) to map your specific situation.",
-          "Start Layer 1 immediately. Even 30 minutes of organizing pays dividends.",
-          "Do not try to do everything at once. Follow the layers in order."
+          "Start Layer 1 today. Three identity documents, one honest afternoon.",
+          "Follow the layers in order. Do not try to do everything at once, and do not activate an agent yet.",
+          "If you want a second set of eyes, book the free Audit — 60 to 90 minutes mapping your exact starting point."
         ]
       };
     }
@@ -640,8 +503,8 @@
         intro: "You have a partial foundation. Recommended path:",
         steps: [
           "Focus on your weakest layer first (see the breakdown above).",
-          "Consider the Guided Program for accountability and expert review.",
-          "Complete one layer fully before moving to the next."
+          "Complete one layer fully before moving to the next.",
+          "Re-run this scorecard when you finish — the trend is the measurement."
         ]
       };
     }
@@ -649,8 +512,8 @@
       intro: "Strong foundation. Recommended path:",
       steps: [
         "Close the specific gaps identified above.",
-        "Focus on governance and maintenance (the compound value layer).",
-        "Consider the Private tier if you want to accelerate the final gaps."
+        "Make sure Phase 3 is real: continuity tested, measurement running, rhythm on the calendar.",
+        "Re-score quarterly and compare layer by layer against last quarter."
       ]
     };
   }
@@ -702,7 +565,7 @@
     document.getElementById("r-pct").textContent = pct;
     document.getElementById("r-band").textContent = band.label;
     document.getElementById("r-desc").textContent = band.desc;
-    document.getElementById("r-points").textContent = "Score: " + total + " of " + maxTotal + " weighted points. The path that fits: " + band.tier + ".";
+    document.getElementById("r-points").textContent = "Score: " + total + " of " + maxTotal + " weighted points.";
 
     var tbody = document.getElementById("r-layers");
     tbody.innerHTML = "";
@@ -734,7 +597,7 @@
     list.innerHTML = "";
     if (gaps.length === 0) {
       var done = document.createElement("li");
-      done.textContent = "All 35 items passing. Maintain current practices.";
+      done.textContent = "All 24 items passing. Maintain current practices.";
       list.appendChild(done);
     } else {
       gaps.sort(function (a, b) { return b.weight - a.weight; });

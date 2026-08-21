@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 2: The Operator | Groundwork Guide</title>
+<meta name="description" content="One scoped agent, activated after the foundation exists. The Operator context package, the Operator prompt, and the rules for adding roles later.">
+<meta name="theme-color" content="#131530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="layer-1.html">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html">L3</a>
+    <a href="operator.html" aria-current="page">Operator</a>
+    <a href="layer-4.html">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="layer-6.html">L6</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / The Operator</span>
+  <header class="page">
+    <span class="kicker">PHASE 2 · ACTIVATION</span>
+    <h1>The Operator.</h1>
+    <p class="lede">One scoped agent, activated only after Phase 1 exists. Not autonomous. Not a swarm. A competent internal operator that drafts, cites authority, and stops when it should.</p>
+  </header>
+
+  <h2>When you are allowed to activate</h2>
+  <p>The Operator comes after the foundation, not instead of it. The gate is simple: all eleven Phase 1 documents exist, a named human has signed off on the governance layer, and the <a href="layer-3.html">Agent Scope</a> file describes one role in one sentence. If any of that is missing, the Operator will improvise it &mdash; and improvised policy is how automation goes wrong.</p>
+  <div class="callout">
+    <p><strong>What an Operator is not:</strong> it is not autonomous, it does not act while you sleep, it does not have memory you have not given it, and it is not a fleet. It is one agent, one context package, one human in the loop. For most owners this is enough &mdash; permanently.</p>
+  </div>
+
+  <h2>The Operator context package</h2>
+  <p>Everything the Operator knows lives in one folder, loaded in order. This is the package &mdash; the fifteen Groundwork documents arranged for loading. A vault that contains everything contains nothing; this is the deliberate subset.</p>
+  <pre><code>01_Operator/
+  00_CONTEXT.md
+  01_Identity/
+    Identity_Charter.md
+    Brand_Voice.md
+    Decision_Principles.md
+    Continuity.md
+  02_Current_Context/
+    Strategic_Priorities.md
+    Active_Constraints.md
+    Context_Vault.md
+  03_Authority_Rules/
+    Authority_Classification.md
+    Automation_Decision_Framework.md
+  04_Capabilities/
+    Escalation_Triggers.md
+    Allowed_Tools.md
+    Agent_Scope.md
+  05_Working_Memory/
+    Session_Notes.md
+  06_Output_Standards/
+    Measurement_Notes.md
+    Operating_Rhythm.md
+    Response_Rules.md
+    Operator_Prompt.md</code></pre>
+  <p><code>00_CONTEXT.md</code> is a one-page index: what this package is, the load order, and the one-line rule &mdash; higher authority levels override lower ones. Load the files first, in order. Then paste the Operator prompt as the session instruction.</p>
+
+  <h2>The Operator prompt</h2>
+  <p>This is the session instruction. Do not expand it into a personality. Keep it as rules.</p>
+  <pre><code>You are now the Operator for this organization.
+
+Load the files in this package in order. Do not
+invent policy. Do not expand your authority.
+
+Primary directive: raise the quality of thinking
+and output while protecting standards.
+
+Rules
+- Stay on-voice at all times.
+- Cite Authority Level on material claims.
+- If the request is Auto-Execute, do it.
+- If the request is Draft &amp; Wait, produce the
+  complete draft and stop.
+- If the request is Never Automate, refuse and
+  escalate.
+- If authority is unclear, confidence is low, or
+  the action is irreversible — escalate.
+
+When escalating, state:
+1. What was requested
+2. Why it cannot proceed
+3. What decision or information is needed
+
+Your output should read like it came from a highly
+competent operator — not an assistant trying to
+be helpful.</code></pre>
+
+  <h2>The first two weeks</h2>
+  <p>Activation is a shakedown cruise, not a launch party. Run it like this:</p>
+  <ul>
+    <li><strong>Days 1&ndash;3: Zone 1 only.</strong> Internal summaries, formatting, file work. You are testing whether the Operator loads context correctly and cites authority levels, not whether it can do your job.</li>
+    <li><strong>Days 4&ndash;14: real Draft &amp; Wait work.</strong> Give it the actual emails, notices, and reports on your desk. Approve, reject, and &mdash; this is the important part &mdash; when a draft misses, fix the <em>document</em> that caused the miss, not just the draft.</li>
+    <li><strong>Log every correction in Session Notes.</strong> Three misses with the same root cause means a foundation file needs editing. That loop &mdash; miss, trace, edit, retest &mdash; is the whole method.</li>
+  </ul>
+
+  <h2>What the Operator may and may not do</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>May do</h3>
+      <ul class="check">
+        <li>Draft work inside Draft &amp; Wait</li>
+        <li>Summarize Level 0&ndash;2 material</li>
+        <li>Flag missing or conflicting authority</li>
+        <li>Prepare recommended next actions</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>May not do</h3>
+      <ul>
+        <li>Invent policy</li>
+        <li>Expand its own authority</li>
+        <li>Execute irreversible actions</li>
+        <li>Spawn additional agents without a human decision</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>After the Operator: adding roles</h2>
+  <p><strong>The default is one.</strong> One Operator, one context package, one human in the loop. Add a second role only after the Operator is stable and a second, clearly different job exists &mdash; a Researcher that never drafts client-facing work, or a Reviewer that only checks authority and voice.</p>
+  <p><strong>How to add one:</strong> do not build an orchestration engine. Duplicate the folder pattern. Give the new role a narrower charter, its own Allowed Tools, and the same Escalation Rules. The human decides who is invoked.</p>
+  <p><strong>What to refuse:</strong> agents that create other agents. Shared memory without classification. Any role that can execute Never Automate work.</p>
+
+  <div class="card">
+    <h3>The Operator is working when</h3>
+    <ul class="check">
+      <li>Drafts arrive on-voice without re-prompting</li>
+      <li>Material claims come with authority levels attached</li>
+      <li>It refuses Zone 3 requests and escalates cleanly, stating what it needs</li>
+      <li>Corrections per week are falling because the documents keep improving</li>
+      <li>You trust it with a category of work you used to do at 11pm</li>
+    </ul>
+  </div>
+
+  <p>The Operator now works. Phase 3 makes it durable: <a href="layer-4.html">Continuity</a> is what survives time, people, and failure &mdash; starting with the ninety-day test.</p>
+
+  <div class="pnav">
+    <a href="layer-3.html">&larr; Layer 3: Governance</a>
+    <a href="layer-4.html">Layer 4: Continuity &rarr;</a>
+  </div>
+</main>
+<footer class="site">Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+</body>
+</html>

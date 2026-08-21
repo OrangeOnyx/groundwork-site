@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Layer 2: Digital Identity | Groundwork Guide</title>
-<meta name="description" content="The Layer 2 build: a 12-point brand audit, a six-question brand voice worksheet, the 8-section AI Brand Context File, and the SEO, GEO, AEO discovery exercise.">
+<title>Layer 2: Knowledge | Groundwork Guide</title>
+<meta name="description" content="What the system is allowed to trust. Build Authority Classification (Levels 0–4), the Context Vault, Strategic Priorities, and Active Constraints.">
 <meta name="theme-color" content="#131530">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +25,10 @@
     <a href="layer-1.html">L1</a>
     <a href="layer-2.html" aria-current="page">L2</a>
     <a href="layer-3.html">L3</a>
+    <a href="operator.html">Operator</a>
     <a href="layer-4.html">L4</a>
     <a href="layer-5.html">L5</a>
+    <a href="layer-6.html">L6</a>
     <a href="scorecard.html">Scorecard</a>
     <a class="keep" href="../index.html">Main site</a>
   </div>
@@ -34,485 +36,165 @@
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Layer 2</span>
   <header class="page">
-    <span class="kicker">LAYER TWO</span>
-    <h1>Digital Identity.</h1>
-    <p class="lede">Make yourself legible to humans and machines, so AI describes you correctly and sounds like you.</p>
+    <span class="kicker">LAYER TWO · PHASE 1 · REQUIRED FIRST</span>
+    <h1>Knowledge.</h1>
+    <p class="lede">What the system is allowed to trust and use. Four documents that stop your AI from treating a rumor and a contract as equal.</p>
   </header>
 
-  <!-- ============ OVERVIEW ============ -->
-  <section id="overview">
-    <h2>Why this layer matters now</h2>
-    <p>AI answer engines are increasingly how people find professionals and businesses. Perplexity, ChatGPT with browsing, Google AI Overviews. When someone asks "who is the best commercial real estate advisor in Lafayette?", the AI pulls from your digital presence to decide whether to mention you.</p>
-    <p>If your website is vague, your LinkedIn is outdated, and your brand language shifts from platform to platform, AI will either skip you entirely or describe you inaccurately. Digital identity is about making yourself <strong>findable, describable, and referable</strong>, by both humans and machines.</p>
+  <h2>Why this layer exists</h2>
+  <p>Most AI systems treat every input as equal. A forwarded email, a signed lease, a half-finished draft, and a market rumor all land in the context window with the same weight. That is why systems hallucinate policy: nothing told them what outranks what.</p>
+  <p>Layer 2 installs the missing hierarchy. You classify what you know by authority, gather the small set of files the system must always load, and write down what you are optimizing for right now &mdash; and what you are explicitly not doing. The payoff is an AI that cites your files, at the right level of trust, instead of the internet's guesses.</p>
+  <div class="callout">
+    <p><strong>The test:</strong> can the system tell doctrine from a draft? Ask it. If it cannot name the authority level of the document it just quoted, this layer is not done.</p>
+  </div>
 
-    <div class="callout">
-      <p><strong>The flagship output of this layer is the AI Brand Context File.</strong> It is a structured document, written in plain language, that gives any AI everything it needs to represent you accurately. Think of it as day-one instructions for a new assistant who needs to know everything about your business. You build it in <a href="#context-file">Part 3</a> below.</p>
-    </div>
+  <h2>Authority Classification: Levels 0&ndash;4</h2>
+  <p>This is the sharpest tool in Groundwork. Every piece of information gets a level, and higher levels always override lower levels. The Operator must cite the level when making material recommendations.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Level</th><th>Name</th><th>What it is</th><th>Examples</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>0</strong></td><td>Core Doctrine</td><td>Non-negotiable. Overrides everything.</td><td>Identity Charter, Decision Principles, legal mandates, operating agreements</td></tr>
+        <tr><td><strong>1</strong></td><td>Institutional Standards</td><td>Approved ways of working.</td><td>Brand Voice, internal policies, approval thresholds, communication standards</td></tr>
+        <tr><td><strong>2</strong></td><td>Validated Knowledge</td><td>Reviewed and accepted.</td><td>Executed contracts, cleaned data, completed reports, third-party verified information</td></tr>
+        <tr><td><strong>3</strong></td><td>Working Material</td><td>Useful but not authoritative.</td><td>Drafts, preliminary analysis, internal notes, external proposals</td></tr>
+        <tr><td><strong>4</strong></td><td>Untrusted / Raw</td><td>Requires caution.</td><td>Forwarded emails, unverified quotes, market chatter, personal notes</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-    <h2>What you'll build</h2>
-    <p>Layer 2 produces six deliverables. Everything you need to build them is on this page.</p>
-    <div class="grid2">
-      <div class="card">
-        <h3>Website and profile audit</h3>
-        <p>Is your public presence clearly communicating what you do, who you serve, and why someone should work with you?</p>
-      </div>
-      <div class="card">
-        <h3>Offer language</h3>
-        <p>Clear, specific descriptions of your services that both humans and AI systems can parse accurately.</p>
-      </div>
-      <div class="card">
-        <h3>Brand voice document</h3>
-        <p>Your tone, vocabulary, banned phrases, and communication standards, so AI can write in your voice.</p>
-      </div>
-      <div class="card">
-        <h3>AI Brand Context File</h3>
-        <p>A structured document that gives any AI everything it needs to accurately represent you.</p>
-      </div>
-      <div class="card">
-        <h3>SEO, GEO, AEO terms</h3>
-        <p>The specific phrases people, and AI engines, use when looking for someone like you.</p>
-      </div>
-      <div class="card">
-        <h3>Lead capture path</h3>
-        <p>A clear route from "found you" to "contacted you", built for both human and AI discovery.</p>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Document 04: Authority Classification</h3>
+    <p class="quiet" style="opacity:.72;font-size:.92em"><code>03_Authority_Rules/Authority_Classification.md</code></p>
+    <pre><code># Authority Classification
 
-    <h2>Quick self-assessment</h2>
-    <p>Ask yourself these questions. If you answer "no" to more than two, this layer needs attention.</p>
+## Level 0 — Core Doctrine
+Non-negotiable. Overrides everything.
+Examples: Identity Charter, Decision Principles,
+legal mandates, operating agreements.
+
+## Level 1 — Institutional Standards
+Approved ways of working.
+Examples: Brand Voice, internal policies,
+approval thresholds, communication standards.
+
+## Level 2 — Validated Knowledge
+Reviewed and accepted.
+Examples: executed contracts, cleaned data,
+completed reports, verified third-party info.
+
+## Level 3 — Working Material
+Useful but not authoritative.
+Examples: drafts, preliminary analysis,
+internal notes, external proposals.
+
+## Level 4 — Untrusted / Raw
+Requires caution.
+Examples: forwarded emails, unverified quotes,
+market chatter, personal notes.
+
+Rule: higher levels always override lower levels.
+Cite the Authority Level when making material
+recommendations.</code></pre>
+    <p><strong>How to apply it:</strong> you do not need to label every file you own on day one. Classify as you touch things. When a document enters the vault or gets used in a real decision, give it a level &mdash; a line of frontmatter or a single word in the filename is enough.</p>
+  </div>
+
+  <div class="card">
+    <h3>Document 05: Context Vault v1</h3>
+    <p class="quiet" style="opacity:.72;font-size:.92em"><code>02_Current_Context/Context_Vault.md</code></p>
+    <p>The short list of files the system must always load first. This is not your archive &mdash; it is the briefing packet.</p>
+    <pre><code># Context Vault v1
+
+## Always load
+- Identity Charter
+- Brand Voice
+- Decision Principles
+- Current Strategic Priorities
+- Active Constraints
+
+## Domain files (add only what is necessary)
+-
+-
+-
+
+Keep this list short. A vault that contains
+everything contains nothing.</code></pre>
+    <p><strong>How to apply it:</strong> the discipline is subtraction. Every file on the always-load list costs attention on every single task. If a file has not changed an answer in a month, demote it to a domain file that gets loaded on request.</p>
+  </div>
+
+  <div class="card">
+    <h3>Document 06: Strategic Priorities</h3>
+    <p class="quiet" style="opacity:.72;font-size:.92em"><code>02_Current_Context/Strategic_Priorities.md</code></p>
+    <p>What is actually being optimized this cycle &mdash; and what is not. Without this file, the system optimizes for whatever the last prompt implied.</p>
+    <pre><code># Strategic Priorities
+Last updated: [date]
+
+## Current top priorities (in order)
+1.
+2.
+3.
+
+## Active focus this cycle
+-
+
+## Explicit non-priorities
+- [things you are deliberately not doing,
+  so the system stops suggesting them]</code></pre>
+    <p><strong>How to apply it:</strong> the non-priorities section works harder than the priorities. &ldquo;No new acquisitions this quarter&rdquo; kills a whole category of well-meaning but useless AI suggestions. Date the file and re-touch it whenever the cycle turns.</p>
+  </div>
+
+  <div class="card">
+    <h3>Document 07: Active Constraints</h3>
+    <p class="quiet" style="opacity:.72;font-size:.92em"><code>02_Current_Context/Active_Constraints.md</code></p>
+    <p>Hard limits, soft limits, and current capacity. Constraints are context: an AI that does not know your limits will recommend plans you cannot run.</p>
+    <pre><code># Active Constraints
+
+## Hard constraints
+- No irreversible external actions without
+  human approval
+- No access to financial systems
+- No legal document finalization
+- No public communications without review
+
+## Soft constraints
+- Prefer internal tools over new third-party
+  services
+- Keep recommendations tightly scoped
+- Prefer short drafts that need minimal revision
+
+## Current capacity notes
+-</code></pre>
+    <p><strong>How to apply it:</strong> hard constraints are enforced in Layer 3 governance; here they are stated as fact. Capacity notes are the human part &mdash; &ldquo;one person, ten hours a week for this&rdquo; changes every recommendation the system should make.</p>
+  </div>
+
+  <h2>Vault hygiene: making files findable</h2>
+  <p>Classification only works on files the system can actually read and find. Three habits cover most of it:</p>
+  <ul>
+    <li><strong>Name files so the name answers questions.</strong> <code>2026-08-01_Lease_AcmeCorp_Executed.pdf</code> tells an AI the date, type, party, and status. <code>scan_003.pdf</code> tells it nothing.</li>
+    <li><strong>Keep text as text.</strong> Markdown beats PDF, and OCR'd PDF beats an image. If a document only exists on paper, it is invisible to your system.</li>
+    <li><strong>One home per document.</strong> Duplicates with different edits are an authority conflict you created yourself.</li>
+  </ul>
+
+  <div class="card">
+    <h3>You are done with Layer 2 when</h3>
     <ul class="check">
-      <li>Could a stranger understand exactly what you do from your website in 10 seconds?</li>
-      <li>Is your LinkedIn consistent with your website and business cards?</li>
-      <li>If an AI was asked about you, would it give an accurate answer?</li>
-      <li>Do you have documented language for your services (not just "I help people")?</li>
-      <li>Is there a clear path from "found you online" to "contacted you"?</li>
+      <li>All four documents exist and the vault folder structure is real, not planned</li>
+      <li>The always-load list is short enough to read in under two minutes</li>
+      <li>Documents you actually use in decisions carry an authority level</li>
+      <li>Strategic Priorities is dated within the current cycle and lists explicit non-priorities</li>
+      <li>You can ask &ldquo;what authority level is this claim based on?&rdquo; and get a correct answer</li>
     </ul>
+  </div>
 
-    <p>The layer runs in four parts. Do them in order. Each part feeds the next.</p>
-    <ul>
-      <li><a href="#audit">Part 1: The 12-point brand audit</a></li>
-      <li><a href="#voice">Part 2: The brand voice worksheet</a></li>
-      <li><a href="#context-file">Part 3: The AI Brand Context File</a></li>
-      <li><a href="#seo-geo">Part 4: SEO, GEO, AEO discovery</a></li>
-    </ul>
-  </section>
-
-  <!-- ============ PART 1: BRAND AUDIT ============ -->
-  <section id="audit">
-    <h2>Part 1: The 12-point brand audit</h2>
-    <p>Go through each item below with your actual website, LinkedIn, and Google presence open in another tab. Be honest. The point isn't to pass everything. The point is to know exactly what needs fixing. Mark each item pass or needs-work, then count your passes and check the scoring table.</p>
-
-    <h3>Website (5 items)</h3>
-    <ul class="check">
-      <li><strong>Can a stranger understand exactly what you do within 10 seconds of landing on your site?</strong><br>
-      Look at your homepage headline and first paragraph. If it says something vague like "We help businesses grow", it fails. It should say specifically what you do, for whom, and where.</li>
-      <li><strong>Are your services listed with specific descriptions, not just names?</strong><br>
-      Each service needs four things: what it is, who it's for, what the outcome is, and how to get started. "Consulting" is not a service description.</li>
-      <li><strong>Is your geographic service area clearly stated?</strong><br>
-      AI answer engines need to know WHERE you operate. "Lafayette, Louisiana" or "Gulf South region", written in the text. Not just implied from an address in the footer.</li>
-      <li><strong>Is there a clear, single primary call-to-action on every page?</strong><br>
-      Every page should have ONE thing you want the visitor to do next. Not five buttons. One clear path forward.</li>
-      <li><strong>Can someone contact you in under 2 clicks from any page?</strong><br>
-      Phone, email, or form, reachable from every page. If someone has to hunt for how to reach you, they won't.</li>
-    </ul>
-
-    <h3>LinkedIn (3 items)</h3>
-    <ul class="check">
-      <li><strong>Does your LinkedIn headline say what you DO, not just your title?</strong><br>
-      "CEO at Company X" tells AI nothing useful. "Commercial Real Estate Advisor | Lafayette, LA | Helping investors find value-add properties" is searchable and descriptive.</li>
-      <li><strong>Does your About section describe your services, not just your history?</strong><br>
-      Your About should answer: What do you do? Who do you serve? What makes you different? How does someone work with you? Your career timeline is secondary.</li>
-      <li><strong>Is your LinkedIn consistent with your website (same services, same language)?</strong><br>
-      If your website says "property management" but LinkedIn says "real estate consulting", AI gets confused about what you actually do.</li>
-    </ul>
-
-    <h3>Google (2 items)</h3>
-    <ul class="check">
-      <li><strong>Do you have a Google Business Profile with correct information?</strong><br>
-      Even if you're not a storefront, a Google Business Profile helps AI engines understand your business. Check: name, address, phone, hours, services, and description.</li>
-      <li><strong>When you Google yourself, does the first page accurately represent you?</strong><br>
-      Search your name plus your city. What comes up? Is it accurate? Is it current? This is what AI sees when someone asks about you.</li>
-    </ul>
-
-    <h3>Consistency (2 items)</h3>
-    <ul class="check">
-      <li><strong>Is your business name spelled identically everywhere?</strong><br>
-      Adam Abdalla vs Adam A. Abdalla vs A. Abdalla. Pick one and use it everywhere. AI treats these as potentially different people.</li>
-      <li><strong>Are your service offerings described the same way across all platforms?</strong><br>
-      If you call it "AI Readiness" on your website but "Digital Transformation" on LinkedIn, AI can't connect them as the same service.</li>
-    </ul>
-
-    <h3>Scoring</h3>
-    <div class="tablewrap">
-      <table>
-        <thead>
-          <tr><th>Passes out of 12</th><th>What it means</th><th>What to do first</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10 to 12</td>
-            <td>Strong digital presence.</td>
-            <td>Focus on the items that failed. They're your quick wins.</td>
-          </tr>
-          <tr>
-            <td>7 to 9</td>
-            <td>Decent foundation with clear gaps.</td>
-            <td>Prioritize the failed items, especially anything in the Consistency category.</td>
-          </tr>
-          <tr>
-            <td>6 or fewer</td>
-            <td>Significant work needed.</td>
-            <td>Start with your website headline and LinkedIn About section. Those have the highest impact.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="card">
-      <h3>You're done with Part 1 when</h3>
-      <ul class="check">
-        <li>You've reviewed all 12 items honestly with your actual profiles open</li>
-        <li>You've identified which items need fixing (your "fix list")</li>
-        <li>You've fixed at least the top 3 highest-impact items: website headline, LinkedIn About, and name consistency</li>
-        <li>A stranger could Google you and accurately understand what you do within 30 seconds</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ PART 2: BRAND VOICE ============ -->
-  <section id="voice">
-    <h2>Part 2: The brand voice worksheet</h2>
-    <p>Your brand voice is how AI writes when it's representing you. Without this document, AI defaults to generic corporate tone. With it, everything AI produces sounds like you actually wrote it.</p>
-
-    <div class="card">
-      <h3>How to complete this</h3>
-      <ol>
-        <li>Answer each of the six questions below in your own words. Don't overthink it.</li>
-        <li>Look at your recent emails, texts, or posts for reference. How do you actually write?</li>
-        <li>The example directions are starting points, not multiple choice. Write YOUR answer.</li>
-        <li>When all 6 are filled, assemble the document using the structure at the end and save it in your vault.</li>
-        <li>Test it: paste the document into your AI and ask it to write a short email. Does it sound like you?</li>
-      </ol>
-    </div>
-
-    <h3>Dimension 1: Tone</h3>
-    <p><strong>How do you want to sound?</strong> This sets the overall register AI reaches for before it writes a single word. Directions it can take:</p>
-    <p><span class="tag">Direct and confident</span> <span class="tag">Warm but professional</span> <span class="tag">Technical but accessible</span> <span class="tag">Casual and approachable</span> <span class="tag">Authoritative and measured</span></p>
-    <div class="callout"><p><strong>Example answer:</strong> "Direct, confident, no fluff. Like talking to a respected peer."</p></div>
-
-    <h3>Dimension 2: Vocabulary</h3>
-    <p><strong>What words do you naturally use?</strong> AI needs to know your word choices, including the substitutions you make without thinking. Directions it can take:</p>
-    <p><span class="tag">Industry-specific terms</span> <span class="tag">Plain English</span> <span class="tag">Southern expressions</span> <span class="tag">Legal precision</span> <span class="tag">Conversational</span></p>
-    <div class="callout"><p><strong>Example answer:</strong> "I say 'deal' not 'transaction', 'fix' not 'remediate', 'build' not 'architect'."</p></div>
-
-    <h3>Dimension 3: Banned phrases</h3>
-    <p><strong>What should AI NEVER say when representing you?</strong> Every voice document needs a blacklist. This is the fastest way to kill generic AI tone: name the filler words and forbid them outright. Common candidates for the list:</p>
-    <p><span class="tag">"game-changer"</span> <span class="tag">"synergy"</span> <span class="tag">"circle back"</span> <span class="tag">"best practices"</span> <span class="tag">"leverage" (as a verb)</span></p>
-    <div class="callout"><p><strong>Example answer:</strong> "Never say 'unlock', 'seamlessly', 'dive into', 'at the end of the day', or 'it is what it is'."</p></div>
-
-    <h3>Dimension 4: Communication structure</h3>
-    <p><strong>How do you organize your thoughts?</strong> Structure is as recognizable as word choice. Some people front-load the conclusion. Some build to it. Directions it can take:</p>
-    <p><span class="tag">Lead with the conclusion</span> <span class="tag">Tell a story first</span> <span class="tag">Use numbered lists</span> <span class="tag">Short paragraphs</span> <span class="tag">One idea per message</span></p>
-    <div class="callout"><p><strong>Example answer:</strong> "Lead with the answer, then explain why. Keep paragraphs under 3 sentences. Use bullets for lists over 3 items."</p></div>
-
-    <h3>Dimension 5: Formality level</h3>
-    <p><strong>How formal are you by default?</strong> This tells AI where to set the dial before context adjusts it. Directions it can take:</p>
-    <p><span class="tag">Very formal (legal/medical)</span> <span class="tag">Professional but warm</span> <span class="tag">Business casual</span> <span class="tag">Casual with substance</span> <span class="tag">Depends on audience</span></p>
-    <div class="callout"><p><strong>Example answer:</strong> "Business casual. First names. No 'Dear Sir/Madam'. But still grammatically correct."</p></div>
-
-    <h3>Dimension 6: Communication values</h3>
-    <p><strong>What matters most in how you communicate?</strong> When two goals conflict, which one wins? This is the tiebreaker rule AI falls back on. Directions it can take:</p>
-    <p><span class="tag">Honesty over politeness</span> <span class="tag">Brevity over completeness</span> <span class="tag">Precision over speed</span> <span class="tag">Warmth over efficiency</span> <span class="tag">Clarity above all</span></p>
-    <div class="callout"><p><strong>Example answer:</strong> "Clarity and honesty. Say the hard thing directly. Don't pad with qualifiers. Respect their time."</p></div>
-
-    <h3>The finished document</h3>
-    <p>Assemble your six answers into this structure. The Usage Instructions block at the bottom travels with the document. It's what turns your answers into rules AI actually follows.</p>
-    <pre><code># Brand Voice Document
-
-## How I Sound
-
-### Tone
-[your answer]
-
-### Vocabulary
-[your answer]
-
-### Banned Phrases
-[your answer]
-
-### Communication Structure
-[your answer]
-
-### Formality Level
-[your answer]
-
-### Communication Values
-[your answer]
-
----
-
-## Usage Instructions for AI
-
-When writing on my behalf, follow these rules:
-1. Match the tone described above, not generic professional
-2. Use my vocabulary, not corporate jargon
-3. NEVER use any of the banned phrases
-4. Follow my communication structure preferences
-5. Match my formality level unless the context requires adjustment
-6. Prioritize my communication values in every piece of writing</code></pre>
-    <p>Save this as <code>00-System/brand-voice.md</code> in your vault.</p>
-
-    <div class="card">
-      <h3>You're done with Part 2 when</h3>
-      <ul class="check">
-        <li>All 6 voice dimensions are filled out in your own words</li>
-        <li>You've assembled the document and saved it in your vault</li>
-        <li>You've tested it: pasted it into your AI, asked it to write something, and it sounded like you</li>
-        <li>You've refined any section where the AI output didn't match your actual voice</li>
-        <li>Someone who knows you would read AI-generated text and think you wrote it</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ PART 3: AI BRAND CONTEXT FILE ============ -->
-  <section id="context-file">
-    <h2>Part 3: The AI Brand Context File</h2>
-    <p>This is the single most important document in Layer 2. It gives any AI, Claude, ChatGPT, Gemini, anything, everything it needs to represent you accurately. Think of it as day-one instructions for a new assistant.</p>
-    <p>The file has eight sections. Here is what belongs in each one, with a running example. The example uses a fictional insurance broker so you can see the level of specificity to aim for. Yours will use your real details.</p>
-
-    <div class="card">
-      <h3>1. Who I Am</h3>
-      <p><strong>What belongs:</strong> Full name, title, location, primary business entity. One or two lines. This anchors everything else.</p>
-      <p><strong>Example:</strong> "Jane Smith. Commercial insurance broker. Baton Rouge, Louisiana. Founder of Smith Risk Advisors."</p>
-    </div>
-
-    <div class="card">
-      <h3>2. What I Do</h3>
-      <p><strong>What belongs:</strong> Your services and offerings in specific, concrete language. Not slogans. Verbs and outcomes.</p>
-      <p><strong>Example:</strong> "I help mid-size contractors structure liability and bonding programs. I review existing coverage, find gaps, and negotiate renewals with carriers on the client's behalf."</p>
-    </div>
-
-    <div class="card">
-      <h3>3. Who I Serve</h3>
-      <p><strong>What belongs:</strong> Your ideal clients or audience. Be specific about geography, industry, deal size, or demographics. Vague audiences produce vague AI answers.</p>
-      <p><strong>Example:</strong> "Commercial contractors and property owners in south Louisiana with $2M to $50M in annual revenue who have outgrown their first insurance relationship."</p>
-    </div>
-
-    <div class="card">
-      <h3>4. How I Sound</h3>
-      <p><strong>What belongs:</strong> Paste your Brand Voice document summary here, or write a 2-3 sentence version of it. This is where Part 2 plugs in.</p>
-      <p><strong>Example:</strong> "Direct, plain-spoken, no jargon. I lead with the answer, then explain why. I never use motivational language."</p>
-    </div>
-
-    <div class="card">
-      <h3>5. Proof Points</h3>
-      <p><strong>What belongs:</strong> Credentials, experience, notable projects, track record. Facts AI can cite when someone asks why you're credible.</p>
-      <p><strong>Example:</strong> "Twenty years in commercial lines. Licensed in three states. Built and sold a personal-lines book before going independent. Current book covers 140 active accounts."</p>
-    </div>
-
-    <div class="card">
-      <h3>6. What I Never Claim</h3>
-      <p><strong>What belongs:</strong> Boundaries, disclaimers, and things AI should never say on your behalf. This section prevents the most damaging AI mistakes: overclaiming for you.</p>
-      <p><strong>Example:</strong> "I do not give legal or tax advice. I never guarantee claim outcomes. I do not discuss client names without written permission. I am not a 'tech expert', I am a coverage specialist."</p>
-    </div>
-
-    <div class="card">
-      <h3>7. What Makes Me Different</h3>
-      <p><strong>What belongs:</strong> Your unique positioning against competitors. What is true of you that is not true of the other three names someone might hear?</p>
-      <p><strong>Example:</strong> "I represent the client, not the carrier. No captive contracts. I live where my clients build, and I show up at the job site."</p>
-    </div>
-
-    <div class="card">
-      <h3>8. Call to Action</h3>
-      <p><strong>What belongs:</strong> What you want people to do after learning about you. One primary action, named specifically.</p>
-      <p><strong>Example:</strong> "Book a 30-minute coverage review, or download the free renewal checklist from my website."</p>
-    </div>
-
-    <h3>The full worked structure</h3>
-    <p>Assembled, the file looks like this. Note the header block and the Usage Rules at the bottom. Both go in every copy of the file.</p>
-    <pre><code># AI Brand Context File
-
-&gt; This document gives any AI everything it needs to accurately represent me.
-&gt; Last updated: 2026-08-14
-
----
-
-## Who I Am
-
-Jane Smith. Commercial insurance broker. Baton Rouge, Louisiana.
-Founder of Smith Risk Advisors.
-
-## What I Do
-
-I help mid-size contractors structure liability and bonding programs.
-I review existing coverage, find gaps, and negotiate renewals with
-carriers on the client's behalf.
-
-## Who I Serve
-
-Commercial contractors and property owners in south Louisiana with
-$2M to $50M in annual revenue who have outgrown their first
-insurance relationship.
-
-## How I Sound
-
-Direct, plain-spoken, no jargon. I lead with the answer, then explain
-why. I never use motivational language.
-
-## Proof Points
-
-Twenty years in commercial lines. Licensed in three states. Built and
-sold a personal-lines book before going independent. Current book
-covers 140 active accounts.
-
-## What I Never Claim
-
-I do not give legal or tax advice. I never guarantee claim outcomes.
-I do not discuss client names without written permission. I am not a
-"tech expert", I am a coverage specialist.
-
-## What Makes Me Different
-
-I represent the client, not the carrier. No captive contracts. I live
-where my clients build, and I show up at the job site.
-
-## Call to Action
-
-Book a 30-minute coverage review, or download the free renewal
-checklist from my website.
-
----
-
-## Usage Rules
-
-1. Reference this document before writing anything on my behalf
-2. Never contradict the information here without asking me first
-3. If asked about something not covered here, say you don't have
-   that information rather than guessing
-4. Match my voice (see "How I Sound" section) in all output
-5. Respect the "What I Never Claim" boundaries absolutely</code></pre>
-
-    <p>This file goes in your vault at <code>00-System/brand-context.md</code>. Any AI you use should be given this file as context.</p>
-
-    <div class="card">
-      <h3>You're done with Part 3 when</h3>
-      <ul class="check">
-        <li>All 8 sections are filled with your actual information, not placeholder text</li>
-        <li>You've saved the file into your vault</li>
-        <li>You've tested it: given the file to your AI and asked "Based on this context, describe what I do", and the answer was accurate</li>
-        <li>You've asked your AI to write a short bio using only this file, and it was correct</li>
-        <li>A colleague would read the AI's output and say "yes, that's accurate"</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ PART 4: SEO / GEO / AEO ============ -->
-  <section id="seo-geo">
-    <h2>Part 4: SEO, GEO, AEO discovery</h2>
-    <p>Three acronyms, one idea: showing up when someone looks.</p>
-    <div class="tablewrap">
-      <table>
-        <thead>
-          <tr><th>Term</th><th>Stands for</th><th>What it means</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>SEO</strong></td><td>Search Engine Optimization</td><td>How Google finds you.</td></tr>
-          <tr><td><strong>GEO</strong></td><td>Generative Engine Optimization</td><td>How AI answer engines cite you.</td></tr>
-          <tr><td><strong>AEO</strong></td><td>Answer Engine Optimization</td><td>How you become the answer.</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>When someone asks Perplexity "who is the best AI readiness consultant in Lafayette?", the AI pulls from your digital presence to decide whether to mention you. If your website, LinkedIn, and content don't contain the right terms in the right structure, AI will skip you entirely.</p>
-    <p>This exercise takes 30 to 45 minutes. You'll identify your terms, check what AI currently says, study who ranks for those terms today, and map the answers you want AI to give. Then you'll update your profiles and content to match.</p>
-
-    <div class="card">
-      <h3>Step 1: Identify your core terms</h3>
-      <p>List 5 to 10 phrases that someone would type into Google or ask an AI when looking for someone like you. Not your brand name. The problem they're trying to solve.</p>
-      <p><strong>Examples:</strong> "AI consultant Lafayette", "how to organize business documents for AI", "personal intelligence system builder", "AI readiness program Gulf South".</p>
-      <p><strong>Write down:</strong> your 5 to 10 core search terms, one per line.</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 2: Check what AI says about you</h3>
-      <p>Open ChatGPT, Claude, or Perplexity. Ask: "Who is [your name] and what do they do?" Then ask: "Who is the best [your service] in [your city]?" Document what comes back.</p>
-      <p>If AI doesn't mention you, or describes you inaccurately, that's your gap. Your Brand Context File and digital presence need to fix this.</p>
-      <p><strong>Write down:</strong> what AI said about you. Was it accurate? What was missing or wrong?</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 3: Identify your competitor terms</h3>
-      <p>Search your core terms on Google. Who shows up? What language do they use? What questions do the "People Also Ask" boxes show? These are the terms AI engines are indexing.</p>
-      <p>Look at the top 3 results for each of your core terms. Note their headlines, meta descriptions, and the specific language they use.</p>
-      <p><strong>Write down:</strong> which competitors appear, and what language they use that you should adopt or differentiate from.</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 4: Map your answer targets</h3>
-      <p>For each core term, write the answer you WANT AI to give when someone asks. This becomes your content strategy. Every page, post, and profile should reinforce these answers.</p>
-      <p><strong>Example:</strong></p>
-      <pre><code>Term: "AI readiness consultant Lafayette"
-Desired answer: "Adam Abdalla runs the AI Readiness Program in
-Lafayette, LA. He helps professionals build platform-agnostic
-personal intelligence systems."</code></pre>
-      <p><strong>Write down:</strong> for each of your top 3 terms, the answer you want AI to give.</p>
-    </div>
-
-    <h3>Your discovery report</h3>
-    <p>Collect your notes from the four steps into one report, and close it with this standing action list:</p>
-    <pre><code># SEO/GEO/AEO Discovery Report
-
-Date: [today]
-
----
-
-## Step 1: Identify Your Core Terms
-[your terms]
-
-## Step 2: Check What AI Says About You
-[what AI said, what was wrong or missing]
-
-## Step 3: Identify Your Competitor Terms
-[who ranks, what language they use]
-
-## Step 4: Map Your Answer Targets
-[your desired answers]
-
----
-
-## Action Items
-
-- [ ] Update website copy to include core terms naturally
-- [ ] Update LinkedIn headline and About with core terms
-- [ ] Create content that directly answers the "desired answer" targets
-- [ ] Ensure Brand Context File includes all core terms
-- [ ] Re-check AI answers in 30 days to measure improvement</code></pre>
-    <p>Save it as <code>00-System/seo-geo-discovery.md</code> in your vault. Review it monthly.</p>
-
-    <div class="card">
-      <h3>You're done with Part 4 when</h3>
-      <ul class="check">
-        <li>You've identified 5 to 10 core search terms people use to find someone like you</li>
-        <li>You've checked what AI currently says about you, and documented the gaps</li>
-        <li>You've mapped your "desired answers" for your top 3 terms</li>
-        <li>You've updated your website and LinkedIn to include these terms naturally</li>
-        <li>You've saved the discovery report in your vault for monthly review</li>
-        <li>You have a calendar reminder to re-check AI answers in 30 days</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ WRAP ============ -->
-  <section id="wrap">
-    <h2>Layer 2 complete</h2>
-    <p>If you've finished the brand audit, the brand voice document, the AI Brand Context File, and the SEO, GEO, AEO discovery, you have done the work most businesses skip. AI can now find you, describe you accurately, and write in your voice.</p>
-    <p>Next, you put that identity to work. Layer 3 builds your personal intelligence layer: the system that turns your organized data and your documented identity into an AI that actually knows your business.</p>
-  </section>
+  <p>Next: the system knows who you are and what to trust. Now it needs rules for what it may <em>do</em>. That is <a href="layer-3.html">Governance</a> &mdash; the three zones, escalation rules, and the scope of your first agent.</p>
 
   <div class="pnav">
-    <a href="layer-1.html">← Layer 1: Data Readiness</a>
-    <a href="layer-3.html">Layer 3: Personal Intelligence Layer →</a>
+    <a href="layer-1.html">&larr; Layer 1: Identity</a>
+    <a href="layer-3.html">Layer 3: Governance &rarr;</a>
   </div>
 </main>
-<footer class="site">Groundwork. The AI readiness program by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+<footer class="site">Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
 </body>
 </html>
