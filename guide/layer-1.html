@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer 1: Data Readiness | Groundwork Guide</title>
+<meta name="description" content="Digitize, name, and file what your business knows. The full naming convention, the five-step scanning workflow, quality standards, folder templates, setup scripts, and troubleshooting.">
+<meta name="theme-color" content="#131530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="layer-1.html" aria-current="page">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html">L3</a>
+    <a href="layer-4.html">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Layer 1</span>
+  <header class="page">
+    <span class="kicker">LAYER ONE</span>
+    <h1>Data Readiness.</h1>
+    <p class="lede">Get it out of your head: digitize, name, and file what your business knows.</p>
+  </header>
+
+  <div class="card">
+    <h2>Why this layer comes first</h2>
+    <p>AI can only work with what it can read. Most of what your business knows lives in filing cabinets, email threads, and one person's memory. Layer 1 moves it into files a machine can search: scanned, named consistently, and filed in a structure that makes sense without a tour guide.</p>
+    <p>This is the exact system I built for my own properties in Lafayette before I ever taught it to anyone. It is not glamorous. It is the foundation everything else in this program stands on. A consistent naming convention means any person, or any AI, can find any document instantly.</p>
+  </div>
+
+  <h2>The naming convention</h2>
+  <p>Every file you create follows one universal formula. No exceptions, no personal styles, no "I'll remember what this is."</p>
+
+  <pre><code>YYYY-MM-DD_[CODE]_[Description].pdf</code></pre>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Date</h3>
+      <p>The document date, not the scan date. ISO format: year, month, day. A lease signed March 15, 2024 starts with <code>2024-03-15</code> even if you scan it in 2026.</p>
+    </div>
+    <div class="card">
+      <h3>Code</h3>
+      <p>A 3-letter document type code from the standard table below. <code>LSE</code> for a lease, <code>INV</code> for an invoice, <code>INS</code> for an insurance certificate.</p>
+    </div>
+    <div class="card">
+      <h3>Description</h3>
+      <p>A brief, specific identifier: vendor name, client, property, project. Hyphens between words. <code>Acme-Landscaping-Annual-Service</code>, not <code>contract stuff</code>.</p>
+    </div>
+  </div>
+
+  <h3>Build one by hand</h3>
+  <p>Three moves. Pick the document date. Pick the code. Write a short hyphenated description. Join the parts with underscores.</p>
+  <pre><code>Date:         2024-06-15
+Code:         CTR
+Description:  Vendor-Name-Service-Type
+
+Result:       2024-06-15_CTR_Vendor-Name-Service-Type.pdf</code></pre>
+  <p>If you type spaces in the description, replace them with hyphens before you save. Spaces break sorting, scripting, and some sync tools.</p>
+
+  <h3>Real-world examples</h3>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Filename</th><th>What it is</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>2024-03-15_CTR_Acme-Landscaping-Annual-Service.pdf</code></td><td>Annual service contract with Acme Landscaping, signed March 15, 2024</td></tr>
+        <tr><td><code>2024-06-01_INS_Hartford-GL-Policy-Renewal.pdf</code></td><td>General liability policy renewal from Hartford, effective June 1</td></tr>
+        <tr><td><code>2024-09-22_INV_Roof-Repair-Building-A-Smith-Roofing.pdf</code></td><td>Invoice from Smith Roofing for Building A roof repair</td></tr>
+        <tr><td><code>2024-11-05_NTC_Default-Notice-Suite-112.pdf</code></td><td>Default notice sent regarding Suite 112</td></tr>
+        <tr><td><code>2025-01-10_MTG_Board-Meeting-Q4-Review.pdf</code></td><td>Board meeting minutes from Q4 review, January 10, 2025</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Document type codes</h3>
+  <p>The full standard list. Print it, pin it next to the scanner, and use it for every file.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Code</th><th>Document type</th><th>Category</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>CTR</code></td><td>Contract / Agreement</td><td>Contracts</td></tr>
+        <tr><td><code>LSE</code></td><td>Lease Agreement</td><td>Contracts</td></tr>
+        <tr><td><code>AMD</code></td><td>Amendment</td><td>Contracts</td></tr>
+        <tr><td><code>RNW</code></td><td>Renewal</td><td>Contracts</td></tr>
+        <tr><td><code>LOI</code></td><td>Letter of Intent</td><td>Contracts</td></tr>
+        <tr><td><code>VND</code></td><td>Vendor Contract</td><td>Vendors</td></tr>
+        <tr><td><code>WRK</code></td><td>Work Order</td><td>Vendors</td></tr>
+        <tr><td><code>INV</code></td><td>Invoice</td><td>Financial</td></tr>
+        <tr><td><code>RCV</code></td><td>Receipt / Payment</td><td>Financial</td></tr>
+        <tr><td><code>TAX</code></td><td>Tax Document</td><td>Financial</td></tr>
+        <tr><td><code>BNK</code></td><td>Bank Statement</td><td>Financial</td></tr>
+        <tr><td><code>BDG</code></td><td>Budget</td><td>Financial</td></tr>
+        <tr><td><code>INS</code></td><td>Insurance Certificate</td><td>Insurance</td></tr>
+        <tr><td><code>POL</code></td><td>Insurance Policy</td><td>Insurance</td></tr>
+        <tr><td><code>CLM</code></td><td>Insurance Claim</td><td>Insurance</td></tr>
+        <tr><td><code>INP</code></td><td>Inspection Report</td><td>Operations</td></tr>
+        <tr><td><code>MNT</code></td><td>Maintenance Record</td><td>Operations</td></tr>
+        <tr><td><code>PRM</code></td><td>Permit / License</td><td>Legal</td></tr>
+        <tr><td><code>COR</code></td><td>Correspondence / Letter</td><td>Communications</td></tr>
+        <tr><td><code>NTC</code></td><td>Notice (Legal)</td><td>Legal</td></tr>
+        <tr><td><code>MTG</code></td><td>Meeting Minutes</td><td>Operations</td></tr>
+        <tr><td><code>RPT</code></td><td>Report</td><td>Operations</td></tr>
+        <tr><td><code>PHO</code></td><td>Photo Documentation</td><td>Operations</td></tr>
+        <tr><td><code>PLN</code></td><td>Plan / Blueprint</td><td>Operations</td></tr>
+        <tr><td><code>HR</code></td><td>Employee Document</td><td>HR</td></tr>
+        <tr><td><code>POC</code></td><td>Policy Document</td><td>Operations</td></tr>
+        <tr><td><code>SOP</code></td><td>Standard Operating Procedure</td><td>Operations</td></tr>
+        <tr><td><code>GEN</code></td><td>General / Uncategorized</td><td>General</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <h3>Five golden rules</h3>
+    <ol>
+      <li>Always use the document date, not the date you scanned it.</li>
+      <li>Never use spaces in filenames. Use hyphens within words, underscores between parts.</li>
+      <li>Keep descriptions under 5 words. Be specific but concise.</li>
+      <li>Always use .pdf as the extension. Scan everything as searchable PDF.</li>
+      <li>When in doubt, check the code table. If no code fits, use <code>GEN</code> (General).</li>
+    </ol>
+  </div>
+
+  <h2>The five-step workflow</h2>
+  <p>Every document follows the same path from physical paper to AI-ready data: Scan, Name, File, Upload, Verify. Follow this process for every single document, every single time. Consistency is what makes the system work. McKinsey research on standardized document workflows found they cut processing time by 60 percent and error rates by 75 percent.</p>
+
+  <div class="card">
+    <h3>Step 1: Scan / Digitize</h3>
+    <ul class="check">
+      <li>Set the scanner to 300 DPI minimum (600 DPI for fine print).</li>
+      <li>Use color mode for documents with highlights or color-coding.</li>
+      <li>Enable OCR (Optical Character Recognition) in your scanner software.</li>
+      <li>Output format: searchable PDF, not image-only PDF.</li>
+      <li>Capture the entire document. No cut-off edges.</li>
+      <li>Flatten stapled packets. Scan multi-page documents as a single PDF.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Step 2: Name the file</h3>
+    <ul class="check">
+      <li>Use the universal formula: <code>YYYY-MM-DD_[CODE]_[Description].pdf</code>.</li>
+      <li>Date = the document date, not the scan date.</li>
+      <li>Code = the standardized document type code (LSE, VND, INS, and so on).</li>
+      <li>Description = a brief, specific identifier: client name, vendor, project.</li>
+      <li>Hyphens within description words, underscores between parts.</li>
+      <li>Example: <code>2024-03-15_CTR_Acme-Corp-Service-Agreement.pdf</code>.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Step 3: File in the correct folder</h3>
+    <ul class="check">
+      <li>Go to the correct top-level category folder.</li>
+      <li>Place the file in the right subcategory (for example, Contracts &gt; Active).</li>
+      <li>If unsure, check the folder templates further down this page.</li>
+      <li>Never leave files in a "misc" or "unsorted" folder.</li>
+      <li>One document = one file. Don't combine unrelated documents.</li>
+      <li>If a document belongs in two categories, file it in the primary one and note the cross-reference in your log.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Step 4: Upload to your system of record</h3>
+    <ul class="check">
+      <li>Open your management system or cloud drive (Google Drive, OneDrive, Dropbox).</li>
+      <li>Go to the correct folder, client, or project record.</li>
+      <li>Upload the file to the right document section.</li>
+      <li>Verify the file name matches what you saved locally.</li>
+      <li>Confirm the upload completed successfully.</li>
+      <li>Check that the file opens correctly from within the system.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Step 5: Verify and log</h3>
+    <ul class="check">
+      <li>Open the uploaded file and confirm it's readable.</li>
+      <li>Spot-check: can you select and copy text? That confirms OCR worked.</li>
+      <li>Log the document in your weekly scanning log spreadsheet.</li>
+      <li>Note any issues: poor original quality, missing pages, and the like.</li>
+      <li>Mark it complete in your daily task list.</li>
+      <li>If you find quality problems, re-scan before moving on.</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <h3>Day one: prove the loop works</h3>
+    <p>On your first day, complete one full cycle with a single document. Pick something simple, a one-page vendor invoice or an insurance certificate. Follow all 5 steps, then ask your AI a question about that document. When it answers correctly, you have seen the entire system working end to end. That is the proof that the work matters.</p>
+    <p>Here's how that looked for one operator, Sarah. She started with a single vendor invoice, a one-page document from her office supply company. She scanned it at 300 DPI with OCR, named it <code>2024-01-15_INV_OfficeMax-Supplies.pdf</code>, filed it in <code>02_Financial/Invoices-Paid/</code>, and uploaded it to Google Drive. Total time: 4 minutes. Then she asked the AI: "How much did we spend on office supplies in January 2024?" It answered correctly, citing the exact invoice. That's when she knew the system worked. By the end of week one she had processed 30 documents, and the AI could answer questions about all of them.</p>
+  </div>
+
+  <h3>Knowledge check</h3>
+  <p>Confirm you have the workflow down before moving on. Answer each one in your head, then open the expander.</p>
+
+  <details>
+    <summary>What is the correct order of the 5-step workflow?</summary>
+    <div class="inner">
+      <p><strong>Scan, Name, File, Upload, Verify.</strong> You must digitize the document first, then name it properly, file it in the right folder, upload it to your cloud system, and finally verify it's readable.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>What should you do if you can't select or copy text from an uploaded PDF?</summary>
+    <div class="inner">
+      <p><strong>Re-scan with OCR enabled.</strong> If you can't select text, OCR didn't work. The AI literally cannot read image-only PDFs. You must re-scan with OCR enabled to create a searchable PDF the AI can actually process. Renaming or re-uploading changes nothing.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>When naming a file, which date should you use?</summary>
+    <div class="inner">
+      <p><strong>The document's original date.</strong> Always use the date on the document itself, not the date you scanned it. This keeps everything chronologically accurate when the AI searches for documents by date.</p>
+    </div>
+  </details>
+
+  <h2>Quality standards</h2>
+  <p>The difference between a useful scan and a useless one comes down to a few simple settings. The AI reads the text from your scans. If it can't read the text clearly, it gives wrong answers.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>What good looks like</h3>
+      <ul class="check">
+        <li>300 DPI minimum resolution (600 DPI for fine print or legal documents).</li>
+        <li>OCR enabled. Text must be selectable, not just an image.</li>
+        <li>Full page captured. No cut-off margins or missing corners.</li>
+        <li>Straight alignment. Not rotated or skewed.</li>
+        <li>Clean glass. No smudges, streaks, or shadows from the scanner lid.</li>
+        <li>Color mode for documents with highlights, stamps, or color-coding.</li>
+        <li>Single PDF per document. Multi-page documents combined into one file.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What to avoid</h3>
+      <ul>
+        <li>Low resolution (below 200 DPI). Text becomes blurry and unreadable to AI.</li>
+        <li>Image-only PDF with no OCR. The AI sees a picture, not text it can read.</li>
+        <li>Cropped or cut-off pages. Missing information the AI needs.</li>
+        <li>Skewed or rotated scans. OCR accuracy drops hard.</li>
+        <li>Dark shadows or smudges. They obscure text and confuse character recognition.</li>
+        <li>Grayscale mode on color documents. It loses important visual information.</li>
+        <li>Multiple unrelated documents in one file. It confuses categorization.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The 30-second quality check</h3>
+    <p>After every scan, run through this list before moving on:</p>
+    <ul class="check">
+      <li>Can you select and copy text from the PDF? (Confirms OCR.)</li>
+      <li>Is all text sharp and readable at 100 percent zoom?</li>
+      <li>Are all pages present? Check the page count.</li>
+      <li>Is the document straight, not rotated?</li>
+      <li>Are there any dark shadows or smudges?</li>
+      <li>Does the filename follow the naming convention?</li>
+    </ul>
+  </div>
+
+  <h3>Edge cases and exceptions</h3>
+  <p>Real documents aren't always clean single pages. Here is how to handle the tricky ones.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>How to handle it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Multi-page stapled documents</td><td>Remove staples, scan all pages as a single PDF. Re-staple the original after scanning.</td></tr>
+        <tr><td>Double-sided pages</td><td>Use duplex scanning if available. Otherwise scan front, then back, and combine into one PDF in correct page order.</td></tr>
+        <tr><td>Oversized documents (blueprints, site plans)</td><td>Use a large-format scanner if available. Otherwise photograph in sections with overlap, or send to a print shop for professional scanning.</td></tr>
+        <tr><td>Handwritten notes or annotations</td><td>Scan at 600 DPI in color. OCR will capture typed text; handwritten portions are preserved as images. Note in the scanning log that handwriting is present.</td></tr>
+        <tr><td>Documents in poor condition (torn, faded, water-damaged)</td><td>Scan at the highest resolution in color. Adjust brightness and contrast if needed. Note condition issues in the scanning log. Do NOT discard the original.</td></tr>
+        <tr><td>Duplicate versions of the same document</td><td>Keep the most recent or most complete version. File the other in Archive with <code>_SUPERSEDED</code> appended to the filename.</td></tr>
+        <tr><td>Documents with sticky notes or attachments</td><td>Scan the base document first, then scan sticky notes and attachments separately. Combine into one PDF with attachments after the main document.</td></tr>
+        <tr><td>Envelopes with postmarks (date evidence)</td><td>Scan the envelope as the first page, then the contents. The postmark date may be legally significant.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <h3>Confidentiality and data handling</h3>
+    <ul>
+      <li>Never leave scanned documents open on a shared or public screen.</li>
+      <li>Do not email unencrypted files containing sensitive financial or personal data.</li>
+      <li>Social Security numbers, bank account numbers, and personal financial data need extra care. Flag these for supervisor review.</li>
+      <li>When in doubt about whether a document should be digitized, ask before scanning.</li>
+      <li>All scanned data is subject to your company's data retention and privacy policies.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Version control</h3>
+    <p>When a document is updated, a new lease version, a revised policy, an updated insurance certificate:</p>
+    <ol>
+      <li>Move the old version to the Archive folder.</li>
+      <li>Append <code>_SUPERSEDED</code> to the old filename.</li>
+      <li>Save the new version in the active folder with the current date.</li>
+      <li>Note the replacement in your scanning log.</li>
+    </ol>
+    <p><strong>Never delete old versions.</strong> They may be needed for legal or historical reference.</p>
+  </div>
+
+  <h2>Folder structure templates</h2>
+  <p>Choose the folder structure that matches your business type. These templates give you a ready-to-deploy filing system. Every top-level folder carries a numbered prefix so folders always sort in the same order on any operating system.</p>
+
+  <div class="card">
+    <h3>Which template fits?</h3>
+    <p>Three questions. Your answers point at a template.</p>
+    <p><strong>1. What type of documents do you deal with most often?</strong></p>
+    <ul>
+      <li>Leases, tenant files, and property inspections: Commercial Real Estate.</li>
+      <li>Client case files, court filings, and research memos: Law Firm.</li>
+      <li>Patient records, insurance claims, and compliance documents: Medical / Dental Office.</li>
+      <li>Invoices, contracts, and general business paperwork: General Business.</li>
+      <li>Permits, vendor orders, and employee schedules: Restaurant / Retail.</li>
+    </ul>
+    <p><strong>2. Do you have regulatory compliance requirements?</strong></p>
+    <ul>
+      <li>Healthcare / HIPAA compliance: Medical / Dental Office.</li>
+      <li>Professional ethics and bar requirements: Law Firm.</li>
+      <li>Health department and food safety: Restaurant / Retail.</li>
+      <li>Minimal, standard business compliance only: General Business (or Commercial Real Estate if you manage property).</li>
+    </ul>
+    <p><strong>3. Who are your primary customers or stakeholders?</strong></p>
+    <ul>
+      <li>Tenants and property owners: Commercial Real Estate.</li>
+      <li>Patients and insurance companies: Medical / Dental Office.</li>
+      <li>Clients involved in legal matters: Law Firm.</li>
+      <li>Walk-in customers and suppliers: Restaurant / Retail.</li>
+      <li>Other businesses, clients, or a mix: General Business.</li>
+    </ul>
+    <p>If two templates tie, pick the one from question 2. Compliance needs shape a filing system more than anything else.</p>
+  </div>
+
+  <h3>Commercial Real Estate</h3>
+  <pre><code>├── 01_Leases
+│   ├── Active
+│   ├── Expired
+│   ├── Pending
+│   ├── Letters-of-Intent
+│   └── Amendments
+├── 02_Vendor-Contracts
+│   ├── Active
+│   ├── Expired
+│   ├── Bids-Proposals
+│   └── W9s-COIs
+├── 03_Insurance
+│   ├── Property-Policies
+│   ├── Liability-Policies
+│   ├── Tenant-COIs
+│   └── Claims
+├── 04_Financial
+│   ├── Bank-Statements
+│   ├── Tax-Returns
+│   ├── CAM-Reconciliations
+│   ├── Invoices-Paid
+│   ├── Invoices-Pending
+│   └── Budgets
+├── 05_Property-Maintenance
+│   ├── Inspections
+│   ├── Work-Orders
+│   ├── Capital-Improvements
+│   ├── Photos
+│   └── Site-Plans
+├── 06_Legal
+│   ├── Entity-Documents
+│   ├── Permits-Licenses
+│   ├── Notices-Sent
+│   ├── Notices-Received
+│   └── Litigation
+├── 07_Correspondence
+│   ├── Tenant-Communications
+│   ├── Vendor-Communications
+│   ├── Government-Municipal
+│   └── Internal-Memos
+├── 08_HR-Personnel
+│   ├── Employee-Files
+│   ├── Policies-Handbook
+│   └── Training
+├── 09_Operations
+│   ├── SOPs
+│   ├── Meeting-Minutes
+│   ├── Reports
+│   └── Emergency-Plans
+└── 10_Archive
+    ├── Prior-Years
+    ├── Superseded-Policies
+    └── Former-Tenants</code></pre>
+
+  <h3>General Business</h3>
+  <pre><code>├── 01_Contracts-Agreements
+│   ├── Active
+│   ├── Expired
+│   └── Templates
+├── 02_Financial
+│   ├── Invoices
+│   ├── Receipts
+│   ├── Tax-Documents
+│   ├── Bank-Statements
+│   └── Budgets
+├── 03_Insurance
+│   ├── Policies
+│   ├── Claims
+│   └── Certificates
+├── 04_Legal
+│   ├── Entity-Formation
+│   ├── Licenses-Permits
+│   └── Compliance
+├── 05_HR
+│   ├── Employee-Files
+│   ├── Policies
+│   └── Benefits
+├── 06_Operations
+│   ├── SOPs
+│   ├── Reports
+│   └── Meeting-Notes
+├── 07_Marketing
+│   ├── Brand-Assets
+│   ├── Campaigns
+│   └── Analytics
+├── 08_Correspondence
+│   ├── Clients
+│   ├── Vendors
+│   └── Internal
+└── 09_Archive
+    ├── Historical
+    └── Superseded</code></pre>
+
+  <h3>Medical / Dental Office</h3>
+  <pre><code>├── 01_Patient-Records
+│   ├── Active-Patients
+│   ├── Discharged
+│   ├── Consent-Forms
+│   └── Referrals
+├── 02_Compliance-HIPAA
+│   ├── Policies
+│   ├── Training-Records
+│   ├── Audit-Logs
+│   └── BAAs
+├── 03_Insurance-Billing
+│   ├── Payer-Contracts
+│   ├── EOBs
+│   ├── Denials-Appeals
+│   └── Fee-Schedules
+├── 04_Credentialing
+│   ├── Provider-Licenses
+│   ├── DEA-Certificates
+│   ├── Board-Certifications
+│   └── Malpractice-Insurance
+├── 05_Financial
+│   ├── Bank-Statements
+│   ├── Tax-Returns
+│   ├── Payroll
+│   └── Vendor-Invoices
+├── 06_Operations
+│   ├── SOPs
+│   ├── Equipment-Maintenance
+│   ├── Vendor-Contracts
+│   └── Meeting-Minutes
+├── 07_HR
+│   ├── Employee-Files
+│   ├── Certifications
+│   └── Continuing-Education
+├── 08_Legal
+│   ├── Entity-Documents
+│   ├── Lease-Agreement
+│   └── Incident-Reports
+└── 09_Archive
+    ├── Former-Patients
+    ├── Expired-Contracts
+    └── Prior-Years</code></pre>
+
+  <h3>Law Firm</h3>
+  <pre><code>├── 01_Client-Matters
+│   ├── Active-Cases
+│   ├── Closed-Cases
+│   ├── Prospective-Clients
+│   └── Conflict-Checks
+├── 02_Billing-Trust
+│   ├── IOLTA-Records
+│   ├── Invoices-Sent
+│   ├── Payments-Received
+│   └── Fee-Agreements
+├── 03_Court-Filings
+│   ├── Pleadings
+│   ├── Motions
+│   ├── Discovery
+│   └── Orders-Judgments
+├── 04_Research
+│   ├── Memoranda
+│   ├── Case-Law
+│   ├── Statutes
+│   └── Templates
+├── 05_Firm-Administration
+│   ├── Entity-Documents
+│   ├── Insurance
+│   ├── Bar-Compliance
+│   └── CLE-Records
+├── 06_Financial
+│   ├── Bank-Statements
+│   ├── Tax-Returns
+│   ├── Payroll
+│   └── Operating-Budget
+├── 07_HR
+│   ├── Partner-Files
+│   ├── Staff-Files
+│   └── Policies
+├── 08_Correspondence
+│   ├── Client-Letters
+│   ├── Opposing-Counsel
+│   └── Court-Communications
+└── 09_Archive
+    ├── Closed-Matters
+    ├── Destroyed-Files
+    └── Retention-Log</code></pre>
+
+  <h3>Restaurant / Retail</h3>
+  <pre><code>├── 01_Licenses-Permits
+│   ├── Business-License
+│   ├── Health-Permits
+│   ├── Liquor-License
+│   ├── Fire-Safety
+│   └── Signage-Permits
+├── 02_Vendor-Suppliers
+│   ├── Food-Distributors
+│   ├── Equipment-Vendors
+│   ├── Service-Contracts
+│   └── Price-Lists
+├── 03_Financial
+│   ├── Daily-Sales-Reports
+│   ├── Bank-Statements
+│   ├── Tax-Returns
+│   ├── POS-Reports
+│   └── Invoices
+├── 04_HR-Staff
+│   ├── Employee-Files
+│   ├── Schedules
+│   ├── Training-Certs
+│   ├── Tip-Records
+│   └── I9-W4-Forms
+├── 05_Compliance
+│   ├── Health-Inspections
+│   ├── Food-Safety-Logs
+│   ├── OSHA
+│   └── ADA-Compliance
+├── 06_Lease-Property
+│   ├── Lease-Agreement
+│   ├── CAM-Statements
+│   ├── Maintenance-Requests
+│   └── Build-Out-Plans
+├── 07_Insurance
+│   ├── General-Liability
+│   ├── Workers-Comp
+│   ├── Property
+│   └── Liquor-Liability
+├── 08_Marketing
+│   ├── Menu-Designs
+│   ├── Social-Media
+│   ├── Promotions
+│   └── Reviews-Feedback
+└── 09_Archive
+    ├── Former-Employees
+    ├── Expired-Permits
+    └── Old-Menus</code></pre>
+
+  <div class="card">
+    <h3>How to set up</h3>
+    <ol>
+      <li><strong>Create the structure.</strong> Copy the tree straight from this page and build it by hand, or run one of the scripts in the next section to build it in one command.</li>
+      <li><strong>Put it in your preferred location.</strong> Desktop, Documents folder, or directly in your cloud drive (Google Drive, OneDrive, Dropbox).</li>
+      <li><strong>Rename the root folder.</strong> Change it from the template name to your actual company name.</li>
+      <li><strong>Test the structure.</strong> Save one sample document in each top-level folder to confirm everything works.</li>
+      <li><strong>Share it with your team.</strong> If you use a shared drive, set permissions so everyone can read but only designated people can reorganize.</li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <h3>Pro tips</h3>
+    <ul>
+      <li>Never create a "Miscellaneous" or "Other" folder. It becomes a dumping ground the AI can't navigate.</li>
+      <li>If a document could go in two places, file it in the primary category and note the cross-reference in your scanning log.</li>
+      <li>Review and clean up the Archive folder quarterly. Old documents still have value for AI training.</li>
+      <li>The numbered prefix (01_, 02_, and so on) keeps folders in the same order regardless of operating system.</li>
+      <li>Customize these templates to your specific business. Add subfolders as needed, but keep the top-level structure intact.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>What comes next: the Intelligence Vault</h3>
+    <p>This folder structure is your document filing system, where your actual files live. In Layer 3 you'll build a separate Intelligence Vault that sits alongside it. The vault holds entity files, relationship maps, decision logs, and governance rules that tell AI how to reason about your documents.</p>
+    <p>Think of it this way: Layer 1 organizes your documents so AI can <em>find</em> them. Layer 3 builds the knowledge layer so AI can <em>understand</em> them.</p>
+  </div>
+
+  <h2>Setup scripts</h2>
+  <p>You don't have to build the folder tree by hand. These scripts create the complete structure on your computer in one run. Both scripts build the same numbered layout; edit the company name variable at the top before running, and add or rename folders to match your chosen template.</p>
+
+  <h3>macOS / Linux (Bash)</h3>
+  <p>Creates the full numbered folder tree with one command on macOS or Linux.</p>
+  <pre><code>#!/bin/bash
+# ============================================
+# AI-Ready Folder Structure Generator
+# Works on macOS and Linux
+# ============================================
+# Usage: chmod +x create_folders.sh &amp;&amp; ./create_folders.sh
+
+# Set your company name here
+COMPANY_NAME="My_Company_Documents"
+
+# Create root directory
+mkdir -p "$COMPANY_NAME"
+cd "$COMPANY_NAME"
+
+echo "Creating AI-ready folder structure for: $COMPANY_NAME"
+echo "================================================"
+
+# Create top-level folders with subfolders
+mkdir -p "01_Contracts-Agreements"/{Active,Expired,Templates,Letters-of-Intent,Amendments}
+mkdir -p "02_Financial"/{Bank-Statements,Tax-Returns,Invoices-Paid,Invoices-Pending,Receipts,Budgets}
+mkdir -p "03_Insurance"/{Policies,Certificates,Claims}
+mkdir -p "04_Legal"/{Entity-Documents,Permits-Licenses,Compliance,Notices-Sent,Notices-Received}
+mkdir -p "05_Operations"/{SOPs,Meeting-Minutes,Reports,Emergency-Plans,Photos}
+mkdir -p "06_HR"/{Employee-Files,Policies-Handbook,Training,Benefits}
+mkdir -p "07_Correspondence"/{Clients,Vendors,Government,Internal}
+mkdir -p "08_Marketing"/{Brand-Assets,Campaigns,Analytics}
+mkdir -p "09_Archive"/{Prior-Years,Superseded,Former-Clients}
+
+echo ""
+echo "Folder structure created successfully!"
+echo "Location: $(pwd)"
+echo ""
+echo "Next steps:"
+echo "  1. Move this folder to your preferred location"
+echo "  2. Set up cloud sync (Google Drive, OneDrive, or Dropbox)"
+echo "  3. Start scanning documents into the correct folders"
+echo ""
+echo "Tip: Customize the COMPANY_NAME variable at the top of this script."</code></pre>
+
+  <div class="card">
+    <h3>How to run the Bash script</h3>
+    <ol>
+      <li>Open <strong>Terminal</strong> (Mac: Cmd+Space, type "Terminal". Linux: Ctrl+Alt+T).</li>
+      <li>Go to where you want the folders: <code>cd ~/Documents</code></li>
+      <li>Create the script file: <code>nano create_folders.sh</code></li>
+      <li>Paste the script above, then save (Ctrl+O, Enter, Ctrl+X).</li>
+      <li>Make it executable: <code>chmod +x create_folders.sh</code></li>
+      <li>Run it: <code>./create_folders.sh</code></li>
+    </ol>
+  </div>
+
+  <h3>Windows (PowerShell)</h3>
+  <p>Creates the same folder tree on Windows with one right-click.</p>
+  <pre><code># ============================================
+# AI-Ready Folder Structure Generator
+# Windows PowerShell
+# ============================================
+# Usage: Right-click &gt; Run with PowerShell
+# Or: powershell -ExecutionPolicy Bypass -File create_folders.ps1
+
+# Set your company name here
+$CompanyName = "My_Company_Documents"
+
+# Create root directory
+$RootPath = Join-Path -Path (Get-Location) -ChildPath $CompanyName
+New-Item -ItemType Directory -Force -Path $RootPath | Out-Null
+Set-Location $RootPath
+
+Write-Host "Creating AI-ready folder structure for: $CompanyName" -ForegroundColor Cyan
+Write-Host "================================================" -ForegroundColor Cyan
+
+# Define folder structure
+$folders = @(
+    "01_Contracts-Agreements\Active",
+    "01_Contracts-Agreements\Expired",
+    "01_Contracts-Agreements\Templates",
+    "01_Contracts-Agreements\Letters-of-Intent",
+    "01_Contracts-Agreements\Amendments",
+    "02_Financial\Bank-Statements",
+    "02_Financial\Tax-Returns",
+    "02_Financial\Invoices-Paid",
+    "02_Financial\Invoices-Pending",
+    "02_Financial\Receipts",
+    "02_Financial\Budgets",
+    "03_Insurance\Policies",
+    "03_Insurance\Certificates",
+    "03_Insurance\Claims",
+    "04_Legal\Entity-Documents",
+    "04_Legal\Permits-Licenses",
+    "04_Legal\Compliance",
+    "04_Legal\Notices-Sent",
+    "04_Legal\Notices-Received",
+    "05_Operations\SOPs",
+    "05_Operations\Meeting-Minutes",
+    "05_Operations\Reports",
+    "05_Operations\Emergency-Plans",
+    "05_Operations\Photos",
+    "06_HR\Employee-Files",
+    "06_HR\Policies-Handbook",
+    "06_HR\Training",
+    "06_HR\Benefits",
+    "07_Correspondence\Clients",
+    "07_Correspondence\Vendors",
+    "07_Correspondence\Government",
+    "07_Correspondence\Internal",
+    "08_Marketing\Brand-Assets",
+    "08_Marketing\Campaigns",
+    "08_Marketing\Analytics",
+    "09_Archive\Prior-Years",
+    "09_Archive\Superseded",
+    "09_Archive\Former-Clients"
+)
+
+foreach ($folder in $folders) {
+    New-Item -ItemType Directory -Force -Path $folder | Out-Null
+}
+
+Write-Host ""
+Write-Host "Folder structure created successfully!" -ForegroundColor Green
+Write-Host "Location: $RootPath" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "Next steps:" -ForegroundColor White
+Write-Host "  1. Move this folder to your preferred location"
+Write-Host "  2. Set up cloud sync (Google Drive, OneDrive, or Dropbox)"
+Write-Host "  3. Start scanning documents into the correct folders"
+Write-Host ""
+Write-Host "Tip: Customize the CompanyName variable at the top of this script." -ForegroundColor Gray</code></pre>
+
+  <div class="card">
+    <h3>How to run the PowerShell script</h3>
+    <ol>
+      <li>Open <strong>Notepad</strong> and paste the script above.</li>
+      <li>Save as <code>create_folders.ps1</code> (change "Save as type" to "All Files").</li>
+      <li>Find the file in File Explorer.</li>
+      <li>Right-click the file, then choose <strong>Run with PowerShell</strong>.</li>
+      <li>If prompted about execution policy, type <code>Y</code> and press Enter.</li>
+      <li>The folders are created in the same directory as the script.</li>
+    </ol>
+  </div>
+
+  <h2>Scanning and OCR software</h2>
+  <p>OCR (Optical Character Recognition) converts scanned images into searchable text, which is what the AI actually reads. Without OCR, your scanned PDFs are just pictures.</p>
+
+  <h3>Windows</h3>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Tool</th><th>Price</th><th>What it is</th><th>How to use it</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NAPS2</td>
+          <td>Free</td>
+          <td>Free, open-source scanning app with built-in OCR. The best free option for Windows.</td>
+          <td>Download from naps2.com. Install, open, select your scanner, enable OCR in settings, scan, save as searchable PDF.</td>
+        </tr>
+        <tr>
+          <td>Adobe Acrobat Pro</td>
+          <td>$22.99/month</td>
+          <td>Industry standard. Highest OCR accuracy. Batch processing. Expensive but powerful.</td>
+          <td>Open Acrobat. Tools, then Scan &amp; OCR. Select scanner or import image, Recognize Text, save as searchable PDF.</td>
+        </tr>
+        <tr>
+          <td>PaperScan</td>
+          <td>Free (Pro: $149)</td>
+          <td>Free scanner software with OCR. Good for basic scanning workflows.</td>
+          <td>Download from paperscan.orpalis.com. Install, select source, scan, apply OCR, export as PDF.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>macOS</h3>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Tool</th><th>Price</th><th>What it is</th><th>How to use it</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apple Preview (built in)</td>
+          <td>Free (built in)</td>
+          <td>macOS has built-in OCR in Preview and Quick Actions. No install needed for basic scanning.</td>
+          <td>Connect scanner. Open Preview, File, Import from Scanner, scan. The PDF is automatically searchable on macOS Ventura and later.</td>
+        </tr>
+        <tr>
+          <td>DEVONthink</td>
+          <td>$99 (one-time)</td>
+          <td>Powerful document management with excellent OCR. Great for building knowledge bases.</td>
+          <td>Download from devontechnologies.com. Install, import documents, right-click, OCR, To Searchable PDF.</td>
+        </tr>
+        <tr>
+          <td>PDF Expert by Readdle</td>
+          <td>$79.99/year</td>
+          <td>Clean, fast PDF editor with OCR. Native Mac experience.</td>
+          <td>Download from pdfexpert.com or the Mac App Store. Open PDF, Edit, OCR, save.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Linux</h3>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Tool</th><th>Price</th><th>What it is</th><th>How to use it</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OCRmyPDF</td>
+          <td>Free (open source)</td>
+          <td>Command-line tool that adds an OCR text layer to existing PDFs. The best Linux option.</td>
+          <td><code>sudo apt install ocrmypdf</code> then <code>ocrmypdf input.pdf output.pdf</code>. Batch: <code>for f in *.pdf; do ocrmypdf "$f" "ocr_$f"; done</code></td>
+        </tr>
+        <tr>
+          <td>Simple Scan (GNOME)</td>
+          <td>Free (built in)</td>
+          <td>Built into most Linux desktops. Simple scanner interface.</td>
+          <td>Open Simple Scan (pre-installed on Ubuntu and Fedora), scan, save as PDF, then run OCRmyPDF on the output.</td>
+        </tr>
+        <tr>
+          <td>Paperless-ngx</td>
+          <td>Free (open source)</td>
+          <td>Self-hosted document management with automatic OCR, tagging, and search. Ideal for AI knowledge bases.</td>
+          <td>Install via Docker: <code>docker-compose up -d</code>. Open the web UI, upload documents, get automatic OCR and categorization.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <h3>Quick recommendation</h3>
+    <ul>
+      <li><strong>On Windows and want free:</strong> use NAPS2. It handles scanning and OCR in one step.</li>
+      <li><strong>On Mac:</strong> start with the built-in Preview scanner. Move up to DEVONthink if you're building a serious knowledge base.</li>
+      <li><strong>On Linux:</strong> use Simple Scan for the scanning step, then run everything through OCRmyPDF. For a full system, deploy Paperless-ngx.</li>
+      <li><strong>Have budget and want the best:</strong> Adobe Acrobat Pro works on all platforms and has the highest OCR accuracy.</li>
+    </ul>
+  </div>
+
+  <h3>Universal scanner settings</h3>
+  <p>Whichever software you use, always configure these settings:</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Setting</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Resolution</td><td>300 DPI minimum (600 for fine print)</td></tr>
+        <tr><td>Color mode</td><td>Color (unless the document is pure B&amp;W)</td></tr>
+        <tr><td>File format</td><td>PDF (searchable / OCR-enabled)</td></tr>
+        <tr><td>Compression</td><td>Medium (balance quality against file size)</td></tr>
+        <tr><td>Page size</td><td>Auto-detect or Letter (8.5 x 11)</td></tr>
+        <tr><td>Duplex</td><td>Enable if the scanner supports double-sided</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <p>Something not working? Find your symptom below. Each entry explains what went wrong, how to fix it, and how to stop it happening again.</p>
+
+  <details>
+    <summary>Can't select or copy text from the PDF <span class="tag">OCR</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> OCR was not enabled during scanning, so you have an image-only PDF the AI cannot read.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Re-scan the document with OCR enabled in your scanner software.</li>
+        <li>If you can't re-scan, use OCRmyPDF (command line) or Adobe Acrobat Pro to add an OCR layer after the fact.</li>
+        <li>Verify the fix: open the new PDF and try to select and copy a word.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Always confirm OCR is enabled before starting a scan batch. Check the first scan of each session.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Text is blurry or unreadable at 100 percent zoom <span class="tag">Resolution</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> Scanner DPI was set too low (below 200 DPI), or the original document moved during scanning.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Re-scan at 300 DPI minimum (600 DPI for fine print or legal documents).</li>
+        <li>Keep the document flat and stationary on the scanner glass.</li>
+        <li>Clean the scanner glass to remove smudges or dust.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Set your scanner default to 300 DPI. Check the first page of each batch before continuing.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>AI can't find a document I know I scanned <span class="tag">Filing</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> The document was filed in the wrong folder, named incorrectly, or left in an unsorted location.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Search your file system for the document by date or partial name.</li>
+        <li>Check Downloads, Desktop, or any "Unsorted" folders.</li>
+        <li>Once found, rename it using the correct convention and move it to the proper folder.</li>
+        <li>Re-upload it to the cloud system if the file was only saved locally.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Never leave files in temporary locations. Complete all 5 workflow steps before moving to the next document.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>AI gives wrong or outdated information about a document <span class="tag">Data quality</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> An old, superseded version is still in the active folder, or the document was mislabeled with the wrong metadata.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Check whether multiple versions exist. Move old ones to Archive with the <code>_SUPERSEDED</code> suffix.</li>
+        <li>Verify the filename date matches the actual document date.</li>
+        <li>Confirm the document type code is correct (CTR versus INV, for example).</li>
+        <li>Re-upload the correct version and wait for the AI to re-index.</li>
+      </ol>
+      <p><strong>Prevention:</strong> When updating documents, always archive the old version first. Never overwrite files in place.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Scan has dark edges, shadows, or black borders <span class="tag">Scanner</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> The scanner lid was not fully closed, or the document didn't cover the full scan area.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Close the scanner lid completely and re-scan.</li>
+        <li>For thick documents or books, press down gently on the lid.</li>
+        <li>Use your scanner software's auto-crop feature if available.</li>
+        <li>If shadows persist, place a white sheet of paper behind the document.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Always close the lid fully. Use auto-crop settings. Check the first page before scanning a batch.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>PDF is missing pages from a multi-page document <span class="tag">Scanning</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> Pages were skipped during scanning, or the scanner's auto-document-feeder (ADF) jammed.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Count the physical pages and compare against the PDF page count.</li>
+        <li>Re-scan missing pages individually.</li>
+        <li>Use a PDF editor to insert the missing pages in the correct position.</li>
+        <li>Rename the final combined file. Don't create a separate "page 5" file.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Always verify the page count after scanning multi-page documents. Listen for ADF jams.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>File exists locally but not in the cloud <span class="tag">Cloud sync</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> The sync app is paused, the file is too large, or a naming conflict is blocking the upload.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Check your sync app status (Google Drive, OneDrive, Dropbox). Look for pause or error icons.</li>
+        <li>Verify your internet connection is active.</li>
+        <li>Check for filename conflicts: special characters or very long names.</li>
+        <li>Manually upload the file if auto-sync won't resolve it.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Keep the sync app running at all times. Check the sync status icon daily. Avoid special characters in filenames.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Same document appears in multiple folders or with multiple names <span class="tag">Organization</span></summary>
+    <div class="inner">
+      <p><strong>Root cause:</strong> The document was saved multiple times, or copied instead of moved during filing.</p>
+      <p><strong>How to fix:</strong></p>
+      <ol>
+        <li>Identify the correct, most complete version.</li>
+        <li>Keep it in the primary correct folder with proper naming.</li>
+        <li>Delete all duplicates, or move them to Archive if unsure.</li>
+        <li>Note in the scanning log that duplicates were consolidated.</li>
+      </ol>
+      <p><strong>Prevention:</strong> Always MOVE files to their destination, never copy. File immediately after naming. Don't leave copies in temp locations.</p>
+    </div>
+  </details>
+
+  <div class="card">
+    <h3>Still stuck?</h3>
+    <p>If your issue isn't listed here or the fix didn't work, escalate to whoever owns your system with these details:</p>
+    <ol>
+      <li>What you were trying to do.</li>
+      <li>What happened instead (screenshot if possible).</li>
+      <li>What you already tried from this page.</li>
+      <li>The specific filename and folder involved.</li>
+    </ol>
+  </div>
+
+  <div class="pnav">
+    <a href="foundations.html">← Foundations</a>
+    <a href="layer-2.html">Layer 2: Digital Identity →</a>
+  </div>
+</main>
+<footer class="site">Groundwork. The AI readiness program by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+</body>
+</html>

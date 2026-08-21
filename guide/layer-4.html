@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer 4: Workflow Automation | Groundwork Guide</title>
+<meta name="description" content="Automate routine work only after the foundation holds. Audit your opportunities, set approval rules for every automation, and ship your first three to five workflows safely.">
+<meta name="theme-color" content="#131530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="layer-1.html">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html">L3</a>
+    <a href="layer-4.html" aria-current="page">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Layer 4</span>
+  <header class="page">
+    <span class="kicker">LAYER FOUR</span>
+    <h1>Workflow Automation.</h1>
+    <p class="lede">Only after the foundation holds: automate routine work under rules you set, with a human sign-off where it matters.</p>
+  </header>
+
+  <!-- ============ OVERVIEW ============ -->
+  <h2>Why this layer comes fourth</h2>
+  <p>Automation is the layer everyone wants to start with. It comes fourth for a reason. AI can only automate what you have already organized. If Layers 1 through 3 are shaky, an automation does not fix the mess. It multiplies it, faster than you can catch it.</p>
+
+  <div class="callout">
+    <strong>The rule: do not automate chaos.</strong>
+    <p>If your source of truth is unclear, your identity is inconsistent, and your knowledge is not structured, automation will amplify the mess, not fix it. Layers 1 through 3 must be solid before you automate anything consequential. A bad filing habit done by hand costs you minutes. The same habit automated costs you hundreds of misfiled documents before you notice.</p>
+  </div>
+
+  <p>When the foundation does hold, this layer pays for everything above it. You will map every routine task you do, decide which ones AI can touch and under what rules, and ship your first three to five automations in a single measured sprint. This page walks all three parts in order:</p>
+  <ul>
+    <li><strong>Part 1: The opportunity audit.</strong> List every routine task. Rank by time and risk. Find your first targets.</li>
+    <li><strong>Part 2: The approval framework.</strong> Three categories that decide what AI may do without asking, what it drafts for your review, and what it must never touch.</li>
+    <li><strong>Part 3: The first automation sprint.</strong> One week. Three automations. Measurable time saved.</li>
+  </ul>
+
+  <h3>Common automation opportunities</h3>
+  <p>Before you audit your own week, look at what routine work usually yields. Rank by time saved, risk level, and setup effort. Start with high-time, low-risk tasks. Here is a typical spread from a small operating business:</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Task</th><th>Time saved</th><th>Risk</th><th>Setup effort</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Email triage and drafting</td><td>45 min/day</td><td><span class="tag">Low</span></td><td>2 hours</td></tr>
+        <tr><td>Document filing and naming</td><td>30 min/day</td><td><span class="tag">Low</span></td><td>1 hour</td></tr>
+        <tr><td>Meeting prep summaries</td><td>20 min/meeting</td><td><span class="tag">Low</span></td><td>30 min</td></tr>
+        <tr><td>Invoice processing</td><td>2 hours/week</td><td><span class="tag">Medium</span></td><td>4 hours</td></tr>
+        <tr><td>Client onboarding packets</td><td>1 hour/client</td><td><span class="tag">Medium</span></td><td>3 hours</td></tr>
+        <tr><td>Monthly reporting</td><td>4 hours/month</td><td><span class="tag">Low</span></td><td>2 hours</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Notice the pattern. The best first targets are not the impressive ones. They are the boring, frequent, low-stakes ones. Email triage at 45 minutes a day is worth almost four hours a week. Nothing breaks if a draft is imperfect, because you review it before it goes anywhere.</p>
+
+  <!-- ============ PART 1: OPPORTUNITY AUDIT ============ -->
+  <h2>Part 1: The automation opportunity audit</h2>
+  <p>List every routine task you do. Rank each by time spent and risk level. The highest-time, lowest-risk tasks are your first automation targets. This audit is the raw material for everything else in this layer, so do it thoroughly.</p>
+
+  <div class="card">
+    <h3>Instructions</h3>
+    <ol>
+      <li>Think through a typical week. What tasks do you repeat?</li>
+      <li>For each task, answer three questions: how often, how long, and what is the risk if AI gets it wrong?</li>
+      <li>Answer "Automatable?" honestly: could AI do this with clear rules? Yes, Partially, or No.</li>
+      <li>Aim for 15 to 20 tasks. Include everything from email triage to report generation.</li>
+    </ol>
+  </div>
+
+  <h3>The worksheet fields</h3>
+  <p>Track five fields per task. A spreadsheet works. So does a plain markdown table in your vault.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Field</th><th>Options</th><th>What it captures</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Task name</td><td>Free text</td><td>The specific repeated task. "Email triage", not "communication".</td></tr>
+        <tr><td>Frequency</td><td>Daily / Weekly / Monthly / Quarterly</td><td>How often you actually do it.</td></tr>
+        <tr><td>Time (minutes)</td><td>Number</td><td>Minutes per occurrence, not per week. The math below normalizes it.</td></tr>
+        <tr><td>Risk</td><td>Low / Medium / High</td><td>The cost if AI gets it wrong. A misfiled document is low. A wrong number sent to a client is high.</td></tr>
+        <tr><td>Automatable?</td><td>Yes / Partially / No</td><td>Could AI do this with clear rules? "Partially" is a real answer. Many tasks split into an automatable core and a human judgment step.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The math: minutes per week and priority score</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>Weekly time recoverable</h4>
+      <p>Convert each task to minutes per week using a frequency multiplier, then sum:</p>
+      <ul>
+        <li>Daily: minutes &times; 5</li>
+        <li>Weekly: minutes &times; 1</li>
+        <li>Monthly: minutes &times; 0.25</li>
+        <li>Quarterly: minutes &times; 0.08</li>
+      </ul>
+      <p>Example: email triage at 45 min daily is 225 min/week. Monthly reporting at 240 min is 60 min/week. The total across 15 to 20 tasks is usually a surprise. Most operators find 5 to 10 recoverable hours per week on the first pass.</p>
+    </div>
+    <div class="card">
+      <h4>Priority score</h4>
+      <p>Score each task: minutes per occurrence multiplied by a risk multiplier.</p>
+      <ul>
+        <li>Low risk: &times; 3</li>
+        <li>Medium risk: &times; 2</li>
+        <li>High risk: &times; 1</li>
+      </ul>
+      <p>Sort descending. High-time, low-risk tasks rise to the top, which is exactly where you want to start. A 60-minute low-risk task (score 180) outranks a 90-minute high-risk task (score 90). That is the point. Risk discounts time.</p>
+    </div>
+  </div>
+
+  <h3>The output: your opportunity report</h3>
+  <p>When the worksheet is full, compile it into a report. This is the document your sprint pulls from. Format it like this:</p>
+  <pre><code># Automation Opportunity Audit
+
+Date: 2026-08-14
+Total time recoverable: ~410 minutes/week (6.8 hours/week)
+
+| Task                        | Frequency | Time (min) | Risk   | Automatable? |
+|-----------------------------|-----------|------------|--------|--------------|
+| Email triage and drafting   | Daily     | 45         | Low    | Yes          |
+| Document filing and naming  | Daily     | 30         | Low    | Yes          |
+| Invoice processing          | Weekly    | 120        | Medium | Partially    |
+| Monthly reporting           | Monthly   | 240        | Low    | Yes          |
+
+## Priority Order (High time + Low risk first)
+
+1. **Monthly reporting**, 240 min/monthly, Low risk
+2. **Invoice processing**, 120 min/weekly, Medium risk
+3. **Email triage and drafting**, 45 min/daily, Low risk
+4. **Document filing and naming**, 30 min/daily, Low risk</code></pre>
+  <p>Save the report in your vault at <code>05-Automations/opportunity-audit.md</code>. You will reference it in Part 3.</p>
+
+  <div class="card">
+    <h3>You are done with the audit when</h3>
+    <ul class="check">
+      <li>You have listed at least 15 routine tasks with time estimates</li>
+      <li>Each task has a risk level and an automatable assessment</li>
+      <li>You have identified your top 5 automation targets (high time, low risk)</li>
+      <li>You know how many hours per week you could recover</li>
+      <li>The report is saved in your vault at <code>05-Automations/opportunity-audit.md</code></li>
+    </ul>
+  </div>
+
+  <!-- ============ PART 2: APPROVAL FRAMEWORK ============ -->
+  <h2>Part 2: The approval framework</h2>
+  <p>Every automated task needs clear rules about what AI can do without asking. Write those rules down before you build anything. This document becomes part of your governance. AI references it before acting, and you reference it when something goes wrong and you need to know whether the system behaved as designed.</p>
+  <p>Every task falls into exactly one of three categories.</p>
+
+  <h3>The three categories</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>1. Auto-Execute</h4>
+      <p><strong>Decision rule:</strong> AI does it immediately. No human review. Low-risk, high-frequency tasks only. Ask: if this runs wrong 50 times before I notice, can I recover in under an hour? If yes, it qualifies. If no, it does not.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Filing documents into correct folders</li>
+        <li>Tagging emails</li>
+        <li>Generating summaries</li>
+        <li>Updating logs</li>
+      </ul>
+      <p>Everything here is internal, reversible, and cheap to correct. Nothing leaves your systems without a human touching it first.</p>
+    </div>
+    <div class="card">
+      <h4>2. Draft and Wait</h4>
+      <p><strong>Decision rule:</strong> AI prepares the output. A human reviews and approves before it goes anywhere. This is the default category for anything that reaches another person. The work still gets done in seconds. You keep the last word.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Email responses</li>
+        <li>Client communications</li>
+        <li>Document drafts</li>
+      </ul>
+      <p>When in doubt between Auto-Execute and Draft and Wait, choose Draft and Wait. You can always promote a task later, after it has earned trust. Demoting one after a bad send is much more expensive.</p>
+    </div>
+    <div class="card">
+      <h4>3. Never Automate</h4>
+      <p><strong>Decision rule:</strong> Human only. AI must not act on these, even to draft-and-send with approval. It can research, summarize, and prepare background material, but the action itself stays in human hands. The test: could a single wrong execution cost real money, bind the business, or damage a person?</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Financial transactions</li>
+        <li>Legal commitments</li>
+        <li>Personnel decisions</li>
+        <li>Sensitive communications</li>
+      </ul>
+      <p>This list should feel conservative. That is by design. The Never Automate category is what lets you be aggressive everywhere else.</p>
+    </div>
+    <div class="card">
+      <h4>Escalation rules</h4>
+      <p>Categories cover the known cases. Escalation rules cover everything else:</p>
+      <ul>
+        <li>If AI is uncertain about classification, default to Draft and Wait</li>
+        <li>If AI encounters information marked "private", stop and ask</li>
+        <li>If the task involves money, legal commitments, or personnel, Never Automate</li>
+        <li>If the output will be seen by someone outside the organization, Draft and Wait at minimum</li>
+      </ul>
+      <p>These four rules do the heavy lifting. They mean an unlisted task never silently defaults to full autonomy.</p>
+    </div>
+  </div>
+
+  <h3>Build your rule list</h3>
+  <p>Now go through your opportunity audit and assign every task a level. Start with these three seed rules and extend from there:</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Task</th><th>Level</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Filing documents into correct folders</td><td><span class="tag">Auto-Execute</span></td></tr>
+        <tr><td>Drafting email responses</td><td><span class="tag">Draft and Wait</span></td></tr>
+        <tr><td>Sending payments</td><td><span class="tag">Never Automate</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Keep adding rules until every task from your audit has a level, and aim for at least 5 rules in each category. If your Never Automate column is empty, you have not thought hard enough about failure modes. If your Auto-Execute column is empty, you are leaving easy time savings on the table.</p>
+
+  <h3>The framework document</h3>
+  <p>Compile the rules into a single document. This exact structure works:</p>
+  <pre><code># Approval Framework
+
+Last updated: 2026-08-14
+
+## Auto-Execute (AI does it without asking)
+
+- Filing documents into correct folders
+- Tagging incoming emails by client and property
+- Generating meeting summaries from transcripts
+- Updating the task log after completed work
+- Renaming files to the standard naming convention
+
+## Draft and Wait (AI prepares it, human reviews before sending)
+
+- Drafting email responses
+- Client communications of any kind
+- Document drafts that leave the organization
+- Invoice drafts before they are issued
+- Monthly report drafts before distribution
+
+## Never Automate (Human only. AI must not act.)
+
+- Sending payments
+- Signing or committing to contract terms
+- Hiring, firing, or disciplinary decisions
+- Communications about a dispute or complaint
+- Anything involving confidential personnel information
+
+---
+
+## Escalation Rules
+
+- If AI is uncertain about classification, default to Draft and Wait
+- If AI encounters information marked "private", stop and ask
+- If the task involves money, legal commitments, or personnel, Never Automate
+- If the output will be seen by someone outside the organization, Draft and Wait minimum</code></pre>
+  <p>Save it as <code>00-System/approval-framework.md</code>. It lives in your system folder, not your automations folder, because it governs everything, not one workflow.</p>
+
+  <div class="callout">
+    <strong>Test the framework before you trust it.</strong>
+    <p>Tell your AI about the framework, then run a live test: ask it to do a task from your Never Automate list. It should refuse and cite the framework. If it complies, your instructions are not binding yet. Fix that before you ship a single automation.</p>
+  </div>
+
+  <div class="card">
+    <h3>You are done with the framework when</h3>
+    <ul class="check">
+      <li>Every task from your opportunity audit has an approval level assigned</li>
+      <li>You have at least 5 rules in each category (Auto-Execute, Draft and Wait, Never Automate)</li>
+      <li>The escalation rules are documented, so you know what happens when AI is uncertain</li>
+      <li>The framework is saved in your vault and referenced in your governance rules</li>
+      <li>You have told your AI about the framework and tested it: you asked it to do a "never" task, and it refused</li>
+    </ul>
+  </div>
+
+  <!-- ============ PART 3: FIRST SPRINT ============ -->
+  <h2>Part 3: Your first automation sprint</h2>
+  <p>One week. Three automations. Measurable time saved. This sprint takes your top opportunities from concept to working automation with verified results. Three is the floor for a real sprint and five is the ceiling. Past five, testing gets sloppy and errors slip through. Run the six steps in order. Each one has a concrete deliverable, and each deliverable feeds the next step.</p>
+
+  <div class="card">
+    <h3>Step 1: Pick your top 3</h3>
+    <p>From your opportunity audit, choose the 3 highest-scoring tasks: high time saved, low risk. These are your sprint targets. Resist the urge to grab something ambitious from the middle of the list. The point of the first sprint is a clean win that builds the habit.</p>
+    <p><strong>Deliverable:</strong> 3 specific tasks written down with expected time savings.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 2: Write the agent instructions</h3>
+    <p>For each task, write clear instructions that AI can follow. Every instruction document needs four parts:</p>
+    <ul>
+      <li>What triggers the task (a new email arrives, a file lands in the inbox folder, Monday at 8am)</li>
+      <li>What the output should look like (format, length, naming, destination)</li>
+      <li>What to do if uncertain (per your escalation rules: default to Draft and Wait, or stop and ask)</li>
+      <li>What success looks like (so both you and the AI can tell a good run from a bad one)</li>
+    </ul>
+    <p><strong>Deliverable:</strong> 3 instruction documents saved in <code>05-Automations/agent-instructions/</code>.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 3: Test in draft mode</h3>
+    <p>Run each automation in Draft and Wait mode first, even if you classified it as Auto-Execute. Review 5 to 10 outputs manually. Ask of each one: is it correct? Is it consistent with the last one? Is anything missing? Do not skip this because the first two outputs looked fine. Errors cluster in the edge cases, and edge cases show up around output six, not output one.</p>
+    <p><strong>Deliverable:</strong> 5 to 10 test outputs reviewed for each automation, with notes on accuracy.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 4: Fix and refine</h3>
+    <p>Based on your test results, refine the instructions. The common fixes, in order of how often they are needed:</p>
+    <ul>
+      <li>More specific examples in the instructions</li>
+      <li>Clearer edge case handling</li>
+      <li>Better output formatting</li>
+    </ul>
+    <p><strong>Deliverable:</strong> updated agent instructions reflecting lessons from testing.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 5: Promote to production</h3>
+    <p>Once you are confident, which means 5 or more correct outputs in a row, promote each automation to the approval level you assigned in your framework. Auto-Execute tasks now run without review. Draft and Wait tasks still get your approval on every output. Nothing gets promoted above the level your framework assigned, no matter how well it tested.</p>
+    <p><strong>Deliverable:</strong> 3 automations running at their assigned approval level.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 6: Measure results</h3>
+    <p>After 1 week in production, calculate actual time saved. Compare it to the estimate from your audit. The gap between estimate and reality is useful data for your next sprint. Document any errors or issues in your correction log, along with what you changed in response.</p>
+    <p><strong>Deliverable:</strong> time-saved measurement, plus any corrections logged in <code>06-Maintenance/correction-log.md</code>.</p>
+  </div>
+
+  <div class="card">
+    <h3>You are done with the sprint when</h3>
+    <ul class="check">
+      <li>3 automations are running at their assigned approval level</li>
+      <li>You have measured actual time saved over 1 week</li>
+      <li>Any errors have been logged and instructions refined</li>
+      <li>You can articulate: "AI handles X, Y, Z for me. It saves me N hours per week."</li>
+      <li>You are confident enough to add 2 to 3 more automations next sprint</li>
+    </ul>
+  </div>
+
+  <!-- ============ LAYER COMPLETE ============ -->
+  <h2>Layer 4 complete?</h2>
+  <p>If you have audited your opportunities, built your approval framework, and completed your first sprint with measurable results, this layer is done. You now have working automations, written rules that govern them, and a repeatable sprint process for adding more. That last part matters most: the first sprint is a template, not a one-time event. Run it again next month with the next 2 to 3 tasks from your audit.</p>
+  <p>Next comes the layer that keeps all of this honest over time: operations and governance. Automations drift. Instructions go stale. Layer 5 is how you catch it.</p>
+
+  <div class="pnav">
+    <a href="layer-3.html">← Layer 3: Personal Intelligence Layer</a>
+    <a href="layer-5.html">Layer 5: Operations and Governance →</a>
+  </div>
+</main>
+<footer class="site">Groundwork. The AI readiness program by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+</body>
+</html>

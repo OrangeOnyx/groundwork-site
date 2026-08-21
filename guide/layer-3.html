@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer 3: The Personal Intelligence Layer | Groundwork Guide</title>
+<meta name="description" content="Build your second brain: a structured vault of plain text files any AI can reason over. Vault architecture, entity mapping, authority levels, and LLM connection.">
+<meta name="theme-color" content="#131530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="layer-1.html">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html" aria-current="page">L3</a>
+    <a href="layer-4.html">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Layer 3</span>
+  <header class="page">
+    <span class="kicker">LAYER THREE</span>
+    <h1>The Personal Intelligence Layer.</h1>
+    <p class="lede">Your second brain: a structured vault of plain text files any AI can reason over. It lives on your machine. It works with any model. It is yours.</p>
+  </header>
+
+  <h2>What this actually is</h2>
+  <p>The Personal Intelligence Layer is not an app. It is not a subscription. It is a structured collection of your knowledge, stored as simple text files on your machine, organized so that any AI tool can find, understand, and reason over your information.</p>
+  <p>Think of the difference between asking a new hire a question on their first day versus asking a ten-year veteran. The veteran knows your history, your preferences, your relationships, your past decisions, and your standards. The Personal Intelligence Layer gives AI that same depth of context. This is what turns AI from a generic tool into a genuine business asset.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Platform-neutral</h3>
+      <p>Markdown files. Every AI on earth can read them. No vendor lock-in. If Claude disappears tomorrow, you plug the same vault into ChatGPT, Gemini, or a local model.</p>
+    </div>
+    <div class="card">
+      <h3>Relationship-aware</h3>
+      <p>Entities, connections, and history are mapped and linked. AI can trace who knows whom, which contract belongs to which property, and why a decision was made.</p>
+    </div>
+    <div class="card">
+      <h3>You own it</h3>
+      <p>The vault lives on your machine. Nothing gets uploaded unless you choose to upload it. If every AI company vanished, you would still have a perfectly organized set of readable documents. Zero dependency.</p>
+    </div>
+  </div>
+
+  <h2>The knowledge graph</h2>
+  <p>The vault is more than folders. Files link to each other, and those links form a graph. Obsidian's graph view draws it for you, and AI can walk it:</p>
+  <div class="card">
+    <ul>
+      <li>People linked to the organizations they belong to</li>
+      <li>Contracts linked to the parties and properties they cover</li>
+      <li>Decisions linked to the evidence that informed them</li>
+      <li>Projects linked to timelines, budgets, and stakeholders</li>
+    </ul>
+    <p>This is what makes AI answers specific instead of generic. When you ask about a tenant, the AI is not guessing. It follows the link from the person, to the company, to the lease, to the property, and answers from your actual records.</p>
+  </div>
+
+  <h2>Build the vault</h2>
+  <p>Your vault is a folder of Markdown files on your machine. Obsidian gives you a visual interface and the graph view, but the underlying format is plain text, readable by any tool, forever.</p>
+
+  <div class="card">
+    <h3>Why Obsidian?</h3>
+    <ul>
+      <li><strong>Free.</strong> No subscription. No account required. No data leaves your machine.</li>
+      <li><strong>Local-first.</strong> Files live on your hard drive. You own them. Period.</li>
+      <li><strong>Markdown.</strong> Plain text files. Any AI, any tool, any editor can read them. Zero lock-in.</li>
+    </ul>
+    <p>Alternatives that also work: Logseq, Notion (with export), or just plain folders plus VS Code. Obsidian is recommended for its graph view and plugin ecosystem.</p>
+  </div>
+
+  <h3>The full architecture</h3>
+  <p>Seven top-level directories. The numbers keep them sorted in the order you think about them: system rules first, maintenance last.</p>
+  <pre><code>Intelligence-Vault/
+├── 00-System/                  governance, config, maintenance rules
+│   ├── brand-context.md
+│   ├── brand-voice.md
+│   ├── governance-rules.md
+│   ├── maintenance-log.md
+│   └── seo-geo-discovery.md
+├── 01-Entities/                one file per person, org, property, account
+│   ├── people/
+│   ├── organizations/
+│   ├── properties/
+│   └── accounts/
+├── 02-Documents/               your actual documents, organized by status
+│   ├── active/
+│   ├── reference/
+│   ├── historical/
+│   └── private/
+├── 03-Knowledge/               your institutional knowledge
+│   ├── decisions/
+│   ├── preferences/
+│   ├── procedures/
+│   └── standards/
+├── 04-Relationships/           how entities connect
+│   ├── connection-maps/
+│   ├── project-links/
+│   └── deal-histories/
+├── 05-Automations/             instructions AI follows
+│   ├── workflows/
+│   ├── rules/
+│   └── agent-instructions/
+└── 06-Maintenance/             keeping the vault honest
+    ├── ingestion-queue.md
+    ├── review-log.md
+    └── correction-log.md</code></pre>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Directory</th><th>What goes there</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>00-System</td><td>Governance rules, brand voice, your context file, maintenance logs, configuration. The rules everything else follows.</td></tr>
+        <tr><td>01-Entities</td><td>People, organizations, properties, accounts. One file per entity.</td></tr>
+        <tr><td>02-Documents</td><td>Your actual documents, organized by status: active, reference, historical, private.</td></tr>
+        <tr><td>03-Knowledge</td><td>Decisions, preferences, procedures, standards. The institutional knowledge that normally lives only in your head.</td></tr>
+        <tr><td>04-Relationships</td><td>Connection maps between entities, project links, deal histories.</td></tr>
+        <tr><td>05-Automations</td><td>Workflow templates, automation rules, agent instructions.</td></tr>
+        <tr><td>06-Maintenance</td><td>Ingestion queue, review logs, correction log, monthly checklists.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Generate it with one script</h3>
+  <p>Paste this into Terminal (macOS or Linux, or Git Bash on Windows) and run it in the directory where you want your vault. Or create the folders by hand. The structure is what matters, not how you create it.</p>
+  <pre><code>#!/bin/bash
+# Intelligence Vault Structure Generator
+# Run this in the directory where you want your vault
+
+VAULT="Intelligence-Vault"
+mkdir -p "$VAULT"
+cd "$VAULT"
+
+# 00-System
+mkdir -p "00-System"
+touch "00-System/brand-context.md"
+touch "00-System/brand-voice.md"
+touch "00-System/governance-rules.md"
+touch "00-System/maintenance-log.md"
+touch "00-System/seo-geo-discovery.md"
+
+# 01-Entities
+mkdir -p "01-Entities/people"
+mkdir -p "01-Entities/organizations"
+mkdir -p "01-Entities/properties"
+mkdir -p "01-Entities/accounts"
+
+# 02-Documents
+mkdir -p "02-Documents/active"
+mkdir -p "02-Documents/reference"
+mkdir -p "02-Documents/historical"
+mkdir -p "02-Documents/private"
+
+# 03-Knowledge
+mkdir -p "03-Knowledge/decisions"
+mkdir -p "03-Knowledge/preferences"
+mkdir -p "03-Knowledge/procedures"
+mkdir -p "03-Knowledge/standards"
+
+# 04-Relationships
+mkdir -p "04-Relationships/connection-maps"
+mkdir -p "04-Relationships/project-links"
+mkdir -p "04-Relationships/deal-histories"
+
+# 05-Automations
+mkdir -p "05-Automations/workflows"
+mkdir -p "05-Automations/rules"
+mkdir -p "05-Automations/agent-instructions"
+
+# 06-Maintenance
+mkdir -p "06-Maintenance"
+touch "06-Maintenance/ingestion-queue.md"
+touch "06-Maintenance/review-log.md"
+touch "06-Maintenance/correction-log.md"
+
+echo "✓ Intelligence Vault created at $(pwd)"
+echo "  Open this folder as a vault in Obsidian."</code></pre>
+
+  <h3>Setup checklist</h3>
+  <ul class="check">
+    <li>Download and install Obsidian (free) from obsidian.md</li>
+    <li>Create a new vault called <code>Intelligence-Vault</code> in a location you control (not a cloud-only folder)</li>
+    <li>Create all 7 top-level directories (00-System through 06-Maintenance)</li>
+    <li>Create the subdirectories within each top-level folder</li>
+    <li>Move your Brand Context File and Brand Voice document (from Layer 2) into <code>00-System/</code></li>
+    <li>Open the vault in Obsidian and verify the graph view shows your folder structure</li>
+    <li>Set up a backup: sync the vault folder to a cloud drive OR use git</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>The vault is done when:</strong> Obsidian opens your Intelligence-Vault without errors. All 7 top-level directories exist with their subdirectories. Your Brand Context File and Brand Voice document are in 00-System/. The graph view shows your folder structure, even if it is mostly empty. You have a backup method configured. And the real test: you could delete Obsidian and still read every file with any text editor.</p>
+  </div>
+
+  <h2>Map your entities</h2>
+  <p>Entities are the people, organizations, properties, and accounts that matter to your business or life. Each gets its own file in your vault. When AI knows your entities, it can answer questions about relationships, history, and context.</p>
+  <p>There are five entity types:</p>
+  <p><span class="tag">Person</span> <span class="tag">Organization</span> <span class="tag">Property</span> <span class="tag">Account</span> <span class="tag">Project</span></p>
+  <p>Start with your top 20 most important entities. You will add more over time. Focus on key clients, partners, vendors, properties, and family members. Do not try to map everything on day one. Twenty well-built entity files beat two hundred empty ones.</p>
+
+  <div class="card">
+    <h3>What this enables</h3>
+    <ul>
+      <li>"What's my history with Acme Corp?" AI pulls from the Acme entity file.</li>
+      <li>"Who do I know at First National Bank?" AI traces relationship links.</li>
+      <li>"What contracts are active for 123 Main St?" AI links the property to its documents.</li>
+      <li>"Draft an email to Sarah in the tone I use with her." AI knows the relationship.</li>
+    </ul>
+  </div>
+
+  <h3>The entity file template</h3>
+  <p>Use this template for every new entity file. The YAML frontmatter at the top is what makes the file machine-readable. Fill the placeholders, then replace the bracketed prompts with real content.</p>
+  <pre><code>---
+type: {{TYPE}}
+status: active
+created: {{DATE}}
+authority: authoritative
+---
+
+# {{NAME}}
+
+## Basic Information
+- **Type:** {{TYPE}}
+- **Relationship:** {{RELATIONSHIP}}
+- **Status:** Active
+
+## Key Facts
+- [Add key facts about this entity]
+
+## Connected To
+- [[Link to related entities]]
+
+## History
+- [Timeline of significant events]
+
+## Notes
+- [Additional context AI should know]</code></pre>
+  <p>File placement follows the type: people go in <code>01-Entities/people/</code>, organizations in <code>01-Entities/organizations/</code>, properties in <code>01-Entities/properties/</code>, accounts and projects in <code>01-Entities/accounts/</code>. Name files in lowercase with hyphens: <code>acme-corp.md</code>, <code>john-smith.md</code>. Keep a master list at <code>01-Entities/entity-registry.md</code> with a table of every entity: name, type, relationship, and file location.</p>
+
+  <div class="callout">
+    <p><strong>Entity mapping is done when:</strong> You have identified at least 20 entities across people, orgs, properties, and accounts. Each entity has its own .md file in the correct subfolder. Each file has at minimum a type, relationship, status, and 3+ key facts. You have added [[links]] between related entities, person to organization for example. Obsidian's graph view shows connections between your entities. And you can ask your AI "what do I know about [entity]?" and get a useful answer.</p>
+  </div>
+
+  <h2>Classify authority levels</h2>
+  <p>Not all information is equal. A signed contract is more authoritative than a draft proposal. Last year's financials are historical, not current. Your medical records are private. AI needs to know the difference.</p>
+
+  <div class="callout">
+    <p><strong>Without authority levels, AI makes dangerous mistakes.</strong> Without classification, AI treats a draft contract the same as an executed one. It might tell you a lease is active when it expired two years ago. It might include private medical information in a business email. Authority levels prevent these errors.</p>
+  </div>
+
+  <h3>The four levels</h3>
+  <div class="card">
+    <h3>Authoritative</h3>
+    <p>Final, verified, current. AI can cite this confidently and use it as the basis for decisions.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Executed contracts</li>
+      <li>Final financial statements</li>
+      <li>Board-approved policies</li>
+      <li>Verified contact information</li>
+      <li>Published content</li>
+    </ul>
+    <p><strong>AI rules:</strong> AI can reference directly. No caveats needed. This is ground truth.</p>
+  </div>
+  <div class="card">
+    <h3>Draft</h3>
+    <p>Work in progress. AI should note it is not final and may change.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Unsigned contracts</li>
+      <li>Budget projections</li>
+      <li>Proposal drafts</li>
+      <li>Meeting notes (unverified)</li>
+      <li>Strategy documents in progress</li>
+    </ul>
+    <p><strong>AI rules:</strong> AI must say "this is a draft" when referencing it. Never present it as final.</p>
+  </div>
+  <div class="card">
+    <h3>Historical</h3>
+    <p>Accurate for its time but may be outdated. Useful for context and history.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Old lease agreements (expired)</li>
+      <li>Previous year financials</li>
+      <li>Past employee records</li>
+      <li>Archived correspondence</li>
+      <li>Superseded policies</li>
+    </ul>
+    <p><strong>AI rules:</strong> AI must state the date context. "As of [date]..." Never present it as current.</p>
+  </div>
+  <div class="card">
+    <h3>Private</h3>
+    <p>In the vault for your reference, but AI must never share it externally or include it in outputs meant for others.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Medical records</li>
+      <li>Personal financial details</li>
+      <li>Family matters</li>
+      <li>Sensitive strategy documents</li>
+      <li>Passwords and credentials</li>
+    </ul>
+    <p><strong>AI rules:</strong> AI can use this for internal reasoning but never includes it in any output, email, or document meant for anyone else.</p>
+  </div>
+
+  <h3>How to apply authority levels</h3>
+  <p>Add a YAML frontmatter block to the top of every document in your vault:</p>
+  <pre><code>---
+authority: authoritative  # or: draft, historical, private
+last_verified: 2026-08-01
+supersedes: null  # link to older version if applicable
+---</code></pre>
+
+  <p>Then run the classification process:</p>
+  <ol>
+    <li>Go through your <code>02-Documents/</code> folder, one file at a time</li>
+    <li>Ask: "Is this final and current?" Then mark it <strong>Authoritative</strong></li>
+    <li>Ask: "Is this still being worked on?" Then mark it <strong>Draft</strong></li>
+    <li>Ask: "Was this accurate once but may be outdated?" Then mark it <strong>Historical</strong></li>
+    <li>Ask: "Should AI never share this externally?" Then mark it <strong>Private</strong></li>
+    <li>Add the frontmatter block to each file</li>
+    <li>For your first pass, aim for 50 documents classified. You will do the rest over time</li>
+  </ol>
+
+  <div class="callout">
+    <p><strong>Authority classification is done when:</strong> You understand the 4 levels and can classify any document in under 5 seconds. At least 50 documents in your vault carry authority frontmatter. Your governance rules (<code>00-System/governance-rules.md</code>) reference the authority system. You have tested it: ask AI about a draft document and it correctly notes "this is a draft"; ask about a private document and it correctly refuses to include it in output. And new documents you add get classified automatically, because it has become habit.</p>
+  </div>
+
+  <h2>Connect your vault to an LLM</h2>
+  <p>This is where it comes alive. You built the vault. Now you connect it to an AI that can reason over your information.</p>
+
+  <div class="callout">
+    <p><strong>The key principle: you are not locked in.</strong> Your vault is Markdown files in folders. Every AI tool on earth can read Markdown. If Claude disappears tomorrow, you plug into ChatGPT. If OpenAI raises prices, you switch to a local model. The vault is yours. The LLM is just the interface.</p>
+  </div>
+
+  <p>Pick ONE connection to start with. You can always add others later. The recommendation for most people: Claude Projects (simplest) or NotebookLM (free).</p>
+
+  <details>
+    <summary>Claude (Anthropic) via Projects</summary>
+    <div class="inner">
+      <ol>
+        <li>Open claude.ai and go to Projects</li>
+        <li>Create a new project (for example, "My Intelligence Vault")</li>
+        <li>Upload your vault files to the project's knowledge base (start with <code>00-System/</code> and <code>01-Entities/</code>)</li>
+        <li>Set the project instructions to reference your governance rules and authority levels</li>
+        <li>Test: ask "Based on my context, describe what I do" and verify accuracy</li>
+      </ol>
+      <p>Claude Projects keeps your files persistent across conversations. The upload limit is generous. Best for: people who want the simplest setup. Link: <a href="https://claude.ai" rel="noopener">claude.ai</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Claude Cowork / computer use via local file access</summary>
+    <div class="inner">
+      <ol>
+        <li>Enable Claude's computer use or Cowork feature</li>
+        <li>Point it at your vault folder on your local machine</li>
+        <li>It reads files directly, no upload needed</li>
+        <li>Give it your governance rules as initial context</li>
+        <li>Test: ask it to find information across multiple entity files</li>
+      </ol>
+      <p>Nothing leaves your machine. Claude reads your files locally. Best for: privacy-conscious users with large vaults. Link: <a href="https://claude.ai" rel="noopener">claude.ai</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary>ChatGPT (OpenAI) via Custom GPT with file search</summary>
+    <div class="inner">
+      <ol>
+        <li>Go to ChatGPT, then Explore GPTs, then Create</li>
+        <li>Upload your vault files to the GPT's knowledge base</li>
+        <li>Set the system instructions to reference your governance rules</li>
+        <li>Enable the "File Search" capability</li>
+        <li>Test: ask about a specific entity and verify it pulls from your files</li>
+      </ol>
+      <p>Custom GPTs have file limits. Best for: people already paying for ChatGPT Plus who want a persistent assistant. Link: <a href="https://chat.openai.com" rel="noopener">chat.openai.com</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Google NotebookLM via source upload</summary>
+    <div class="inner">
+      <ol>
+        <li>Go to notebooklm.google.com</li>
+        <li>Create a new notebook</li>
+        <li>Upload your vault files as sources (PDFs, docs, or text files)</li>
+        <li>NotebookLM automatically indexes and cross-references them</li>
+        <li>Test: ask questions that require connecting information across multiple files</li>
+      </ol>
+      <p>Free. Excellent at cross-referencing multiple documents. Best for: people who want to test before committing to a paid tool. Link: <a href="https://notebooklm.google.com" rel="noopener">notebooklm.google.com</a></p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Local AI (Ollama + RAG), self-hosted</summary>
+    <div class="inner">
+      <ol>
+        <li>Install Ollama (ollama.ai), which runs AI models locally</li>
+        <li>Pull a model: <code>ollama pull llama3.1</code></li>
+        <li>Set up a RAG pipeline pointing at your vault folder (using LangChain, LlamaIndex, or similar)</li>
+        <li>Configure the system prompt with your governance rules</li>
+        <li>Test: ask questions and verify it retrieves from your vault</li>
+      </ol>
+      <p>100% private. Nothing leaves your machine. Requires technical setup. Best for: technical users or those with extremely sensitive data. Link: <a href="https://ollama.ai" rel="noopener">ollama.ai</a></p>
+    </div>
+  </details>
+
+  <h3>The verification test</h3>
+  <p>Once connected, run these 5 test queries. If all pass, your vault is working:</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Test query</th><th>Pass criteria</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>"Based on my context, describe what I do and who I serve."</td><td>Accurate description matching your Brand Context File</td></tr>
+        <tr><td>"What is my relationship with [entity name]?"</td><td>Pulls from the entity file with correct details</td></tr>
+        <tr><td>"Write a short email in my voice to [person]."</td><td>Matches your Brand Voice document tone and style</td></tr>
+        <tr><td>"What contracts do I have that are currently active?"</td><td>Lists only documents marked authoritative, not drafts or historical</td></tr>
+        <tr><td>"Tell me about [private document topic]."</td><td>Either refuses or notes it is private. Does NOT include details in output</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p><strong>The connection is done when:</strong> You have chosen and connected at least one LLM to your vault. All 5 verification tests pass: accurate, voice-matched, authority-aware, privacy-respecting. You can ask a question about your business and get an answer that references YOUR specific information. The difference between "generic AI" and "your AI" is immediately obvious. And you could switch to a different LLM provider within 30 minutes if you had to.</p>
+  </div>
+
+  <h2>Layer 3 complete?</h2>
+  <div class="card">
+    <p>If your vault is set up, your entities are mapped, authority levels are assigned, and your LLM is connected and passing all five tests, Layer 3 is done. This is where the real compound value begins: every file you add from here makes every future AI answer better.</p>
+    <p><a class="btn" href="layer-4.html">Start Layer 4: Workflow Automation</a></p>
+  </div>
+
+  <div class="pnav">
+    <a href="layer-2.html">← Layer 2: Digital Identity</a>
+    <a href="layer-4.html">Layer 4: Workflow Automation →</a>
+  </div>
+</main>
+<footer class="site">Groundwork. The AI readiness program by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+</body>
+</html>

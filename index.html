@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groundwork — The AI Readiness System by Adam Abdalla</title>
+<meta name="description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later. Lafayette, Louisiana.">
+<meta name="theme-color" content="#131530">
+<!-- DEPLOY STEP: patch og:url and og:image with the live absolute URL before zipping -->
+<meta property="og:title" content="Groundwork — The AI Readiness System by Adam Abdalla">
+<meta property="og:description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/">
+<meta property="og:image" content="assets/hero-ending.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://adamabdalla.com/#adamabdalla",
+  "name": "Adam Abdalla",
+  "jobTitle": ["Founder", "Commercial Real Estate Operator"],
+  "description": "Commercial real estate operator building AI-driven business systems with a focus on governance and real-world implementation. Creator of Groundwork — the free, ungated AI readiness system for owners and operators.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Lafayette", "addressRegion": "LA", "addressCountry": "US"},
+  "email": "adam@adamabdalla.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/adam-abdalla-54206211/",
+    "https://x.com/adamabdalla"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Where does my data go?", "acceptedAnswer": {"@type": "Answer", "text": "Into folders on your machine. The vault is plain text files you own. Nothing is uploaded anywhere unless you choose it, and the governance layer writes that choice down."}},
+    {"@type": "Question", "name": "I can't risk made-up answers.", "acceptedAnswer": {"@type": "Answer", "text": "Neither can we. The vault gives AI your verified documents to cite, and the approval framework keeps a human sign-off on anything that matters. AI drafts. You decide."}},
+    {"@type": "Question", "name": "I'm not technical.", "acceptedAnswer": {"@type": "Answer", "text": "You don't need to be. If you can name a folder and fill in a form, you can do this. The program was written for owners, not engineers."}},
+    {"@type": "Question", "name": "I don't have time for another project.", "acceptedAnswer": {"@type": "Answer", "text": "The program runs in ninety days alongside your normal work, and it gives hours back: owners typically take three to five recurring tasks off their plate by the end."}},
+    {"@type": "Question", "name": "What happens when the AI companies change everything again?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing happens to you. Your vault is plain text on your machine. If every AI company disappeared tomorrow, you would still own a perfectly organized set of readable files. Zero dependency."}},
+    {"@type": "Question", "name": "Is this another course?", "acceptedAnswer": {"@type": "Answer", "text": "No. Courses end with notes. This ends with a working system: files organized, context written, vault built, and your first automations running under rules you set."}}
+  ]
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --canvas:#131530;
+  --panel:#1B1E40;
+  --accent:#8FA3FF;
+  --accent-hover:#6F87F2;
+  --accent-muted:#39406E;
+  --text-secondary:#A9AECC;
+  --text-primary:#EEF0FA;
+  --btn-ink:#10122A;
+  --display:'Libre Caslon Display',Georgia,serif;
+  --body:'Public Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-inout:cubic-bezier(.77,0,.175,1);
+  --tshadow:0 1px 2px rgba(7,8,22,.95),0 3px 12px rgba(7,8,22,.78),0 10px 44px rgba(7,8,22,.8);
+}
+/* ============ base ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden;overflow-x:clip}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--text-primary);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--btn-ink);padding:.6em 1em;z-index:100;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.005em}
+.kicker{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.24em;color:var(--accent);text-transform:uppercase}
+.lede{color:var(--text-secondary)}
+.btn{display:inline-block;background:var(--accent);color:var(--btn-ink);font-family:var(--body);font-weight:600;font-size:.95rem;padding:.85em 1.7em;border-radius:10px;border:0;cursor:pointer;transition:background .18s var(--ease-out),transform .18s var(--ease-out)}
+.btn:hover{background:var(--accent-hover)}
+.btn:active{transform:scale(.97)}
+.btn-ghost{background:transparent;color:var(--text-primary);border:1px solid var(--accent-muted)}
+.btn-ghost:hover{background:rgba(143,163,255,.08)}
+@media (pointer:coarse){.btn,nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
+/* ============ paused-tab + reduced motion ============ */
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+/* ============ environment motes ============ */
+.motes{position:fixed;inset:0;pointer-events:none;z-index:0}
+.motes span{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.07;animation:drift 90s linear infinite}
+.motes span:nth-child(2n){width:2px;height:2px;animation-duration:120s;animation-delay:-40s;opacity:.05}
+.motes span:nth-child(3n){animation-duration:75s;animation-delay:-22s;opacity:.09}
+@keyframes drift{
+  0%{transform:translate3d(0,0,0)}
+  25%{transform:translate3d(2.2vw,12vh,0)}
+  50%{transform:translate3d(-1.4vw,26vh,0)}
+  75%{transform:translate3d(1.8vw,40vh,0)}
+  100%{transform:translate3d(0,54vh,0)}
+}
+/* ============ nav ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:1.6rem;padding:.8rem clamp(1rem,4vw,2.6rem);background:rgba(19,21,48,.72);backdrop-filter:blur(12px);border-bottom:1px solid rgba(143,163,255,.12)}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--text-primary)}
+.brand svg{width:26px;height:26px}
+.brand b{font-family:var(--body);font-weight:600;letter-spacing:.22em;font-size:.82rem}
+nav .links{margin-left:auto;display:flex;align-items:baseline;gap:1.5rem}
+nav .links a{color:var(--text-secondary);font-size:.88rem;transition:color .18s var(--ease-out)}
+nav .links a:hover{color:var(--text-primary)}
+nav .links a.cta{color:var(--btn-ink);background:var(--accent);padding:.5em 1.1em;border-radius:8px;font-weight:600;transition:background .18s var(--ease-out)}
+nav .links a.cta:hover{background:var(--accent-hover)}
+@media (max-width:720px){nav .links a:not(.cta){display:none}}
+/* ============ hero ============ */
+.hero{position:relative;height:1300vh}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden}
+.poster{position:absolute;inset:0;background-size:cover;background-position:center}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s var(--ease-out);will-change:transform;transform:translateZ(0)}
+.stage.video-ready video{opacity:1}
+.stage.video-failed video{display:none}
+.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(9,10,26,0) 35%,rgba(9,10,26,.62) 100%)}
+.ring-wrap{position:absolute;right:1.4rem;bottom:1.4rem;color:var(--accent);opacity:.85}
+.ring{width:34px;height:34px;transform:rotate(-90deg)}
+.ring circle{transition:stroke-dashoffset .2s linear}
+.chev{width:26px;height:26px;color:var(--text-secondary);animation:chev 2.6s var(--ease-inout) -1.2s infinite}
+@keyframes chev{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:.95}}
+/* bands */
+.band{position:absolute;opacity:0;text-shadow:var(--tshadow);z-index:3}
+.band .btn{text-shadow:none}
+.band::before{content:"";position:absolute;inset:-24% -18%;pointer-events:none;z-index:-1;opacity:calc(.25 + .75*var(--k,1));background:radial-gradient(ellipse 76% 66% at 50% 50%,rgba(7,8,22,.8) 0%,rgba(7,8,22,.6) 50%,rgba(7,8,22,0) 84%)}
+.band h1,.band h2{font-size:clamp(1.9rem,4.2vw,3.4rem)}
+.band p{color:var(--text-primary);font-size:clamp(1rem,1.5vw,1.2rem)}
+.b-left{left:clamp(1.2rem,7vw,8rem);top:26vh;max-width:30ch}
+.b-right{right:clamp(1.2rem,7vw,8rem);top:30vh;max-width:32ch;text-align:right}
+.b-right::before{inset:-18% -14%}
+#band7{left:50%;top:39%;transform:translate(-50%,-50%);text-align:center;max-width:min(92vw,760px)}
+#band7::before{inset:-34% -22%;background:radial-gradient(ellipse 84% 76% at 50% 46%,rgba(7,8,22,.82) 0%,rgba(7,8,22,.6) 52%,rgba(7,8,22,0) 84%)}
+#band7 h1{font-size:clamp(2.2rem,4.8vw,4rem)}
+#band7 .sub{margin-top:1rem;opacity:var(--ks,0);transform:translateY(calc((1 - var(--ks,0))*14px))}
+#band7 .ctarow{margin-top:1.8rem;opacity:var(--kb,0);transform:translateY(calc((1 - var(--kb,0))*14px))}
+#band7{--ks:clamp(0,calc((var(--k,0) - .66)*4),1);--kb:clamp(0,calc((var(--k,0) - .78)*5),1)}
+/* split text mechanics */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.w{display:inline-block;white-space:nowrap}
+.c{display:inline-block}
+/* scatter (band 3) */
+.fx-scatter .c{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);opacity:var(--kc);transform:translate(calc((1 - var(--kc))*var(--jx,0px)),calc((1 - var(--kc))*var(--jy,0px))) rotate(calc((1 - var(--kc))*var(--jr,0deg)))}
+/* grid snap (band 4): horizontal only jitter, ordered thresholds */
+.fx-grid .c{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);opacity:var(--kc);transform:translateX(calc((1 - var(--kc))*var(--jx,0px)))}
+/* weave (band 5): vertical alternating */
+.fx-weave .c{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*var(--jy,0px)))}
+/* drift-down (band 1) */
+.fx-drift .w{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.8),1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*-24px))}
+/* approach-from-depth (band 2) */
+.fx-depth{position:relative}
+.fx-depth .sharp{--kc:var(--k,0);opacity:var(--kc);transform:scale(calc(.82 + .18*var(--kc)))}
+.fx-depth .soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k,0));transform:scale(calc(.82 + .18*var(--k,0)))}
+/* blur-to-sharp (band 6) */
+.fx-blur{position:relative}
+.fx-blur .sharp{opacity:var(--k,0)}
+.fx-blur .soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k,0))}
+/* word-rise (band 7 headline) */
+.fx-rise .w{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*3),1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*20px))}
+/* plumb line */
+.plumb{position:absolute;top:0;bottom:0;right:clamp(.9rem,2.4vw,2rem);width:40px;z-index:4;pointer-events:none}
+.plumb .line{position:absolute;top:10vh;bottom:10vh;left:50%;width:1px;background:linear-gradient(to bottom,transparent,var(--accent-muted) 12%,var(--accent-muted) 88%,transparent)}
+.plumb .bob{position:absolute;left:50%;top:10vh;width:9px;height:13px;margin-left:-4.5px;background:var(--accent);clip-path:polygon(50% 100%,0 28%,20% 0,80% 0,100% 28%);will-change:transform}
+.plumb .stop{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;color:var(--text-secondary);writing-mode:vertical-rl;background:rgba(10,11,28,.55);border:1px solid rgba(143,163,255,.18);border-radius:8px;padding:.5em .22em;backdrop-filter:blur(10px);text-shadow:0 1px 3px rgba(7,8,22,.85)}
+@media (max-height:560px){.plumb,.ring-wrap{display:none}}
+/* ============ static hero (five gates, identical strings in JS) ============ */
+.static-hero{display:none}
+@media (max-width: 720px),(orientation: portrait) and (max-width: 1024px),(orientation: portrait) and (pointer: coarse),(orientation: landscape) and (pointer: coarse) and (max-height: 560px),(prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .stage,.plumb{display:none}
+  .static-hero{display:flex;min-height:92vh;flex-direction:column;justify-content:flex-end;position:relative;padding:5.5rem clamp(1.2rem,6vw,4rem) 4rem;background:var(--canvas) url('assets/hero-ending.jpg') center/cover no-repeat}
+  .static-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(9,10,26,.88) 0%,rgba(9,10,26,.45) 55%,rgba(9,10,26,.25) 100%)}
+  .static-hero>*{position:relative}
+  .static-hero h1{font-size:clamp(2.1rem,7.5vw,3.4rem);text-shadow:var(--tshadow)}
+  .static-hero p{color:var(--text-secondary);margin-top:.9rem;max-width:34ch;text-shadow:var(--tshadow)}
+  .static-hero .btn{margin-top:1.6rem;align-self:flex-start;text-shadow:none}
+}
+/* ============ sections ============ */
+main{position:relative;z-index:1;background:var(--canvas)}
+section{padding:clamp(4.5rem,10vh,8rem) clamp(1.2rem,6vw,4rem);position:relative}
+.wrap{max-width:1080px;margin:0 auto}
+.narrow{max-width:720px;margin:0 auto}
+section h2{font-size:clamp(1.8rem,3.4vw,2.7rem);margin:.65rem 0 1rem}
+.divider{display:block;width:min(420px,70%);margin:0 auto;height:44px;overflow:visible}
+.divider path,.divider line{stroke:var(--accent-muted);stroke-width:1.2;fill:none;stroke-dasharray:var(--len,300);stroke-dashoffset:var(--len,300)}
+.divider circle{fill:var(--accent-muted);opacity:0;transition:opacity .5s var(--ease-out) .5s}
+.in .divider path,.in .divider line{animation:draw 1.4s var(--ease-out) forwards}
+.in .divider circle{opacity:.9}
+@keyframes draw{to{stroke-dashoffset:0}}
+/* entrance choreography */
+.reveal .part{opacity:0;transform:translateY(22px)}
+.reveal.in .part{opacity:1;transform:none;transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.reveal.in .part:nth-child(2){transition-delay:.09s}
+.reveal.in .part:nth-child(3){transition-delay:.18s}
+.reveal.in .part:nth-child(4){transition-delay:.27s}
+.reveal.in .part:nth-child(5){transition-delay:.36s}
+.reveal.in .part:nth-child(6){transition-delay:.45s}
+.reveal.in.settled .part:nth-child(n){transition-delay:0s}
+/* S1 cards */
+.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2.4rem}
+.qcard{background:var(--panel);border:1px solid rgba(143,163,255,.12);border-radius:14px;padding:1.7rem 1.5rem;position:relative;transition:transform .3s var(--ease-out),border-color .3s var(--ease-out)}
+.qcard:hover{transform:translateY(-4px);border-color:rgba(143,163,255,.3)}
+.qcard q{font-family:var(--display);font-size:1.28rem;display:block;quotes:'\201C' '\201D'}
+.qcard q::before{color:var(--accent);position:relative}
+.qcard p{color:var(--text-secondary);font-size:.95rem;margin-top:.9rem}
+.qcard::after{content:"";position:absolute;top:1.1rem;right:1.2rem;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.35;animation:pulse 5s var(--ease-inout) -2s infinite}
+@keyframes pulse{0%,100%{opacity:.2}50%{opacity:.6}}
+/* S2 rule + hold */
+#rule{text-align:center}
+#rule h2{font-size:clamp(2.1rem,4.4vw,3.2rem)}
+.holdzone{margin:2.6rem auto 0;max-width:520px}
+.holdfield{position:relative;height:230px;border:1px solid rgba(143,163,255,.14);border-radius:16px;background:radial-gradient(ellipse 90% 90% at 50% 50%,rgba(27,30,64,.7),rgba(19,21,48,.2));overflow:hidden}
+.holdfield i{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--text-secondary);left:calc(var(--dx)*1%);top:calc(var(--dy)*1%);opacity:.75;transform:translate(calc((var(--tx) - var(--dx))*var(--p,0)*1%*5.2),calc((var(--ty) - var(--dy))*var(--p,0)*1%*2.3));transition:background .4s var(--ease-out)}
+.holdfield.done i{background:var(--accent)}
+.holdfield svg{position:absolute;inset:0;width:100%;height:100%}
+.holdfield svg line{stroke:var(--accent);stroke-width:1;opacity:calc(var(--p,0)*.85)}
+.holdbtn{margin-top:1.2rem;position:relative;overflow:hidden}
+.holdbtn .fill{position:absolute;inset:0;background:rgba(16,18,42,.22);transform-origin:left;transform:scaleX(var(--p,0))}
+.holdbtn span{position:relative}
+/* vistas */
+.vista{position:relative;height:56vh;min-height:320px;overflow:hidden;padding:0}
+.vista img{width:100%;height:100%;object-fit:cover}
+.vista.in img{animation:vistaDrift 34s var(--ease-inout) -14s infinite alternate}
+@keyframes vistaDrift{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.09) translateY(-1.5%)}}
+.vista .cap{position:absolute;left:clamp(1.2rem,6vw,4rem);bottom:1.5rem;font-family:var(--mono);font-weight:500;font-size:.7rem;letter-spacing:.22em;color:var(--text-primary);background:rgba(10,11,28,.55);border:1px solid rgba(143,163,255,.18);border-radius:8px;padding:.55em 1.1em;backdrop-filter:blur(10px);text-transform:uppercase}
+/* S3 layers */
+.layer{display:grid;grid-template-columns:auto 1fr auto;gap:1.4rem;align-items:baseline;padding:1.7rem 0;border-bottom:1px solid rgba(143,163,255,.12)}
+.layer:last-child{border-bottom:0}
+.layer .num{font-family:var(--mono);color:var(--accent);font-size:.9rem}
+.layer h3{font-size:1.45rem}
+.layer .promise{font-family:var(--display);color:var(--accent);font-size:1.05rem;margin-top:.2rem}
+.layer p{color:var(--text-secondary);font-size:.97rem;margin-top:.55rem;max-width:58ch}
+.layer .glyph{width:34px;height:34px;color:var(--accent-muted);transition:color .4s var(--ease-out)}
+.layer.lit .glyph{color:var(--accent)}
+.layer .out{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-secondary);margin-top:.7rem;display:inline-block;border:1px solid rgba(143,163,255,.18);border-radius:20px;padding:.35em .9em}
+.layer .lmore{display:inline-block;margin-top:.7rem;margin-left:.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em}
+@media (max-width:720px){.layer{grid-template-columns:auto 1fr}.layer .glyph{display:none}}
+/* S4 operator */
+#who .split2{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+#who img{border-radius:16px;border:1px solid rgba(143,163,255,.14)}
+#who .imgwrap{overflow:hidden;border-radius:16px}
+#who .imgwrap img{animation:slowdrift 26s var(--ease-inout) -8s infinite alternate}
+@keyframes slowdrift{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.08) translateY(-2%)}}
+#who p{color:var(--text-secondary);margin-top:1.1rem}
+@media (max-width:860px){#who .split2{grid-template-columns:1fr}}
+/* S5 paths */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2.6rem;align-items:stretch}
+.path{background:var(--panel);border:1px solid rgba(143,163,255,.12);border-radius:16px;padding:1.9rem 1.6rem;display:flex;flex-direction:column;position:relative}
+.path.mid{border-color:rgba(143,163,255,.42);box-shadow:0 18px 60px rgba(10,12,34,.6)}
+.path .tag{position:absolute;top:-.8em;left:1.4rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;background:var(--accent);color:var(--btn-ink);border-radius:14px;padding:.35em .95em}
+.path.mid .tag{animation:tagpulse 6s var(--ease-inout) -1.5s infinite}
+@keyframes tagpulse{0%,100%{box-shadow:0 0 0 0 rgba(143,163,255,0)}50%{box-shadow:0 0 22px 2px rgba(143,163,255,.45)}}
+.path h3{font-size:1.35rem}
+.path .price{font-family:var(--mono);color:var(--accent);font-size:.86rem;margin-top:.5rem}
+.path p{color:var(--text-secondary);font-size:.95rem;margin-top:.9rem}
+.trustrow{display:flex;gap:2.4rem;flex-wrap:wrap;justify-content:center;margin-top:3rem}
+.trustrow span{font-size:.9rem;color:var(--text-secondary);display:flex;align-items:baseline;gap:.5rem}
+.trustrow b{color:var(--accent);font-weight:600}
+/* S6 FAQ */
+.faq details{border-bottom:1px solid rgba(143,163,255,.12)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.25rem 0;font-family:var(--display);font-size:1.18rem;transition:color .2s var(--ease-out)}
+.faq summary:hover{color:var(--accent)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--accent);transition:transform .3s var(--ease-out)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--text-secondary);padding:0 0 1.4rem;max-width:62ch}
+/* S7 final */
+#audit{text-align:center;padding-bottom:7rem;overflow:hidden}
+#audit::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(19,21,48,.88),rgba(19,21,48,.74) 55%,rgba(19,21,48,.78)),url('assets/still-ground.jpg') center/cover no-repeat;pointer-events:none}
+#audit .body,#audit h2{text-shadow:0 1px 3px rgba(7,8,22,.7)}
+#audit .narrow{position:relative}
+#audit .glow{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(900px,90vw);height:340px;background:radial-gradient(ellipse 60% 90% at 50% 100%,rgba(143,163,255,.16),rgba(143,163,255,0) 70%);pointer-events:none;animation:breath 8s var(--ease-inout) -3s infinite}
+@keyframes breath{0%,100%{opacity:.7}50%{opacity:1}}
+#audit p.body{max-width:52ch;margin:0 auto;color:var(--text-secondary)}
+#audit .btn{margin-top:2rem;font-size:1.05rem}
+#audit .alt{display:block;margin-top:1.1rem;font-size:.88rem;color:var(--text-secondary)}
+#audit .alt a{color:var(--accent)}
+/* footer */
+footer{border-top:1px solid rgba(143,163,255,.12);padding:2.6rem clamp(1.2rem,6vw,4rem);display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center;justify-content:space-between;color:var(--text-secondary);font-size:.85rem}
+footer .brand b{color:var(--text-primary)}
+footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
+@media (max-width:640px){footer{flex-direction:column;align-items:flex-start}footer .cols{text-align:left}}
+/* ============ reduced motion ============ */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
+  .reveal .part{opacity:1;transform:none}
+  .divider path,.divider line{stroke-dashoffset:0}
+  .divider circle{opacity:.9}
+  .holdfield i{transform:translate(calc((var(--tx) - var(--dx))*1%*5.2),calc((var(--ty) - var(--dy))*1%*2.3));background:var(--accent)}
+  .holdfield svg line{opacity:.85}
+  .layer .glyph{color:var(--accent)}
+  .motes{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="motes" aria-hidden="true"></div>
+
+<nav aria-label="Main">
+  <a class="brand" href="#top" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="#sound-familiar">The Problem</a>
+    <a href="#method">The Method</a>
+    <a href="#docs">The 15 Documents</a>
+    <a href="#curriculum">The Curriculum</a>
+    <a href="#faq">FAQ</a>
+    <a class="cta" href="#audit">Book the Audit</a>
+  </div>
+</nav>
+
+<header id="top" class="hero" aria-label="Groundwork introduction">
+  <div class="stage">
+    <div class="poster"></div>
+    <video id="hero-video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+    <div class="scrim"></div>
+
+    <div class="band b-left fx-drift split-words" id="band1" data-a="0" data-b="0.09">
+      <h1 class="split" data-fx="drift">Your AI doesn't know your business.</h1>
+      <p class="split" data-fx="drift" data-th-base="0.3">That's why it sounds generic.</p>
+    </div>
+
+    <div class="band b-right fx-depth" id="band2" data-a="0.105" data-b="0.215">
+      <h2 class="dual"><span class="soft" aria-hidden="true">So we go deeper.</span><span class="sharp">So we go deeper.</span></h2>
+    </div>
+
+    <div class="band b-left fx-scatter" id="band3" data-a="0.23" data-b="0.34" data-spread="0.5">
+      <h2 class="split" data-fx="scatter">Everything your business knows is in here.</h2>
+      <p class="split" data-fx="scatter" data-th-base="0.25">Scattered across drives, inboxes, and your head.</p>
+    </div>
+
+    <div class="band b-right fx-grid" id="band4" data-a="0.37" data-b="0.48" data-ramp="0.032">
+      <h2 class="split" data-fx="grid">The fix isn't a better prompt. It's a better foundation.</h2>
+    </div>
+
+    <div class="band b-left fx-weave" id="band5" data-a="0.51" data-b="0.62">
+      <h2 class="split" data-fx="weave">Six layers. Built in order. Owned by you.</h2>
+    </div>
+
+    <div class="band b-right fx-blur" id="band6" data-a="0.65" data-b="0.76">
+      <h2 class="dual"><span class="soft" aria-hidden="true">The result: an AI that finally knows your business.</span><span class="sharp">The result: an AI that finally knows your business.</span></h2>
+    </div>
+
+    <div class="band fx-rise" id="band7" data-a="0.80" data-b="1" data-ramp="0.05">
+      <h1 class="split" data-fx="rise">Build the foundation your AI actually needs.</h1>
+      <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
+      <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="assets/Groundwork-Program-Guide.pdf" download>Download the Field Guide</a></div>
+    </div>
+
+    <div class="plumb" aria-hidden="true">
+      <div class="line"></div>
+      <div class="bob" id="bob"></div>
+      <span class="stop" style="top:12vh">THE NOISE</span>
+      <span class="stop" style="top:29vh">THE SCATTER</span>
+      <span class="stop" style="top:46vh">THE TURN</span>
+      <span class="stop" style="top:63vh">THE ORDER</span>
+      <span class="stop" style="top:82vh">GROUND</span>
+    </div>
+
+    <div class="ring-wrap" id="ring-wrap" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/></svg>
+    </div>
+  </div>
+
+  <div class="static-hero">
+    <h1>Build the foundation your AI actually needs.</h1>
+    <p>Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
+    <a class="btn" href="#audit">Book your AI Readiness Audit</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section id="sound-familiar" class="reveal" aria-labelledby="h-sf">
+    <div class="wrap">
+      <span class="kicker part">Sound familiar</span>
+      <h2 class="part" id="h-sf">You tried AI. It wrote you something generic.</h2>
+      <p class="lede part" style="max-width:58ch">It didn't know your clients, your history, or how you talk. So it guessed. Every owner has the same story: the AI wasn't bad. It was uninformed.</p>
+      <div class="cards3">
+        <div class="qcard part"><q>I don't know where to start.</q><p>There are too many tools and they change weekly. You don't need another tool. You need a sequence.</p></div>
+        <div class="qcard part"><q>It doesn't sound like me.</q><p>Generic AI writes like everyone in your market. Your voice is an asset. Write it down once and every draft after sounds like you.</p></div>
+        <div class="qcard part"><q>Everything is in my head.</q><p>If it lives only in your head, the business stops when you do. That's not a tech problem. It's a continuity problem.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="180" y2="22" style="--len:170"/><circle cx="196" cy="22" r="3"/><line x1="212" y1="22" x2="410" y2="14" style="--len:200"/><circle cx="410" cy="14" r="3"/></svg>
+
+  <section id="rule" class="reveal" aria-labelledby="h-rule">
+    <div class="narrow">
+      <span class="kicker part">The one rule</span>
+      <h2 class="part" id="h-rule">Do not automate chaos.</h2>
+      <p class="lede part" style="max-width:52ch;margin-left:auto;margin-right:auto">Automation multiplies whatever you feed it. Feed it a mess, get a faster mess. That's why Groundwork builds in strict order: organize first, automate last.</p>
+      <div class="holdzone part">
+        <div class="holdfield" id="holdfield" aria-hidden="true"><svg id="holdlines"></svg></div>
+        <button class="btn holdbtn" id="holdbtn" aria-describedby="hold-hint"><span class="fill" aria-hidden="true"></span><span>Hold to bring order</span></button>
+        <p id="hold-hint" class="lede" style="font-size:.8rem;margin-top:.7rem">Press and hold. Order is made, not bought.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="vista" aria-hidden="false">
+    <img src="assets/still-scatter.jpg" alt="Silver fragments drifting in a deep indigo dusk" loading="lazy" width="1920" height="1072">
+    <span class="cap">Your knowledge, today.</span>
+  </div>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="30" x2="150" y2="30" style="--len:140"/><circle cx="166" cy="30" r="3"/><line x1="182" y1="30" x2="300" y2="18" style="--len:120"/><circle cx="300" cy="18" r="3"/><line x1="316" y1="18" x2="410" y2="18" style="--len:100"/></svg>
+
+  <section id="method" class="reveal" aria-labelledby="h-method">
+    <div class="wrap">
+      <span class="kicker part">The method</span>
+      <h2 class="part" id="h-method">Six layers, built in order. Three phases.</h2>
+      <p class="lede part">Phase 1 is required first — Identity, Knowledge, Governance. Phase 2 activates one Operator, not a swarm. Phase 3 makes it durable. Skip a layer and you are automating chaos.</p>
+      <p class="part" style="margin-top:1.1rem"><a class="btn btn-ghost" href="guide/index.html">Open the full Field Guide</a> <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download>or download it as a PDF</a></p>
+      <div style="margin-top:1.6rem">
+        <div class="layer part" id="layer1">
+          <span class="num">01</span>
+          <div><h3>Identity <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles — in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/layer-2.html">Read the full layer</a></div>
+          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="17" cy="13" r="5"/><path d="M8 27c1.5-5 5-7 9-7s7.5 2 9 7"/></svg>
+        </div>
+        <div class="layer part" id="layer2">
+          <span class="num">02</span>
+          <div><h3>Knowledge <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0–4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/layer-3.html">Read the full layer</a></div>
+          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="2.5"/><circle cx="25" cy="12" r="2.5"/><circle cx="14" cy="25" r="2.5"/><path d="M11 10.5l11.5 1M10 11l3 11.5M23.5 14l-8 9.5"/></svg>
+        </div>
+        <div class="layer part" id="layer3">
+          <span class="num">03</span>
+          <div><h3>Governance <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules, allowed tools, and Agent Scope. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/layer-4.html">Read the full layer</a></div>
+          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 22h14M23 7v20"/><path d="M20 9l3-2 3 2M20 25l3 2 3-2"/></svg>
+        </div>
+        <div class="layer part" id="layer4">
+          <span class="num">04</span>
+          <div><h3>Continuity <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/layer-5.html">Read the full layer</a></div>
+          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 5l10 4v8c0 6-4 10-10 12C11 27 7 23 7 17V9z"/><path d="M13 17l3 3 6-6"/></svg>
+        </div>
+        <div class="layer part" id="layer5">
+          <span class="num">05</span>
+          <div><h3>Measurement <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">Whether the foundation is actually working.</p><p>Signals of a working foundation: output stays on-voice without prompting, escalations are appropriate not constant, humans trust the drafts enough to use them.</p><span class="out">You know when it is working, and when it is drifting.</span><a class="lmore" href="guide/scorecard.html">Read the full layer</a></div>
+          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 24l6-6 5 5 11-11"/><path d="M23 12h5v5"/></svg>
+        </div>
+        <div class="layer part" id="layer6">
+          <span class="num">06</span>
+          <div><h3>Operating Rhythm <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">How the foundation is maintained so it does not decay.</p><p>Weekly, monthly, and quarterly reviews. Who owns each layer. How changes get proposed, approved, and versioned. Order is made, not bought — and it stays that way with rhythm.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/foundations.html">Read the full layer</a></div>
+          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 4a13 13 0 1 1-9 3.8"/><path d="M8 4v5h5"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="14" x2="120" y2="14" style="--len:110"/><circle cx="136" cy="14" r="3"/><line x1="152" y1="14" x2="260" y2="30" style="--len:120"/><circle cx="260" cy="30" r="3"/><line x1="276" y1="30" x2="410" y2="30" style="--len:140"/></svg>
+
+  <section id="who" class="reveal" aria-labelledby="h-who">
+    <div class="wrap split2">
+      <div>
+        <span class="kicker part">Who's behind it</span>
+        <h2 class="part" id="h-who">Built by an operator who needed it first.</h2>
+        <p class="part">Adam Abdalla runs a 70,000 square foot commercial shopping center in Lafayette, Louisiana: leases, vendors, tenants, and decades of records. He built Groundwork for himself first, spent a year refining his own system, and now runs his properties on it daily. This program is that system, taught.</p>
+        <p class="part">He is not selling AI tools. There are no subscriptions to him and no lock-in. He builds foundations you own outright.</p>
+      </div>
+      <div class="imgwrap part"><img src="assets/hero-ending.jpg" alt="The ordered ground: the settled final frame of the Groundwork descent" loading="lazy" width="1920" height="1080"></div>
+    </div>
+  </section>
+
+  <div class="vista" aria-hidden="false">
+    <img src="assets/still-constellation.jpg" alt="A constellation of connected points of light over night mist" loading="lazy" width="1920" height="1072">
+    <span class="cap">Your knowledge, connected.</span>
+  </div>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="200" y2="22" style="--len:190"/><circle cx="216" cy="22" r="3"/><line x1="232" y1="22" x2="410" y2="22" style="--len:180"/></svg>
+
+  <section id="authority" class="reveal" aria-labelledby="h-authority">
+    <div class="wrap">
+      <span class="kicker part">Authority Classification</span>
+      <h2 class="part" id="h-authority">Not every document is equal. Your AI should know which is which.</h2>
+      <p class="lede part">Most AI failures are trust failures — the system treats a rumor and a contract as the same weight. Groundwork tags every document Level 0 through Level 4, so the system knows what to obey, what to check, and what to ignore.</p>
+      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem">
+        <div class="path part">
+          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 0</span>
+          <h3>Core Doctrine</h3>
+          <p>Charter, principles, non-negotiables. The system obeys without asking.</p>
+        </div>
+        <div class="path part">
+          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 1</span>
+          <h3>Institutional Standards</h3>
+          <p>Signed policies, executed contracts, filed docs. Trusted unless overridden by Level 0.</p>
+        </div>
+        <div class="path mid part">
+          <span class="tag">LEVEL 2</span>
+          <h3>Validated Knowledge</h3>
+          <p>Documented playbooks, reviewed procedures. The working library.</p>
+        </div>
+        <div class="path part">
+          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 3</span>
+          <h3>Working Material</h3>
+          <p>Drafts, notes, transcripts. Useful, not yet doctrine. Never quoted as final.</p>
+        </div>
+        <div class="path part">
+          <span class="tag" style="background:#3a1f1f;color:#f0d0d0">LEVEL 4</span>
+          <h3>Untrusted / Raw</h3>
+          <p>External clippings, unverified. Available for context, never quoted as truth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="200" y2="22" style="--len:190"/><circle cx="216" cy="22" r="3"/><line x1="232" y1="22" x2="410" y2="22" style="--len:180"/></svg>
+
+  <section id="docs" class="reveal" aria-labelledby="h-docs">
+    <div class="wrap">
+      <span class="kicker part">What you actually get</span>
+      <h2 class="part" id="h-docs">Fifteen documents. All free. All yours.</h2>
+      <p class="lede part">Not a course. Not a subscription. Fifteen plain-text files you write once and own forever — the working system Adam runs his own businesses on.</p>
+      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin-top:1.4rem">
+        <div class="path part">
+          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 1 · IDENTITY</span>
+          <h3>Layer 01</h3>
+          <p>01. Charter · 02. Brand Voice · 03. Decision Principles · 04. Operator Bio</p>
+        </div>
+        <div class="path part">
+          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 1 · KNOWLEDGE</span>
+          <h3>Layer 02</h3>
+          <p>05. Knowledge Vault Structure · 06. Authority Classification · 07. Verified Facts · 08. Working Library Index</p>
+        </div>
+        <div class="path mid part">
+          <span class="tag">PHASE 1 · GOVERNANCE</span>
+          <h3>Layer 03</h3>
+          <p>09. Automation Zones · 10. Escalation Rules · 11. Agent Scope · 12. Allowed Tools List</p>
+        </div>
+        <div class="path part">
+          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 3 · DURABILITY</span>
+          <h3>Layers 04–06</h3>
+          <p>13. Continuity &amp; Succession · 14. Measurement Scorecard · 15. Operating Rhythm Calendar</p>
+        </div>
+      </div>
+      <p class="part" style="margin-top:1.6rem"><a class="btn" href="assets/Groundwork-Program-Guide.pdf" download>Download all fifteen in the Field Guide</a></p>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="14" x2="120" y2="14" style="--len:110"/><circle cx="136" cy="14" r="3"/><line x1="152" y1="14" x2="260" y2="30" style="--len:120"/><circle cx="260" cy="30" r="3"/><line x1="276" y1="30" x2="410" y2="30" style="--len:140"/></svg>
+
+  <section id="operator" class="reveal" aria-labelledby="h-operator">
+    <div class="narrow">
+      <span class="kicker part">The Operator</span>
+      <h2 class="part" id="h-operator">One assistant. Scoped. Yours.</h2>
+      <p class="lede part" style="max-width:58ch">Phase 2 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and governance you wrote in Phase 1. Here is the opening of Adam's own Operator prompt — the same one running on his properties today.</p>
+      <pre class="part" style="background:rgba(255,255,255,.03);border:1px solid var(--rule);border-radius:12px;padding:1.4rem 1.6rem;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.82rem;line-height:1.55;overflow-x:auto;color:var(--text-secondary);white-space:pre-wrap">You are the Operator for &lt;OwnerName&gt;.
+
+You obey four things, in this order:
+  1. The Charter and Decision Principles (Layer 01, Level 0).
+  2. The Governance zones and Escalation Rules (Layer 03).
+  3. The Knowledge Vault, weighted by Authority Level.
+  4. Explicit instructions from &lt;OwnerName&gt; in this session.
+
+If a request violates any of the above, refuse and escalate.
+If a request falls in Draft &amp; Wait, produce the draft and stop.
+If a request falls in Never Automate, refuse and explain why.
+
+You cite your sources by filename and Authority Level.
+You do not invent facts, dates, dollar amounts, names, or contract terms.
+You match the Brand Voice document exactly.</pre>
+      <p class="part" style="margin-top:1.2rem;font-size:.9rem;color:var(--text-secondary)">The full prompt — with every zone, tool, and escalation rule — is in the Field Guide.</p>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="28" x2="140" y2="28" style="--len:130"/><circle cx="156" cy="28" r="3"/><line x1="172" y1="28" x2="410" y2="16" style="--len:240"/><circle cx="410" cy="16" r="3"/></svg>
+
+  <section id="curriculum" class="reveal" aria-labelledby="h-curriculum">
+    <div class="wrap">
+      <span class="kicker part">The Curriculum</span>
+      <h2 class="part" id="h-curriculum">If you want to learn the whole thing at your own pace.</h2>
+      <p class="lede part" style="max-width:64ch">The Groundwork Curriculum is a five-level, two-track open curriculum on GitHub: the same doctrine as the Field Guide, taught as a study plan. Individual track for owners and operators; Company track for teams. MIT licensed. Free forever.</p>
+      <p class="part" style="margin-top:1.2rem">
+        <a class="btn" href="https://github.com/OrangeOnyx/groundwork-curriculum" target="_blank" rel="noopener">Open the curriculum on GitHub</a>
+        <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download style="margin-left:1rem">or read the Field Guide first</a>
+      </p>
+      <p class="part" style="margin-top:1.4rem;font-size:.85rem;color:var(--text-secondary);max-width:64ch">Curriculum authorship credit: Jake Van Clief. Doctrine and structure: Adam Abdalla. Released MIT with no branding requirement — teach it, fork it, use it inside your own company.</p>
+    </div>
+  </section>
+
+  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="28" x2="140" y2="28" style="--len:130"/><circle cx="156" cy="28" r="3"/><line x1="172" y1="28" x2="410" y2="16" style="--len:240"/><circle cx="410" cy="16" r="3"/></svg>
+
+  <section id="faq" class="reveal" aria-labelledby="h-faq">
+    <div class="narrow">
+      <span class="kicker part">Fair questions</span>
+      <h2 class="part" id="h-faq">Asked by every owner we meet.</h2>
+      <div class="faq part">
+        <details><summary>Why is this free? What's the catch?</summary><p>No catch. Adam built this for himself first and runs his own businesses on it. Making the doctrine, the fifteen documents, and the curriculum public is the fastest way to make the standard the standard. If you eventually want him in the room helping you build it, that conversation starts with the audit.</p></details>
+        <details><summary>Where does my data go?</summary><p>Into folders on your machine. The vault is plain text files you own. Nothing is uploaded anywhere unless you choose it, and the governance layer writes that choice down.</p></details>
+        <details><summary>I can't risk made-up answers.</summary><p>Neither can we. The Authority Classification tags every document Level 0 through 4 so the AI knows what to obey, cite, and ignore. The Governance layer keeps a human sign-off on anything that matters. AI drafts. You decide.</p></details>
+        <details><summary>I'm not technical.</summary><p>You don't need to be. If you can name a folder and fill in a form, you can do this. The Field Guide was written for owners, not engineers.</p></details>
+        <details><summary>How long does it take?</summary><p>Phase 1 (Identity, Knowledge, Governance) in a weekend if you focus. Phase 2 (one Operator) in a week. Phase 3 (Continuity, Measurement, Rhythm) is ongoing — that's the point.</p></details>
+        <details><summary>What happens when the AI companies change everything again?</summary><p>Nothing happens to you. Your vault is plain text on your machine. If every AI company disappeared tomorrow, you would still own a perfectly organized set of readable files. Zero dependency.</p></details>
+        <details><summary>Is this a course?</summary><p>No. Courses end with notes. Groundwork ends with a working system: files organized, context written, vault classified, Operator running under rules you set. The Field Guide is the doctrine. The Curriculum is the taught version. Both are free.</p></details>
+        <details><summary>What is the difference between the Field Guide and the Curriculum?</summary><p>Same doctrine. Field Guide is the reference — the whole system in one PDF you can print. Curriculum is the study plan — five levels, two tracks, learn one layer at a time on GitHub.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="audit" class="reveal" aria-labelledby="h-audit">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="narrow">
+      <span class="kicker part">The first step</span>
+      <h2 class="part" id="h-audit">Want it built with you? Start with the audit.</h2>
+      <p class="body part">The Field Guide and Curriculum are free — read them, build it yourself, no ask. But if you want Adam in the room: sixty to ninety minutes together, no cost. You leave with a map of your current state, the gaps costing you most, and a plan. In Lafayette, across the Gulf South, or virtual anywhere.</p>
+      <a class="btn part" href="https://calendly.com/adamabdalla/ai-readiness-audit" target="_blank" rel="noopener">Book your AI Readiness Audit</a>
+      <span class="alt part">Prefer email? <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="brand" href="#top" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="cols">
+    <span>Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated.</span>
+    <span>Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></span>
+    <span>© 2026 Adam Abdalla. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+'use strict';
+/* ================= config ================= */
+const VIDEO_URL = 'assets/hero-scrub.mp4';
+const VIDEO_BYTES = 12473800; /* real byte size of assets/hero-scrub.mp4 */
+const POSTER_URL = 'assets/hero-poster.jpg';
+
+/* ================= utilities ================= */
+const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+const smoothstep = (p, e0, e1) => {
+  const t = clamp((p - e0) / (e1 - e0), 0, 1);
+  return t * t * (3 - 2 * t);
+};
+function rng(seed) {
+  let s = seed >>> 0;
+  return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
+}
+
+/* ================= text splitting (once, seeded) ================= */
+function splitText() {
+  document.querySelectorAll('.split').forEach((el, ei) => {
+    if (el.dataset.splitDone) return;
+    el.dataset.splitDone = '1';
+    const text = el.textContent;
+    const fx = el.dataset.fx || 'scatter';
+    const thBase = parseFloat(el.dataset.thBase || '0');
+    const spread = parseFloat(el.closest('.band')?.dataset.spread || '0.5');
+    const r = rng(1013 + ei * 97);
+    el.textContent = '';
+    const sr = document.createElement('span');
+    sr.className = 'vh';
+    sr.textContent = text;
+    el.appendChild(sr);
+    const vis = document.createElement('span');
+    vis.setAttribute('aria-hidden', 'true');
+    const words = text.split(' ');
+    const totalChars = text.replace(/ /g, '').length;
+    let ci = 0;
+    words.forEach((word, wi) => {
+      const w = document.createElement('span');
+      w.className = 'w';
+      /* thresholds cap at 0.6 so every span fully assembles by k = 1 */
+      const capTh = v => Math.min(0.6, v).toFixed(3);
+      if (fx === 'drift' || fx === 'rise') {
+        w.style.setProperty('--th', capTh(thBase + (wi / Math.max(1, words.length)) * 0.5 + r() * 0.05));
+        w.textContent = word;
+      } else {
+        for (const ch of word) {
+          const c = document.createElement('span');
+          c.className = 'c';
+          c.textContent = ch;
+          if (fx === 'scatter') {
+            c.style.setProperty('--th', capTh(thBase + r() * 0.55));
+            c.style.setProperty('--jx', ((r() - 0.5) * 60).toFixed(1) + 'px');
+            c.style.setProperty('--jy', ((r() - 0.5) * 52).toFixed(1) + 'px');
+            c.style.setProperty('--jr', ((r() - 0.5) * 30).toFixed(1) + 'deg');
+          } else if (fx === 'grid') {
+            c.style.setProperty('--th', capTh(thBase + (ci / Math.max(1, totalChars)) * spread + r() * 0.06));
+            c.style.setProperty('--jx', ((r() * 34) + 12).toFixed(1) + 'px');
+          } else if (fx === 'weave') {
+            c.style.setProperty('--th', capTh(thBase + (ci / Math.max(1, totalChars)) * spread + r() * 0.06));
+            c.style.setProperty('--jy', ((ci % 2 ? 1 : -1) * (16 + r() * 14)).toFixed(1) + 'px');
+          }
+          ci++;
+          w.appendChild(c);
+        }
+      }
+      vis.appendChild(w);
+      if (wi < words.length - 1) vis.appendChild(document.createTextNode(' '));
+    });
+    el.appendChild(vis);
+  });
+}
+
+/* ================= hero engine ================= */
+const stage = document.querySelector('.stage');
+const hero = document.querySelector('.hero');
+const video = document.getElementById('hero-video');
+const posterLayer = document.querySelector('.poster');
+const ringWrap = document.getElementById('ring-wrap');
+const ring = ringWrap ? ringWrap.querySelector('circle') : null;
+const bob = document.getElementById('bob');
+const bands = [...document.querySelectorAll('.band')].map(el => ({
+  el,
+  a: parseFloat(el.dataset.a),
+  b: parseFloat(el.dataset.b),
+  ramp: el.dataset.ramp ? parseFloat(el.dataset.ramp) : null,
+  op: -1,
+  k: -1
+}));
+const firstBand = bands[0], lastBand = bands[bands.length - 1];
+
+let heroTop = 0, heroRange = 1;
+function measureHero() {
+  const r = hero.getBoundingClientRect();
+  heroTop = r.top + scrollY;
+  heroRange = Math.max(1, hero.offsetHeight - innerHeight);
+}
+function heroProgress() {
+  return clamp((scrollY - heroTop) / heroRange, 0, 1);
+}
+
+/* band 1 one-time load ramp */
+let loadK = 0, loadRampStart = 0;
+function tickLoadRamp(now) {
+  if (!loadRampStart) loadRampStart = now;
+  loadK = clamp((now - loadRampStart) / 1400, 0, 1);
+  loadK = loadK * loadK * (3 - 2 * loadK);
+  if (loadK < 1 && scrubOn) requestAnimationFrame(tickLoadRamp);
+  updateCaptions(shown);
+}
+
+let lastBobY = -1, lastBobAt = 0;
+function updateCaptions(p) {
+  for (const band of bands) {
+    const { a, b } = band;
+    const f = Math.min(0.02, (b - a) / 3);
+    let op = smoothstep(p, a, a + f) * (1 - smoothstep(p, b - f, b));
+    if (band === firstBand) op = 1 - smoothstep(p, b - f, b);
+    if (band === lastBand) op = smoothstep(p, a, a + f);
+    const rampLen = band.ramp || Math.min(0.025, (b - a) * 0.35);
+    let k = clamp((p - a) / rampLen, 0, 1);
+    if (band === firstBand) k = Math.max(k, loadK);
+    if (Math.abs(op - band.op) > 0.008) {
+      band.op = op;
+      band.el.style.opacity = op.toFixed(3);
+    }
+    if (Math.abs(k - band.k) > 0.008) {
+      band.k = k;
+      band.el.style.setProperty('--k', k.toFixed(3));
+    }
+  }
+  /* plumb bob: transform only, 10Hz + delta gated */
+  if (bob) {
+    const now = performance.now();
+    const y = Math.round(p * 70 * 10) / 10; /* 10vh..80vh span => 70vh travel */
+    if (now - lastBobAt > 100 && y !== lastBobY) {
+      lastBobAt = now; lastBobY = y;
+      bob.style.transform = 'translateY(' + y + 'vh)';
+    }
+  }
+}
+
+/* lerp loop that rests */
+let target = 0, shown = 0, rafId = null, lastTick = 0, heroOnScreen = true;
+function tick(now) {
+  const dt = Math.min(100, now - (lastTick || now));
+  lastTick = now;
+  const k = 0.16;
+  shown += (target - shown) * (1 - Math.pow(1 - k, dt / 16.667));
+  if (Math.abs(target - shown) < 0.0005) {
+    shown = target;
+    rafId = null;
+    lastTick = 0;
+  } else {
+    rafId = requestAnimationFrame(tick);
+  }
+  if (video.duration) requestSeek(shown * video.duration);
+  updateCaptions(shown);
+}
+function onScroll() {
+  target = heroProgress();
+  if (rafId === null && heroOnScreen) rafId = requestAnimationFrame(tick);
+}
+
+/* seek gate, deadlock-safe */
+let seekBusy = false, pendingTime = null;
+function requestSeek(t) {
+  if (!video.duration) return;
+  if (seekBusy) { pendingTime = t; return; }
+  seekBusy = true;
+  video.currentTime = t;
+}
+video.addEventListener('seeked', () => {
+  seekBusy = false;
+  if (pendingTime !== null) {
+    const t = pendingTime;
+    pendingTime = null;
+    requestSeek(t);
+  }
+});
+video.addEventListener('error', () => {
+  seekBusy = false;
+  pendingTime = null;
+  stage.classList.add('video-failed');
+});
+
+/* blob loader: poster wins the race, streamed with honest ring */
+let heroInitDone = false, blobStarted = false;
+function initHeroOnce() {
+  if (heroInitDone) return;
+  heroInitDone = true;
+  posterLayer.style.backgroundImage = "url('" + POSTER_URL + "')";
+  const posterImg = new Image();
+  posterImg.onload = startBlobFetch;
+  posterImg.onerror = startBlobFetch;
+  posterImg.src = POSTER_URL;
+  setTimeout(startBlobFetch, 4000);
+}
+function startBlobFetch() {
+  if (blobStarted) return;
+  blobStarted = true;
+  loadHeroBlob().catch(failVideo);
+}
+async function loadHeroBlob() {
+  const ctrl = new AbortController();
+  let watchdog = setTimeout(() => ctrl.abort(), 20000);
+  const res = await fetch(VIDEO_URL, { priority: 'low', signal: ctrl.signal });
+  if (!res.ok) throw new Error('video fetch ' + res.status);
+  const total = Number(res.headers.get('Content-Length')) || VIDEO_BYTES;
+  const reader = res.body.getReader();
+  const chunks = [];
+  let got = 0, lastRing = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    clearTimeout(watchdog);
+    watchdog = setTimeout(() => ctrl.abort(), 20000);
+    chunks.push(value);
+    got += value.length;
+    const frac = Math.min(1, got / total);
+    const now = performance.now();
+    if (ring && (now - lastRing > 100 || frac === 1)) {
+      lastRing = now;
+      ring.style.strokeDashoffset = Math.round(126 * (1 - frac));
+    }
+  }
+  clearTimeout(watchdog);
+  if (ring) ring.style.strokeDashoffset = 0;
+  video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
+  video.load();
+  video.addEventListener('canplay', () => {
+    requestSeek(heroProgress() * video.duration);
+    stage.classList.add('video-ready');
+    if (ringWrap) ringWrap.style.opacity = '0';
+  }, { once: true });
+}
+function failVideo() {
+  stage.classList.add('video-failed');
+  if (ringWrap) {
+    ringWrap.innerHTML = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
+  }
+}
+
+/* ================= the five gates, live ================= */
+const GATES = [
+  '(max-width: 720px)',
+  '(orientation: portrait) and (max-width: 1024px)',
+  '(orientation: portrait) and (pointer: coarse)',
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+  '(prefers-reduced-motion: reduce)'
+];
+let scrubOn = false;
+function enableScrub() {
+  if (scrubOn) return;
+  scrubOn = true;
+  measureHero();
+  initHeroOnce();
+  addEventListener('scroll', onScroll, { passive: true });
+  bands.forEach(b => { b.op = -1; b.k = -1; });
+  unpinFinalStates();
+  loadRampStart = 0;
+  requestAnimationFrame(tickLoadRamp);
+  target = shown = heroProgress();
+  updateCaptions(shown);
+  onScroll();
+}
+function disableScrub() {
+  if (!scrubOn) return;
+  scrubOn = false;
+  removeEventListener('scroll', onScroll);
+  if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+}
+function applyHeroMode() {
+  if (GATES.some(q => matchMedia(q).matches)) disableScrub();
+  else enableScrub();
+}
+const MQLS = GATES.map(q => matchMedia(q));
+MQLS.forEach(m => m.addEventListener('change', applyHeroMode));
+
+/* ================= reduced motion, both directions ================= */
+function pinToFinalStates() {
+  disableScrub();
+  bands.forEach(b => { b.el.style.opacity = ''; b.el.style.setProperty('--k', '1'); });
+  document.querySelectorAll('.reveal').forEach(s => s.classList.add('in', 'settled'));
+  const hf = document.getElementById('holdfield');
+  if (hf) { hf.style.setProperty('--p', '1'); hf.classList.add('done'); }
+  document.querySelectorAll('.layer').forEach(l => l.classList.add('lit'));
+}
+function unpinFinalStates() {
+  bands.forEach(b => { b.el.style.opacity = '0'; });
+  const hf = document.getElementById('holdfield');
+  if (hf && !hf.dataset.completed) { hf.style.setProperty('--p', '0'); hf.classList.remove('done'); }
+}
+matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
+  if (e.matches) pinToFinalStates();
+  else applyHeroMode();
+});
+
+/* ================= hero visibility ================= */
+new IntersectionObserver(entries => {
+  heroOnScreen = entries[0].isIntersecting;
+  if (heroOnScreen && scrubOn) onScroll();
+}, { threshold: 0 }).observe(hero);
+
+/* ================= below-fold entrances ================= */
+const revealIO = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      en.target.classList.add('in');
+      setTimeout(() => en.target.classList.add('settled'), 1200);
+      revealIO.unobserve(en.target);
+    }
+  });
+}, { threshold: 0.18 });
+document.querySelectorAll('.reveal').forEach(s => revealIO.observe(s));
+/* dividers draw when scrolled to */
+const divIO = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); divIO.unobserve(en.target); }
+  });
+}, { threshold: 0.6 });
+document.querySelectorAll('.divider').forEach(d => divIO.observe(d));
+const vistaIO = new IntersectionObserver(entries => {
+  entries.forEach(en => en.target.classList.toggle('in', en.isIntersecting));
+}, { threshold: 0.15 });
+document.querySelectorAll('.vista').forEach(v => vistaIO.observe(v));
+
+/* ================= environment motes ================= */
+(function () {
+  const wrap = document.querySelector('.motes');
+  const r = rng(777);
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.style.left = (r() * 100).toFixed(1) + '%';
+    s.style.top = (r() * 100).toFixed(1) + '%';
+    s.style.animationDelay = (-r() * 90).toFixed(1) + 's';
+    wrap.appendChild(s);
+  }
+})();
+
+/* ================= pause on hidden tab ================= */
+document.addEventListener('visibilitychange', () => {
+  document.body.classList.toggle('paused', document.hidden);
+});
+
+/* ================= the hold moment ================= */
+(function () {
+  const field = document.getElementById('holdfield');
+  const btn = document.getElementById('holdbtn');
+  const linesSvg = document.getElementById('holdlines');
+  if (!field || !btn) return;
+  const r = rng(4242);
+  const motes = [];
+  const COLS = 6, ROWS = 4;
+  for (let i = 0; i < COLS * ROWS; i++) {
+    const el = document.createElement('i');
+    const dx = 6 + r() * 88, dy = 8 + r() * 84;
+    const tx = 12.5 + (i % COLS) * 15;
+    const ty = 22 + Math.floor(i / COLS) * 19;
+    el.style.setProperty('--dx', dx.toFixed(1));
+    el.style.setProperty('--dy', dy.toFixed(1));
+    el.style.setProperty('--tx', tx.toFixed(1));
+    el.style.setProperty('--ty', ty.toFixed(1));
+    field.appendChild(el);
+    motes.push({ tx, ty });
+  }
+  /* constellation lines between grid neighbors */
+  linesSvg.setAttribute('viewBox', '0 0 100 100');
+  linesSvg.setAttribute('preserveAspectRatio', 'none');
+  motes.forEach((m, i) => {
+    if (i % COLS < COLS - 1) {
+      const n = motes[i + 1];
+      const L = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      L.setAttribute('x1', m.tx); L.setAttribute('y1', m.ty);
+      L.setAttribute('x2', n.tx); L.setAttribute('y2', n.ty);
+      linesSvg.appendChild(L);
+    }
+  });
+  let p = 0, holding = false, holdRaf = null, lastT = 0, done = false;
+  function step(now) {
+    const dt = Math.min(60, now - (lastT || now));
+    lastT = now;
+    p += (holding ? dt / 2000 : -dt / 480);
+    p = clamp(p, 0, 1);
+    field.style.setProperty('--p', p.toFixed(3));
+    if (p >= 1 && !done) {
+      done = true;
+      field.dataset.completed = '1';
+      field.classList.add('done');
+      document.querySelectorAll('.layer').forEach((l, i) => setTimeout(() => l.classList.add('lit'), i * 160));
+    }
+    if ((holding && p < 1) || (!holding && p > 0 && !done)) holdRaf = requestAnimationFrame(step);
+    else { holdRaf = null; lastT = 0; }
+  }
+  function start(e) { e.preventDefault(); holding = true; if (!holdRaf) holdRaf = requestAnimationFrame(step); }
+  function stop() { holding = false; if (!holdRaf && p > 0 && !done) holdRaf = requestAnimationFrame(step); }
+  btn.addEventListener('pointerdown', start);
+  addEventListener('pointerup', stop);
+  btn.addEventListener('pointercancel', stop);
+  btn.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') start(e); });
+  btn.addEventListener('keyup', stop);
+})();
+
+/* ================= boot ================= */
+splitText();
+measureHero();
+addEventListener('resize', () => { measureHero(); if (scrubOn) onScroll(); }, { passive: true });
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) pinToFinalStates();
+else applyHeroMode();
+</script>
+</body>
+</html>

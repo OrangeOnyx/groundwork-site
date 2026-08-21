@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundations | Groundwork Guide</title>
+<meta name="description" content="The four building blocks of AI in plain language: LLMs, agents, prompting, and data. Plus how to talk to an AI that actually knows your business.">
+<meta name="theme-color" content="#131530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="foundations.html" aria-current="page">Foundations</a>
+    <a href="layer-1.html">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html">L3</a>
+    <a href="layer-4.html">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Foundations</span>
+  <header class="page">
+    <span class="kicker">BEFORE LAYER ONE</span>
+    <h1>Understand the machine you're feeding.</h1>
+    <p class="lede">Before you scan a single document, you should know what you're feeding it into. Four building blocks, in plain language: the model, the agents, the instructions, and the data. No technical background needed. Then, how to actually talk to the thing once it knows your business.</p>
+  </header>
+
+  <p>AI is not magic and it is not a black box. It is a system with parts, and every part depends on what you put into it. Once you see the four parts clearly, every decision in the five layers ahead of you makes sense. This page gives you that picture.</p>
+
+  <div class="callout">
+    <p><strong>Why this matters in dollars:</strong> Gartner (2024) found that organizations that invest in data quality see 3x higher return on their AI investments. The work in this guide is that investment.</p>
+  </div>
+
+  <h2>Block 1: The LLM is the brain</h2>
+  <div class="card">
+    <p>Think of a large language model (an LLM) as a <strong>highly well-read librarian</strong> who has read millions of books, articles, and documents. When you ask this librarian a question, they don't look it up in a single book. They draw on everything they've ever read to give you the most helpful answer.</p>
+    <p>That's what an LLM does. It's the brain behind AI tools like ChatGPT, Claude, and Gemini. It processes language, understands context, and generates human-like responses. But here's the key insight: <strong>this librarian only knows what they've read.</strong> If your company's documents aren't in their library, they can't answer questions about your business.</p>
+  </div>
+  <div class="callout">
+    <p><strong>Quick summary:</strong> LLMs are the AI's brain. Incredibly smart, but only as knowledgeable as the data they can reach. Your documents become part of their reading list.</p>
+  </div>
+
+  <h2>Block 2: Agents are the hands and feet</h2>
+  <div class="card">
+    <p>If the LLM is the brain, <strong>AI agents are the hands and feet.</strong> They're specialized digital assistants that use the LLM's intelligence to perform specific tasks. Think of them as employees with different job titles:</p>
+    <div class="grid2">
+      <div class="card">
+        <p><strong>The Contract Finder.</strong> Searches through all your agreements to find specific clauses or terms.</p>
+      </div>
+      <div class="card">
+        <p><strong>The Report Summarizer.</strong> Reads a 50-page inspection report and gives you the 5 key takeaways.</p>
+      </div>
+      <div class="card">
+        <p><strong>The Policy Expert.</strong> Answers questions about company procedures based on your actual policy documents.</p>
+      </div>
+    </div>
+  </div>
+  <div class="callout">
+    <p><strong>Quick summary:</strong> AI agents are specialized workers that use the LLM brain to do specific jobs. Searching files, summarizing reports, answering questions. They can only work with documents they can access.</p>
+  </div>
+
+  <h2>Block 3: Prompting is the instruction</h2>
+  <div class="card">
+    <p>A "prompt" is simply the <strong>instruction you give to the AI.</strong> The quality of your instruction directly determines the quality of the answer. It's the difference between asking a new employee "find me that thing" versus "find me the 2024 contract renewal for Unit 103 with Acme Corp."</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th></th><th>The prompt</th><th>What happens</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bad (vague)</strong></td>
+            <td>"What's our policy on late payments?"</td>
+            <td>Problem: Which department? Which document? What year's version?</td>
+          </tr>
+          <tr>
+            <td><strong>Good (specific)</strong></td>
+            <td>"What is the late payment policy for clients, per our 2024 Terms of Service document, Section 4.2?"</td>
+            <td>Result: the AI knows exactly where to look and what to return.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="callout">
+    <p><strong>Quick summary:</strong> Better instructions produce better answers. Always include context (which document, which section, what time period) when asking the AI a question.</p>
+  </div>
+
+  <h2>Block 4: Data is the fuel</h2>
+  <div class="card">
+    <p>This is the most critical concept: <strong>your documents are the fuel for the AI.</strong> Without them, the AI is just a smart engine with an empty tank. It might know general information about the world, but it knows nothing about your specific company, your contracts, your vendors, or your policies.</p>
+    <p>Every document you scan and organize correctly adds to the AI's knowledge of your business. Every document that's missing, mislabeled, or poorly scanned is a gap in the AI's understanding. A question it can't answer. A policy it doesn't know about.</p>
+    <p><strong>The equation is simple:</strong></p>
+    <ul>
+      <li><strong>+</strong> Clean, organized data = smart, accurate AI</li>
+      <li><strong>&minus;</strong> Messy, missing data = confused, wrong AI</li>
+    </ul>
+  </div>
+
+  <h3>Sarah's before and after</h3>
+  <div class="card">
+    <p><strong>Before:</strong> Sarah's firm asked their AI, "What are the payment terms for the Johnson account?" The AI said, "I don't have that information." Why? The contract was scanned as a blurry image with no OCR, filed under <code>misc_scan_2023.pdf</code>. The information existed. The AI just couldn't read it or find it.</p>
+    <p><strong>After:</strong> Sarah re-scanned the contract with OCR enabled, renamed it <code>2023-03-15_Johnson-Acct_Contract-MSA.pdf</code>, and filed it in <code>01_Contracts/Active/</code>. Now the AI finds it instantly and quotes Section 4.2 verbatim.</p>
+    <p>Same document. Same AI. The only thing that changed was how the document was prepared. That is the whole lesson of this program in one story.</p>
+  </div>
+  <div class="callout">
+    <p><strong>Quick summary:</strong> Documents are fuel. The person scanning and organizing them is literally building the AI's brain. If data is messy or missing, the AI gives wrong answers. Your work is the foundation of everything.</p>
+  </div>
+
+  <h2>You are a knowledge architect</h2>
+  <div class="card">
+    <p>By scanning documents clearly and organizing them correctly, you are creating the company brain. Every file you process becomes knowledge the AI can use to help the entire team. If a document is scanned poorly or mislabeled, the AI might give incorrect information, leading to wrong decisions, missed deadlines, or compliance issues.</p>
+    <p><strong>You are not doing data entry. You are a knowledge architect,</strong> building the intelligence layer of your company. The quality of your work directly determines how smart and reliable the AI becomes. This is a career-level skill. Companies are actively hiring for "AI Data Preparation" and "Knowledge Management" roles at $60K to $90K and up because this work is that critical.</p>
+    <p><strong>Career implications:</strong></p>
+    <ul class="check">
+      <li>Companies now hire "Knowledge Engineers" and "AI Data Specialists" at premium salaries</li>
+      <li>Understanding how AI consumes data makes you indispensable in any organization adopting AI</li>
+      <li>This skill transfers across industries. Every company needs someone who can do this well</li>
+    </ul>
+  </div>
+
+  <h2>Check yourself</h2>
+  <p>Three questions. Answer each one in your head before you open the answer. If you miss one, re-read the block it points to and move on.</p>
+
+  <details>
+    <summary>What is the best analogy for an LLM: a calculator, a well-read librarian, a search engine, or a filing cabinet?</summary>
+    <div class="inner">
+      <p><strong>Answer: a well-read librarian.</strong> An LLM is like a librarian who has read millions of documents and draws on all of them to answer your questions. But the librarian only knows what it has read. Not a calculator (it doesn't compute exact answers), not a search engine (it doesn't just point you to sources), not a filing cabinet (it doesn't store your files, it reasons over them).</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>What happens when your documents are poorly organized or missing: the AI works slower, the AI gives wrong or incomplete answers, the AI crashes, or nothing, the AI figures it out?</summary>
+    <div class="inner">
+      <p><strong>Answer: the AI gives wrong or incomplete answers.</strong> If documents are messy, mislabeled, or missing, the AI literally cannot find the information it needs. It will either give wrong answers or say it doesn't know. Both are failures. It won't crash, and it won't "figure it out." It fails quietly, which is worse.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>What is your role in the AI system: IT support, knowledge architect, data entry clerk, or software developer?</summary>
+    <div class="inner">
+      <p><strong>Answer: knowledge architect.</strong> You are building the company's AI brain. Every document you properly digitize and organize becomes permanent intelligence the AI can use. You're building the foundation that makes everything else work.</p>
+    </div>
+  </details>
+
+  <h2>How to talk to your AI</h2>
+  <p>This isn't prompt engineering. You don't need to learn special syntax or magic words. You need to ask questions the way you'd ask a competent assistant who has access to all your files, because that's exactly what you're about to build. The examples below reference the vault you'll construct in Layers 1 and 2. Read them now to see where this is going, then come back to this section once your system is live.</p>
+
+  <h3>The shift in how you ask</h3>
+  <div class="card">
+    <p><strong>Before your vault:</strong> You asked AI generic questions and got generic answers. "Write me an email" gets you a corporate-sounding template.</p>
+    <p><strong>After your vault:</strong> You ask AI questions that reference YOUR context and get answers that know YOUR business. "Draft a renewal reminder to Sarah using my notes from our March meeting" gets you an email you'd actually send.</p>
+  </div>
+
+  <h3>Six rules for effective queries</h3>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Rule</th><th>In practice</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Be specific about what you want back</strong></td>
+          <td>Instead of "tell me about X," ask "give me the key terms, dates, and parties involved in X."</td>
+        </tr>
+        <tr>
+          <td><strong>2. Reference your vault structure</strong></td>
+          <td>Instead of "find my contract," ask "look in <code>02-Documents/active/</code> for my lease with Acme Corp."</td>
+        </tr>
+        <tr>
+          <td><strong>3. State the output format you want</strong></td>
+          <td>Instead of just asking, add "give me this as a bullet list / table / draft email / comparison."</td>
+        </tr>
+        <tr>
+          <td><strong>4. Include decision criteria when asking for analysis</strong></td>
+          <td>Instead of "should I do X?" ask "based on criteria A, B, and C, what are the arguments for and against X?"</td>
+        </tr>
+        <tr>
+          <td><strong>5. Tell the AI what authority level to respect</strong></td>
+          <td>"Use only authoritative documents for this answer" or "Include draft documents but note them as drafts."</td>
+        </tr>
+        <tr>
+          <td><strong>6. Ask for sources</strong></td>
+          <td>End queries with "cite which files you're referencing." This lets you verify and catch errors.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Query patterns by purpose</h3>
+  <p>Five kinds of question you'll actually ask, each with a weak version, an effective version, and the reason the effective one works.</p>
+
+  <div class="card">
+    <h4>Recall and reference</h4>
+    <p>Pull specific information from your vault.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Weak query</th><th>Effective query</th><th>Why it works</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Tell me about my lease."</td>
+            <td>"What are the key terms of my active lease with Acme Corp, including rent amount, expiration date, and renewal options?"</td>
+            <td>Specificity tells the AI exactly what to retrieve. Vague questions get vague answers.</td>
+          </tr>
+          <tr>
+            <td>"What happened last year?"</td>
+            <td>"Summarize my significant business decisions from Q3 2025, including the reasoning documented at the time."</td>
+            <td>Time-bounded plus a specific category equals precise retrieval.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4>Relationship and context</h4>
+    <p>Understand connections between people, companies, and properties.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Weak query</th><th>Effective query</th><th>Why it works</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Who is John?"</td>
+            <td>"What is my full relationship history with John Smith? Include how we met, projects we've worked on together, and any outstanding commitments."</td>
+            <td>The AI can trace entity connections when you ask for the full picture.</td>
+          </tr>
+          <tr>
+            <td>"What vendors do I use?"</td>
+            <td>"List my active vendors by category, including contract status, last renewal date, and any performance notes I've documented."</td>
+            <td>A structured output request gets a structured, useful answer.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4>Draft and create</h4>
+    <p>Generate content using your voice and your context.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Weak query</th><th>Effective query</th><th>Why it works</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Write an email to a tenant."</td>
+            <td>"Draft a lease renewal reminder to Sarah Chen at Unit 204, using my standard professional tone. Reference her current lease expiration date and the renewal terms we discussed in our March meeting notes."</td>
+            <td>Context plus voice plus specific details equals an email you'd actually send.</td>
+          </tr>
+          <tr>
+            <td>"Write a proposal."</td>
+            <td>"Draft a service proposal for [Client Name] based on our intake call notes from [date]. Use my standard proposal structure, include the scope we discussed, and price it using my standard rate card."</td>
+            <td>The AI can only write good proposals if it has your templates, rates, and meeting notes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4>Analysis and decision support</h4>
+    <p>Reason over your information to support decisions.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Weak query</th><th>Effective query</th><th>Why it works</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Should I renew this lease?"</td>
+            <td>"Based on my lease with Acme Corp (expiring 12/2026), current market rates in my area, Acme's payment history, and my occupancy goals, what are the arguments for and against renewal at the current rate vs. a 5% increase?"</td>
+            <td>Give the AI the decision criteria and it can reason. Without criteria, it guesses.</td>
+          </tr>
+          <tr>
+            <td>"How's my business doing?"</td>
+            <td>"Compare my Q2 2026 financial performance to Q2 2025 using my documented financials. Highlight: revenue change, expense categories that grew, and any metrics that deviated more than 10% from my stated targets."</td>
+            <td>A specific comparison plus a threshold gets you analysis you can act on, not platitudes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4>Maintenance and governance</h4>
+    <p>Keep your system accurate and current.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Weak query</th><th>Effective query</th><th>Why it works</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Is everything up to date?"</td>
+            <td>"Review my entity files in <code>01-Entities/</code> and flag any that haven't been updated in the last 90 days. For each flagged entity, note what information might be stale."</td>
+            <td>The AI can audit your vault for staleness if you give it clear criteria.</td>
+          </tr>
+          <tr>
+            <td>"Check my documents."</td>
+            <td>"Review documents in <code>02-Documents/active/</code> and identify any that should be reclassified: contracts that have expired (move to historical), drafts that were finalized (update authority to authoritative), or items that reference people no longer in my network."</td>
+            <td>Specific reclassification criteria mean the AI can actually help maintain your system.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>Common mistakes (and fixes)</h3>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Mistake</th><th>Fix</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Asking the AI to "remember" something from a previous chat</td>
+          <td>AI doesn't remember between sessions (unless you're using Projects or custom assistants). Put persistent information in your vault, not in chat.</td>
+        </tr>
+        <tr>
+          <td>Accepting the first answer without asking for sources</td>
+          <td>Always ask: "Which files are you referencing?" This catches hallucinations and stale information immediately.</td>
+        </tr>
+        <tr>
+          <td>Giving the AI a task without specifying the output format</td>
+          <td>Say what you want back: "as a bullet list," "as a draft email," "as a comparison table," "as a 3-sentence summary."</td>
+        </tr>
+        <tr>
+          <td>Asking for advice without providing your decision criteria</td>
+          <td>The AI can't make good recommendations without knowing what you optimize for. State your priorities explicitly.</td>
+        </tr>
+        <tr>
+          <td>Using AI for tasks marked "Never Automate" in your governance rules</td>
+          <td>Your approval framework exists for a reason. If it's in the "never" category, don't ask the AI to do it. Not even "just this once."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>You're done with this page when</h3>
+  <ul class="check">
+    <li>You can ask your AI a question about your business and get an answer that references YOUR specific files</li>
+    <li>You naturally include context (entity names, dates, file locations) in your queries without thinking about it</li>
+    <li>You ask for sources and verify them. It's habit, not extra work</li>
+    <li>The difference between "generic AI" and "your AI" is immediately obvious to you</li>
+    <li>You could teach someone else how to query your system effectively in 5 minutes</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Where this goes next:</strong> Everything above assumes the AI can find and read your documents. Layer 1 is where you make that true. It starts with the least glamorous, highest-return work in the whole program: getting your files clean, named, and organized.</p>
+  </div>
+
+  <div class="pnav">
+    <a href="index.html">← Guide overview</a>
+    <a href="layer-1.html">Layer 1: Data Readiness →</a>
+  </div>
+</main>
+<footer class="site">Groundwork. The AI readiness program by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+</body>
+</html>
