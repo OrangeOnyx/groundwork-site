@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Oldest Idea in Groundwork | Groundwork Guide</title>
+<meta name="description" content="Graded source trust is not new. Naval intelligence built it in 1939. Groundwork brings that discipline to the files your AI reads.">
+<meta name="theme-color" content="#131530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="day-one.html">Day One</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="layer-1.html">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html">L3</a>
+    <a href="operator.html">Operator</a>
+    <a href="layer-4.html">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="layer-6.html">L6</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Notes</span>
+  <header class="page">
+    <span class="kicker">WHERE THIS COMES FROM</span>
+    <h1>The oldest idea in Groundwork.</h1>
+    <p class="lede">Authority Classification is the sharpest tool in this system, and we did not invent the idea behind it. Nobody should trust a method that pretends to be newer than it is. Here is the real lineage, and why it took until now to reach your filing cabinet.</p>
+  </header>
+
+  <h2>1939: the convoy problem</h2>
+  <p>British naval intelligence in the Second World War had a version of the exact problem you have. Reports poured in from everywhere: trusted agents, intercepted signals, neutral captains, rumor mills in port cities. Some of it was gold. Some of it was bait. A convoy routed on the wrong report died. So they refused to treat information as one undifferentiated pile, and built a grading system instead.</p>
+  <p>It became known as the <a href="https://en.wikipedia.org/wiki/Admiralty_code">Admiralty Code</a>, and NATO still uses its descendants today. Every source gets a reliability grade, A through F. Every piece of information gets a credibility grade, 1 through 6. A "B2" is a usually-reliable source reporting something probably true. An "F6" is an unknown source reporting something that cannot be judged. The report does not just say what was seen. It says how far to lean on it.</p>
+  <div class="callout">
+    <p><strong>The insight that survived eighty years:</strong> the value of information depends on two different questions. What does it say, and how much should you trust it? Any system that answers only the first question will eventually route your convoy onto a submarine.</p>
+  </div>
+
+  <h2>The idea kept getting reinvented</h2>
+  <p>Because it is correct, the graded trust ladder keeps showing up wherever information volume outruns human review.</p>
+  <ul>
+    <li><strong>Wikipedia</strong> runs a five-level ladder for <a href="https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources">its sources</a>: generally reliable, no consensus, generally unreliable, deprecated, and blacklisted. The bottom level is mechanically enforced. You cannot cite a blacklisted source even if you try.</li>
+    <li><strong>Enterprise data teams</strong> mark their datasets endorsed, warned, or deprecated, and grade data bronze, silver, or gold as it earns validation. Analysts downstream know at a glance what a dashboard is standing on.</li>
+    <li><strong>Search systems</strong> have ranked "authoritative pages" above the rest for decades, so the intranet answer comes from the policy manual, not the lunch menu.</li>
+  </ul>
+  <p>Intelligence agencies, encyclopedias, and data engineers all landed on the same shape: grade the trust, not just the content, and make the grade something the machine can act on.</p>
+
+  <h2>The gap nobody filled</h2>
+  <p>Here is the strange part. All of that machinery exists for spies, editors, and engineers, and none of it was ever packaged for the person who needs it most right now: an owner handing their business's files to an AI.</p>
+  <p>When you connect an AI to your documents without trust grades, you have rebuilt the 1939 problem exactly. The signed lease and the abandoned draft sit in the same folder, weighted the same. The policy you enforce and the idea you jotted at midnight read identically to the model. The AI is not careless. It is ungraded. It will route your convoy on whatever report it finds first.</p>
+
+  <h2>What Groundwork does with it</h2>
+  <p>Authority Classification, Document 04 in <a href="layer-2.html">Layer 2</a>, is the owner's version of the ladder. Five levels, plain language, written into a plain text file the AI loads with everything else:</p>
+  <ul>
+    <li><strong>Level 0, Core Doctrine:</strong> charter, principles, non-negotiables. Obeyed without asking.</li>
+    <li><strong>Level 1, Institutional Standards:</strong> signed policies, executed contracts. Trusted unless doctrine overrides.</li>
+    <li><strong>Level 2, Validated Knowledge:</strong> reviewed playbooks and procedures. The working library.</li>
+    <li><strong>Level 3, Working Material:</strong> drafts, notes, transcripts. Useful, never quoted as final.</li>
+    <li><strong>Level 4, Untrusted / Raw:</strong> clippings and unverified material. Context only, never truth.</li>
+  </ul>
+  <p>The grades change how the system behaves, which is the whole point. Higher levels override lower ones. Level 3 gets flagged as not final whenever it is used. Level 4 is never quoted as fact. A convoy captain from 1939 would recognize the design at a glance.</p>
+
+  <div class="callout">
+    <p><strong>Credit where it belongs:</strong> graded source trust is an eighty-year-old discipline. What Groundwork adds is the packaging: five named levels, in plain English, in files you own, applied to the documents that run a business, and enforced by the AI that reads them. The idea is proven. The application to your filing cabinet is the new part.</p>
+  </div>
+
+  <p>If you have not built your ladder yet, it is one document with a template waiting in <a href="layer-2.html">Layer 2</a>, and the <a href="scorecard.html">scorecard</a> will tell you how much the gap is costing you.</p>
+
+  <div class="pnav">
+    <a href="index.html">← Guide overview</a>
+    <a href="layer-2.html">Layer 2: Knowledge →</a>
+  </div>
+</main>
+<footer class="site">Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+</body>
+</html>
