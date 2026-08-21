@@ -21,6 +21,7 @@
   </a>
   <div class="links">
     <a href="index.html">Guide</a>
+    <a href="day-one.html">Day One</a>
     <a href="foundations.html">Foundations</a>
     <a href="layer-1.html">L1</a>
     <a href="layer-2.html">L2</a>
@@ -42,13 +43,13 @@
   </header>
 
   <h2>When you are allowed to activate</h2>
-  <p>The Operator comes after the foundation, not instead of it. The gate is simple: all eleven Phase 1 documents exist, a named human has signed off on the governance layer, and the <a href="layer-3.html">Agent Scope</a> file describes one role in one sentence. If any of that is missing, the Operator will improvise it &mdash; and improvised policy is how automation goes wrong.</p>
+  <p>The Operator comes after the foundation, not instead of it. The gate is simple: all eleven Phase 1 documents exist, a named human has signed off on the governance layer, and the <a href="layer-3.html">Agent Scope</a> file describes one role in one sentence. If any of that is missing, the Operator will improvise it, and improvised policy is how automation goes wrong.</p>
   <div class="callout">
-    <p><strong>What an Operator is not:</strong> it is not autonomous, it does not act while you sleep, it does not have memory you have not given it, and it is not a fleet. It is one agent, one context package, one human in the loop. For most owners this is enough &mdash; permanently.</p>
+    <p><strong>What an Operator is not:</strong> it is not autonomous, it does not act while you sleep, it does not have memory you have not given it, and it is not a fleet. It is one agent, one context package, one human in the loop. For most owners this is enough. Permanently.</p>
   </div>
 
   <h2>The Operator context package</h2>
-  <p>Everything the Operator knows lives in one folder, loaded in order. This is the package &mdash; the fifteen Groundwork documents arranged for loading. A vault that contains everything contains nothing; this is the deliberate subset.</p>
+  <p>Everything the Operator knows lives in one folder, loaded in order. This is the package: the fifteen Groundwork documents arranged for loading. A vault that contains everything contains nothing; this is the deliberate subset.</p>
   <pre><code>01_Operator/
   00_CONTEXT.md
   01_Identity/
@@ -62,19 +63,17 @@
     Context_Vault.md
   03_Authority_Rules/
     Authority_Classification.md
-    Automation_Decision_Framework.md
+    Automation_Framework.md
+    Escalation_Rules.md
   04_Capabilities/
-    Escalation_Triggers.md
     Allowed_Tools.md
     Agent_Scope.md
   05_Working_Memory/
     Session_Notes.md
   06_Output_Standards/
     Measurement_Notes.md
-    Operating_Rhythm.md
-    Response_Rules.md
-    Operator_Prompt.md</code></pre>
-  <p><code>00_CONTEXT.md</code> is a one-page index: what this package is, the load order, and the one-line rule &mdash; higher authority levels override lower ones. Load the files first, in order. Then paste the Operator prompt as the session instruction.</p>
+    Operating_Rhythm.md</code></pre>
+  <p><code>00_CONTEXT.md</code> is a one-page index: what this package is, the load order, and the one-line rule: higher authority levels override lower ones. Load the files first, in order. Then paste the Operator prompt as the session instruction.</p>
 
   <h2>The Operator prompt</h2>
   <p>This is the session instruction. Do not expand it into a personality. Keep it as rules.</p>
@@ -95,7 +94,7 @@ Rules
 - If the request is Never Automate, refuse and
   escalate.
 - If authority is unclear, confidence is low, or
-  the action is irreversible — escalate.
+  the action is irreversible, escalate.
 
 When escalating, state:
 1. What was requested
@@ -103,15 +102,15 @@ When escalating, state:
 3. What decision or information is needed
 
 Your output should read like it came from a highly
-competent operator — not an assistant trying to
+competent operator, not an assistant trying to
 be helpful.</code></pre>
 
   <h2>The first two weeks</h2>
   <p>Activation is a shakedown cruise, not a launch party. Run it like this:</p>
   <ul>
     <li><strong>Days 1&ndash;3: Zone 1 only.</strong> Internal summaries, formatting, file work. You are testing whether the Operator loads context correctly and cites authority levels, not whether it can do your job.</li>
-    <li><strong>Days 4&ndash;14: real Draft &amp; Wait work.</strong> Give it the actual emails, notices, and reports on your desk. Approve, reject, and &mdash; this is the important part &mdash; when a draft misses, fix the <em>document</em> that caused the miss, not just the draft.</li>
-    <li><strong>Log every correction in Session Notes.</strong> Three misses with the same root cause means a foundation file needs editing. That loop &mdash; miss, trace, edit, retest &mdash; is the whole method.</li>
+    <li><strong>Days 4&ndash;14: real Draft &amp; Wait work.</strong> Give it the actual emails, notices, and reports on your desk. Approve, reject, and (this is the important part) when a draft misses, fix the <em>document</em> that caused the miss, not just the draft.</li>
+    <li><strong>Log every correction in Session Notes.</strong> Three misses with the same root cause means a foundation file needs editing. That loop (miss, trace, edit, retest) is the whole method.</li>
   </ul>
 
   <h2>What the Operator may and may not do</h2>
@@ -137,7 +136,7 @@ be helpful.</code></pre>
   </div>
 
   <h2>After the Operator: adding roles</h2>
-  <p><strong>The default is one.</strong> One Operator, one context package, one human in the loop. Add a second role only after the Operator is stable and a second, clearly different job exists &mdash; a Researcher that never drafts client-facing work, or a Reviewer that only checks authority and voice.</p>
+  <p><strong>The default is one.</strong> One Operator, one context package, one human in the loop. Add a second role only after the Operator is stable and a second, clearly different job exists: a Researcher that never drafts client-facing work, or a Reviewer that only checks authority and voice.</p>
   <p><strong>How to add one:</strong> do not build an orchestration engine. Duplicate the folder pattern. Give the new role a narrower charter, its own Allowed Tools, and the same Escalation Rules. The human decides who is invoked.</p>
   <p><strong>What to refuse:</strong> agents that create other agents. Shared memory without classification. Any role that can execute Never Automate work.</p>
 
@@ -152,7 +151,7 @@ be helpful.</code></pre>
     </ul>
   </div>
 
-  <p>The Operator now works. Phase 3 makes it durable: <a href="layer-4.html">Continuity</a> is what survives time, people, and failure &mdash; starting with the ninety-day test.</p>
+  <p>The Operator now works. Phase 3 makes it durable: <a href="layer-4.html">Continuity</a> is what survives time, people, and failure, starting with the ninety-day test.</p>
 
   <div class="pnav">
     <a href="layer-3.html">&larr; Layer 3: Governance</a>

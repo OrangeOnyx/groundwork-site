@@ -21,6 +21,7 @@
   </a>
   <div class="links">
     <a href="index.html">Guide</a>
+    <a href="day-one.html">Day One</a>
     <a href="foundations.html" aria-current="page">Foundations</a>
     <a href="layer-1.html">L1</a>
     <a href="layer-2.html">L2</a>
@@ -44,7 +45,7 @@
   <p>AI is not magic and it is not a black box. It is a system with parts, and every part depends on what you put into it. Once you see the four parts clearly, every decision in the six layers ahead of you makes sense. This page gives you that picture.</p>
 
   <div class="callout">
-    <p><strong>Why this matters in dollars:</strong> <a href="https://www.gartner.com/en/newsroom/press-releases/2026-04-16-gartner-says-organizations-with-successful-ai-initiatives-invest-up-to-four-times-more-in-data-and-analytics-foundations">Gartner found</a> that organizations with successful AI initiatives invest up to four times more in foundations — data quality, governance, and AI-ready people — than organizations with poor AI outcomes. The work in this guide is that investment.</p>
+    <p><strong>Why this matters in dollars:</strong> <a href="https://www.gartner.com/en/newsroom/press-releases/2026-04-16-gartner-says-organizations-with-successful-ai-initiatives-invest-up-to-four-times-more-in-data-and-analytics-foundations">Gartner found</a> that organizations with successful AI initiatives invest up to four times more in foundations, as a share of revenue, than organizations with poor AI outcomes: data quality, governance, change management, and AI-ready people. The work in this guide is that investment.</p>
   </div>
 
   <h2>Block 1: The LLM is the brain</h2>
@@ -113,11 +114,11 @@
     </ul>
   </div>
 
-  <h3>Sarah's before and after</h3>
+  <h3>Sarah's before and after (a composite example)</h3>
   <div class="card">
     <p><strong>Before:</strong> Sarah's firm asked their AI, "What are the payment terms for the Johnson account?" The AI said, "I don't have that information." Why? The contract was scanned as a blurry image with no OCR, filed under <code>misc_scan_2023.pdf</code>. The information existed. The AI just couldn't read it or find it.</p>
     <p><strong>After:</strong> Sarah re-scanned the contract with OCR enabled, renamed it <code>2023-03-15_Johnson-Acct_Contract-MSA.pdf</code>, and filed it in <code>01_Contracts/Active/</code>. Now the AI finds it instantly and quotes Section 4.2 verbatim.</p>
-    <p>Same document. Same AI. The only thing that changed was how the document was prepared. That is the whole lesson of this program in one story.</p>
+    <p>Same document. Same AI. The only thing that changed was how the document was prepared. Sarah and her firm are a composite, but the pattern is one every firm hits, and it is the whole lesson of this program in one story.</p>
   </div>
   <div class="callout">
     <p><strong>Quick summary:</strong> Documents are fuel. The person scanning and organizing them is literally building the AI's brain. If data is messy or missing, the AI gives wrong answers. Your work is the foundation of everything.</p>
@@ -126,10 +127,10 @@
   <h2>You are a knowledge architect</h2>
   <div class="card">
     <p>By scanning documents clearly and organizing them correctly, you are creating the company brain. Every file you process becomes knowledge the AI can use to help the entire team. If a document is scanned poorly or mislabeled, the AI might give incorrect information, leading to wrong decisions, missed deadlines, or compliance issues.</p>
-    <p><strong>You are not doing data entry. You are a knowledge architect,</strong> building the intelligence layer of your company. The quality of your work directly determines how smart and reliable the AI becomes. This is a career-level skill. Companies are actively hiring for "AI Data Preparation" and "Knowledge Management" roles at $60K to $90K and up because this work is that critical.</p>
+    <p><strong>You are not doing data entry. You are a knowledge architect,</strong> building the intelligence layer of your company. The quality of your work directly determines how smart and reliable the AI becomes. This is a career-level skill. Companies hire for knowledge management roles at salaries that commonly run $60K to $100K, because this work is that critical.</p>
     <p><strong>Career implications:</strong></p>
     <ul class="check">
-      <li>Companies now hire "Knowledge Engineers" and "AI Data Specialists" at premium salaries</li>
+      <li>Knowledge management is a hired-for, salaried role in the market, not busywork</li>
       <li>Understanding how AI consumes data makes you indispensable in any organization adopting AI</li>
       <li>This skill transfers across industries. Every company needs someone who can do this well</li>
     </ul>
@@ -181,7 +182,7 @@
         </tr>
         <tr>
           <td><strong>2. Reference your vault structure</strong></td>
-          <td>Instead of "find my contract," ask "look in <code>02-Documents/active/</code> for my lease with Acme Corp."</td>
+          <td>Instead of "find my contract," ask "look in <code>02_Current_Context/</code> for my lease with Acme Corp."</td>
         </tr>
         <tr>
           <td><strong>3. State the output format you want</strong></td>
@@ -313,12 +314,12 @@
         <tbody>
           <tr>
             <td>"Is everything up to date?"</td>
-            <td>"Review my entity files in <code>01-Entities/</code> and flag any that haven't been updated in the last 90 days. For each flagged entity, note what information might be stale."</td>
+            <td>"Review the files in <code>02_Current_Context/</code> and flag any that haven't been updated in the last 90 days. For each flagged entity, note what information might be stale."</td>
             <td>The AI can audit your vault for staleness if you give it clear criteria.</td>
           </tr>
           <tr>
             <td>"Check my documents."</td>
-            <td>"Review documents in <code>02-Documents/active/</code> and identify any that should be reclassified: contracts that have expired (move to historical), drafts that were finalized (update authority to authoritative), or items that reference people no longer in my network."</td>
+            <td>"Review documents in <code>02_Current_Context/</code> and identify any that should be reclassified: contracts that have expired (move to historical), drafts that were finalized (update authority to authoritative), or items that reference people no longer in my network."</td>
             <td>Specific reclassification criteria mean the AI can actually help maintain your system.</td>
           </tr>
         </tbody>
@@ -367,7 +368,7 @@
   </ul>
 
   <div class="callout">
-    <p><strong>Where this goes next:</strong> Everything above assumes the AI can find and read your documents. Layer 1 is where you make that true. It starts with the least glamorous, highest-return work in the whole program: getting your files clean, named, and organized.</p>
+    <p><strong>Where this goes next:</strong> Everything above assumes the AI knows who you are and what to trust. Layer 1, Identity, is where you write that down: your charter, your voice, your decision principles. The file cleanup comes right after, in Layer 2, Knowledge, the least glamorous, highest-return work in the whole system.</p>
   </div>
 
   <div class="pnav">

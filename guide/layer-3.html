@@ -21,6 +21,7 @@
   </a>
   <div class="links">
     <a href="index.html">Guide</a>
+    <a href="day-one.html">Day One</a>
     <a href="foundations.html">Foundations</a>
     <a href="layer-1.html">L1</a>
     <a href="layer-2.html">L2</a>
@@ -38,12 +39,12 @@
   <header class="page">
     <span class="kicker">LAYER THREE · PHASE 1 · REQUIRED FIRST</span>
     <h1>Governance.</h1>
-    <p class="lede">What the system is allowed to do. Four documents that decide &mdash; in writing, before the fact &mdash; when AI acts, when it drafts, and when it must stop.</p>
+    <p class="lede">What the system is allowed to do. Four documents that decide, in writing and before the fact, when AI acts, when it drafts, and when it must stop.</p>
   </header>
 
   <h2>Why rules come before agents</h2>
   <p>The most dangerous phrase in automation is &ldquo;it will be fine.&rdquo; The most dangerous failure mode in AI systems is an agent doing something you did not authorize because nobody wrote down what was authorized. Governance is where you decide the boundaries while the stakes are still zero.</p>
-  <p>This layer is the reason Groundwork installs a foundation before an Operator. An agent without written rules does not have no rules &mdash; it has improvised rules, invented fresh in every session. Written governance is also what makes delegation safe for you psychologically: you can hand work to the system because you know exactly where it must stop.</p>
+  <p>This layer is the reason Groundwork installs a foundation before an Operator. An agent without written rules does not have no rules: it has improvised rules, invented fresh in every session. Written governance is also what makes delegation safe for you psychologically: you can hand work to the system because you know exactly where it must stop.</p>
   <div class="callout">
     <p><strong>The test:</strong> does the system know when to act, when to draft, and when to stop? If the answer lives in your head instead of a file, this layer is not done.</p>
   </div>
@@ -61,13 +62,13 @@
       <span class="tag">Zone 2</span>
       <h3>Draft &amp; Wait</h3>
       <p>Anything customer-facing, tenant-facing, or reputation-touching. Emails, notices, proposals, listings, reports going outside. AI prepares the complete work product; a named human approves before anything leaves.</p>
-      <p><strong>The bar:</strong> most real business work lives here. This is where the leverage is &mdash; drafting is the expensive part, approving takes minutes.</p>
+      <p><strong>The bar:</strong> most real business work lives here. This is where the payoff is: drafting is the expensive part, approving takes minutes.</p>
     </div>
     <div class="card">
       <span class="tag">Zone 3</span>
       <h3>Never Automate</h3>
       <p>Legal commitments, pricing decisions, hiring and firing, disputes, anything irreversible or precedent-setting. AI may brief you. It may not act, draft-to-send, or decide.</p>
-      <p><strong>The bar:</strong> if a mistake here would need a lawyer, an apology, or an explanation to a judge &mdash; it is Zone 3, permanently.</p>
+      <p><strong>The bar:</strong> if a mistake here would need a lawyer, an apology, or an explanation to a judge, it is Zone 3, permanently.</p>
     </div>
   </div>
 
@@ -76,20 +77,20 @@
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>03_Authority_Rules/Automation_Framework.md</code></p>
     <pre><code># Automation Decision Framework
 
-## Zone 1 — Auto-Execute
+## Zone 1: Auto-Execute
 Criteria: reversible, internal, no exposure.
 Tasks:
 -
 -
 
-## Zone 2 — Draft &amp; Wait
+## Zone 2: Draft &amp; Wait
 Criteria: external-facing or judgment-adjacent.
 Approver: [named human]
 Tasks:
 -
 -
 
-## Zone 3 — Never Automate
+## Zone 3: Never Automate
 Criteria: irreversible, legal, financial,
 precedent-setting.
 Tasks:
@@ -98,13 +99,13 @@ Tasks:
 
 Default: any task not listed is Zone 2 until
 a human assigns it a zone.</code></pre>
-    <p><strong>How to write it well:</strong> start by listing the ten tasks you actually want help with, then zone each one. The default rule at the bottom matters most &mdash; unlisted work falls to Draft &amp; Wait, never to auto-execute.</p>
+    <p><strong>How to write it well:</strong> start by listing the ten tasks you actually want help with, then zone each one. The default rule at the bottom matters most: unlisted work falls to Draft &amp; Wait, never to auto-execute.</p>
   </div>
 
   <div class="card">
     <h3>Document 09: Escalation Rules</h3>
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>03_Authority_Rules/Escalation_Rules.md</code></p>
-    <p>When the system must stop and hand the decision to a human &mdash; even in the middle of an approved task.</p>
+    <p>When the system must stop and hand the decision to a human, even in the middle of an approved task.</p>
     <pre><code># Escalation Rules
 
 Stop and escalate to [named human] when:
@@ -126,16 +127,16 @@ is needed. Do not proceed on silence.</code></pre>
   <div class="card">
     <h3>Document 10: Allowed Tools &amp; Access</h3>
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>04_Capabilities/Allowed_Tools.md</code></p>
-    <p>The explicit inventory of what the system may touch &mdash; and the systems it may never enter.</p>
+    <p>The explicit inventory of what the system may touch, and the systems it may never enter.</p>
     <pre><code># Allowed Tools &amp; Access
 
 ## May use
 - [AI assistant / platform]
-- [document drive — read]
-- [calendar — read]
+- [document drive: read]
+- [calendar: read]
 
 ## May use with approval per instance
-- [email — send]
+- [email: send]
 - [external posting]
 
 ## May never access
@@ -148,8 +149,8 @@ is needed. Do not proceed on silence.</code></pre>
   <div class="card">
     <h3>Document 11: Agent Scope (First Operator)</h3>
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>04_Capabilities/Agent_Scope.md</code></p>
-    <p>The job description for your first Operator &mdash; written before the Operator exists. One role, a short task list, and hard boundaries.</p>
-    <pre><code># Agent Scope — First Operator
+    <p>The job description for your first Operator, written before the Operator exists. One role, a short task list, and hard boundaries.</p>
+    <pre><code># Agent Scope: First Operator
 
 ## Role
 [One sentence. e.g., "Drafting and document
@@ -175,8 +176,8 @@ operator for tenant communications."]
   <p>Draft &amp; Wait only works if the wait is real. Three rules keep it honest:</p>
   <ul>
     <li><strong>Name the approver.</strong> &ldquo;Someone reviews it&rdquo; means nobody reviews it. Every Zone 2 category has exactly one named human.</li>
-    <li><strong>Approve the artifact, not the idea.</strong> The human reads the actual email, the actual notice, the actual number &mdash; not a summary of it.</li>
-    <li><strong>Log the approvals.</strong> A one-line record &mdash; date, item, approver &mdash; turns disputes into lookups. It also builds the evidence you will use in <a href="layer-5.html">Measurement</a> to decide whether a task has earned a wider zone.</li>
+    <li><strong>Approve the artifact, not the idea.</strong> The human reads the actual email, the actual notice, the actual number, not a summary of it.</li>
+    <li><strong>Log the approvals.</strong> A one-line record (date, item, approver) turns disputes into lookups. It also builds the evidence you will use in <a href="layer-5.html">Measurement</a> to decide whether a task has earned a wider zone.</li>
   </ul>
 
   <div class="card">
@@ -190,7 +191,7 @@ operator for tenant communications."]
     </ul>
   </div>
 
-  <p>Phase 1 is now complete: identity, trusted knowledge, written rules. You have earned the right to activate something. Next: <a href="operator.html">the Operator</a> &mdash; one scoped agent running inside everything you just built.</p>
+  <p>Phase 1 is now complete: identity, trusted knowledge, written rules. You have earned the right to activate something. Next: <a href="operator.html">the Operator</a>, one scoped agent running inside everything you just built.</p>
 
   <div class="pnav">
     <a href="layer-2.html">&larr; Layer 2: Knowledge</a>

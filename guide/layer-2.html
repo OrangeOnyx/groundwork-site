@@ -21,6 +21,7 @@
   </a>
   <div class="links">
     <a href="index.html">Guide</a>
+    <a href="day-one.html">Day One</a>
     <a href="foundations.html">Foundations</a>
     <a href="layer-1.html">L1</a>
     <a href="layer-2.html" aria-current="page">L2</a>
@@ -43,7 +44,7 @@
 
   <h2>Why this layer exists</h2>
   <p>Most AI systems treat every input as equal. A forwarded email, a signed lease, a half-finished draft, and a market rumor all land in the context window with the same weight. That is why systems hallucinate policy: nothing told them what outranks what.</p>
-  <p>Layer 2 installs the missing hierarchy. You classify what you know by authority, gather the small set of files the system must always load, and write down what you are optimizing for right now &mdash; and what you are explicitly not doing. The payoff is an AI that cites your files, at the right level of trust, instead of the internet's guesses.</p>
+  <p>Layer 2 installs the missing hierarchy. You classify what you know by authority, gather the small set of files the system must always load, and write down what you are optimizing for right now, and what you are explicitly not doing. The payoff is an AI that cites your files, at the right level of trust, instead of the internet's guesses.</p>
   <div class="callout">
     <p><strong>The test:</strong> can the system tell doctrine from a draft? Ask it. If it cannot name the authority level of the document it just quoted, this layer is not done.</p>
   </div>
@@ -70,27 +71,27 @@
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>03_Authority_Rules/Authority_Classification.md</code></p>
     <pre><code># Authority Classification
 
-## Level 0 — Core Doctrine
+## Level 0: Core Doctrine
 Non-negotiable. Overrides everything.
 Examples: Identity Charter, Decision Principles,
 legal mandates, operating agreements.
 
-## Level 1 — Institutional Standards
+## Level 1: Institutional Standards
 Approved ways of working.
 Examples: Brand Voice, internal policies,
 approval thresholds, communication standards.
 
-## Level 2 — Validated Knowledge
+## Level 2: Validated Knowledge
 Reviewed and accepted.
 Examples: executed contracts, cleaned data,
 completed reports, verified third-party info.
 
-## Level 3 — Working Material
+## Level 3: Working Material
 Useful but not authoritative.
 Examples: drafts, preliminary analysis,
 internal notes, external proposals.
 
-## Level 4 — Untrusted / Raw
+## Level 4: Untrusted / Raw
 Requires caution.
 Examples: forwarded emails, unverified quotes,
 market chatter, personal notes.
@@ -98,13 +99,13 @@ market chatter, personal notes.
 Rule: higher levels always override lower levels.
 Cite the Authority Level when making material
 recommendations.</code></pre>
-    <p><strong>How to apply it:</strong> you do not need to label every file you own on day one. Classify as you touch things. When a document enters the vault or gets used in a real decision, give it a level &mdash; a line of frontmatter or a single word in the filename is enough.</p>
+    <p><strong>How to apply it:</strong> you do not need to label every file you own on day one. Classify as you touch things. When a document enters the vault or gets used in a real decision, give it a level: a line of frontmatter or a single word in the filename is enough.</p>
   </div>
 
   <div class="card">
     <h3>Document 05: Context Vault v1</h3>
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>02_Current_Context/Context_Vault.md</code></p>
-    <p>The short list of files the system must always load first. This is not your archive &mdash; it is the briefing packet.</p>
+    <p>The short list of files the system must always load first. This is not your archive. It is the briefing packet.</p>
     <pre><code># Context Vault v1
 
 ## Always load
@@ -127,7 +128,7 @@ everything contains nothing.</code></pre>
   <div class="card">
     <h3>Document 06: Strategic Priorities</h3>
     <p class="quiet" style="opacity:.72;font-size:.92em"><code>02_Current_Context/Strategic_Priorities.md</code></p>
-    <p>What is actually being optimized this cycle &mdash; and what is not. Without this file, the system optimizes for whatever the last prompt implied.</p>
+    <p>What is actually being optimized this cycle, and what is not. Without this file, the system optimizes for whatever the last prompt implied.</p>
     <pre><code># Strategic Priorities
 Last updated: [date]
 
@@ -166,7 +167,7 @@ Last updated: [date]
 
 ## Current capacity notes
 -</code></pre>
-    <p><strong>How to apply it:</strong> hard constraints are enforced in Layer 3 governance; here they are stated as fact. Capacity notes are the human part &mdash; &ldquo;one person, ten hours a week for this&rdquo; changes every recommendation the system should make.</p>
+    <p><strong>How to apply it:</strong> hard constraints are enforced in Layer 3 governance; here they are stated as fact. Capacity notes are the human part: &ldquo;one person, ten hours a week for this&rdquo; changes every recommendation the system should make.</p>
   </div>
 
   <h2>Vault hygiene: making files findable</h2>
@@ -188,7 +189,7 @@ Last updated: [date]
     </ul>
   </div>
 
-  <p>Next: the system knows who you are and what to trust. Now it needs rules for what it may <em>do</em>. That is <a href="layer-3.html">Governance</a> &mdash; the three zones, escalation rules, and the scope of your first agent.</p>
+  <p>Next: the system knows who you are and what to trust. Now it needs rules for what it may <em>do</em>. That is <a href="layer-3.html">Governance</a>: the three zones, escalation rules, and the scope of your first agent.</p>
 
   <div class="pnav">
     <a href="layer-1.html">&larr; Layer 1: Identity</a>
