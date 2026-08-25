@@ -304,6 +304,35 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
   .layer .glyph{color:var(--accent)}
   .motes{display:none}
 }
+
+/* ============ visual wave ============ */
+.vw svg{display:block;width:100%;height:auto}
+.vw svg text{font-family:var(--body);fill:var(--text-primary)}
+.vw svg .mono{font-family:var(--mono)}
+.vw svg .sub{fill:var(--text-secondary)}
+.vw svg .acc{fill:var(--accent)}
+.vw svg .slab{fill:var(--panel);stroke:var(--accent);stroke-width:1.3}
+.vw svg .slab-dim{fill:var(--panel);stroke:var(--accent-muted);stroke-width:1.2}
+.vw svg .ln{stroke:var(--accent-muted);fill:none}
+.vw svg .ln-acc{stroke:var(--accent);fill:none}
+.vw svg .ground{stroke:var(--text-primary);stroke-width:2;opacity:.55;stroke-linecap:round}
+.vw svg .star{fill:var(--accent)}
+.vw svg .star-halo{fill:none;stroke:var(--accent);opacity:.4}
+.vw svg .arrowline{stroke:var(--text-secondary);fill:none;stroke-width:1.2}
+.vw svg .mk{fill:var(--text-secondary)}
+.vw svg a text{cursor:pointer}
+.vw svg a:hover .star{fill:var(--accent-hover)}
+.act-head{display:grid;grid-template-columns:72px 1fr;gap:1.3rem;align-items:start;margin-bottom:.4rem}
+.act-emblem{width:72px;height:72px;border:1px solid var(--accent-muted);border-radius:50%;display:grid;place-items:center;background:rgba(143,163,255,.06)}
+.act-emblem svg{width:42px;height:42px}
+.act-no{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
+.act-promise{color:var(--text-secondary);font-size:.92rem;max-width:58ch;margin:.4rem 0 0}
+.act-promise b{color:var(--text-primary);font-weight:600}
+.act-next{display:inline-block;margin-top:.7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--accent)}
+.layer.p1{border-left:2px solid var(--accent);padding-left:1.2rem}
+.layer.p3{border-left:2px solid var(--accent-muted);padding-left:1.2rem}
+.quiet-h{font-size:clamp(1.3rem,2.3vw,1.75rem) !important;color:var(--text-secondary)}
+@media (max-width:640px){.act-head{grid-template-columns:1fr}.act-emblem{width:56px;height:56px}.act-emblem svg{width:34px;height:34px}}
 </style>
 </head>
 <body>
@@ -390,19 +419,157 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 
 <main id="main" tabindex="-1">
 
+  <section id="nutshell" class="reveal" aria-labelledby="h-nutshell">
+    <div class="wrap">
+      <span class="kicker part">The whole thing, in one picture</span>
+      <h2 class="part" id="h-nutshell">Here is the whole system.</h2>
+      <div class="vw part">
+        <svg viewBox="0 0 1000 400" role="img" aria-label="Build sequence: scattered knowledge today, then Phase 1 stacks Identity, Knowledge, and Governance into a foundation, Phase 2 places one Operator on top, Phase 3 wraps the whole in a durable shell.">
+          <defs>
+            <marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="mk"/>
+            </marker>
+          </defs>
+          <line class="ground" x1="24" y1="330" x2="976" y2="330"/>
+          <a href="#sound-familiar" aria-label="Today: scattered and undocumented. Read the problem.">
+            <g>
+              <circle class="star" cx="66"  cy="212" r="3" opacity="0.85"/>
+              <circle class="star" cx="118" cy="188" r="2.4" opacity="0.5"/>
+              <circle class="star" cx="152" cy="238" r="3.4" opacity="0.9"/>
+              <circle class="star" cx="92"  cy="266" r="2.2" opacity="0.45"/>
+              <circle class="star" cx="138" cy="290" r="2.8" opacity="0.7"/>
+              <circle class="star" cx="72"  cy="304" r="2" opacity="0.4"/>
+              <circle class="star" cx="112" cy="232" r="2" opacity="0.55"/>
+              <circle class="star" cx="160" cy="196" r="2" opacity="0.4"/>
+              <circle class="star" cx="86"  cy="172" r="2.4" opacity="0.6"/>
+              <circle class="star" cx="146" cy="264" r="2" opacity="0.5"/>
+            </g>
+            <text class="mono acc" x="112" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">TODAY</text>
+            <text class="sub" x="112" y="374" text-anchor="middle" font-size="10.5">scattered · undocumented</text>
+          </a>
+          <line class="arrowline" x1="196" y1="252" x2="238" y2="252" marker-end="url(#mA)"/>
+          <a href="#method" aria-label="Phase 1, the foundation: Identity, Knowledge, Governance. Read the method.">
+            <g>
+              <rect class="slab" x="266" y="294" width="170" height="30" rx="5"/>
+              <rect class="slab" x="266" y="258" width="170" height="30" rx="5"/>
+              <rect class="slab" x="266" y="222" width="170" height="30" rx="5"/>
+              <text x="351" y="313" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">01</tspan><tspan dx="7">Identity</tspan></text>
+              <text x="351" y="277" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">02</tspan><tspan dx="7">Knowledge</tspan></text>
+              <text x="351" y="241" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">03</tspan><tspan dx="7">Governance</tspan></text>
+            </g>
+            <text class="mono acc" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 1 · THE FOUNDATION</text>
+            <text class="sub" x="351" y="374" text-anchor="middle" font-size="10.5">eleven documents · a focused weekend</text>
+          </a>
+          <line class="arrowline" x1="452" y1="252" x2="494" y2="252" marker-end="url(#mA)"/>
+          <a href="#operator" aria-label="Phase 2, activation: one scoped Operator. Read about the Operator.">
+            <g>
+              <rect class="slab-dim" x="522" y="294" width="170" height="30" rx="5"/>
+              <rect class="slab-dim" x="522" y="258" width="170" height="30" rx="5"/>
+              <rect class="slab-dim" x="522" y="222" width="170" height="30" rx="5"/>
+              <circle class="star-halo" cx="607" cy="196" r="15"/>
+              <circle class="star" cx="607" cy="196" r="7"/>
+              <line class="ln-acc" x1="607" y1="176" x2="607" y2="168"/>
+              <line class="ln-acc" x1="627" y1="196" x2="635" y2="196"/>
+              <line class="ln-acc" x1="587" y1="196" x2="579" y2="196"/>
+              <text class="acc" x="651" y="200" font-size="11" font-weight="600">Operator</text>
+            </g>
+            <text class="mono acc" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 2 · ACTIVATION</text>
+            <text class="sub" x="607" y="374" text-anchor="middle" font-size="10.5">one scoped agent · about a week</text>
+          </a>
+          <line class="arrowline" x1="708" y1="252" x2="750" y2="252" marker-end="url(#mA)"/>
+          <a href="#docs" aria-label="Phase 3, durability: continuity, measurement, rhythm. See the fifteen documents.">
+            <g>
+              <rect class="ln-acc" x="770" y="164" width="206" height="166" rx="16" fill="none" stroke-width="1.4"/>
+              <rect class="slab-dim" x="788" y="294" width="170" height="30" rx="5"/>
+              <rect class="slab-dim" x="788" y="258" width="170" height="30" rx="5"/>
+              <rect class="slab-dim" x="788" y="222" width="170" height="30" rx="5"/>
+              <circle class="star-halo" cx="873" cy="196" r="13"/>
+              <circle class="star" cx="873" cy="196" r="6"/>
+              <text class="sub mono" x="873" y="152" text-anchor="middle" font-size="9.5" letter-spacing="1">CONTINUITY · MEASUREMENT · RHYTHM</text>
+            </g>
+            <text class="mono acc" x="873" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 3 · DURABILITY</text>
+            <text class="sub" x="873" y="374" text-anchor="middle" font-size="10.5">four documents · survives you gone 90 days</text>
+          </a>
+          <text class="sub" x="500" y="80" text-anchor="middle" font-size="12.5">Fifteen plain-text documents you own, built in strict order, then one Operator standing on them.</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
   <section id="start" class="reveal" aria-labelledby="h-start">
     <div class="narrow">
       <span class="kicker part">Where do you start</span>
       <h2 class="part" id="h-start">Three minutes tells you.</h2>
       <p class="body part">Six layers and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest layer, and that is where you start reading.</p>
       <p class="part"><a class="btn" href="guide/scorecard.html">Take the 5-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
+      <div class="vw part" style="margin-top:2rem">
+        <svg viewBox="0 0 1000 260" role="img" aria-label="Journey with five stops: the three-minute scorecard names your weakest layer, Day One puts the first files on disk, a weekend builds Phase 1's eleven documents, a week activates one governed Operator, and the rhythm keeps it standing.">
+          <polyline class="ln-acc" points="80,150 280,110 490,145 700,105 910,138" stroke-width="1.3" opacity="0.85"/>
+          <a href="guide/scorecard.html" aria-label="Score yourself: three minutes, leave with your weakest layer named.">
+            <circle class="star-halo" cx="80" cy="150" r="11"/>
+            <circle class="star" cx="80" cy="150" r="5"/>
+            <text class="mono acc" x="80" y="182" text-anchor="middle" font-size="10">3 MIN</text>
+            <text x="80" y="200" text-anchor="middle" font-size="12" font-weight="600">Score yourself</text>
+            <text class="sub" x="80" y="217" text-anchor="middle" font-size="10.5">leave with: your weakest</text>
+            <text class="sub" x="80" y="231" text-anchor="middle" font-size="10.5">layer, named</text>
+          </a>
+          <a href="guide/day-one.html" aria-label="Day One: thirty minutes, leave with the first files on your disk.">
+            <circle class="star-halo" cx="280" cy="110" r="11"/>
+            <circle class="star" cx="280" cy="110" r="5"/>
+            <text class="mono acc" x="280" y="76" text-anchor="middle" font-size="10">30 MIN</text>
+            <text x="280" y="58" text-anchor="middle" font-size="12" font-weight="600">Day One</text>
+            <text class="sub" x="280" y="140" text-anchor="middle" font-size="10.5">leave with: the first</text>
+            <text class="sub" x="280" y="154" text-anchor="middle" font-size="10.5">files on your disk</text>
+          </a>
+          <a href="guide/foundations.html" aria-label="Build Phase 1: a weekend, leave with eleven documents, the foundation installed.">
+            <circle class="star-halo" cx="490" cy="145" r="11"/>
+            <circle class="star" cx="490" cy="145" r="5"/>
+            <text class="mono acc" x="490" y="177" text-anchor="middle" font-size="10">A WEEKEND</text>
+            <text x="490" y="195" text-anchor="middle" font-size="12" font-weight="600">Build Phase 1</text>
+            <text class="sub" x="490" y="212" text-anchor="middle" font-size="10.5">leave with: eleven documents,</text>
+            <text class="sub" x="490" y="226" text-anchor="middle" font-size="10.5">the foundation installed</text>
+          </a>
+          <a href="guide/operator.html" aria-label="Activate the Operator: a week, leave with one governed agent live on real work.">
+            <circle class="star-halo" cx="700" cy="105" r="11"/>
+            <circle class="star" cx="700" cy="105" r="5"/>
+            <text class="mono acc" x="700" y="71" text-anchor="middle" font-size="10">A WEEK</text>
+            <text x="700" y="53" text-anchor="middle" font-size="12" font-weight="600">Activate the Operator</text>
+            <text class="sub" x="700" y="135" text-anchor="middle" font-size="10.5">leave with: one governed</text>
+            <text class="sub" x="700" y="149" text-anchor="middle" font-size="10.5">agent, live on real work</text>
+          </a>
+          <a href="guide/layer-6.html" aria-label="Keep it standing: ongoing, leave with a rhythm, not a one-time build.">
+            <circle class="star-halo" cx="910" cy="138" r="11"/>
+            <circle class="star" cx="910" cy="138" r="5"/>
+            <text class="mono acc" x="910" y="170" text-anchor="middle" font-size="10">ONGOING</text>
+            <text x="910" y="188" text-anchor="middle" font-size="12" font-weight="600">Keep it standing</text>
+            <text class="sub" x="910" y="205" text-anchor="middle" font-size="10.5">leave with: a rhythm,</text>
+            <text class="sub" x="910" y="219" text-anchor="middle" font-size="10.5">not a one-time build</text>
+          </a>
+        </svg>
+      </div>
     </div>
   </section>
 
   <section id="sound-familiar" class="reveal" aria-labelledby="h-sf">
     <div class="wrap">
-      <span class="kicker part">Sound familiar</span>
-      <h2 class="part" id="h-sf">You tried AI. It wrote you something generic.</h2>
+      <div class="act-head part">
+        <div class="act-emblem" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="13" cy="14" r="2.2" fill="#8FA3FF" opacity="0.5"/>
+            <circle cx="27" cy="10" r="1.8" fill="#8FA3FF" opacity="0.4"/>
+            <circle cx="22" cy="22" r="2.6" fill="#8FA3FF"/>
+            <circle cx="10" cy="27" r="1.6" fill="#8FA3FF" opacity="0.4"/>
+            <circle cx="30" cy="28" r="2" fill="#8FA3FF" opacity="0.55"/>
+            <path d="M7 34 H33" stroke="#EEF0FA" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div>
+          <span class="act-no">Act 01 · The problem</span>
+          <h2 id="h-sf" style="margin-top:.35rem">You tried AI. It wrote you something generic.</h2>
+          <p class="act-promise"><b>What you get here:</b> why generic output is a context problem, not a prompt problem, and the one rule that fixes it.</p>
+          <span class="act-next">NEXT ACT: THE METHOD &#8594;</span>
+        </div>
+      </div>
       <p class="lede part" style="max-width:58ch">It didn't know your clients, your history, or how you talk. So it guessed. Every owner has the same story: the AI wasn't bad. It was uninformed.</p>
       <div class="cards3">
         <div class="qcard part"><q>I don't know where to start.</q><p>There are too many tools and they change weekly. You don't need another tool. You need a sequence.</p></div>
@@ -436,37 +603,51 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 
   <section id="method" class="reveal" aria-labelledby="h-method">
     <div class="wrap">
-      <span class="kicker part">The method</span>
-      <h2 class="part" id="h-method">Six layers, built in order. Three phases.</h2>
+      <div class="act-head part">
+        <div class="act-emblem" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect x="8" y="26" width="24" height="5" rx="1.5" stroke="#8FA3FF" stroke-width="1.4"/>
+            <rect x="8" y="19" width="24" height="5" rx="1.5" stroke="#8FA3FF" stroke-width="1.4"/>
+            <rect x="8" y="12" width="24" height="5" rx="1.5" stroke="#8FA3FF" stroke-width="1.4"/>
+            <circle cx="20" cy="7" r="2.6" fill="#8FA3FF"/>
+          </svg>
+        </div>
+        <div>
+          <span class="act-no">Act 02 · The method</span>
+          <h2 id="h-method" style="margin-top:.35rem">Six layers, built in order. Three phases.</h2>
+          <p class="act-promise"><b>What you get here:</b> the build order, what each layer produces, and why skipping one means automating chaos.</p>
+          <span class="act-next">NEXT ACT: THE PROOF &#8594;</span>
+        </div>
+      </div>
       <p class="lede part">Phase 1 is required first: Identity, Knowledge, Governance. Phase 2 activates one Operator, not a swarm. Phase 3 makes it durable. Skip a layer and you are automating chaos.</p>
       <p class="part" style="margin-top:1.1rem"><a class="btn btn-ghost" href="guide/index.html">Open the full Field Guide</a> <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download>or download it as a PDF</a></p>
       <div style="margin-top:1.6rem">
-        <div class="layer part" id="layer1">
+        <div class="layer part p1" id="layer1">
           <span class="num">01</span>
           <div><h3>Identity <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/layer-1.html">Read the full layer</a></div>
           <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="17" cy="13" r="5"/><path d="M8 27c1.5-5 5-7 9-7s7.5 2 9 7"/></svg>
         </div>
-        <div class="layer part" id="layer2">
+        <div class="layer part p1" id="layer2">
           <span class="num">02</span>
           <div><h3>Knowledge <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0–4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/layer-2.html">Read the full layer</a></div>
           <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="2.5"/><circle cx="25" cy="12" r="2.5"/><circle cx="14" cy="25" r="2.5"/><path d="M11 10.5l11.5 1M10 11l3 11.5M23.5 14l-8 9.5"/></svg>
         </div>
-        <div class="layer part" id="layer3">
+        <div class="layer part p1" id="layer3">
           <span class="num">03</span>
           <div><h3>Governance <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules, allowed tools, and Agent Scope. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/layer-3.html">Read the full layer</a></div>
           <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 22h14M23 7v20"/><path d="M20 9l3-2 3 2M20 25l3 2 3-2"/></svg>
         </div>
-        <div class="layer part" id="layer4">
+        <div class="layer part p3" id="layer4">
           <span class="num">04</span>
           <div><h3>Continuity <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/layer-4.html">Read the full layer</a></div>
           <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 5l10 4v8c0 6-4 10-10 12C11 27 7 23 7 17V9z"/><path d="M13 17l3 3 6-6"/></svg>
         </div>
-        <div class="layer part" id="layer5">
+        <div class="layer part p3" id="layer5">
           <span class="num">05</span>
           <div><h3>Measurement <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">Whether the foundation is actually working.</p><p>Signals of a working foundation: output stays on-voice without prompting, escalations are appropriate not constant, humans trust the drafts enough to use them.</p><span class="out">You know when it is working, and when it is drifting.</span><a class="lmore" href="guide/layer-5.html">Read the full layer</a></div>
           <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 24l6-6 5 5 11-11"/><path d="M23 12h5v5"/></svg>
         </div>
-        <div class="layer part" id="layer6">
+        <div class="layer part p3" id="layer6">
           <span class="num">06</span>
           <div><h3>Operating Rhythm <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">How the foundation is maintained so it does not decay.</p><p>Weekly, monthly, and quarterly reviews. Who owns each layer. How changes get proposed, approved, and versioned. Order is made, not bought, and it stays that way with rhythm.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/layer-6.html">Read the full layer</a></div>
           <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 4a13 13 0 1 1-9 3.8"/><path d="M8 4v5h5"/></svg>
@@ -498,8 +679,21 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 
   <section id="atlas" class="reveal" aria-labelledby="h-atlas">
     <div class="wrap">
-      <span class="kicker part">The proof</span>
-      <h2 class="part" id="h-atlas">First the groundwork. Then Atlas.</h2>
+      <div class="act-head part">
+        <div class="act-emblem" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect x="8" y="8" width="24" height="24" rx="2" stroke="#8FA3FF" stroke-width="1.3"/>
+            <path d="M8 16 H32 M16 8 V32" stroke="#8FA3FF" stroke-width="1" opacity="0.6"/>
+            <circle cx="24" cy="24" r="2.4" fill="#8FA3FF"/>
+          </svg>
+        </div>
+        <div>
+          <span class="act-no">Act 03 · The proof</span>
+          <h2 id="h-atlas" style="margin-top:.35rem">First the groundwork. Then Atlas.</h2>
+          <p class="act-promise"><b>What you get here:</b> a real command center running on these documents, built by the operator who needed it first.</p>
+          <span class="act-next">NEXT ACT: WHAT YOU GET &#8594;</span>
+        </div>
+      </div>
       <p class="lede part" style="max-width:60ch">Here is what this method made possible on Adam's own property.</p>
       <p class="body part" style="max-width:62ch">For years, the shopping center's knowledge lived the way most businesses' knowledge lives: paper leases, scattered PDFs, spreadsheets, and memory. The layers you are reading about came first. Every record digitized, named, classified, and governed. Only then was the interesting part even possible.</p>
       <p class="body part" style="max-width:62ch"><strong>Atlas</strong> is the interesting part: a living command center for the property. An interactive site plan of all 27 units. The rent roll, lease runway, critical dates, and work orders, live from the records. And a concierge AI that answers questions about the property, grounded in the property's own dossier and live state, citing the record when it answers.</p>
@@ -520,32 +714,52 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
       <span class="kicker part">Authority Classification</span>
       <h2 class="part" id="h-authority">Not every document is equal. Your AI should know which is which.</h2>
       <p class="lede part">Most AI failures are trust failures: the system treats a rumor and a contract as the same weight. Groundwork tags every document Level 0 through Level 4, so the system knows what to obey, what to check, and what to ignore.</p>
-      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.9rem">
-        <div class="path part">
-          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 0</span>
-          <h3>Core Doctrine</h3>
-          <p>Charter, principles, non-negotiables. The system obeys without asking.</p>
-        </div>
-        <div class="path part">
-          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 1</span>
-          <h3>Institutional Standards</h3>
-          <p>Approved ways of working: internal policies, approval thresholds, communication standards. Trusted unless doctrine overrides.</p>
-        </div>
-        <div class="path mid part">
-          <span class="tag">LEVEL 2</span>
-          <h3>Validated Knowledge</h3>
-          <p>Executed contracts, cleaned data, completed reports. Reviewed and accepted. The working library.</p>
-        </div>
-        <div class="path part">
-          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 3</span>
-          <h3>Working Material</h3>
-          <p>Drafts, notes, transcripts. Useful, not yet doctrine. Never quoted as final.</p>
-        </div>
-        <div class="path part">
-          <span class="tag" style="background:#3a1f1f;color:#f0d0d0">LEVEL 4</span>
-          <h3>Untrusted / Raw</h3>
-          <p>External clippings, unverified. Available for context, never quoted as truth.</p>
-        </div>
+      <div class="vw part" style="max-width:760px;margin-top:1.4rem">
+        <svg viewBox="0 0 720 330" role="img" aria-label="Vertical ladder of five authority levels from Level 0 Core Doctrine, which the AI obeys, down to Level 4 Untrusted, which is never quoted as truth. Stroke brightness descends with trust.">
+          <defs>
+            <marker id="mL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" class="mk"/>
+            </marker>
+          </defs>
+          <line class="arrowline" x1="96" y1="56" x2="96" y2="284" marker-end="url(#mL)"/>
+          <text class="sub" x="82" y="52" text-anchor="end" font-size="10.5">the AI obeys</text>
+          <text class="sub" x="82" y="292" text-anchor="end" font-size="10.5">the AI ignores</text>
+          <g>
+            <rect x="130" y="40" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--text-primary)" stroke-width="2"/>
+            <text class="mono acc" x="148" y="59" font-size="10">L0</text>
+            <text x="178" y="60" font-size="12.5" font-weight="600">Core Doctrine</text>
+            <text class="sub" x="178" y="75" font-size="9.5">Charter, principles, non-negotiables.</text>
+            <text class="mono" x="634" y="65" text-anchor="end" font-size="9.5" fill="var(--text-primary)">OBEYED</text>
+          </g>
+          <g>
+            <rect x="130" y="96" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text class="mono acc" x="148" y="115" font-size="10">L1</text>
+            <text x="178" y="116" font-size="12.5" font-weight="600">Institutional Standards</text>
+            <text class="sub" x="178" y="131" font-size="9.5">Internal policies, approval thresholds, communication standards.</text>
+            <text class="mono sub" x="634" y="121" text-anchor="end" font-size="9.5">TRUSTED</text>
+          </g>
+          <g>
+            <rect x="130" y="152" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--accent-muted)" stroke-width="1.4"/>
+            <text class="mono acc" x="148" y="171" font-size="10">L2</text>
+            <text x="178" y="172" font-size="12.5" font-weight="600">Validated Knowledge</text>
+            <text class="sub" x="178" y="187" font-size="9.5">Executed contracts, cleaned data, completed reports.</text>
+            <text class="mono sub" x="634" y="177" text-anchor="end" font-size="9.5">USED</text>
+          </g>
+          <g>
+            <rect x="130" y="208" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--accent-muted)" stroke-width="1" opacity="0.8"/>
+            <text class="mono acc" x="148" y="227" font-size="10" opacity="0.8">L3</text>
+            <text x="178" y="228" font-size="12.5" font-weight="600" opacity="0.85">Working Material</text>
+            <text class="sub" x="178" y="243" font-size="9.5">Drafts, notes, transcripts. Useful, not yet doctrine.</text>
+            <text class="mono sub" x="634" y="233" text-anchor="end" font-size="9.5">NEVER FINAL</text>
+          </g>
+          <g>
+            <rect x="130" y="264" width="520" height="42" rx="7" fill="#3a1f1f" stroke="var(--accent-muted)" stroke-width="1" stroke-dasharray="4 4" opacity="0.9"/>
+            <text class="mono" x="148" y="283" font-size="10" fill="#f0d0d0">L4</text>
+            <text x="178" y="284" font-size="12.5" font-weight="600" fill="#f0d0d0">Untrusted / Raw</text>
+            <text x="178" y="299" font-size="9.5" fill="#f0d0d0" opacity="0.8">External clippings, unverified. Available for context.</text>
+            <text class="mono" x="634" y="289" text-anchor="end" font-size="9.5" fill="#f0d0d0">NEVER QUOTED</text>
+          </g>
+        </svg>
       </div>
       <p class="part" style="margin-top:1.3rem"><a class="lmore" href="guide/lineage.html">Where this idea comes from: eighty years of graded trust</a></p>
     </div>
@@ -555,8 +769,21 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 
   <section id="docs" class="reveal" aria-labelledby="h-docs">
     <div class="wrap">
-      <span class="kicker part">What you actually get</span>
-      <h2 class="part" id="h-docs">Fifteen documents. All free. All yours.</h2>
+      <div class="act-head part">
+        <div class="act-emblem" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect x="9" y="11" width="14" height="18" rx="2" stroke="#8FA3FF" stroke-width="1.3"/>
+            <rect x="14" y="8" width="14" height="18" rx="2" stroke="#8FA3FF" stroke-width="1.3" fill="#1B1E40"/>
+            <path d="M18 14 H24 M18 18 H24 M18 22 H22" stroke="#8FA3FF" stroke-width="1" opacity="0.7"/>
+          </svg>
+        </div>
+        <div>
+          <span class="act-no">Act 04 · What you get</span>
+          <h2 id="h-docs" style="margin-top:.35rem">Fifteen documents. All free. All yours.</h2>
+          <p class="act-promise"><b>What you get here:</b> all fifteen documents, the Operator that stands on them, and the free ways to learn it.</p>
+          <span class="act-next">NEXT ACT: START &#8594;</span>
+        </div>
+      </div>
       <p class="lede part">Not a course. Not a subscription. Fifteen plain-text files you write once and own forever: the working system Adam runs his own businesses on.</p>
       <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin-top:1.4rem">
         <div class="path part">
@@ -617,7 +844,7 @@ Rules
   <section id="curriculum" class="reveal" aria-labelledby="h-curriculum">
     <div class="wrap">
       <span class="kicker part">The Curriculum</span>
-      <h2 class="part" id="h-curriculum">If you want to learn the whole thing at your own pace.</h2>
+      <h2 class="part quiet-h" id="h-curriculum">If you want to learn the whole thing at your own pace.</h2>
       <p class="lede part" style="max-width:64ch">The Groundwork Curriculum is a five-level, two-track open curriculum on GitHub: the same doctrine as the Field Guide, taught as a study plan. Individual track for owners and operators; Company track for teams. MIT licensed. Free forever.</p>
       <p class="part" style="margin-top:1.2rem">
         <a class="btn" href="https://github.com/OrangeOnyx/groundwork-curriculum" target="_blank" rel="noopener">Open the curriculum on GitHub</a>
@@ -632,7 +859,7 @@ Rules
   <section id="compare" class="reveal" aria-labelledby="h-compare">
     <div class="wrap">
       <span class="kicker part">The honest comparison</span>
-      <h2 class="part" id="h-compare">What the market sells. What you walk away with.</h2>
+      <h2 class="part quiet-h" id="h-compare">What the market sells. What you walk away with.</h2>
       <p class="lede part" style="max-width:58ch">We looked hard at what else is out there. Free readiness quizzes are everywhere. Complete systems are not. As far as we can tell, nobody else gives the whole thing away.</p>
       <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem">
         <div class="path part">
@@ -657,7 +884,7 @@ Rules
   <section id="faq" class="reveal" aria-labelledby="h-faq">
     <div class="narrow">
       <span class="kicker part">Fair questions</span>
-      <h2 class="part" id="h-faq">Asked by every owner we meet.</h2>
+      <h2 class="part quiet-h" id="h-faq">Asked by every owner we meet.</h2>
       <div class="faq part">
         <details><summary>Why is this free? What's the catch?</summary><p>No catch. Adam built this for himself first and runs his own businesses on it. Making the doctrine, the fifteen documents, and the curriculum public is the fastest way to make the standard the standard. If you eventually want him in the room helping you build it, that conversation starts with the audit.</p></details>
         <details><summary>Where does my data go?</summary><p>Into folders on your machine. The vault is plain text files you own. Nothing is uploaded anywhere unless you choose it, and the governance layer writes that choice down.</p></details>
@@ -674,8 +901,21 @@ Rules
   <section id="audit" class="reveal" aria-labelledby="h-audit">
     <div class="glow" aria-hidden="true"></div>
     <div class="narrow">
-      <span class="kicker part">The first step</span>
-      <h2 class="part" id="h-audit">Want it built with you? Start with the audit.</h2>
+      <div class="act-head part">
+        <div class="act-emblem" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="14" cy="16" r="2.6" fill="#8FA3FF"/>
+            <circle cx="26" cy="16" r="2.6" fill="#8FA3FF"/>
+            <path d="M16.5 16 H23.5" stroke="#8FA3FF" stroke-width="1.3"/>
+            <path d="M8 30 H32" stroke="#EEF0FA" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div>
+          <span class="act-no">Act 05 · Start</span>
+          <h2 id="h-audit" style="margin-top:.35rem">Want it built with you? Start with the audit.</h2>
+          <p class="act-promise"><b>What you get here:</b> a scorecard, a first half hour, and a free hour with Adam if you want company on the way.</p>
+        </div>
+      </div>
       <p class="body part">The Field Guide and Curriculum are free: read them, build it yourself, no ask. But if you want Adam in the room: sixty to ninety minutes together, no cost. You leave with a map of your current state, the gaps costing you most, and a plan. In Lafayette, across the Gulf South, or virtual anywhere.</p>
       <a class="btn part" href="https://calendly.com/adam-adamabdalla" target="_blank" rel="noopener">Book your AI Readiness Audit</a>
       <span class="alt part">Prefer email? <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></span>
