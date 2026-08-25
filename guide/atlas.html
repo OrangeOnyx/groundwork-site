@@ -20,6 +20,7 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
+  <button class="navtoggle" aria-expanded="false" aria-label="Chapters" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
   <div class="links">
     <a href="index.html">Guide</a>
     <a href="day-one.html">Day One</a>
@@ -32,6 +33,8 @@
     <a href="layer-5.html">L5</a>
     <a href="layer-6.html">L6</a>
     <a href="scorecard.html">Scorecard</a>
+    <a href="atlas.html" aria-current="page">Atlas</a>
+    <a href="lineage.html">Lineage</a>
     <a class="keep" href="../index.html">Main site</a>
   </div>
 </nav>
@@ -123,7 +126,8 @@
     <a href="day-one.html">Start Day One →</a>
   </div>
 </main>
-<footer class="site">Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+<footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="https://github.com/OrangeOnyx/groundwork-curriculum">Curriculum on GitHub</a></div>
+Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

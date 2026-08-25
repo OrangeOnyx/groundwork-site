@@ -20,6 +20,7 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
+  <button class="navtoggle" aria-expanded="false" aria-label="Chapters" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
   <div class="links">
     <a href="index.html">Guide</a>
     <a href="day-one.html">Day One</a>
@@ -32,6 +33,8 @@
     <a href="layer-5.html">L5</a>
     <a href="layer-6.html">L6</a>
     <a href="scorecard.html" aria-current="page">Scorecard</a>
+    <a href="atlas.html">Atlas</a>
+    <a href="lineage.html">Lineage</a>
     <a class="keep" href="../index.html">Main site</a>
   </div>
 </nav>
@@ -62,6 +65,7 @@
     <p>Twenty-four questions, four per layer. About five minutes. Answer honestly: the value is in knowing exactly where you stand, not in getting a high score.</p>
     <p>Every question is weighted. Standard questions count one point. High impact questions count two and carry a tag. Yes earns the full weight. Partial earns half. No earns zero. Thirty-six points total.</p>
     <p>Open the note under any question to see why it matters and what the fix is. Results show your overall percentage, a layer-by-layer breakdown, your top priorities, and the recommended next move.</p>
+    <p class="quiet">The Field Guide PDF carries a one-page 0 to 5 version of this same diagnostic, for scoring a layer out loud in a meeting. This is the full instrument.</p>
   </div>
 
   <noscript><div class="callout">This scorecard needs JavaScript to compute your score. The questions read fine without it, so you can still work through them on paper.</div></noscript>
@@ -435,7 +439,8 @@
     <p id="r-next-intro"></p>
     <ol id="r-next"></ol>
 
-    <p><button class="btn-ghost" type="button" id="retake">Start over</button></p>
+    <p><p style="margin:1.6rem 0 1rem"><a class="btn" href="../index.html#audit">Book the free Audit</a> <span class="quiet">Sixty to ninety minutes with Adam, no cost, whatever your score.</span></p>
+      <button class="btn-ghost" type="button" id="retake">Start over</button></p>
   </section>
 
   <div class="pnav">
@@ -443,7 +448,8 @@
     <a href="../index.html">Back to the main site &rarr;</a>
   </div>
 </main>
-<footer class="site">Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+<footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="https://github.com/OrangeOnyx/groundwork-curriculum">Curriculum on GitHub</a></div>
+Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
 <script>
 (function () {
   "use strict";

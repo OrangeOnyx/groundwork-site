@@ -20,6 +20,7 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
+  <button class="navtoggle" aria-expanded="false" aria-label="Chapters" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
   <div class="links">
     <a href="index.html">Guide</a>
     <a href="day-one.html" aria-current="page">Day One</a>
@@ -32,6 +33,8 @@
     <a href="layer-5.html">L5</a>
     <a href="layer-6.html">L6</a>
     <a href="scorecard.html">Scorecard</a>
+    <a href="atlas.html">Atlas</a>
+    <a href="lineage.html">Lineage</a>
     <a class="keep" href="../index.html">Main site</a>
   </div>
 </nav>
@@ -43,18 +46,18 @@
     <p class="lede">You do not need to understand the whole system to start. You need one sitting, one folder, and one honest page. Here is exactly what to do, minute by minute. No signup, no cost, nothing to install.</p>
   </header>
 
-  <h2>Minutes 0 to 3: find your starting point</h2>
+  <h2>Minutes 0 to 5: find your starting point</h2>
   <div class="card">
     <p>Take the scorecard. Twenty-four quick questions, nothing leaves the page. It scores all six layers and names your weakest one, which is where your real work starts. Write that layer's name down.</p>
     <p><a class="btn" href="scorecard.html">Take the scorecard</a></p>
   </div>
 
-  <h2>Minutes 3 to 13: understand the machine</h2>
+  <h2>Minutes 5 to 15: understand the machine</h2>
   <div class="card">
     <p>Read <a href="foundations.html">Foundations</a>, at least the four building blocks at the top: the model is a well-read librarian, agents are its hands, prompts are instructions, and your documents are the fuel. Ten minutes, plain language. Every decision in the six layers makes sense once you have this picture.</p>
   </div>
 
-  <h2>Minutes 13 to 28: write your first document</h2>
+  <h2>Minutes 15 to 28: write your first document</h2>
   <div class="card">
     <p>Create one folder on your machine called <code>Groundwork</code>, and inside it a folder called <code>01_Identity</code>. Open any text editor and start the first of the fifteen documents, the Identity Charter. A starter version:</p>
     <pre><code># Identity Charter
@@ -84,6 +87,15 @@ Describe the actual operator or organization.]
     <p><strong>Where this goes:</strong> Phase 1 (Identity, Knowledge, Governance) is a focused weekend. Phase 2 activates one Operator in about a week. Phase 3 keeps it alive. The whole path is free and open in <a href="index.html">the guide</a>, and the <a href="../assets/Groundwork-Program-Guide.pdf" download>Field Guide PDF</a> is the same doctrine in printable form.</p>
   </div>
 
+  <h2>The card to keep</h2>
+  <div class="card" id="recap">
+    <p class="kicker" style="margin-bottom:.6rem">GROUNDWORK ON ONE SCREEN</p>
+    <p><strong>The rule:</strong> do not automate chaos. Organize first, automate last.</p>
+    <p><strong>The three zones:</strong> Auto-Execute (safe, reversible, rule-bound) · Draft &amp; Wait (AI drafts, a human signs off) · Never Automate (money, signatures, people).</p>
+    <p><strong>The five authority levels:</strong> 0 Core Doctrine (charter, principles: obeyed without asking) · 1 Institutional Standards (approved policies and ways of working) · 2 Validated Knowledge (executed contracts, cleaned data, reviewed reports) · 3 Working Material (drafts and notes, never quoted as final) · 4 Untrusted / Raw (context only, never truth).</p>
+    <p class="quiet">Print this page and keep the card. The print view strips everything else down to paper.</p>
+  </div>
+
   <p>Prefer a human in the room? <a href="../index.html#audit">The audit is free</a>: sixty to ninety minutes with Adam, and you leave with a map of your gaps whether or not you go further.</p>
 
   <div class="pnav">
@@ -91,7 +103,8 @@ Describe the actual operator or organization.]
     <a href="scorecard.html">Take the scorecard →</a>
   </div>
 </main>
-<footer class="site">Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></footer>
+<footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="https://github.com/OrangeOnyx/groundwork-curriculum">Curriculum on GitHub</a></div>
+Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

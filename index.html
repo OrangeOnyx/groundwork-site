@@ -109,7 +109,16 @@ nav .links a{color:var(--text-secondary);font-size:.88rem;transition:color .18s 
 nav .links a:hover{color:var(--text-primary)}
 nav .links a.cta{color:var(--btn-ink);background:var(--accent);padding:.5em 1.1em;border-radius:8px;font-weight:600;transition:background .18s var(--ease-out)}
 nav .links a.cta:hover{background:var(--accent-hover)}
-@media (max-width:720px){nav .links a:not(.cta){display:none}}
+nav .navtoggle{display:none;background:transparent;border:1px solid var(--accent-muted);color:var(--text-primary);border-radius:8px;padding:.45em .9em;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;cursor:pointer}
+@media (max-width:720px){
+  nav .links a:not(.cta){display:none}
+  nav .navtoggle{display:inline-flex;align-items:center;margin-left:auto}
+  nav .links{margin-left:.6rem}
+  nav .links.open{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;background:rgba(19,21,48,.97);backdrop-filter:blur(12px);padding:1.1rem clamp(1rem,4vw,2.6rem) 1.3rem;border-bottom:1px solid rgba(143,163,255,.2)}
+  nav .links.open a:not(.cta){display:inline-flex}
+}
+.skipfilm{position:absolute;right:clamp(1rem,3vw,2.4rem);bottom:1.2rem;z-index:6;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;color:var(--text-secondary);background:rgba(8,8,20,.55);border:1px solid rgba(143,163,255,.25);border-radius:16px;padding:.5em 1.1em;backdrop-filter:blur(8px);transition:color .2s var(--ease-out)}
+.skipfilm:hover{color:var(--text-primary)}
 /* ============ hero ============ */
 .hero{position:relative;height:1300vh}
 .stage{position:sticky;top:0;height:100vh;overflow:hidden}
@@ -177,6 +186,7 @@ nav .links a.cta:hover{background:var(--accent-hover)}
   .static-hero h1{font-size:clamp(2.1rem,7.5vw,3.4rem);text-shadow:var(--tshadow)}
   .static-hero p{color:var(--text-secondary);margin-top:.9rem;max-width:34ch;text-shadow:var(--tshadow)}
   .static-hero .btn{margin-top:1.6rem;align-self:flex-start;text-shadow:none}
+  .static-hero .btn+.btn{margin-top:.7rem}
 }
 /* ============ sections ============ */
 main{position:relative;z-index:1;background:var(--canvas)}
@@ -304,6 +314,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
+  <button class="navtoggle" aria-expanded="false" aria-label="Menu" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
   <div class="links">
     <a href="guide/day-one.html">Start Here</a>
     <a href="#method">The Method</a>
@@ -319,6 +330,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
     <div class="poster"></div>
     <video id="hero-video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
     <div class="scrim"></div>
+    <a class="skipfilm" href="#start">Skip the film ↓</a>
 
     <div class="band b-left fx-drift split-words" id="band1" data-a="0" data-b="0.09">
       <h1 class="split" data-fx="drift">Your AI doesn't know your business.</h1>
@@ -349,7 +361,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
     <div class="band fx-rise" id="band7" data-a="0.80" data-b="1" data-ramp="0.05">
       <h1 class="split" data-fx="rise">Build the foundation your AI actually needs.</h1>
       <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
-      <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="assets/Groundwork-Program-Guide.pdf" download>Download the Field Guide</a></div>
+      <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
     </div>
 
     <div class="plumb" aria-hidden="true">
@@ -371,6 +383,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
     <h1>Build the foundation your AI actually needs.</h1>
     <p>Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
     <a class="btn" href="#audit">Book your AI Readiness Audit</a>
+    <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a>
   </div>
 </header>
 
@@ -381,7 +394,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
       <span class="kicker part">Where do you start</span>
       <h2 class="part" id="h-start">Three minutes tells you.</h2>
       <p class="body part">Six layers and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest layer, and that is where you start reading.</p>
-      <p class="part"><a class="btn" href="guide/scorecard.html">Take the 3-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
+      <p class="part"><a class="btn" href="guide/scorecard.html">Take the 5-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
     </div>
   </section>
 
@@ -506,7 +519,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
       <span class="kicker part">Authority Classification</span>
       <h2 class="part" id="h-authority">Not every document is equal. Your AI should know which is which.</h2>
       <p class="lede part">Most AI failures are trust failures: the system treats a rumor and a contract as the same weight. Groundwork tags every document Level 0 through Level 4, so the system knows what to obey, what to check, and what to ignore.</p>
-      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem">
+      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.9rem">
         <div class="path part">
           <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 0</span>
           <h3>Core Doctrine</h3>
@@ -515,12 +528,12 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
         <div class="path part">
           <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 1</span>
           <h3>Institutional Standards</h3>
-          <p>Signed policies, executed contracts, filed docs. Trusted unless overridden by Level 0.</p>
+          <p>Approved ways of working: internal policies, approval thresholds, communication standards. Trusted unless doctrine overrides.</p>
         </div>
         <div class="path mid part">
           <span class="tag">LEVEL 2</span>
           <h3>Validated Knowledge</h3>
-          <p>Documented playbooks, reviewed procedures. The working library.</p>
+          <p>Executed contracts, cleaned data, completed reports. Reviewed and accepted. The working library.</p>
         </div>
         <div class="path part">
           <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">LEVEL 3</span>
@@ -548,25 +561,26 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
         <div class="path part">
           <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 1 · IDENTITY</span>
           <h3>Layer 01</h3>
-          <p>01. Charter · 02. Brand Voice · 03. Decision Principles · 04. Operator Bio</p>
+          <p>01. Identity Charter · 02. Brand Voice · 03. Decision Principles</p>
         </div>
         <div class="path part">
           <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 1 · KNOWLEDGE</span>
           <h3>Layer 02</h3>
-          <p>05. Knowledge Vault Structure · 06. Authority Classification · 07. Verified Facts · 08. Working Library Index</p>
+          <p>04. Authority Classification · 05. Context Vault · 06. Strategic Priorities · 07. Active Constraints</p>
         </div>
         <div class="path mid part">
           <span class="tag">PHASE 1 · GOVERNANCE</span>
           <h3>Layer 03</h3>
-          <p>09. Automation Zones · 10. Escalation Rules · 11. Agent Scope · 12. Allowed Tools List</p>
+          <p>08. Automation Decision Framework · 09. Escalation Rules · 10. Allowed Tools &amp; Access · 11. Agent Scope</p>
         </div>
         <div class="path part">
           <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 3 · DURABILITY</span>
           <h3>Layers 04–06</h3>
-          <p>13. Continuity &amp; Succession · 14. Measurement Scorecard · 15. Operating Rhythm Calendar</p>
+          <p>12. Continuity &amp; Succession · 13. Session Notes · 14. Measurement Notes · 15. Operating Rhythm</p>
         </div>
       </div>
-      <p class="part" style="margin-top:1.6rem"><a class="btn" href="assets/Groundwork-Program-Guide.pdf" download>Download all fifteen in the Field Guide</a></p>
+      <p class="part" style="margin-top:1.6rem"><a class="btn" href="assets/Groundwork-Program-Guide.pdf" download>Download the Field Guide PDF</a></p>
+      <p class="part" style="margin-top:.8rem;font-size:.9rem;color:var(--text-secondary)">Eleven documents in Phase 1, four in Phase 3. The Field Guide carries the doctrine and the core templates on paper; every one of the fifteen is taught in full, with its template, in <a class="lmore" href="guide/index.html">the guide</a>.</p>
     </div>
   </section>
 
@@ -576,23 +590,24 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
     <div class="narrow">
       <span class="kicker part">The Operator</span>
       <h2 class="part" id="h-operator">One assistant. Scoped. Yours.</h2>
-      <p class="lede part" style="max-width:58ch">Phase 2 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and governance you wrote in Phase 1. Here is the opening of Adam's own Operator prompt, the same one running on his properties today.</p>
-      <pre class="part" style="background:rgba(255,255,255,.03);border:1px solid rgba(143,163,255,.16);border-radius:12px;padding:1.4rem 1.6rem;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.82rem;line-height:1.55;overflow-x:auto;color:var(--text-secondary);white-space:pre-wrap">You are the Operator for &lt;OwnerName&gt;.
+      <p class="lede part" style="max-width:58ch">Phase 2 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and governance you wrote in Phase 1. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p>
+      <pre class="part" style="background:rgba(255,255,255,.03);border:1px solid rgba(143,163,255,.16);border-radius:12px;padding:1.4rem 1.6rem;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.82rem;line-height:1.55;overflow-x:auto;color:var(--text-secondary);white-space:pre-wrap">You are now the Operator for this organization.
 
-You obey four things, in this order:
-  1. The Charter and Decision Principles (Layer 01, Level 0).
-  2. The Governance zones and Escalation Rules (Layer 03).
-  3. The Knowledge Vault, weighted by Authority Level.
-  4. Explicit instructions from &lt;OwnerName&gt; in this session.
+Load the files in this package in order. Do not
+invent policy. Do not expand your authority.
 
-If a request violates any of the above, refuse and escalate.
-If a request falls in Draft &amp; Wait, produce the draft and stop.
-If a request falls in Never Automate, refuse and explain why.
+Primary directive: raise the quality of thinking
+and output while protecting standards.
 
-You cite your sources by filename and Authority Level.
-You do not invent facts, dates, dollar amounts, names, or contract terms.
-You match the Brand Voice document exactly.</pre>
-      <p class="part" style="margin-top:1.2rem;font-size:.9rem;color:var(--text-secondary)">The full prompt (with every zone, tool, and escalation rule) is in <a class="lmore" href="guide/operator.html">the Operator chapter of the guide</a>.</p>
+Rules
+- Stay on-voice at all times.
+- Cite Authority Level on material claims.
+- If the request is Auto-Execute, do it.
+- If the request is Draft &amp; Wait, produce the
+  complete draft and stop.
+- If the request is Never Automate, refuse and
+  escalate.</pre>
+      <p class="part" style="margin-top:1.2rem;font-size:.9rem;color:var(--text-secondary)">The full prompt, the context package, and the activation gate are in <a class="lmore" href="guide/operator.html">the Operator chapter of the guide</a>.</p>
     </div>
   </section>
 
@@ -676,7 +691,7 @@ You match the Brand Voice document exactly.</pre>
   <div class="cols">
     <span>Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated.</span>
     <span>Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></span>
-    <span>© 2026 Adam Abdalla. All rights reserved.</span>
+    <span>© 2026 Adam Abdalla. All rights reserved. <a href="legal.html">Disclaimer &amp; Privacy</a></span>
   </div>
 </footer>
 
