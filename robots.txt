@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://groundwork.adamabdalla.com/sitemap.xml
