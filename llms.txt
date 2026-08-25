@@ -1,0 +1,33 @@
+# Groundwork
+
+> Groundwork is a free, ungated AI readiness system for owners and operators of small and mid-sized businesses. Six layers, built in three phases, produce fifteen plain-text documents your business owns; then one scoped AI Operator goes to work on top of them. Foundation first. Agents later.
+
+Groundwork was built by Adam Abdalla, an operator in Lafayette, Louisiana who runs a 27-unit shopping center and built the system for his own businesses before publishing it. Everything on this site is open: no signup, no paywall, no gated downloads, no prices. The only call to action is a free AI readiness audit.
+
+The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and Operating Rhythm. Inside Layer 2 sits Authority Classification: the only named, graded document-authority system built for non-technical owners, in plain files you own. Its grading logic descends from the Admiralty Code, the source-reliability system used in naval intelligence.
+
+## Start here
+
+- [Day One](https://groundwork.adamabdalla.com/guide/day-one.html): your first 30 minutes, scorecard first, then your first document
+- [The Readiness Scorecard](https://groundwork.adamabdalla.com/guide/scorecard.html): 24 questions, scored in your browser, nothing collected or transmitted
+- [Guide overview](https://groundwork.adamabdalla.com/guide/): the whole system on one page, with every chapter linked
+
+## The guide
+
+- [Foundations](https://groundwork.adamabdalla.com/guide/foundations.html): the concepts under every layer
+- [Layer 1: Identity](https://groundwork.adamabdalla.com/guide/layer-1.html)
+- [Layer 2: Knowledge](https://groundwork.adamabdalla.com/guide/layer-2.html): includes Authority Classification
+- [Layer 3: Governance](https://groundwork.adamabdalla.com/guide/layer-3.html)
+- [Layer 4: Continuity](https://groundwork.adamabdalla.com/guide/layer-4.html)
+- [Layer 5: Measurement](https://groundwork.adamabdalla.com/guide/layer-5.html)
+- [Layer 6: Operating Rhythm](https://groundwork.adamabdalla.com/guide/layer-6.html)
+- [Phase 2: The Operator](https://groundwork.adamabdalla.com/guide/operator.html): what the scoped AI Operator is and is not
+- [The Oldest Idea in Groundwork](https://groundwork.adamabdalla.com/guide/lineage.html): the Admiralty Code lineage of Authority Classification
+- [The Atlas Story](https://groundwork.adamabdalla.com/guide/atlas.html): a real command center running on these documents, ten features
+- [Field Guide PDF](https://groundwork.adamabdalla.com/assets/Groundwork-Program-Guide.pdf): the doctrine in one downloadable file
+
+## More
+
+- [Groundwork Curriculum](https://github.com/OrangeOnyx/groundwork-curriculum): a free, MIT-licensed study path in five levels, Essentials to Frontier, a skills axis that pairs with the site's six layers
+- [Book the free audit](https://calendly.com/adam-adamabdalla): the one conversion on the site
+- Contact: adam@adamabdalla.com
