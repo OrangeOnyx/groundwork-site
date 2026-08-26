@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Groundwork | The AI Readiness System by Adam Abdalla</title>
 <meta name="description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later. Lafayette, Louisiana.">
-<meta name="theme-color" content="#131530">
+<meta name="theme-color" content="#F4EFE2">
 <link rel="canonical" href="https://groundwork.adamabdalla.com/">
 <meta property="og:title" content="Groundwork | The AI Readiness System by Adam Abdalla">
 <meta property="og:description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://groundwork.adamabdalla.com/">
 <meta property="og:image" content="https://groundwork.adamabdalla.com/assets/hero-ending.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F4EFE2'/%3E%3Crect x='8' y='22' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='16' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='10' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Ccircle cx='16' cy='5.5' r='2.6' fill='%23D9A419'/%3E%3Cpath d='M5 29 H27' stroke='%231E1B16' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&family=Besley:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,296 +52,326 @@
 <style>
 /* ============ tokens ============ */
 :root{
-  --canvas:#131530;
-  --panel:#1B1E40;
-  --accent:#8FA3FF;
-  --accent-hover:#6F87F2;
-  --accent-muted:#39406E;
-  --text-secondary:#A9AECC;
-  --text-primary:#EEF0FA;
-  --btn-ink:#10122A;
-  --display:'Libre Caslon Display',Georgia,serif;
-  --body:'Public Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --paper:#F4EFE2;
+  --paper-deep:#EAE2CD;
+  --ink:#1E1B16;
+  --ink-soft:#5C554A;
+  --rule:#C9BFA8;
+  --terra:#C7681D;
+  --terra-deep:#A44E12;
+  --mustard:#D9A419;
+  --mustard-deep:#8F6D0C;
+  --olive:#5A6B4A;
+  --olive-deep:#49573C;
+  --oxblood:#8A2F1F;
+  /* legacy aliases kept so inline SVG var() references pick up the new world */
+  --canvas:var(--paper);
+  --panel:var(--paper-deep);
+  --accent:var(--terra);
+  --accent-hover:var(--terra-deep);
+  --accent-muted:var(--rule);
+  --text-secondary:var(--ink-soft);
+  --text-primary:var(--ink);
+  --btn-ink:var(--paper);
+  --display:'Archivo',Arial,'Helvetica Neue',sans-serif;
+  --slab:'Besley',Georgia,'Times New Roman',serif;
+  --body:'Archivo',Arial,'Helvetica Neue',sans-serif;
+  --mono:'Courier Prime','Courier New',ui-monospace,monospace;
   --ease-out:cubic-bezier(.23,1,.32,1);
   --ease-inout:cubic-bezier(.77,0,.175,1);
-  --tshadow:0 1px 2px rgba(7,8,22,.95),0 3px 12px rgba(7,8,22,.78),0 10px 44px rgba(7,8,22,.8);
 }
 /* ============ base ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:hidden;overflow-x:clip}
 html{scroll-behavior:smooth}
-body{background:var(--canvas);color:var(--text-primary);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;font-weight:500;-webkit-font-smoothing:antialiased;caret-color:var(--terra-deep)}
 img,video{max-width:100%;display:block}
-a{color:var(--accent);text-decoration:none}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--btn-ink);padding:.6em 1em;z-index:100;border-radius:0 0 8px 0}
+a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--terra)}
+a:hover{color:var(--terra-deep)}
+::selection{background:var(--terra);color:var(--paper)}
+html{scrollbar-color:var(--ink) var(--paper-deep)}
+::-webkit-scrollbar{width:12px}
+::-webkit-scrollbar-track{background:var(--paper-deep)}
+::-webkit-scrollbar-thumb{background:var(--ink);border:3px solid var(--paper-deep)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6em 1em;z-index:100;text-decoration:none}
 .skip:focus{left:0}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.005em}
-.kicker{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.24em;color:var(--accent);text-transform:uppercase}
-.lede{color:var(--text-secondary)}
-.btn{display:inline-block;background:var(--accent);color:var(--btn-ink);font-family:var(--body);font-weight:600;font-size:.95rem;padding:.85em 1.7em;border-radius:10px;border:0;cursor:pointer;transition:background .18s var(--ease-out),transform .18s var(--ease-out)}
-.btn:hover{background:var(--accent-hover)}
-.btn:active{transform:scale(.97)}
-.btn-ghost{background:transparent;color:var(--text-primary);border:1px solid var(--accent-muted)}
-.btn-ghost:hover{background:rgba(143,163,255,.08)}
+h1,h2,h3{font-family:var(--display);line-height:1.06;letter-spacing:-.015em}
+h1{font-weight:900}
+h2{font-weight:900;text-transform:uppercase;letter-spacing:-.005em}
+h3{font-weight:700}
+.lede{color:var(--ink-soft);font-weight:500}
+.body{font-weight:500}
+strong,b{font-weight:700}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:700;font-size:.92rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:.9em 1.7em;border:2px solid var(--ink);cursor:pointer;transition:background .18s var(--ease-out),border-color .18s var(--ease-out),transform .18s var(--ease-out)}
+.btn:hover{background:var(--terra-deep);border-color:var(--terra-deep);color:var(--paper)}
+.btn:active{transform:translate(1px,1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-ghost:hover{background:var(--paper-deep);color:var(--ink);border-color:var(--ink)}
 @media (pointer:coarse){.btn,nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
-/* ============ paused-tab + reduced motion ============ */
 body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
-/* ============ environment motes ============ */
-.motes{position:fixed;inset:0;pointer-events:none;z-index:0}
-.motes span{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.07;animation:drift 90s linear infinite}
-.motes span:nth-child(2n){width:2px;height:2px;animation-duration:120s;animation-delay:-40s;opacity:.05}
-.motes span:nth-child(3n){animation-duration:75s;animation-delay:-22s;opacity:.09}
-@keyframes drift{
-  0%{transform:translate3d(0,0,0)}
-  25%{transform:translate3d(2.2vw,12vh,0)}
-  50%{transform:translate3d(-1.4vw,26vh,0)}
-  75%{transform:translate3d(1.8vw,40vh,0)}
-  100%{transform:translate3d(0,54vh,0)}
-}
-/* ============ nav ============ */
-nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:1.6rem;padding:.8rem clamp(1rem,4vw,2.6rem);background:rgba(19,21,48,.72);backdrop-filter:blur(12px);border-bottom:1px solid rgba(143,163,255,.12)}
-.brand{display:flex;align-items:center;gap:.6rem;color:var(--text-primary)}
+/* ============ nav masthead ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:1.6rem;padding:.7rem clamp(1rem,4vw,2.6rem);background:var(--paper);border-bottom:2px solid var(--ink)}
+nav::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--ink)}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none}
 .brand svg{width:26px;height:26px}
-.brand b{font-family:var(--body);font-weight:600;letter-spacing:.22em;font-size:.82rem}
-nav .links{margin-left:auto;display:flex;align-items:baseline;gap:1.5rem}
-nav .links a{color:var(--text-secondary);font-size:.88rem;transition:color .18s var(--ease-out)}
-nav .links a:hover{color:var(--text-primary)}
-nav .links a.cta{color:var(--btn-ink);background:var(--accent);padding:.5em 1.1em;border-radius:8px;font-weight:600;transition:background .18s var(--ease-out)}
-nav .links a.cta:hover{background:var(--accent-hover)}
-nav .navtoggle{display:none;background:transparent;border:1px solid var(--accent-muted);color:var(--text-primary);border-radius:8px;padding:.45em .9em;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;cursor:pointer}
+.brand b{font-family:var(--display);font-weight:900;letter-spacing:.24em;font-size:.84rem}
+nav .links{margin-left:auto;display:flex;align-items:center;gap:1.5rem}
+nav .links a{color:var(--ink);font-size:.85rem;font-weight:600;text-decoration:none;transition:color .18s var(--ease-out)}
+nav .links a:hover{color:var(--terra-deep)}
+nav .links a.cta{color:var(--paper);background:var(--terra-deep);padding:.55em 1.1em;font-weight:700;letter-spacing:.03em;white-space:nowrap;transition:background .18s var(--ease-out)}
+nav .links a.cta:hover{background:var(--ink);color:var(--paper)}
+nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);color:var(--ink);padding:.4em .9em;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.1em;cursor:pointer}
 @media (max-width:720px){
   nav .links a:not(.cta){display:none}
   nav .navtoggle{display:inline-flex;align-items:center;margin-left:auto}
   nav .links{margin-left:.6rem}
-  nav .links.open{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;background:rgba(19,21,48,.97);backdrop-filter:blur(12px);padding:1.1rem clamp(1rem,4vw,2.6rem) 1.3rem;border-bottom:1px solid rgba(143,163,255,.2)}
+  nav .links.open{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;background:var(--paper);padding:1.1rem clamp(1rem,4vw,2.6rem) 1.3rem;border-bottom:2px solid var(--ink)}
   nav .links.open a:not(.cta){display:inline-flex}
 }
-.skipfilm{position:absolute;right:clamp(1rem,3vw,2.4rem);bottom:1.2rem;z-index:6;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;color:var(--text-secondary);background:rgba(8,8,20,.55);border:1px solid rgba(143,163,255,.25);border-radius:16px;padding:.5em 1.1em;backdrop-filter:blur(8px);transition:color .2s var(--ease-out)}
-.skipfilm:hover{color:var(--text-primary)}
-/* ============ hero ============ */
-.hero{position:relative;height:1300vh}
-.stage{position:sticky;top:0;height:100vh;overflow:hidden}
-.poster{position:absolute;inset:0;background-size:cover;background-position:center}
-.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s var(--ease-out);will-change:transform;transform:translateZ(0)}
-.stage.video-ready video{opacity:1}
-.stage.video-failed video{display:none}
-.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(9,10,26,0) 35%,rgba(9,10,26,.62) 100%)}
-.ring-wrap{position:absolute;right:1.4rem;bottom:1.4rem;color:var(--accent);opacity:.85}
-.ring{width:34px;height:34px;transform:rotate(-90deg)}
-.ring circle{transition:stroke-dashoffset .2s linear}
-.chev{width:26px;height:26px;color:var(--text-secondary);animation:chev 2.6s var(--ease-inout) -1.2s infinite}
-@keyframes chev{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:.95}}
-/* bands */
-.band{position:absolute;opacity:0;text-shadow:var(--tshadow);z-index:3}
-.band .btn{text-shadow:none}
-.band::before{content:"";position:absolute;inset:-24% -18%;pointer-events:none;z-index:-1;opacity:calc(.25 + .75*var(--k,1));background:radial-gradient(ellipse 76% 66% at 50% 50%,rgba(7,8,22,.8) 0%,rgba(7,8,22,.6) 50%,rgba(7,8,22,0) 84%)}
-.band h1,.band h2{font-size:clamp(1.9rem,4.2vw,3.4rem)}
-.band p{color:var(--text-primary);font-size:clamp(1rem,1.5vw,1.2rem)}
-.b-left{left:clamp(1.2rem,7vw,8rem);top:26vh;max-width:30ch}
-.b-right{right:clamp(1.2rem,7vw,8rem);top:30vh;max-width:32ch;text-align:right}
-.b-right::before{inset:-18% -14%}
-#band7{left:50%;top:39%;transform:translate(-50%,-50%);text-align:center;max-width:min(92vw,760px)}
-#band7::before{inset:-34% -22%;background:radial-gradient(ellipse 84% 76% at 50% 46%,rgba(7,8,22,.82) 0%,rgba(7,8,22,.6) 52%,rgba(7,8,22,0) 84%)}
-#band7 h1{font-size:clamp(2.2rem,4.8vw,4rem)}
-#band7 .sub{margin-top:1rem;opacity:var(--ks,0);transform:translateY(calc((1 - var(--ks,0))*14px))}
-#band7 .ctarow{margin-top:1.8rem;opacity:var(--kb,0);transform:translateY(calc((1 - var(--kb,0))*14px))}
-#band7{--ks:clamp(0,calc((var(--k,0) - .66)*4),1);--kb:clamp(0,calc((var(--k,0) - .78)*5),1)}
-/* split text mechanics */
-.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.w{display:inline-block;white-space:nowrap}
-.c{display:inline-block}
-/* scatter (band 3) */
-.fx-scatter .c{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);opacity:var(--kc);transform:translate(calc((1 - var(--kc))*var(--jx,0px)),calc((1 - var(--kc))*var(--jy,0px))) rotate(calc((1 - var(--kc))*var(--jr,0deg)))}
-/* grid snap (band 4): horizontal only jitter, ordered thresholds */
-.fx-grid .c{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);opacity:var(--kc);transform:translateX(calc((1 - var(--kc))*var(--jx,0px)))}
-/* weave (band 5): vertical alternating */
-.fx-weave .c{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*var(--jy,0px)))}
-/* drift-down (band 1) */
-.fx-drift .w{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.8),1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*-24px))}
-/* approach-from-depth (band 2) */
-.fx-depth{position:relative}
-.fx-depth .sharp{--kc:var(--k,0);opacity:var(--kc);transform:scale(calc(.82 + .18*var(--kc)))}
-.fx-depth .soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k,0));transform:scale(calc(.82 + .18*var(--k,0)))}
-/* blur-to-sharp (band 6) */
-.fx-blur{position:relative}
-.fx-blur .sharp{opacity:var(--k,0)}
-.fx-blur .soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k,0))}
-/* word-rise (band 7 headline) */
-.fx-rise .w{--kc:clamp(0,calc((var(--k,0) - var(--th,0))*3),1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*20px))}
-/* plumb line */
-.plumb{position:absolute;top:0;bottom:0;right:clamp(.9rem,2.4vw,2rem);width:40px;z-index:4;pointer-events:none}
-.plumb .line{position:absolute;top:10vh;bottom:10vh;left:50%;width:1px;background:linear-gradient(to bottom,transparent,var(--accent-muted) 12%,var(--accent-muted) 88%,transparent)}
-.plumb .bob{position:absolute;left:50%;top:10vh;width:9px;height:13px;margin-left:-4.5px;background:var(--accent);clip-path:polygon(50% 100%,0 28%,20% 0,80% 0,100% 28%);will-change:transform}
-.plumb .stop{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;color:var(--text-secondary);writing-mode:vertical-rl;background:rgba(10,11,28,.55);border:1px solid rgba(143,163,255,.18);border-radius:8px;padding:.5em .22em;backdrop-filter:blur(10px);text-shadow:0 1px 3px rgba(7,8,22,.85)}
-@media (max-height:560px){.plumb,.ring-wrap{display:none}}
-/* ============ static hero (five gates, identical strings in JS) ============ */
-.static-hero{display:none}
-@media (max-width: 720px),(orientation: portrait) and (max-width: 1024px),(orientation: portrait) and (pointer: coarse),(orientation: landscape) and (pointer: coarse) and (max-height: 560px),(prefers-reduced-motion: reduce){
-  .hero{height:auto}
-  .stage,.plumb{display:none}
-  .static-hero{display:flex;min-height:92vh;flex-direction:column;justify-content:flex-end;position:relative;padding:5.5rem clamp(1.2rem,6vw,4rem) 4rem;background:var(--canvas) url('assets/hero-ending.jpg') center/cover no-repeat}
-  .static-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(9,10,26,.88) 0%,rgba(9,10,26,.45) 55%,rgba(9,10,26,.25) 100%)}
-  .static-hero>*{position:relative}
-  .static-hero h1{font-size:clamp(2.1rem,7.5vw,3.4rem);text-shadow:var(--tshadow)}
-  .static-hero p{color:var(--text-secondary);margin-top:.9rem;max-width:34ch;text-shadow:var(--tshadow)}
-  .static-hero .btn{margin-top:1.6rem;align-self:flex-start;text-shadow:none}
-  .static-hero .btn+.btn{margin-top:.7rem}
+@media (max-width:480px){
+  nav{gap:.7rem;padding-left:.9rem;padding-right:.9rem}
+  .brand b{font-size:.76rem;letter-spacing:.14em}
+  nav .navtoggle{padding:.4em .7em}
+  nav .links{margin-left:.3rem}
+  nav .links a.cta{padding:.5em .8em;font-size:.8rem}
+}
+/* ============ cover ============ */
+.cover{position:relative;padding:8.5rem clamp(1.2rem,6vw,4rem) 0;background:var(--paper)}
+.cover .inner{max-width:1080px;margin:0 auto}
+.folio{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--ink);padding-bottom:.55rem;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+.folio .no{color:var(--terra-deep)}
+.cover .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:end;padding:clamp(2.5rem,6vh,4.5rem) 0 clamp(2.2rem,5vh,3.6rem)}
+.cover h1{font-size:clamp(2.6rem,5.6vw,5.1rem);text-transform:uppercase;letter-spacing:-.02em;max-width:13ch}
+.cover .sub{font-family:var(--slab);font-style:italic;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink-soft);margin-top:1.3rem;max-width:38ch}
+.cover .ctarow{margin-top:2rem}
+.ctarow,.btnrow{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.covermark{width:100%;max-width:460px;margin-left:auto;display:block}
+.covermark .plate{animation:register .9s var(--ease-out) both}
+.covermark .p1{--rx:-16px;--ry:8px;animation-delay:.1s}
+.covermark .p2{--rx:12px;--ry:-6px;animation-delay:.22s}
+.covermark .p3{--rx:-9px;--ry:-9px;animation-delay:.34s}
+.covermark .pd{--rx:0px;--ry:-18px;animation-delay:.48s}
+.covermark .pf{--rx:6px;--ry:6px;animation-delay:.62s}
+.covermark .pg{--rx:0px;--ry:0px;animation-delay:0s}
+@keyframes register{from{transform:translate(var(--rx),var(--ry));opacity:.55}to{transform:translate(0,0);opacity:1}}
+.contents{border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:.85rem 0;display:flex;flex-wrap:wrap;gap:.4rem 2.2rem}
+.contents a{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.contents a b{color:var(--terra-deep);margin-right:.5em;font-family:var(--slab);font-weight:900}
+.contents a:hover{color:var(--terra-deep)}
+@media (max-width:860px){
+  .cover{padding-top:7rem}
+  .cover .grid{grid-template-columns:1fr;align-items:start}
+  .covermark{margin-left:0;max-width:320px}
 }
 /* ============ sections ============ */
-main{position:relative;z-index:1;background:var(--canvas)}
-section{padding:clamp(4.5rem,10vh,8rem) clamp(1.2rem,6vw,4rem);position:relative}
+main{position:relative;background:var(--paper)}
+section{padding:clamp(3.8rem,9vh,7rem) clamp(1.2rem,6vw,4rem);position:relative}
 .wrap{max-width:1080px;margin:0 auto}
-.narrow{max-width:720px;margin:0 auto}
-section h2{font-size:clamp(1.8rem,3.4vw,2.7rem);margin:.65rem 0 1rem}
-.divider{display:block;width:min(420px,70%);margin:0 auto;height:44px;overflow:visible}
-.divider path,.divider line{stroke:var(--accent-muted);stroke-width:1.2;fill:none;stroke-dasharray:var(--len,300);stroke-dashoffset:var(--len,300)}
-.divider circle{fill:var(--accent-muted);opacity:0;transition:opacity .5s var(--ease-out) .5s}
-.in .divider path,.in .divider line{animation:draw 1.4s var(--ease-out) forwards}
-.in .divider circle{opacity:.9}
-@keyframes draw{to{stroke-dashoffset:0}}
-/* entrance choreography */
-.reveal .part{opacity:0;transform:translateY(22px)}
-.reveal.in .part{opacity:1;transform:none;transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
-.reveal.in .part:nth-child(2){transition-delay:.09s}
-.reveal.in .part:nth-child(3){transition-delay:.18s}
-.reveal.in .part:nth-child(4){transition-delay:.27s}
-.reveal.in .part:nth-child(5){transition-delay:.36s}
-.reveal.in .part:nth-child(6){transition-delay:.45s}
+.narrow{max-width:760px;margin:0 auto}
+section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
+.runhead{display:flex;justify-content:flex-end;border-top:1px solid var(--ink);padding-top:.5rem;margin-bottom:clamp(2.2rem,5vh,3.4rem)}
+.runhead span{font-family:var(--display);font-weight:700;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)}
+/* act lockup: the numeral leads, the heading speaks */
+.act{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.4rem,3.5vw,2.6rem);align-items:start;margin-bottom:1.8rem}
+.act .numeral{font-family:var(--slab);font-weight:900;font-size:clamp(4.2rem,9vw,7.5rem);line-height:.82;color:var(--terra);user-select:none}
+.act.a2 .numeral{color:var(--mustard-deep)}
+.act.a3 .numeral{color:var(--olive)}
+.act.a4 .numeral{color:var(--terra)}
+.act.a5 .numeral{color:var(--paper);opacity:.9}
+.act .numcap{display:block;font-family:var(--display);font-weight:700;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:.7rem}
+.act .promise{font-family:var(--slab);font-style:italic;color:var(--ink-soft);font-size:1.02rem;max-width:56ch;margin-top:1rem}
+.act .promise b{color:var(--ink);font-style:normal;font-family:var(--display);font-weight:700}
+.xref{display:inline-block;margin-top:1.1rem;font-family:var(--display);font-weight:700;font-size:.7rem;letter-spacing:.16em;color:var(--terra-deep);text-decoration:none}
+@media (max-width:640px){.act{grid-template-columns:1fr;gap:.8rem}.act .numeral{font-size:3.6rem}}
+/* entrance: plates into register */
+.reveal .part{opacity:0;transform:translateY(16px)}
+.reveal.in .part{opacity:1;transform:none;transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+.reveal.in .part:nth-child(2){transition-delay:.08s}
+.reveal.in .part:nth-child(3){transition-delay:.16s}
+.reveal.in .part:nth-child(4){transition-delay:.24s}
+.reveal.in .part:nth-child(5){transition-delay:.32s}
+.reveal.in .part:nth-child(6){transition-delay:.4s}
 .reveal.in.settled .part:nth-child(n){transition-delay:0s}
-/* S1 cards */
-.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2.4rem}
-.qcard{background:var(--panel);border:1px solid rgba(143,163,255,.12);border-radius:14px;padding:1.7rem 1.5rem;position:relative;transition:transform .3s var(--ease-out),border-color .3s var(--ease-out)}
-.qcard:hover{transform:translateY(-4px);border-color:rgba(143,163,255,.3)}
-.qcard q{font-family:var(--display);font-size:1.28rem;display:block;quotes:'\201C' '\201D'}
-.qcard q::before{color:var(--accent);position:relative}
-.qcard p{color:var(--text-secondary);font-size:.95rem;margin-top:.9rem}
-.qcard::after{content:"";position:absolute;top:1.1rem;right:1.2rem;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.35;animation:pulse 5s var(--ease-inout) -2s infinite}
-@keyframes pulse{0%,100%{opacity:.2}50%{opacity:.6}}
-/* S2 rule + hold */
+/* ============ the argument ============ */
+#argument{padding-top:clamp(3rem,7vh,5rem)}
+.argrow{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.2rem,3vw,2.4rem);align-items:baseline;padding:1.4rem 0;border-bottom:1px solid var(--rule)}
+.argrow:last-of-type{border-bottom:0}
+.argrow .n{font-family:var(--slab);font-weight:900;font-size:1.1rem;color:var(--terra-deep)}
+.argrow p{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.6vw,2rem);line-height:1.18;letter-spacing:-.01em;max-width:34ch}
+.argrow p small{display:block;font-family:var(--slab);font-style:italic;font-weight:400;font-size:clamp(.95rem,1.4vw,1.1rem);letter-spacing:0;color:var(--ink-soft);margin-top:.45rem}
+/* ============ quote ledger (sound familiar) ============ */
+.ledger{border-top:2px solid var(--ink);margin-top:2.2rem}
+.entry{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(1.2rem,3vw,3rem);padding:1.6rem 0;border-bottom:1px solid var(--rule);align-items:start}
+.entry q{font-family:var(--slab);font-style:italic;font-weight:600;font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.3;quotes:'\201C' '\201D'}
+.entry q::before{color:var(--terra)}
+.entry p{color:var(--ink-soft);font-size:.97rem;align-self:center}
+@media (max-width:680px){.entry{grid-template-columns:1fr;gap:.6rem}}
+/* ============ the rule / hold moment ============ */
 #rule{text-align:center}
-#rule h2{font-size:clamp(2.1rem,4.4vw,3.2rem)}
-.holdzone{margin:2.6rem auto 0;max-width:520px}
-.holdfield{position:relative;height:230px;border:1px solid rgba(143,163,255,.14);border-radius:16px;background:radial-gradient(ellipse 90% 90% at 50% 50%,rgba(27,30,64,.7),rgba(19,21,48,.2));overflow:hidden}
-.holdfield i{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--text-secondary);left:calc(var(--dx)*1%);top:calc(var(--dy)*1%);opacity:.75;transform:translate(calc((var(--tx) - var(--dx))*var(--p,0)*1%*5.2),calc((var(--ty) - var(--dy))*var(--p,0)*1%*2.3));transition:background .4s var(--ease-out)}
-.holdfield.done i{background:var(--accent)}
+#rule h2{font-size:clamp(2.1rem,4.4vw,3.4rem);max-width:none}
+.holdzone{margin:2.6rem auto 0;max-width:540px}
+.holdfield{position:relative;height:230px;border:1px solid var(--ink);background:var(--paper-deep);overflow:hidden}
+.holdfield i{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--ink-soft);left:calc((var(--dx) + (var(--tx) - var(--dx))*var(--p,0))*1%);top:calc((var(--dy) + (var(--ty) - var(--dy))*var(--p,0))*1%);opacity:.8;transition:background .4s var(--ease-out)}
+.holdfield.done i{background:var(--terra-deep)}
 .holdfield svg{position:absolute;inset:0;width:100%;height:100%}
-.holdfield svg line{stroke:var(--accent);stroke-width:1;opacity:calc(var(--p,0)*.85)}
+.holdfield svg line{stroke:var(--terra);stroke-width:1;opacity:calc(var(--p,0)*.9)}
 .holdbtn{margin-top:1.2rem;position:relative;overflow:hidden}
-.holdbtn .fill{position:absolute;inset:0;background:rgba(16,18,42,.22);transform-origin:left;transform:scaleX(var(--p,0))}
+.holdbtn .fill{position:absolute;inset:0;background:var(--terra-deep);transform-origin:left;transform:scaleX(var(--p,0))}
 .holdbtn span{position:relative}
-/* vistas */
-.vista{position:relative;height:56vh;min-height:320px;overflow:hidden;padding:0}
-.vista img{width:100%;height:100%;object-fit:cover}
-.vista.in img{animation:vistaDrift 34s var(--ease-inout) -14s infinite alternate}
-@keyframes vistaDrift{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.09) translateY(-1.5%)}}
-.vista .cap{position:absolute;left:clamp(1.2rem,6vw,4rem);bottom:1.5rem;font-family:var(--mono);font-weight:500;font-size:.7rem;letter-spacing:.22em;color:var(--text-primary);background:rgba(10,11,28,.55);border:1px solid rgba(143,163,255,.18);border-radius:8px;padding:.55em 1.1em;backdrop-filter:blur(10px);text-transform:uppercase}
-/* S3 layers */
-.layer{display:grid;grid-template-columns:auto 1fr auto;gap:1.4rem;align-items:baseline;padding:1.7rem 0;border-bottom:1px solid rgba(143,163,255,.12)}
+/* ============ method: the six layers as a ruled schedule ============ */
+.layer{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.2rem,3vw,2.2rem);padding:1.8rem 0;border-bottom:1px solid var(--rule);align-items:start}
 .layer:last-child{border-bottom:0}
-.layer .num{font-family:var(--mono);color:var(--accent);font-size:.9rem}
-.layer h3{font-size:1.45rem}
-.layer .promise{font-family:var(--display);color:var(--accent);font-size:1.05rem;margin-top:.2rem}
-.layer p{color:var(--text-secondary);font-size:.97rem;margin-top:.55rem;max-width:58ch}
-.layer .glyph{width:34px;height:34px;color:var(--accent-muted);transition:color .4s var(--ease-out)}
-.layer.lit .glyph{color:var(--accent)}
-.layer .out{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-secondary);margin-top:.7rem;display:inline-block;border:1px solid rgba(143,163,255,.18);border-radius:20px;padding:.35em .9em}
-.layer .lmore{display:inline-block;margin-top:.7rem;margin-left:.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em}
-@media (max-width:720px){.layer{grid-template-columns:auto 1fr}.layer .glyph{display:none}}
-/* S4 operator */
-#who .split2{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
-#who img{border-radius:16px;border:1px solid rgba(143,163,255,.14)}
-#who .imgwrap{overflow:hidden;border-radius:16px}
-#who .imgwrap img{animation:slowdrift 26s var(--ease-inout) -8s infinite alternate}
-@keyframes slowdrift{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.08) translateY(-2%)}}
-#who p{color:var(--text-secondary);margin-top:1.1rem}
-@media (max-width:860px){#who .split2{grid-template-columns:1fr}}
-/* S5 paths */
-.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2.6rem;align-items:stretch}
-.path{background:var(--panel);border:1px solid rgba(143,163,255,.12);border-radius:16px;padding:1.9rem 1.6rem;display:flex;flex-direction:column;position:relative}
-.path.mid{border-color:rgba(143,163,255,.42);box-shadow:0 18px 60px rgba(10,12,34,.6)}
-.path .tag{position:absolute;top:-.8em;left:1.4rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;background:var(--accent);color:var(--btn-ink);border-radius:14px;padding:.35em .95em}
-.path.mid .tag{animation:tagpulse 6s var(--ease-inout) -1.5s infinite}
-@keyframes tagpulse{0%,100%{box-shadow:0 0 0 0 rgba(143,163,255,0)}50%{box-shadow:0 0 22px 2px rgba(143,163,255,.45)}}
-.path h3{font-size:1.35rem}
-.path p{color:var(--text-secondary);font-size:.95rem;margin-top:.9rem}
-.trustrow{display:flex;gap:2.4rem;flex-wrap:wrap;justify-content:center;margin-top:3rem}
-.trustrow span{font-size:.9rem;color:var(--text-secondary);display:flex;align-items:baseline;gap:.5rem}
-.trustrow b{color:var(--accent);font-weight:600}
-/* S6 FAQ */
-.faq details{border-bottom:1px solid rgba(143,163,255,.12)}
-.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.25rem 0;font-family:var(--display);font-size:1.18rem;transition:color .2s var(--ease-out)}
-.faq summary:hover{color:var(--accent)}
+.layer .lnum{font-family:var(--slab);font-weight:900;font-size:2.6rem;line-height:1;color:var(--paper);background:var(--terra-deep);min-width:4.6rem;text-align:center;padding:.55rem 0 .4rem}
+.layer.ph3 .lnum{background:var(--olive-deep)}
+.layer .phase{display:block;font-family:var(--display);font-weight:700;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);padding-bottom:.35rem}
+.layer h3{font-size:1.5rem;letter-spacing:-.01em}
+.layer .promise{font-family:var(--slab);font-style:italic;color:var(--terra-deep);font-size:1.05rem;margin-top:.25rem}
+.layer.ph3 .promise{color:var(--olive-deep)}
+.layer p{color:var(--ink-soft);font-size:.97rem;margin-top:.55rem;max-width:58ch}
+.layer .out{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.02em;color:var(--ink);margin-top:.8rem;display:inline-block;border:1px solid var(--ink);padding:.4em 1em}
+.layer .lmore{display:inline-block;margin-top:.8rem;margin-left:.8rem;font-size:.85rem;font-weight:600}
+@media (max-width:560px){.layer{grid-template-columns:1fr}.layer .lnum{min-width:3.8rem;display:inline-block;padding:.45rem .9rem .35rem;font-size:2rem}}
+/* ============ operator letter (who) ============ */
+.letter{background:var(--olive);color:var(--paper);padding:clamp(2.4rem,5vw,3.8rem)}
+.letter .runhead{border-top-color:var(--paper)}
+.letter .runhead span{color:var(--paper);opacity:.85}
+.letter h2{color:var(--paper)}
+.letter p{color:var(--paper);opacity:.94;margin-top:1.1rem;max-width:62ch}
+.letter .sig{font-family:var(--slab);font-style:italic;font-size:1.1rem;margin-top:1.8rem;opacity:1}
+.letter .sig b{font-style:normal;font-weight:700;font-family:var(--display)}
+/* ============ exhibit (Atlas A-2) ============ */
+.exhibit{padding:0 clamp(1.2rem,6vw,4rem)}
+.exhibit .mat{max-width:1080px;margin:0 auto;background:var(--paper-deep);border:1px solid var(--ink);padding:clamp(.8rem,2vw,1.4rem)}
+.exhibit img{width:100%;height:auto;border:1px solid var(--rule)}
+.exhibit .cap{display:flex;justify-content:space-between;gap:1rem;font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.06em;color:var(--ink-soft);padding-top:.7rem;text-transform:uppercase}
+.exhibit .cap b{color:var(--ink)}
+/* ============ authority ladder ============ */
+.vw svg{display:block;width:100%;height:auto}
+.vw svg text{font-family:var(--body);fill:var(--ink);font-size:13px}
+.vw svg .mono{font-family:var(--display);font-weight:700}
+.vw svg .sub{fill:var(--ink-soft);font-size:12px}
+.vw svg .mono{font-size:12px}
+#start .vw svg text{font-size:17px}
+#start .vw svg .sub{font-size:15.5px}
+#start .vw svg .mono{font-size:15.5px}
+#authority .vw svg text{font-size:13.5px}
+#authority .vw svg .sub{font-size:11.5px}
+#authority .vw svg .mono{font-size:12px}
+.vw svg .acc{fill:var(--terra-deep)}
+.vw svg .slab{fill:var(--paper-deep);stroke:var(--ink);stroke-width:1.3}
+.vw svg .slab-dim{fill:var(--paper-deep);stroke:var(--rule);stroke-width:1.2}
+.vw svg .ln{stroke:var(--rule);fill:none}
+.vw svg .ln-acc{stroke:var(--terra-deep);fill:none}
+.vw svg .ground{stroke:var(--ink);stroke-width:2;opacity:.85;stroke-linecap:round}
+.vw svg .star{fill:var(--terra-deep)}
+.vw svg .star-halo{fill:none;stroke:var(--terra-deep);opacity:.45}
+.vw svg .arrowline{stroke:var(--ink-soft);fill:none;stroke-width:1.2}
+.vw svg .mk{fill:var(--ink-soft)}
+.vw svg a{text-decoration:none}
+.vw svg a text{cursor:pointer}
+.vw svg a:hover .star{fill:var(--terra)}
+@media (max-width:680px){
+  .vw.wide{overflow-x:auto;padding-bottom:.6rem}
+  .vw.wide svg{min-width:840px}
+  .vw.ladder{overflow-x:auto;padding-bottom:.6rem}
+  .vw.ladder svg{min-width:640px}
+  .vw.wide::before,.vw.ladder::before{content:"Continued across \2192 drag to read";display:block;font-family:var(--display);font-weight:700;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.6rem}
+}
+/* ============ schedule of documents ============ */
+.tablewrap{overflow-x:auto;margin-top:2rem}
+.schedule{width:100%;min-width:640px;border-collapse:collapse;border-top:2px solid var(--ink)}
+.schedule th{font-family:var(--display);font-weight:700;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;text-align:left;color:var(--ink-soft);padding:.7rem .9rem .7rem 0;border-bottom:1px solid var(--ink)}
+.schedule td{padding:1.05rem .9rem 1.05rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.schedule .sq{width:.85rem;height:.85rem;display:inline-block;background:var(--terra);vertical-align:baseline}
+.schedule tr.ph3 .sq{background:var(--olive)}
+.schedule .ln{font-family:var(--display);font-weight:700;font-size:1.02rem;white-space:nowrap}
+.schedule .ph{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.06em;color:var(--ink-soft);white-space:nowrap;text-transform:uppercase}
+.schedule .files{font-family:var(--mono);font-size:.86rem;line-height:1.9;color:var(--ink)}
+.schedule .files b{color:var(--terra-deep);font-weight:700}
+.schedule tr.ph3 .files b{color:var(--olive-deep)}
+@media (max-width:680px){
+  .schedule{min-width:0}
+  .schedule thead{display:none}
+  .schedule tr{display:block;border-bottom:1px solid var(--rule);padding:1rem 0}
+  .schedule td{display:block;border-bottom:0;padding:.15rem 0}
+  .schedule .ln{font-size:1.05rem}
+}
+/* ============ operator prompt ============ */
+.prompt{background:var(--paper-deep);border:1px solid var(--ink);padding:1.5rem 1.7rem;font-family:var(--mono);font-size:.85rem;line-height:1.6;overflow-x:auto;color:var(--ink);white-space:pre-wrap}
+/* ============ compare table ============ */
+.compare{width:100%;border-collapse:collapse;border-top:2px solid var(--ink);margin-top:2rem}
+.compare th{font-family:var(--display);font-weight:900;font-size:1.15rem;text-align:left;padding:.9rem 1.4rem .6rem 0;border-bottom:1px solid var(--ink)}
+.compare td{padding:.9rem 1.4rem .9rem 0;color:var(--ink-soft);font-size:.95rem;vertical-align:top;border-bottom:1px solid var(--rule)}
+@media (max-width:680px){
+  .compare,.compare tbody,.compare tr,.compare th,.compare td{display:block;padding-right:0}
+  .compare thead{display:none}
+  .compare td{border-bottom:0;padding-top:.2rem}
+  .compare tr{border-bottom:1px solid var(--rule);padding:.9rem 0}
+  .compare td::before{content:attr(data-h);display:block;font-family:var(--display);font-weight:900;font-size:1.1rem;color:var(--ink);margin-bottom:.25rem}
+}
+/* ============ FAQ ledger ============ */
+.faq{border-top:2px solid var(--ink);margin-top:2rem}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.25rem 0;font-family:var(--slab);font-weight:600;font-size:1.15rem;transition:color .2s var(--ease-out)}
+.faq summary:hover{color:var(--terra-deep)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--mono);color:var(--accent);transition:transform .3s var(--ease-out)}
+.faq summary::after{content:"+";font-family:var(--display);font-weight:700;color:var(--terra-deep);transition:transform .3s var(--ease-out)}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{color:var(--text-secondary);padding:0 0 1.4rem;max-width:62ch}
-/* S7 final */
-#audit{text-align:center;padding-bottom:7rem;overflow:hidden}
-#audit::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(19,21,48,.88),rgba(19,21,48,.74) 55%,rgba(19,21,48,.78)),url('assets/still-ground.jpg') center/cover no-repeat;pointer-events:none}
-#audit .body,#audit h2{text-shadow:0 1px 3px rgba(7,8,22,.7)}
-#audit .narrow{position:relative}
-#audit .glow{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(900px,90vw);height:340px;background:radial-gradient(ellipse 60% 90% at 50% 100%,rgba(143,163,255,.16),rgba(143,163,255,0) 70%);pointer-events:none;animation:breath 8s var(--ease-inout) -3s infinite}
-@keyframes breath{0%,100%{opacity:.7}50%{opacity:1}}
-#audit p.body{max-width:52ch;margin:0 auto;color:var(--text-secondary)}
-#audit .btn{margin-top:2rem;font-size:1.05rem}
-#audit .alt{display:block;margin-top:1.1rem;font-size:.88rem;color:var(--text-secondary)}
-#audit .alt a{color:var(--accent)}
-/* footer */
-footer{border-top:1px solid rgba(143,163,255,.12);padding:2.6rem clamp(1.2rem,6vw,4rem);display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center;justify-content:space-between;color:var(--text-secondary);font-size:.85rem}
-footer .brand b{color:var(--text-primary)}
+.faq details p{color:var(--ink-soft);padding:0 0 1.4rem;max-width:62ch}
+/* ============ audit field ============ */
+#audit{background:var(--terra-deep);color:var(--paper)}
+#audit .runhead{border-top-color:var(--paper)}
+#audit .runhead span{color:var(--paper)}
+#audit h2{color:var(--paper)}
+#audit .act .numcap{color:var(--paper)}
+#audit .act .promise{color:var(--paper)}
+#audit .act .promise b{color:var(--paper)}
+#audit p.body{max-width:56ch;color:var(--paper)}
+#audit .btn{background:var(--paper);color:var(--ink);border-color:var(--paper);margin-top:1.8rem}
+#audit .btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#audit .alt{display:block;margin-top:1.1rem;font-size:.9rem;color:var(--paper)}
+#audit .alt a{color:var(--paper);text-decoration-color:var(--paper)}
+#audit ::selection{background:var(--paper);color:var(--terra-deep)}
+/* ============ footer ============ */
+footer{border-top:2px solid var(--ink);position:relative;padding:2.6rem clamp(1.2rem,6vw,4rem);display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center;justify-content:space-between;color:var(--ink-soft);font-size:.85rem;background:var(--paper)}
+footer::before{content:"";position:absolute;left:0;right:0;top:3px;height:1px;background:var(--ink)}
+footer .brand b{color:var(--ink)}
 footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 @media (max-width:640px){footer{flex-direction:column;align-items:flex-start}footer .cols{text-align:left}}
 /* ============ reduced motion ============ */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
   .reveal .part{opacity:1;transform:none}
-  .divider path,.divider line{stroke-dashoffset:0}
-  .divider circle{opacity:.9}
-  .holdfield i{transform:translate(calc((var(--tx) - var(--dx))*1%*5.2),calc((var(--ty) - var(--dy))*1%*2.3));background:var(--accent)}
-  .holdfield svg line{opacity:.85}
-  .layer .glyph{color:var(--accent)}
-  .motes{display:none}
+  .covermark .plate{animation:none;transform:none;opacity:1}
+  .holdfield{--p:1}
+  .holdfield i{background:var(--terra-deep)}
+  .holdfield svg line{opacity:.9}
 }
-
-/* ============ visual wave ============ */
-.vw svg{display:block;width:100%;height:auto}
-.vw svg text{font-family:var(--body);fill:var(--text-primary)}
-.vw svg .mono{font-family:var(--mono)}
-.vw svg .sub{fill:var(--text-secondary)}
-.vw svg .acc{fill:var(--accent)}
-.vw svg .slab{fill:var(--panel);stroke:var(--accent);stroke-width:1.3}
-.vw svg .slab-dim{fill:var(--panel);stroke:var(--accent-muted);stroke-width:1.2}
-.vw svg .ln{stroke:var(--accent-muted);fill:none}
-.vw svg .ln-acc{stroke:var(--accent);fill:none}
-.vw svg .ground{stroke:var(--text-primary);stroke-width:2;opacity:.55;stroke-linecap:round}
-.vw svg .star{fill:var(--accent)}
-.vw svg .star-halo{fill:none;stroke:var(--accent);opacity:.4}
-.vw svg .arrowline{stroke:var(--text-secondary);fill:none;stroke-width:1.2}
-.vw svg .mk{fill:var(--text-secondary)}
-.vw svg a text{cursor:pointer}
-.vw svg a:hover .star{fill:var(--accent-hover)}
-.act-head{display:grid;grid-template-columns:72px 1fr;gap:1.3rem;align-items:start;margin-bottom:.4rem}
-.act-emblem{width:72px;height:72px;border:1px solid var(--accent-muted);border-radius:50%;display:grid;place-items:center;background:rgba(143,163,255,.06)}
-.act-emblem svg{width:42px;height:42px}
-.act-no{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
-.act-promise{color:var(--text-secondary);font-size:.92rem;max-width:58ch;margin:.4rem 0 0}
-.act-promise b{color:var(--text-primary);font-weight:600}
-.act-next{display:inline-block;margin-top:.7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--accent)}
-.layer.p1{border-left:2px solid var(--accent);padding-left:1.2rem}
-.layer.p3{border-left:2px solid var(--accent-muted);padding-left:1.2rem}
-.quiet-h{font-size:clamp(1.3rem,2.3vw,1.75rem) !important;color:var(--text-secondary)}
-@media (max-width:640px){.act-head{grid-template-columns:1fr}.act-emblem{width:56px;height:56px}.act-emblem svg{width:34px;height:34px}}
 </style>
 </head>
 <body>
+<!--
+THESIS: An annual report for the AI age. The system presented as a confident mid-century program
+on paper; refuses the dark glowing-tech hero this category ships.
+OWN-WORLD: warm cream uncoated paper, near-black ink, terracotta/mustard/olive spot color committed
+at field scale; Archivo grotesque display, Besley slab numerals, Courier Prime strictly for the
+fifteen files and the Operator prompt; hairline ink rules, running heads, ruled schedules;
+motion is print registration settling into place.
+STORY: an owner sees a serious, complete, free system from a real operator; reads the argument,
+scans the method, sees real proof, then starts Day One or books the audit.
+FIRST VIEWPORT: masthead rule and GROUNDWORK; left, 900-weight headline, italic slab sub, two
+printed buttons; right, the registration-animated system mark (three terracotta bars, mustard
+Operator disc, olive durability frame, ink ground line); below, a ruled contents strip of five acts.
+FORM: The Annual Report, ranked candidate 1 of 7; seed c62d8482.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the
+verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
 <a class="skip" href="#main">Skip to content</a>
-<div class="motes" aria-hidden="true"></div>
 
 <nav aria-label="Main">
   <a class="brand" href="#top" aria-label="Groundwork home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
   <button class="navtoggle" aria-expanded="false" aria-label="Menu" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
@@ -355,75 +385,58 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
   </div>
 </nav>
 
-<header id="top" class="hero" aria-label="Groundwork introduction">
-  <div class="stage">
-    <div class="poster"></div>
-    <video id="hero-video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
-    <div class="scrim"></div>
-    <a class="skipfilm" href="#start">Skip the film ↓</a>
-
-    <div class="band b-left fx-drift split-words" id="band1" data-a="0" data-b="0.09">
-      <h1 class="split" data-fx="drift">Your AI doesn't know your business.</h1>
-      <p class="split" data-fx="drift" data-th-base="0.3">That's why it sounds generic.</p>
+<header id="top" class="cover" aria-label="Groundwork introduction">
+  <div class="inner">
+    <div class="folio"><span>The AI Readiness Program &middot; Adam Abdalla</span><span class="no">No. 1 &middot; 2026</span></div>
+    <div class="grid">
+      <div>
+        <h1>Build the foundation your AI actually needs.</h1>
+        <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
+        <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
+      </div>
+      <svg class="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark: three terracotta layer bars stacked on an ink ground line, one mustard Operator disc above them, and an olive durability frame around the whole.">
+        <line class="plate pg" x1="24" y1="392" x2="376" y2="392" stroke="#1E1B16" stroke-width="4" stroke-linecap="round"/>
+        <rect class="plate pf" x="64" y="130" width="272" height="238" fill="none" stroke="#5A6B4A" stroke-width="2.5"/>
+        <text class="plate pf" x="200" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5A6B4A">CONTINUITY &middot; MEASUREMENT &middot; RHYTHM</text>
+        <rect class="plate p1" x="100" y="322" width="200" height="38" fill="#A44E12"/>
+        <rect class="plate p2" x="100" y="276" width="200" height="38" fill="#A44E12"/>
+        <rect class="plate p3" x="100" y="230" width="200" height="38" fill="#A44E12"/>
+        <text class="plate p1" x="200" y="346" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">01 IDENTITY</text>
+        <text class="plate p2" x="200" y="300" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">02 KNOWLEDGE</text>
+        <text class="plate p3" x="200" y="254" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">03 GOVERNANCE</text>
+        <circle class="plate pd" cx="200" cy="185" r="24" fill="#D9A419"/>
+        <circle class="plate pd" cx="200" cy="185" r="7" fill="#1E1B16"/>
+        <text class="plate pd" x="164" y="190" text-anchor="end" font-family="Besley,Georgia,serif" font-style="italic" font-weight="600" font-size="13.5" fill="#1E1B16">the Operator</text>
+      </svg>
     </div>
-
-    <div class="band b-right fx-depth" id="band2" data-a="0.105" data-b="0.215">
-      <h2 class="dual"><span class="soft" aria-hidden="true">So we go deeper.</span><span class="sharp">So we go deeper.</span></h2>
+    <div class="contents" aria-label="In this report">
+      <a href="#sound-familiar"><b>01</b>The problem</a>
+      <a href="#method"><b>02</b>The method</a>
+      <a href="#atlas"><b>03</b>The proof</a>
+      <a href="#docs"><b>04</b>What you get</a>
+      <a href="#audit"><b>05</b>Start</a>
     </div>
-
-    <div class="band b-left fx-scatter" id="band3" data-a="0.23" data-b="0.34" data-spread="0.5">
-      <h2 class="split" data-fx="scatter">Everything your business knows is in here.</h2>
-      <p class="split" data-fx="scatter" data-th-base="0.25">Scattered across drives, inboxes, and your head.</p>
-    </div>
-
-    <div class="band b-right fx-grid" id="band4" data-a="0.37" data-b="0.48" data-ramp="0.032">
-      <h2 class="split" data-fx="grid">The fix isn't a better prompt. It's a better foundation.</h2>
-    </div>
-
-    <div class="band b-left fx-weave" id="band5" data-a="0.51" data-b="0.62">
-      <h2 class="split" data-fx="weave">Six layers. Built in order. Owned by you.</h2>
-    </div>
-
-    <div class="band b-right fx-blur" id="band6" data-a="0.65" data-b="0.76">
-      <h2 class="dual"><span class="soft" aria-hidden="true">The result: an AI that finally knows your business.</span><span class="sharp">The result: an AI that finally knows your business.</span></h2>
-    </div>
-
-    <div class="band fx-rise" id="band7" data-a="0.80" data-b="1" data-ramp="0.05">
-      <h1 class="split" data-fx="rise">Build the foundation your AI actually needs.</h1>
-      <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
-      <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
-    </div>
-
-    <div class="plumb" aria-hidden="true">
-      <div class="line"></div>
-      <div class="bob" id="bob"></div>
-      <span class="stop" style="top:12vh">THE NOISE</span>
-      <span class="stop" style="top:29vh">THE SCATTER</span>
-      <span class="stop" style="top:46vh">THE TURN</span>
-      <span class="stop" style="top:63vh">THE ORDER</span>
-      <span class="stop" style="top:82vh">GROUND</span>
-    </div>
-
-    <div class="ring-wrap" id="ring-wrap" aria-hidden="true">
-      <svg class="ring" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/></svg>
-    </div>
-  </div>
-
-  <div class="static-hero">
-    <h1>Build the foundation your AI actually needs.</h1>
-    <p>Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
-    <a class="btn" href="#audit">Book your AI Readiness Audit</a>
-    <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a>
   </div>
 </header>
 
 <main id="main" tabindex="-1">
 
+  <section id="argument" class="reveal" aria-label="The argument">
+    <div class="narrow">
+      <div class="argrow part"><span class="n">01</span><p>Your AI doesn't know your business.<small>That's why it sounds generic.</small></p></div>
+      <div class="argrow part"><span class="n">02</span><p>So we go deeper.</p></div>
+      <div class="argrow part"><span class="n">03</span><p>Everything your business knows is in here.<small>Scattered across drives, inboxes, and your head.</small></p></div>
+      <div class="argrow part"><span class="n">04</span><p>The fix isn't a better prompt. It's a better foundation.</p></div>
+      <div class="argrow part"><span class="n">05</span><p>Six layers. Built in order. Owned by you.</p></div>
+      <div class="argrow part"><span class="n">06</span><p>The result: an AI that finally knows your business.</p></div>
+    </div>
+  </section>
+
   <section id="nutshell" class="reveal" aria-labelledby="h-nutshell">
     <div class="wrap">
-      <span class="kicker part">The whole thing, in one picture</span>
+      <div class="runhead part"><span>The whole thing, in one picture</span></div>
       <h2 class="part" id="h-nutshell">Here is the whole system.</h2>
-      <div class="vw part">
+      <div class="vw wide part" style="margin-top:1.6rem">
         <svg viewBox="0 0 1000 400" role="img" aria-label="Build sequence: scattered knowledge today, then Phase 1 stacks Identity, Knowledge, and Governance into a foundation, Phase 2 places one Operator on top, Phase 3 wraps the whole in a durable shell.">
           <defs>
             <marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -445,27 +458,27 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
               <circle class="star" cx="146" cy="264" r="2" opacity="0.5"/>
             </g>
             <text class="mono acc" x="112" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">TODAY</text>
-            <text class="sub" x="112" y="374" text-anchor="middle" font-size="10.5">scattered · undocumented</text>
+            <text class="sub" x="112" y="374" text-anchor="middle" font-size="10.5">scattered &middot; undocumented</text>
           </a>
           <line class="arrowline" x1="196" y1="252" x2="238" y2="252" marker-end="url(#mA)"/>
           <a href="#method" aria-label="Phase 1, the foundation: Identity, Knowledge, Governance. Read the method.">
             <g>
-              <rect class="slab" x="266" y="294" width="170" height="30" rx="5"/>
-              <rect class="slab" x="266" y="258" width="170" height="30" rx="5"/>
-              <rect class="slab" x="266" y="222" width="170" height="30" rx="5"/>
+              <rect class="slab" x="266" y="294" width="170" height="30"/>
+              <rect class="slab" x="266" y="258" width="170" height="30"/>
+              <rect class="slab" x="266" y="222" width="170" height="30"/>
               <text x="351" y="313" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">01</tspan><tspan dx="7">Identity</tspan></text>
               <text x="351" y="277" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">02</tspan><tspan dx="7">Knowledge</tspan></text>
               <text x="351" y="241" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">03</tspan><tspan dx="7">Governance</tspan></text>
             </g>
-            <text class="mono acc" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 1 · THE FOUNDATION</text>
-            <text class="sub" x="351" y="374" text-anchor="middle" font-size="10.5">eleven documents · a focused weekend</text>
+            <text class="mono acc" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 1 &middot; THE FOUNDATION</text>
+            <text class="sub" x="351" y="374" text-anchor="middle" font-size="10.5">eleven documents &middot; a focused weekend</text>
           </a>
           <line class="arrowline" x1="452" y1="252" x2="494" y2="252" marker-end="url(#mA)"/>
           <a href="#operator" aria-label="Phase 2, activation: one scoped Operator. Read about the Operator.">
             <g>
-              <rect class="slab-dim" x="522" y="294" width="170" height="30" rx="5"/>
-              <rect class="slab-dim" x="522" y="258" width="170" height="30" rx="5"/>
-              <rect class="slab-dim" x="522" y="222" width="170" height="30" rx="5"/>
+              <rect class="slab-dim" x="522" y="294" width="170" height="30"/>
+              <rect class="slab-dim" x="522" y="258" width="170" height="30"/>
+              <rect class="slab-dim" x="522" y="222" width="170" height="30"/>
               <circle class="star-halo" cx="607" cy="196" r="15"/>
               <circle class="star" cx="607" cy="196" r="7"/>
               <line class="ln-acc" x1="607" y1="176" x2="607" y2="168"/>
@@ -473,22 +486,22 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
               <line class="ln-acc" x1="587" y1="196" x2="579" y2="196"/>
               <text class="acc" x="651" y="200" font-size="11" font-weight="600">Operator</text>
             </g>
-            <text class="mono acc" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 2 · ACTIVATION</text>
-            <text class="sub" x="607" y="374" text-anchor="middle" font-size="10.5">one scoped agent · about a week</text>
+            <text class="mono acc" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 2 &middot; ACTIVATION</text>
+            <text class="sub" x="607" y="374" text-anchor="middle" font-size="10.5">one scoped agent &middot; about a week</text>
           </a>
           <line class="arrowline" x1="708" y1="252" x2="750" y2="252" marker-end="url(#mA)"/>
           <a href="#docs" aria-label="Phase 3, durability: continuity, measurement, rhythm. See the fifteen documents.">
             <g>
-              <rect class="ln-acc" x="770" y="164" width="206" height="166" rx="16" fill="none" stroke-width="1.4"/>
-              <rect class="slab-dim" x="788" y="294" width="170" height="30" rx="5"/>
-              <rect class="slab-dim" x="788" y="258" width="170" height="30" rx="5"/>
-              <rect class="slab-dim" x="788" y="222" width="170" height="30" rx="5"/>
+              <rect class="ln-acc" x="770" y="164" width="206" height="166" fill="none" stroke-width="1.4"/>
+              <rect class="slab-dim" x="788" y="294" width="170" height="30"/>
+              <rect class="slab-dim" x="788" y="258" width="170" height="30"/>
+              <rect class="slab-dim" x="788" y="222" width="170" height="30"/>
               <circle class="star-halo" cx="873" cy="196" r="13"/>
               <circle class="star" cx="873" cy="196" r="6"/>
-              <text class="sub mono" x="873" y="152" text-anchor="middle" font-size="9.5" letter-spacing="1">CONTINUITY · MEASUREMENT · RHYTHM</text>
+              <text class="sub mono" x="856" y="152" text-anchor="middle" font-size="9.5" letter-spacing="0.4">CONTINUITY &middot; MEASUREMENT &middot; RHYTHM</text>
             </g>
-            <text class="mono acc" x="873" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 3 · DURABILITY</text>
-            <text class="sub" x="873" y="374" text-anchor="middle" font-size="10.5">four documents · survives you gone 90 days</text>
+            <text class="mono acc" x="873" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 3 &middot; DURABILITY</text>
+            <text class="sub" x="873" y="374" text-anchor="middle" font-size="10.5">four documents &middot; survives you gone 90 days</text>
           </a>
           <text class="sub" x="500" y="80" text-anchor="middle" font-size="12.5">Fifteen plain-text documents you own, built in strict order, then one Operator standing on them.</text>
         </svg>
@@ -498,11 +511,11 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 
   <section id="start" class="reveal" aria-labelledby="h-start">
     <div class="narrow">
-      <span class="kicker part">Where do you start</span>
+      <div class="runhead part"><span>Where do you start</span></div>
       <h2 class="part" id="h-start">Three minutes tells you.</h2>
-      <p class="body part">Six layers and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest layer, and that is where you start reading.</p>
-      <p class="part"><a class="btn" href="guide/scorecard.html">Take the 5-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
-      <div class="vw part" style="margin-top:2rem">
+      <p class="body part" style="margin-top:1.1rem">Six layers and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest layer, and that is where you start reading.</p>
+      <p class="part btnrow" style="margin-top:1.4rem"><a class="btn" href="guide/scorecard.html">Take the 5-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
+      <div class="vw wide part" style="margin-top:2.4rem">
         <svg viewBox="0 0 1000 260" role="img" aria-label="Journey with five stops: the three-minute scorecard names your weakest layer, Day One puts the first files on disk, a weekend builds Phase 1's eleven documents, a week activates one governed Operator, and the rhythm keeps it standing.">
           <polyline class="ln-acc" points="80,150 280,110 490,145 700,105 910,138" stroke-width="1.3" opacity="0.85"/>
           <a href="guide/scorecard.html" aria-label="Score yourself: three minutes, leave with your weakest layer named.">
@@ -510,8 +523,8 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
             <circle class="star" cx="80" cy="150" r="5"/>
             <text class="mono acc" x="80" y="182" text-anchor="middle" font-size="10">3 MIN</text>
             <text x="80" y="200" text-anchor="middle" font-size="12" font-weight="600">Score yourself</text>
-            <text class="sub" x="80" y="217" text-anchor="middle" font-size="10.5">leave with: your weakest</text>
-            <text class="sub" x="80" y="231" text-anchor="middle" font-size="10.5">layer, named</text>
+            <text class="sub" x="102" y="217" text-anchor="middle" font-size="10.5">leave with: your weakest</text>
+            <text class="sub" x="102" y="231" text-anchor="middle" font-size="10.5">layer, named</text>
           </a>
           <a href="guide/day-one.html" aria-label="Day One: thirty minutes, leave with the first files on your disk.">
             <circle class="star-halo" cx="280" cy="110" r="11"/>
@@ -552,40 +565,29 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 
   <section id="sound-familiar" class="reveal" aria-labelledby="h-sf">
     <div class="wrap">
-      <div class="act-head part">
-        <div class="act-emblem" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none">
-            <circle cx="13" cy="14" r="2.2" fill="#8FA3FF" opacity="0.5"/>
-            <circle cx="27" cy="10" r="1.8" fill="#8FA3FF" opacity="0.4"/>
-            <circle cx="22" cy="22" r="2.6" fill="#8FA3FF"/>
-            <circle cx="10" cy="27" r="1.6" fill="#8FA3FF" opacity="0.4"/>
-            <circle cx="30" cy="28" r="2" fill="#8FA3FF" opacity="0.55"/>
-            <path d="M7 34 H33" stroke="#EEF0FA" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-          </svg>
-        </div>
+      <div class="runhead part"><span>Act 01 &middot; The problem</span></div>
+      <div class="act part">
+        <div><span class="numeral" aria-hidden="true">01</span><span class="numcap">The problem</span></div>
         <div>
-          <span class="act-no">Act 01 · The problem</span>
-          <h2 id="h-sf" style="margin-top:.35rem">You tried AI. It wrote you something generic.</h2>
-          <p class="act-promise"><b>What you get here:</b> why generic output is a context problem, not a prompt problem, and the one rule that fixes it.</p>
-          <span class="act-next">NEXT ACT: THE METHOD &#8594;</span>
+          <h2 id="h-sf">You tried AI. It wrote you something generic.</h2>
+          <p class="promise"><b>What you get here:</b> why generic output is a context problem, not a prompt problem, and the one rule that fixes it.</p>
+          <a class="xref" href="#method">NEXT ACT: THE METHOD &#8594;</a>
         </div>
       </div>
       <p class="lede part" style="max-width:58ch">It didn't know your clients, your history, or how you talk. So it guessed. Every owner has the same story: the AI wasn't bad. It was uninformed.</p>
-      <div class="cards3">
-        <div class="qcard part"><q>I don't know where to start.</q><p>There are too many tools and they change weekly. You don't need another tool. You need a sequence.</p></div>
-        <div class="qcard part"><q>It doesn't sound like me.</q><p>Generic AI writes like everyone in your market. Your voice is an asset. Write it down once and every draft after sounds like you.</p></div>
-        <div class="qcard part"><q>Everything is in my head.</q><p>If it lives only in your head, the business stops when you do. That's not a tech problem. It's a continuity problem.</p></div>
+      <div class="ledger">
+        <div class="entry part"><q>I don't know where to start.</q><p>There are too many tools and they change weekly. You don't need another tool. You need a sequence.</p></div>
+        <div class="entry part"><q>It doesn't sound like me.</q><p>Generic AI writes like everyone in your market. Your voice is an asset. Write it down once and every draft after sounds like you.</p></div>
+        <div class="entry part"><q>Everything is in my head.</q><p>If it lives only in your head, the business stops when you do. That's not a tech problem. It's a continuity problem.</p></div>
       </div>
     </div>
   </section>
 
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="180" y2="22" style="--len:170"/><circle cx="196" cy="22" r="3"/><line x1="212" y1="22" x2="410" y2="14" style="--len:200"/><circle cx="410" cy="14" r="3"/></svg>
-
   <section id="rule" class="reveal" aria-labelledby="h-rule">
     <div class="narrow">
-      <span class="kicker part">The one rule</span>
+      <div class="runhead part" style="justify-content:center"><span>The one rule</span></div>
       <h2 class="part" id="h-rule">Do not automate chaos.</h2>
-      <p class="lede part" style="max-width:52ch;margin-left:auto;margin-right:auto">Automation multiplies whatever you feed it. Feed it a mess, get a faster mess. That's why Groundwork builds in strict order: organize first, automate last.</p>
+      <p class="lede part" style="max-width:52ch;margin:1.1rem auto 0">Automation multiplies whatever you feed it. Feed it a mess, get a faster mess. That's why Groundwork builds in strict order: organize first, automate last.</p>
       <div class="holdzone part">
         <div class="holdfield" id="holdfield" aria-hidden="true"><svg id="holdlines"></svg></div>
         <button class="btn holdbtn" id="holdbtn" aria-describedby="hold-hint"><span class="fill" aria-hidden="true"></span><span>Hold to bring order</span></button>
@@ -594,128 +596,93 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
     </div>
   </section>
 
-  <div class="vista" aria-hidden="false">
-    <img src="assets/still-scatter.jpg" alt="Silver fragments drifting in a deep indigo dusk" loading="lazy" width="1920" height="1072">
-    <span class="cap">Your knowledge, today.</span>
-  </div>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="30" x2="150" y2="30" style="--len:140"/><circle cx="166" cy="30" r="3"/><line x1="182" y1="30" x2="300" y2="18" style="--len:120"/><circle cx="300" cy="18" r="3"/><line x1="316" y1="18" x2="410" y2="18" style="--len:100"/></svg>
-
   <section id="method" class="reveal" aria-labelledby="h-method">
     <div class="wrap">
-      <div class="act-head part">
-        <div class="act-emblem" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none">
-            <rect x="8" y="26" width="24" height="5" rx="1.5" stroke="#8FA3FF" stroke-width="1.4"/>
-            <rect x="8" y="19" width="24" height="5" rx="1.5" stroke="#8FA3FF" stroke-width="1.4"/>
-            <rect x="8" y="12" width="24" height="5" rx="1.5" stroke="#8FA3FF" stroke-width="1.4"/>
-            <circle cx="20" cy="7" r="2.6" fill="#8FA3FF"/>
-          </svg>
-        </div>
+      <div class="runhead part"><span>Act 02 &middot; The method</span></div>
+      <div class="act a2 part">
+        <div><span class="numeral" aria-hidden="true">02</span><span class="numcap">The method</span></div>
         <div>
-          <span class="act-no">Act 02 · The method</span>
-          <h2 id="h-method" style="margin-top:.35rem">Six layers, built in order. Three phases.</h2>
-          <p class="act-promise"><b>What you get here:</b> the build order, what each layer produces, and why skipping one means automating chaos.</p>
-          <span class="act-next">NEXT ACT: THE PROOF &#8594;</span>
+          <h2 id="h-method">Six layers, built in order. Three phases.</h2>
+          <p class="promise"><b>What you get here:</b> the build order, what each layer produces, and why skipping one means automating chaos.</p>
+          <a class="xref" href="#atlas">NEXT ACT: THE PROOF &#8594;</a>
         </div>
       </div>
       <p class="lede part">Phase 1 is required first: Identity, Knowledge, Governance. Phase 2 activates one Operator, not a swarm. Phase 3 makes it durable. Skip a layer and you are automating chaos.</p>
-      <p class="part" style="margin-top:1.1rem"><a class="btn btn-ghost" href="guide/index.html">Open the full Field Guide</a> <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download>or download it as a PDF</a></p>
-      <div style="margin-top:1.6rem">
-        <div class="layer part p1" id="layer1">
-          <span class="num">01</span>
-          <div><h3>Identity <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/layer-1.html">Read the full layer</a></div>
-          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="17" cy="13" r="5"/><path d="M8 27c1.5-5 5-7 9-7s7.5 2 9 7"/></svg>
+      <p class="part btnrow" style="margin-top:1.3rem"><a class="btn btn-ghost" href="guide/index.html">Open the full Field Guide</a> <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download style="font-size:.9rem;white-space:nowrap">or download it as a PDF</a></p>
+      <div style="margin-top:1.8rem;border-top:2px solid var(--ink)">
+        <div class="layer part" id="layer1">
+          <div class="lnum"><span class="phase">Phase 1</span>01</div>
+          <div><h3>Identity</h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/layer-1.html">Read the full layer</a></div>
         </div>
-        <div class="layer part p1" id="layer2">
-          <span class="num">02</span>
-          <div><h3>Knowledge <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0–4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/layer-2.html">Read the full layer</a></div>
-          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="2.5"/><circle cx="25" cy="12" r="2.5"/><circle cx="14" cy="25" r="2.5"/><path d="M11 10.5l11.5 1M10 11l3 11.5M23.5 14l-8 9.5"/></svg>
+        <div class="layer part" id="layer2">
+          <div class="lnum"><span class="phase">Phase 1</span>02</div>
+          <div><h3>Knowledge</h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0&ndash;4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/layer-2.html">Read the full layer</a></div>
         </div>
-        <div class="layer part p1" id="layer3">
-          <span class="num">03</span>
-          <div><h3>Governance <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 1 · Required first</span></h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules, allowed tools, and Agent Scope. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/layer-3.html">Read the full layer</a></div>
-          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 22h14M23 7v20"/><path d="M20 9l3-2 3 2M20 25l3 2 3-2"/></svg>
+        <div class="layer part" id="layer3">
+          <div class="lnum"><span class="phase">Phase 1</span>03</div>
+          <div><h3>Governance</h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules, allowed tools, and Agent Scope. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/layer-3.html">Read the full layer</a></div>
         </div>
-        <div class="layer part p3" id="layer4">
-          <span class="num">04</span>
-          <div><h3>Continuity <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/layer-4.html">Read the full layer</a></div>
-          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 5l10 4v8c0 6-4 10-10 12C11 27 7 23 7 17V9z"/><path d="M13 17l3 3 6-6"/></svg>
+        <div class="layer ph3 part" id="layer4">
+          <div class="lnum"><span class="phase">Phase 3</span>04</div>
+          <div><h3>Continuity</h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/layer-4.html">Read the full layer</a></div>
         </div>
-        <div class="layer part p3" id="layer5">
-          <span class="num">05</span>
-          <div><h3>Measurement <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">Whether the foundation is actually working.</p><p>Signals of a working foundation: output stays on-voice without prompting, escalations are appropriate not constant, humans trust the drafts enough to use them.</p><span class="out">You know when it is working, and when it is drifting.</span><a class="lmore" href="guide/layer-5.html">Read the full layer</a></div>
-          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 24l6-6 5 5 11-11"/><path d="M23 12h5v5"/></svg>
+        <div class="layer ph3 part" id="layer5">
+          <div class="lnum"><span class="phase">Phase 3</span>05</div>
+          <div><h3>Measurement</h3><p class="promise">Whether the foundation is actually working.</p><p>Signals of a working foundation: output stays on-voice without prompting, escalations are appropriate not constant, humans trust the drafts enough to use them.</p><span class="out">You know when it is working, and when it is drifting.</span><a class="lmore" href="guide/layer-5.html">Read the full layer</a></div>
         </div>
-        <div class="layer part p3" id="layer6">
-          <span class="num">06</span>
-          <div><h3>Operating Rhythm <span class="promise" style="display:inline;font-size:.65em;opacity:.7;font-weight:400;margin-left:.5em">Phase 3 · Durability</span></h3><p class="promise">How the foundation is maintained so it does not decay.</p><p>Weekly, monthly, and quarterly reviews. Who owns each layer. How changes get proposed, approved, and versioned. Order is made, not bought, and it stays that way with rhythm.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/layer-6.html">Read the full layer</a></div>
-          <svg class="glyph" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 4a13 13 0 1 1-9 3.8"/><path d="M8 4v5h5"/></svg>
+        <div class="layer ph3 part" id="layer6">
+          <div class="lnum"><span class="phase">Phase 3</span>06</div>
+          <div><h3>Operating Rhythm</h3><p class="promise">How the foundation is maintained so it does not decay.</p><p>Weekly, monthly, and quarterly reviews. Who owns each layer. How changes get proposed, approved, and versioned. Order is made, not bought, and it stays that way with rhythm.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/layer-6.html">Read the full layer</a></div>
         </div>
       </div>
     </div>
   </section>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="14" x2="120" y2="14" style="--len:110"/><circle cx="136" cy="14" r="3"/><line x1="152" y1="14" x2="260" y2="30" style="--len:120"/><circle cx="260" cy="30" r="3"/><line x1="276" y1="30" x2="410" y2="30" style="--len:140"/></svg>
 
   <section id="who" class="reveal" aria-labelledby="h-who">
-    <div class="wrap split2">
-      <div>
-        <span class="kicker part">Who's behind it</span>
-        <h2 class="part" id="h-who">Built by an operator who needed it first.</h2>
-        <p class="part">Adam Abdalla runs a 70,000 square foot commercial shopping center in Lafayette, Louisiana: leases, vendors, tenants, and decades of records. He built Groundwork for himself first, spent a year refining his own system, and now runs his properties on it daily. This program is that system, taught.</p>
-        <p class="part">He is not selling AI tools. There are no subscriptions to him and no lock-in. He builds foundations you own outright.</p>
+    <div class="wrap">
+      <div class="letter part">
+        <div class="runhead"><span>Who's behind it</span></div>
+        <h2 id="h-who">Built by an operator who needed it first.</h2>
+        <p>Adam Abdalla runs a 70,000 square foot commercial shopping center in Lafayette, Louisiana: leases, vendors, tenants, and decades of records. He built Groundwork for himself first, spent a year refining his own system, and now runs his properties on it daily. This program is that system, taught.</p>
+        <p>He is not selling AI tools. There are no subscriptions to him and no lock-in. He builds foundations you own outright.</p>
+        <p class="sig"><b>Adam Abdalla</b> &middot; Lafayette, Louisiana</p>
       </div>
-      <div class="imgwrap part"><img src="assets/hero-ending.jpg" alt="The ordered ground: the settled final frame of the Groundwork descent" loading="lazy" width="1920" height="1080"></div>
     </div>
   </section>
-
-  <div class="vista" aria-hidden="false">
-    <img src="assets/still-constellation.jpg" alt="A constellation of connected points of light over night mist" loading="lazy" width="1920" height="1072">
-    <span class="cap">Your knowledge, connected.</span>
-  </div>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="200" y2="22" style="--len:190"/><circle cx="216" cy="22" r="3"/><line x1="232" y1="22" x2="410" y2="22" style="--len:180"/></svg>
 
   <section id="atlas" class="reveal" aria-labelledby="h-atlas">
     <div class="wrap">
-      <div class="act-head part">
-        <div class="act-emblem" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none">
-            <rect x="8" y="8" width="24" height="24" rx="2" stroke="#8FA3FF" stroke-width="1.3"/>
-            <path d="M8 16 H32 M16 8 V32" stroke="#8FA3FF" stroke-width="1" opacity="0.6"/>
-            <circle cx="24" cy="24" r="2.4" fill="#8FA3FF"/>
-          </svg>
-        </div>
+      <div class="runhead part"><span>Act 03 &middot; The proof</span></div>
+      <div class="act a3 part">
+        <div><span class="numeral" aria-hidden="true">03</span><span class="numcap">The proof</span></div>
         <div>
-          <span class="act-no">Act 03 · The proof</span>
-          <h2 id="h-atlas" style="margin-top:.35rem">First the groundwork. Then Atlas.</h2>
-          <p class="act-promise"><b>What you get here:</b> a real command center running on these documents, built by the operator who needed it first.</p>
-          <span class="act-next">NEXT ACT: WHAT YOU GET &#8594;</span>
+          <h2 id="h-atlas">First the groundwork. Then Atlas.</h2>
+          <p class="promise"><b>What you get here:</b> a real command center running on these documents, built by the operator who needed it first.</p>
+          <a class="xref" href="#docs">NEXT ACT: WHAT YOU GET &#8594;</a>
         </div>
       </div>
       <p class="lede part" style="max-width:60ch">Here is what this method made possible on Adam's own property.</p>
-      <p class="body part" style="max-width:62ch">For years, the shopping center's knowledge lived the way most businesses' knowledge lives: paper leases, scattered PDFs, spreadsheets, and memory. The layers you are reading about came first. Every record digitized, named, classified, and governed. Only then was the interesting part even possible.</p>
-      <p class="body part" style="max-width:62ch"><strong>Atlas</strong> is the interesting part: a living command center for the property. An interactive site plan of all 27 units. The rent roll, lease runway, critical dates, and work orders, live from the records. And a concierge AI that answers questions about the property, grounded in the property's own dossier and live state, citing the record when it answers.</p>
-      <p class="body part" style="max-width:62ch">Atlas is not a demo and it is not for sale. It is the private tool that runs the property, owners and operator only. It exists because the files were ready first. That is the whole argument of this site, standing in one artifact.</p>
-      <p class="part" style="margin-top:1.2rem"><a class="lmore" href="guide/atlas.html">Read the full Atlas story: ten features, and the documents each one stands on</a></p>
+      <p class="body part" style="max-width:62ch;margin-top:1rem">For years, the shopping center's knowledge lived the way most businesses' knowledge lives: paper leases, scattered PDFs, spreadsheets, and memory. The layers you are reading about came first. Every record digitized, named, classified, and governed. Only then was the interesting part even possible.</p>
+      <p class="body part" style="max-width:62ch;margin-top:1rem"><strong>Atlas</strong> is the interesting part: a living command center for the property. An interactive site plan of all 27 units. The rent roll, lease runway, critical dates, and work orders, live from the records. And a concierge AI that answers questions about the property, grounded in the property's own dossier and live state, citing the record when it answers.</p>
+      <p class="body part" style="max-width:62ch;margin-top:1rem">Atlas is not a demo and it is not for sale. It is the private tool that runs the property, owners and operator only. It exists because the files were ready first. That is the whole argument of this site, standing in one artifact.</p>
+      <p class="part" style="margin-top:1.4rem"><a class="lmore" href="guide/atlas.html">Read the full Atlas story: ten features, and the documents each one stands on</a></p>
     </div>
   </section>
 
-  <div class="vista" aria-hidden="false">
-    <img src="assets/atlas-spatial.jpg" alt="Atlas sheet A-2: an aerial reality view of the On The Boulevard shopping center inside the Atlas interface, with isometric, 3D, satellite, and reality lenses" loading="lazy" width="1474" height="1100">
-    <span class="cap">Atlas, sheet A-2. The real property, live in the tool.</span>
+  <div class="exhibit reveal">
+    <div class="mat part">
+      <img src="assets/atlas-spatial.jpg" alt="Atlas sheet A-2: an aerial reality view of the On The Boulevard shopping center inside the Atlas interface, with isometric, 3D, satellite, and reality lenses" loading="lazy" width="1474" height="1100">
+      <div class="cap"><span><b>Exhibit A-2</b> &middot; Atlas, sheet A-2. The real property, live in the tool.</span><span>27 units &middot; Lafayette, LA</span></div>
+    </div>
   </div>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="190" y2="22" style="--len:180"/><circle cx="206" cy="22" r="3"/><line x1="222" y1="22" x2="410" y2="22" style="--len:190"/></svg>
 
   <section id="authority" class="reveal" aria-labelledby="h-authority">
     <div class="wrap">
-      <span class="kicker part">Authority Classification</span>
+      <div class="runhead part"><span>Authority Classification</span></div>
       <h2 class="part" id="h-authority">Not every document is equal. Your AI should know which is which.</h2>
-      <p class="lede part">Most AI failures are trust failures: the system treats a rumor and a contract as the same weight. Groundwork tags every document Level 0 through Level 4, so the system knows what to obey, what to check, and what to ignore.</p>
-      <div class="vw part" style="max-width:760px;margin-top:1.4rem">
-        <svg viewBox="0 0 720 330" role="img" aria-label="Vertical ladder of five authority levels from Level 0 Core Doctrine, which the AI obeys, down to Level 4 Untrusted, which is never quoted as truth. Stroke brightness descends with trust.">
+      <p class="lede part" style="margin-top:1.1rem">Most AI failures are trust failures: the system treats a rumor and a contract as the same weight. Groundwork tags every document Level 0 through Level 4, so the system knows what to obey, what to check, and what to ignore.</p>
+      <div class="vw ladder part" style="max-width:760px;margin-top:1.8rem">
+        <svg viewBox="0 0 720 330" role="img" aria-label="Vertical ladder of five authority levels from Level 0 Core Doctrine, which the AI obeys, down to Level 4 Untrusted, which is never quoted as truth. Stroke weight descends with trust.">
           <defs>
             <marker id="mL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
               <path d="M0,0 L10,5 L0,10 z" class="mk"/>
@@ -725,101 +692,99 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
           <text class="sub" x="82" y="52" text-anchor="end" font-size="10.5">the AI obeys</text>
           <text class="sub" x="82" y="292" text-anchor="end" font-size="10.5">the AI ignores</text>
           <g>
-            <rect x="130" y="40" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--text-primary)" stroke-width="2"/>
+            <rect x="130" y="40" width="520" height="42" fill="var(--paper-deep)" stroke="var(--ink)" stroke-width="2.4"/>
             <text class="mono acc" x="148" y="59" font-size="10">L0</text>
             <text x="178" y="60" font-size="12.5" font-weight="600">Core Doctrine</text>
             <text class="sub" x="178" y="75" font-size="9.5">Charter, principles, non-negotiables.</text>
-            <text class="mono" x="634" y="65" text-anchor="end" font-size="9.5" fill="var(--text-primary)">OBEYED</text>
+            <text class="mono" x="634" y="65" text-anchor="end" font-size="9.5" fill="var(--ink)">OBEYED</text>
           </g>
           <g>
-            <rect x="130" y="96" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--accent)" stroke-width="1.5"/>
+            <rect x="130" y="96" width="520" height="42" fill="var(--paper-deep)" stroke="var(--terra-deep)" stroke-width="1.6"/>
             <text class="mono acc" x="148" y="115" font-size="10">L1</text>
             <text x="178" y="116" font-size="12.5" font-weight="600">Institutional Standards</text>
             <text class="sub" x="178" y="131" font-size="9.5">Internal policies, approval thresholds, communication standards.</text>
             <text class="mono sub" x="634" y="121" text-anchor="end" font-size="9.5">TRUSTED</text>
           </g>
           <g>
-            <rect x="130" y="152" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--accent-muted)" stroke-width="1.4"/>
+            <rect x="130" y="152" width="520" height="42" fill="var(--paper-deep)" stroke="var(--rule)" stroke-width="1.4"/>
             <text class="mono acc" x="148" y="171" font-size="10">L2</text>
             <text x="178" y="172" font-size="12.5" font-weight="600">Validated Knowledge</text>
             <text class="sub" x="178" y="187" font-size="9.5">Executed contracts, cleaned data, completed reports.</text>
             <text class="mono sub" x="634" y="177" text-anchor="end" font-size="9.5">USED</text>
           </g>
           <g>
-            <rect x="130" y="208" width="520" height="42" rx="7" fill="var(--panel)" stroke="var(--accent-muted)" stroke-width="1" opacity="0.8"/>
-            <text class="mono acc" x="148" y="227" font-size="10" opacity="0.8">L3</text>
-            <text x="178" y="228" font-size="12.5" font-weight="600" opacity="0.85">Working Material</text>
+            <rect x="130" y="208" width="520" height="42" fill="var(--paper-deep)" stroke="var(--rule)" stroke-width="1" opacity="0.85"/>
+            <text class="mono acc" x="148" y="227" font-size="10" opacity="0.85">L3</text>
+            <text x="178" y="228" font-size="12.5" font-weight="600" opacity="0.9">Working Material</text>
             <text class="sub" x="178" y="243" font-size="9.5">Drafts, notes, transcripts. Useful, not yet doctrine.</text>
             <text class="mono sub" x="634" y="233" text-anchor="end" font-size="9.5">NEVER FINAL</text>
           </g>
           <g>
-            <rect x="130" y="264" width="520" height="42" rx="7" fill="#3a1f1f" stroke="var(--accent-muted)" stroke-width="1" stroke-dasharray="4 4" opacity="0.9"/>
-            <text class="mono" x="148" y="283" font-size="10" fill="#f0d0d0">L4</text>
-            <text x="178" y="284" font-size="12.5" font-weight="600" fill="#f0d0d0">Untrusted / Raw</text>
-            <text x="178" y="299" font-size="9.5" fill="#f0d0d0" opacity="0.8">External clippings, unverified. Available for context.</text>
-            <text class="mono" x="634" y="289" text-anchor="end" font-size="9.5" fill="#f0d0d0">NEVER QUOTED</text>
+            <rect x="130" y="264" width="520" height="42" fill="none" stroke="var(--oxblood)" stroke-width="1.2" stroke-dasharray="5 4"/>
+            <text class="mono" x="148" y="283" font-size="10" fill="var(--oxblood)">L4</text>
+            <text x="178" y="284" font-size="12.5" font-weight="600" fill="var(--oxblood)">Untrusted / Raw</text>
+            <text x="178" y="299" font-size="9.5" fill="var(--oxblood)" opacity="0.85">External clippings, unverified. Available for context.</text>
+            <text class="mono" x="634" y="289" text-anchor="end" font-size="9.5" fill="var(--oxblood)">NEVER QUOTED</text>
           </g>
         </svg>
       </div>
-      <p class="part" style="margin-top:1.3rem"><a class="lmore" href="guide/lineage.html">Where this idea comes from: eighty years of graded trust</a></p>
+      <p class="part" style="margin-top:1.5rem"><a class="lmore" href="guide/lineage.html">Where this idea comes from: eighty years of graded trust</a></p>
     </div>
   </section>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="200" y2="22" style="--len:190"/><circle cx="216" cy="22" r="3"/><line x1="232" y1="22" x2="410" y2="22" style="--len:180"/></svg>
 
   <section id="docs" class="reveal" aria-labelledby="h-docs">
     <div class="wrap">
-      <div class="act-head part">
-        <div class="act-emblem" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none">
-            <rect x="9" y="11" width="14" height="18" rx="2" stroke="#8FA3FF" stroke-width="1.3"/>
-            <rect x="14" y="8" width="14" height="18" rx="2" stroke="#8FA3FF" stroke-width="1.3" fill="#1B1E40"/>
-            <path d="M18 14 H24 M18 18 H24 M18 22 H22" stroke="#8FA3FF" stroke-width="1" opacity="0.7"/>
-          </svg>
-        </div>
+      <div class="runhead part"><span>Act 04 &middot; What you get</span></div>
+      <div class="act a4 part">
+        <div><span class="numeral" aria-hidden="true">04</span><span class="numcap">What you get</span></div>
         <div>
-          <span class="act-no">Act 04 · What you get</span>
-          <h2 id="h-docs" style="margin-top:.35rem">Fifteen documents. All free. All yours.</h2>
-          <p class="act-promise"><b>What you get here:</b> all fifteen documents, the Operator that stands on them, and the free ways to learn it.</p>
-          <span class="act-next">NEXT ACT: START &#8594;</span>
+          <h2 id="h-docs">Fifteen documents. All free. All yours.</h2>
+          <p class="promise"><b>What you get here:</b> all fifteen documents, the Operator that stands on them, and the free ways to learn it.</p>
+          <a class="xref" href="#audit">NEXT ACT: START &#8594;</a>
         </div>
       </div>
       <p class="lede part">Not a course. Not a subscription. Fifteen plain-text files you write once and own forever: the working system Adam runs his own businesses on.</p>
-      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin-top:1.4rem">
-        <div class="path part">
-          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 1 · IDENTITY</span>
-          <h3>Layer 01</h3>
-          <p>01. Identity Charter · 02. Brand Voice · 03. Decision Principles</p>
-        </div>
-        <div class="path part">
-          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 1 · KNOWLEDGE</span>
-          <h3>Layer 02</h3>
-          <p>04. Authority Classification · 05. Context Vault · 06. Strategic Priorities · 07. Active Constraints</p>
-        </div>
-        <div class="path mid part">
-          <span class="tag">PHASE 1 · GOVERNANCE</span>
-          <h3>Layer 03</h3>
-          <p>08. Automation Decision Framework · 09. Escalation Rules · 10. Allowed Tools &amp; Access · 11. Agent Scope</p>
-        </div>
-        <div class="path part">
-          <span class="tag" style="background:var(--accent-muted);color:var(--text-primary)">PHASE 3 · DURABILITY</span>
-          <h3>Layers 04–06</h3>
-          <p>12. Continuity &amp; Succession · 13. Session Notes · 14. Measurement Notes · 15. Operating Rhythm</p>
-        </div>
+      <div class="tablewrap part">
+        <table class="schedule">
+          <caption class="skip">Schedule of the fifteen documents by layer and phase</caption>
+          <thead>
+            <tr><th scope="col">Layer</th><th scope="col">Phase</th><th scope="col">Documents</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Layer 01</td>
+              <td class="ph">Phase 1 &middot; Identity</td>
+              <td class="files"><b>01.</b> Identity Charter &nbsp;&middot;&nbsp; <b>02.</b> Brand Voice &nbsp;&middot;&nbsp; <b>03.</b> Decision Principles</td>
+            </tr>
+            <tr>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Layer 02</td>
+              <td class="ph">Phase 1 &middot; Knowledge</td>
+              <td class="files"><b>04.</b> Authority Classification &nbsp;&middot;&nbsp; <b>05.</b> Context Vault &nbsp;&middot;&nbsp; <b>06.</b> Strategic Priorities &nbsp;&middot;&nbsp; <b>07.</b> Active Constraints</td>
+            </tr>
+            <tr>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Layer 03</td>
+              <td class="ph">Phase 1 &middot; Governance</td>
+              <td class="files"><b>08.</b> Automation Decision Framework &nbsp;&middot;&nbsp; <b>09.</b> Escalation Rules &nbsp;&middot;&nbsp; <b>10.</b> Allowed Tools &amp; Access &nbsp;&middot;&nbsp; <b>11.</b> Agent Scope</td>
+            </tr>
+            <tr class="ph3">
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Layers 04&ndash;06</td>
+              <td class="ph">Phase 3 &middot; Durability</td>
+              <td class="files"><b>12.</b> Continuity &amp; Succession &nbsp;&middot;&nbsp; <b>13.</b> Session Notes &nbsp;&middot;&nbsp; <b>14.</b> Measurement Notes &nbsp;&middot;&nbsp; <b>15.</b> Operating Rhythm</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <p class="part" style="margin-top:1.6rem"><a class="btn" href="assets/Groundwork-Program-Guide.pdf" download>Download the Field Guide PDF</a></p>
-      <p class="part" style="margin-top:.8rem;font-size:.9rem;color:var(--text-secondary)">Eleven documents in Phase 1, four in Phase 3. The Field Guide carries the doctrine and the core templates on paper; every one of the fifteen is taught in full, with its template, in <a class="lmore" href="guide/index.html">the guide</a>.</p>
+      <p class="part" style="margin-top:1.8rem"><a class="btn" href="assets/Groundwork-Program-Guide.pdf" download>Download the Field Guide PDF</a></p>
+      <p class="part" style="margin-top:.9rem;font-size:.9rem;color:var(--ink-soft)">Eleven documents in Phase 1, four in Phase 3. The Field Guide carries the doctrine and the core templates on paper; every one of the fifteen is taught in full, with its template, in <a href="guide/index.html">the guide</a>.</p>
     </div>
   </section>
 
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="14" x2="120" y2="14" style="--len:110"/><circle cx="136" cy="14" r="3"/><line x1="152" y1="14" x2="260" y2="30" style="--len:120"/><circle cx="260" cy="30" r="3"/><line x1="276" y1="30" x2="410" y2="30" style="--len:140"/></svg>
-
   <section id="operator" class="reveal" aria-labelledby="h-operator">
     <div class="narrow">
-      <span class="kicker part">The Operator</span>
+      <div class="runhead part"><span>The Operator</span></div>
       <h2 class="part" id="h-operator">One assistant. Scoped. Yours.</h2>
-      <p class="lede part" style="max-width:58ch">Phase 2 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and governance you wrote in Phase 1. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p>
-      <pre class="part" style="background:rgba(255,255,255,.03);border:1px solid rgba(143,163,255,.16);border-radius:12px;padding:1.4rem 1.6rem;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.82rem;line-height:1.55;overflow-x:auto;color:var(--text-secondary);white-space:pre-wrap">You are now the Operator for this organization.
+      <p class="lede part" style="max-width:58ch;margin-top:1.1rem">Phase 2 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and governance you wrote in Phase 1. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p>
+      <pre class="prompt part" style="margin-top:1.4rem">You are now the Operator for this organization.
 
 Load the files in this package in order. Do not
 invent policy. Do not expand your authority.
@@ -835,56 +800,48 @@ Rules
   complete draft and stop.
 - If the request is Never Automate, refuse and
   escalate.</pre>
-      <p class="part" style="margin-top:1.2rem;font-size:.9rem;color:var(--text-secondary)">The full prompt, the context package, and the activation gate are in <a class="lmore" href="guide/operator.html">the Operator chapter of the guide</a>.</p>
+      <p class="part" style="margin-top:1.2rem;font-size:.9rem;color:var(--ink-soft)">The full prompt, the context package, and the activation gate are in <a href="guide/operator.html">the Operator chapter of the guide</a>.</p>
     </div>
   </section>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="28" x2="140" y2="28" style="--len:130"/><circle cx="156" cy="28" r="3"/><line x1="172" y1="28" x2="410" y2="16" style="--len:240"/><circle cx="410" cy="16" r="3"/></svg>
 
   <section id="curriculum" class="reveal" aria-labelledby="h-curriculum">
     <div class="wrap">
-      <span class="kicker part">The Curriculum</span>
-      <h2 class="part quiet-h" id="h-curriculum">If you want to learn the whole thing at your own pace.</h2>
-      <p class="lede part" style="max-width:64ch">The Groundwork Curriculum is a five-level, two-track open curriculum on GitHub: the same doctrine as the Field Guide, taught as a study plan. Individual track for owners and operators; Company track for teams. MIT licensed. Free forever.</p>
-      <p class="part" style="margin-top:1.2rem">
+      <div class="runhead part"><span>The Curriculum</span></div>
+      <h2 class="part" id="h-curriculum" style="font-size:clamp(1.3rem,2.3vw,1.75rem);color:var(--ink-soft)">If you want to learn the whole thing at your own pace.</h2>
+      <p class="lede part" style="max-width:64ch;margin-top:1rem">The Groundwork Curriculum is a five-level, two-track open curriculum on GitHub: the same doctrine as the Field Guide, taught as a study plan. Individual track for owners and operators; Company track for teams. MIT licensed. Free forever.</p>
+      <p class="part btnrow" style="margin-top:1.3rem">
         <a class="btn" href="https://github.com/OrangeOnyx/groundwork-curriculum" target="_blank" rel="noopener">Open the curriculum on GitHub</a>
-        <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download style="margin-left:1rem">or read the Field Guide first</a>
+        <a href="assets/Groundwork-Program-Guide.pdf" download style="font-size:.9rem;white-space:nowrap">or read the Field Guide first</a>
       </p>
-      <p class="part" style="margin-top:1.4rem;font-size:.85rem;color:var(--text-secondary);max-width:64ch">Curriculum authorship credit: Jake Van Clief. Doctrine and structure: Adam Abdalla. Released MIT with no branding requirement: teach it, fork it, use it inside your own company.</p>
+      <p class="part" style="margin-top:1.4rem;font-size:.85rem;color:var(--ink-soft);max-width:64ch">Curriculum authorship credit: Jake Van Clief. Doctrine and structure: Adam Abdalla. Released MIT with no branding requirement: teach it, fork it, use it inside your own company.</p>
     </div>
   </section>
-
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="28" x2="140" y2="28" style="--len:130"/><circle cx="156" cy="28" r="3"/><line x1="172" y1="28" x2="410" y2="16" style="--len:240"/><circle cx="410" cy="16" r="3"/></svg>
 
   <section id="compare" class="reveal" aria-labelledby="h-compare">
     <div class="wrap">
-      <span class="kicker part">The honest comparison</span>
-      <h2 class="part quiet-h" id="h-compare">What the market sells. What you walk away with.</h2>
-      <p class="lede part" style="max-width:58ch">We looked hard at what else is out there. Free readiness quizzes are everywhere. Complete systems are not. As far as we can tell, nobody else gives the whole thing away.</p>
-      <div class="paths" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem">
-        <div class="path part">
-          <h3>A score</h3>
-          <p>The big platforms grade your readiness for free, then steer you into their stack. You end with a number and a sales call.</p>
-        </div>
-        <div class="path part">
-          <h3>A course</h3>
-          <p>Cohorts and certificates teach prompts and tools. The person learns. The business itself stays undocumented.</p>
-        </div>
-        <div class="path part">
-          <h3>A retainer</h3>
-          <p>Consultants and fractional AI officers do strong work, priced for companies with a staff to hand it to.</p>
-        </div>
-      </div>
-      <p class="body part" style="margin-top:1.4rem">Groundwork hands you the fifteen working documents and one governed Operator, free, in plain files you own. If you want it built with you, <a href="#audit">the audit</a> is where that conversation starts.</p>
+      <div class="runhead part"><span>The honest comparison</span></div>
+      <h2 class="part" id="h-compare" style="font-size:clamp(1.3rem,2.3vw,1.75rem);color:var(--ink-soft)">What the market sells. What you walk away with.</h2>
+      <p class="lede part" style="max-width:58ch;margin-top:1rem">We looked hard at what else is out there. Free readiness quizzes are everywhere. Complete systems are not. As far as we can tell, nobody else gives the whole thing away.</p>
+      <table class="compare part">
+        <thead>
+          <tr><th scope="col">A score</th><th scope="col">A course</th><th scope="col">A retainer</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-h="A score">The big platforms grade your readiness for free, then steer you into their stack. You end with a number and a sales call.</td>
+            <td data-h="A course">Cohorts and certificates teach prompts and tools. The person learns. The business itself stays undocumented.</td>
+            <td data-h="A retainer">Consultants and fractional AI officers do strong work, priced for companies with a staff to hand it to.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="body part" style="margin-top:1.6rem">Groundwork hands you the fifteen working documents and one governed Operator, free, in plain files you own. If you want it built with you, <a href="#audit">the audit</a> is where that conversation starts.</p>
     </div>
   </section>
 
-  <svg class="divider" viewBox="0 0 420 44" aria-hidden="true"><line x1="10" y1="22" x2="180" y2="22" style="--len:170"/><circle cx="196" cy="22" r="3"/><line x1="212" y1="22" x2="410" y2="22" style="--len:200"/></svg>
-
   <section id="faq" class="reveal" aria-labelledby="h-faq">
     <div class="narrow">
-      <span class="kicker part">Fair questions</span>
-      <h2 class="part quiet-h" id="h-faq">Asked by every owner we meet.</h2>
+      <div class="runhead part"><span>Fair questions</span></div>
+      <h2 class="part" id="h-faq" style="font-size:clamp(1.3rem,2.3vw,1.75rem);color:var(--ink-soft)">Asked by every owner we meet.</h2>
       <div class="faq part">
         <details><summary>Why is this free? What's the catch?</summary><p>No catch. Adam built this for himself first and runs his own businesses on it. Making the doctrine, the fifteen documents, and the curriculum public is the fastest way to make the standard the standard. If you eventually want him in the room helping you build it, that conversation starts with the audit.</p></details>
         <details><summary>Where does my data go?</summary><p>Into folders on your machine. The vault is plain text files you own. Nothing is uploaded anywhere unless you choose it, and the governance layer writes that choice down.</p></details>
@@ -899,21 +856,13 @@ Rules
   </section>
 
   <section id="audit" class="reveal" aria-labelledby="h-audit">
-    <div class="glow" aria-hidden="true"></div>
     <div class="narrow">
-      <div class="act-head part">
-        <div class="act-emblem" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none">
-            <circle cx="14" cy="16" r="2.6" fill="#8FA3FF"/>
-            <circle cx="26" cy="16" r="2.6" fill="#8FA3FF"/>
-            <path d="M16.5 16 H23.5" stroke="#8FA3FF" stroke-width="1.3"/>
-            <path d="M8 30 H32" stroke="#EEF0FA" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-          </svg>
-        </div>
+      <div class="runhead part"><span>Act 05 &middot; Start</span></div>
+      <div class="act a5 part">
+        <div><span class="numeral" aria-hidden="true">05</span><span class="numcap">Start</span></div>
         <div>
-          <span class="act-no">Act 05 · Start</span>
-          <h2 id="h-audit" style="margin-top:.35rem">Want it built with you? Start with the audit.</h2>
-          <p class="act-promise"><b>What you get here:</b> a scorecard, a first half hour, and a free hour with Adam if you want company on the way.</p>
+          <h2 id="h-audit">Want it built with you? Start with the audit.</h2>
+          <p class="promise"><b>What you get here:</b> a scorecard, a first half hour, and a free hour with Adam if you want company on the way.</p>
         </div>
       </div>
       <p class="body part">The Field Guide and Curriculum are free: read them, build it yourself, no ask. But if you want Adam in the room: sixty to ninety minutes together, no cost. You leave with a map of your current state, the gaps costing you most, and a plan. In Lafayette, across the Gulf South, or virtual anywhere.</p>
@@ -926,356 +875,46 @@ Rules
 
 <footer>
   <a class="brand" href="#top" aria-label="Groundwork home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
   <div class="cols">
     <span>Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated.</span>
     <span>Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></span>
-    <span>© 2026 Adam Abdalla. All rights reserved. <a href="legal.html">Disclaimer &amp; Privacy</a></span>
+    <span>&copy; 2026 Adam Abdalla. All rights reserved. <a href="legal.html">Disclaimer &amp; Privacy</a></span>
   </div>
 </footer>
 
 <script>
 'use strict';
-/* ================= config ================= */
-const VIDEO_URL = 'assets/hero-scrub.mp4';
-const VIDEO_BYTES = 12473800; /* real byte size of assets/hero-scrub.mp4 */
-const POSTER_URL = 'assets/hero-poster.jpg';
-
-/* ================= utilities ================= */
 const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
-const smoothstep = (p, e0, e1) => {
-  const t = clamp((p - e0) / (e1 - e0), 0, 1);
-  return t * t * (3 - 2 * t);
-};
 function rng(seed) {
   let s = seed >>> 0;
   return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
 }
-
-/* ================= text splitting (once, seeded) ================= */
-function splitText() {
-  document.querySelectorAll('.split').forEach((el, ei) => {
-    if (el.dataset.splitDone) return;
-    el.dataset.splitDone = '1';
-    const text = el.textContent;
-    const fx = el.dataset.fx || 'scatter';
-    const thBase = parseFloat(el.dataset.thBase || '0');
-    const spread = parseFloat(el.closest('.band')?.dataset.spread || '0.5');
-    const r = rng(1013 + ei * 97);
-    el.textContent = '';
-    const sr = document.createElement('span');
-    sr.className = 'vh';
-    sr.textContent = text;
-    el.appendChild(sr);
-    const vis = document.createElement('span');
-    vis.setAttribute('aria-hidden', 'true');
-    const words = text.split(' ');
-    const totalChars = text.replace(/ /g, '').length;
-    let ci = 0;
-    words.forEach((word, wi) => {
-      const w = document.createElement('span');
-      w.className = 'w';
-      /* thresholds cap at 0.6 so every span fully assembles by k = 1 */
-      const capTh = v => Math.min(0.6, v).toFixed(3);
-      if (fx === 'drift' || fx === 'rise') {
-        w.style.setProperty('--th', capTh(thBase + (wi / Math.max(1, words.length)) * 0.5 + r() * 0.05));
-        w.textContent = word;
-      } else {
-        for (const ch of word) {
-          const c = document.createElement('span');
-          c.className = 'c';
-          c.textContent = ch;
-          if (fx === 'scatter') {
-            c.style.setProperty('--th', capTh(thBase + r() * 0.55));
-            c.style.setProperty('--jx', ((r() - 0.5) * 60).toFixed(1) + 'px');
-            c.style.setProperty('--jy', ((r() - 0.5) * 52).toFixed(1) + 'px');
-            c.style.setProperty('--jr', ((r() - 0.5) * 30).toFixed(1) + 'deg');
-          } else if (fx === 'grid') {
-            c.style.setProperty('--th', capTh(thBase + (ci / Math.max(1, totalChars)) * spread + r() * 0.06));
-            c.style.setProperty('--jx', ((r() * 34) + 12).toFixed(1) + 'px');
-          } else if (fx === 'weave') {
-            c.style.setProperty('--th', capTh(thBase + (ci / Math.max(1, totalChars)) * spread + r() * 0.06));
-            c.style.setProperty('--jy', ((ci % 2 ? 1 : -1) * (16 + r() * 14)).toFixed(1) + 'px');
-          }
-          ci++;
-          w.appendChild(c);
-        }
-      }
-      vis.appendChild(w);
-      if (wi < words.length - 1) vis.appendChild(document.createTextNode(' '));
-    });
-    el.appendChild(vis);
-  });
-}
-
-/* ================= hero engine ================= */
-const stage = document.querySelector('.stage');
-const hero = document.querySelector('.hero');
-const video = document.getElementById('hero-video');
-const posterLayer = document.querySelector('.poster');
-const ringWrap = document.getElementById('ring-wrap');
-const ring = ringWrap ? ringWrap.querySelector('circle') : null;
-const bob = document.getElementById('bob');
-const bands = [...document.querySelectorAll('.band')].map(el => ({
-  el,
-  a: parseFloat(el.dataset.a),
-  b: parseFloat(el.dataset.b),
-  ramp: el.dataset.ramp ? parseFloat(el.dataset.ramp) : null,
-  op: -1,
-  k: -1
-}));
-const firstBand = bands[0], lastBand = bands[bands.length - 1];
-
-let heroTop = 0, heroRange = 1;
-function measureHero() {
-  const r = hero.getBoundingClientRect();
-  heroTop = r.top + scrollY;
-  heroRange = Math.max(1, hero.offsetHeight - innerHeight);
-}
-function heroProgress() {
-  return clamp((scrollY - heroTop) / heroRange, 0, 1);
-}
-
-/* band 1 one-time load ramp */
-let loadK = 0, loadRampStart = 0;
-function tickLoadRamp(now) {
-  if (!loadRampStart) loadRampStart = now;
-  loadK = clamp((now - loadRampStart) / 1400, 0, 1);
-  loadK = loadK * loadK * (3 - 2 * loadK);
-  if (loadK < 1 && scrubOn) requestAnimationFrame(tickLoadRamp);
-  updateCaptions(shown);
-}
-
-let lastBobY = -1, lastBobAt = 0;
-function updateCaptions(p) {
-  for (const band of bands) {
-    const { a, b } = band;
-    const f = Math.min(0.02, (b - a) / 3);
-    let op = smoothstep(p, a, a + f) * (1 - smoothstep(p, b - f, b));
-    if (band === firstBand) op = 1 - smoothstep(p, b - f, b);
-    if (band === lastBand) op = smoothstep(p, a, a + f);
-    const rampLen = band.ramp || Math.min(0.025, (b - a) * 0.35);
-    let k = clamp((p - a) / rampLen, 0, 1);
-    if (band === firstBand) k = Math.max(k, loadK);
-    if (Math.abs(op - band.op) > 0.008) {
-      band.op = op;
-      band.el.style.opacity = op.toFixed(3);
-    }
-    if (Math.abs(k - band.k) > 0.008) {
-      band.k = k;
-      band.el.style.setProperty('--k', k.toFixed(3));
-    }
-  }
-  /* plumb bob: transform only, 10Hz + delta gated */
-  if (bob) {
-    const now = performance.now();
-    const y = Math.round(p * 70 * 10) / 10; /* 10vh..80vh span => 70vh travel */
-    if (now - lastBobAt > 100 && y !== lastBobY) {
-      lastBobAt = now; lastBobY = y;
-      bob.style.transform = 'translateY(' + y + 'vh)';
-    }
-  }
-}
-
-/* lerp loop that rests */
-let target = 0, shown = 0, rafId = null, lastTick = 0, heroOnScreen = true;
-function tick(now) {
-  const dt = Math.min(100, now - (lastTick || now));
-  lastTick = now;
-  const k = 0.16;
-  shown += (target - shown) * (1 - Math.pow(1 - k, dt / 16.667));
-  if (Math.abs(target - shown) < 0.0005) {
-    shown = target;
-    rafId = null;
-    lastTick = 0;
-  } else {
-    rafId = requestAnimationFrame(tick);
-  }
-  if (video.duration) requestSeek(shown * video.duration);
-  updateCaptions(shown);
-}
-function onScroll() {
-  target = heroProgress();
-  if (rafId === null && heroOnScreen) rafId = requestAnimationFrame(tick);
-}
-
-/* seek gate, deadlock-safe */
-let seekBusy = false, pendingTime = null;
-function requestSeek(t) {
-  if (!video.duration) return;
-  if (seekBusy) { pendingTime = t; return; }
-  seekBusy = true;
-  video.currentTime = t;
-}
-video.addEventListener('seeked', () => {
-  seekBusy = false;
-  if (pendingTime !== null) {
-    const t = pendingTime;
-    pendingTime = null;
-    requestSeek(t);
-  }
-});
-video.addEventListener('error', () => {
-  seekBusy = false;
-  pendingTime = null;
-  stage.classList.add('video-failed');
-});
-
-/* blob loader: poster wins the race, streamed with honest ring */
-let heroInitDone = false, blobStarted = false;
-function initHeroOnce() {
-  if (heroInitDone) return;
-  heroInitDone = true;
-  posterLayer.style.backgroundImage = "url('" + POSTER_URL + "')";
-  const posterImg = new Image();
-  posterImg.onload = startBlobFetch;
-  posterImg.onerror = startBlobFetch;
-  posterImg.src = POSTER_URL;
-  setTimeout(startBlobFetch, 4000);
-}
-function startBlobFetch() {
-  if (blobStarted) return;
-  blobStarted = true;
-  loadHeroBlob().catch(failVideo);
-}
-async function loadHeroBlob() {
-  const ctrl = new AbortController();
-  let watchdog = setTimeout(() => ctrl.abort(), 20000);
-  const res = await fetch(VIDEO_URL, { priority: 'low', signal: ctrl.signal });
-  if (!res.ok) throw new Error('video fetch ' + res.status);
-  const total = Number(res.headers.get('Content-Length')) || VIDEO_BYTES;
-  const reader = res.body.getReader();
-  const chunks = [];
-  let got = 0, lastRing = 0;
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    clearTimeout(watchdog);
-    watchdog = setTimeout(() => ctrl.abort(), 20000);
-    chunks.push(value);
-    got += value.length;
-    const frac = Math.min(1, got / total);
-    const now = performance.now();
-    if (ring && (now - lastRing > 100 || frac === 1)) {
-      lastRing = now;
-      ring.style.strokeDashoffset = Math.round(126 * (1 - frac));
-    }
-  }
-  clearTimeout(watchdog);
-  if (ring) ring.style.strokeDashoffset = 0;
-  video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
-  video.load();
-  video.addEventListener('canplay', () => {
-    requestSeek(heroProgress() * video.duration);
-    stage.classList.add('video-ready');
-    if (ringWrap) ringWrap.style.opacity = '0';
-  }, { once: true });
-}
-function failVideo() {
-  stage.classList.add('video-failed');
-  if (ringWrap) {
-    ringWrap.innerHTML = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
-  }
-}
-
-/* ================= the five gates, live ================= */
-const GATES = [
-  '(max-width: 720px)',
-  '(orientation: portrait) and (max-width: 1024px)',
-  '(orientation: portrait) and (pointer: coarse)',
-  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
-  '(prefers-reduced-motion: reduce)'
-];
-let scrubOn = false;
-function enableScrub() {
-  if (scrubOn) return;
-  scrubOn = true;
-  measureHero();
-  initHeroOnce();
-  addEventListener('scroll', onScroll, { passive: true });
-  bands.forEach(b => { b.op = -1; b.k = -1; });
-  unpinFinalStates();
-  loadRampStart = 0;
-  requestAnimationFrame(tickLoadRamp);
-  target = shown = heroProgress();
-  updateCaptions(shown);
-  onScroll();
-}
-function disableScrub() {
-  if (!scrubOn) return;
-  scrubOn = false;
-  removeEventListener('scroll', onScroll);
-  if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
-}
-function applyHeroMode() {
-  if (GATES.some(q => matchMedia(q).matches)) disableScrub();
-  else enableScrub();
-}
-const MQLS = GATES.map(q => matchMedia(q));
-MQLS.forEach(m => m.addEventListener('change', applyHeroMode));
-
-/* ================= reduced motion, both directions ================= */
-function pinToFinalStates() {
-  disableScrub();
-  bands.forEach(b => { b.el.style.opacity = ''; b.el.style.setProperty('--k', '1'); });
-  document.querySelectorAll('.reveal').forEach(s => s.classList.add('in', 'settled'));
-  const hf = document.getElementById('holdfield');
-  if (hf) { hf.style.setProperty('--p', '1'); hf.classList.add('done'); }
-  document.querySelectorAll('.layer').forEach(l => l.classList.add('lit'));
-}
-function unpinFinalStates() {
-  bands.forEach(b => { b.el.style.opacity = '0'; });
-  const hf = document.getElementById('holdfield');
-  if (hf && !hf.dataset.completed) { hf.style.setProperty('--p', '0'); hf.classList.remove('done'); }
-}
-matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
-  if (e.matches) pinToFinalStates();
-  else applyHeroMode();
-});
-
-/* ================= hero visibility ================= */
-new IntersectionObserver(entries => {
-  heroOnScreen = entries[0].isIntersecting;
-  if (heroOnScreen && scrubOn) onScroll();
-}, { threshold: 0 }).observe(hero);
 
 /* ================= below-fold entrances ================= */
 const revealIO = new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (en.isIntersecting) {
       en.target.classList.add('in');
-      setTimeout(() => en.target.classList.add('settled'), 1200);
+      setTimeout(() => en.target.classList.add('settled'), 1100);
       revealIO.unobserve(en.target);
     }
   });
-}, { threshold: 0.18 });
+}, { threshold: 0.16 });
 document.querySelectorAll('.reveal').forEach(s => revealIO.observe(s));
-/* dividers draw when scrolled to */
-const divIO = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (en.isIntersecting) { en.target.classList.add('in'); divIO.unobserve(en.target); }
-  });
-}, { threshold: 0.6 });
-document.querySelectorAll('.divider').forEach(d => divIO.observe(d));
-const vistaIO = new IntersectionObserver(entries => {
-  entries.forEach(en => en.target.classList.toggle('in', en.isIntersecting));
-}, { threshold: 0.15 });
-document.querySelectorAll('.vista').forEach(v => vistaIO.observe(v));
 
-/* ================= environment motes ================= */
-(function () {
-  const wrap = document.querySelector('.motes');
-  const r = rng(777);
-  for (let i = 0; i < 18; i++) {
-    const s = document.createElement('span');
-    s.style.left = (r() * 100).toFixed(1) + '%';
-    s.style.top = (r() * 100).toFixed(1) + '%';
-    s.style.animationDelay = (-r() * 90).toFixed(1) + 's';
-    wrap.appendChild(s);
-  }
-})();
+/* ================= reduced motion: pin final states ================= */
+function pinToFinalStates() {
+  document.querySelectorAll('.reveal').forEach(s => s.classList.add('in', 'settled'));
+  const hf = document.getElementById('holdfield');
+  if (hf) { hf.style.setProperty('--p', '1'); hf.classList.add('done'); }
+}
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) pinToFinalStates();
+matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
+  if (e.matches) pinToFinalStates();
+});
 
 /* ================= pause on hidden tab ================= */
 document.addEventListener('visibilitychange', () => {
@@ -1303,7 +942,6 @@ document.addEventListener('visibilitychange', () => {
     field.appendChild(el);
     motes.push({ tx, ty });
   }
-  /* constellation lines between grid neighbors */
   linesSvg.setAttribute('viewBox', '0 0 100 100');
   linesSvg.setAttribute('preserveAspectRatio', 'none');
   motes.forEach((m, i) => {
@@ -1326,7 +964,6 @@ document.addEventListener('visibilitychange', () => {
       done = true;
       field.dataset.completed = '1';
       field.classList.add('done');
-      document.querySelectorAll('.layer').forEach((l, i) => setTimeout(() => l.classList.add('lit'), i * 160));
     }
     if ((holding && p < 1) || (!holding && p > 0 && !done)) holdRaf = requestAnimationFrame(step);
     else { holdRaf = null; lastT = 0; }
@@ -1339,13 +976,6 @@ document.addEventListener('visibilitychange', () => {
   btn.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') start(e); });
   btn.addEventListener('keyup', stop);
 })();
-
-/* ================= boot ================= */
-splitText();
-measureHero();
-addEventListener('resize', () => { measureHero(); if (scrubOn) onScroll(); }, { passive: true });
-if (matchMedia('(prefers-reduced-motion: reduce)').matches) pinToFinalStates();
-else applyHeroMode();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
