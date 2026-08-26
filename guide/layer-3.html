@@ -5,20 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Layer 3: Governance | Groundwork Guide</title>
 <meta name="description" content="What the system is allowed to do. Build the Automation Decision Framework (Auto-Execute, Draft &amp; Wait, Never Automate), Escalation Rules, Allowed Tools, and Agent Scope.">
-<meta name="theme-color" content="#131530">
+<meta name="theme-color" content="#F4EFE2">
 <link rel="canonical" href="https://groundwork.adamabdalla.com/guide/layer-3.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131530'/%3E%3Cpath d='M9 7.5 L16 14 L23 20.5' stroke='%233A4170' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='9' cy='7.5' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='16' cy='14' r='2.6' fill='%238FA3FF'/%3E%3Ccircle cx='23' cy='20.5' r='2.6' fill='%238FA3FF'/%3E%3Cpath d='M6 26.5 H26' stroke='%23EEF0FA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:image" content="https://groundwork.adamabdalla.com/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F4EFE2'/%3E%3Crect x='8' y='22' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='16' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='10' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Ccircle cx='16' cy='5.5' r='2.6' fill='%23D9A419'/%3E%3Cpath d='M5 29 H27' stroke='%231E1B16' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&family=Besley:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/guide.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="top" aria-label="Guide">
   <a class="brand" href="../index.html" aria-label="Groundwork home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
   <button class="navtoggle" aria-expanded="false" aria-label="Chapters" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
@@ -68,22 +70,22 @@
   <p>Every task the system touches falls into exactly one of three zones. The zone assignment is a human decision, made in advance, recorded in a file.</p>
   <div class="vw" style="margin:1.2rem 0 1.4rem">
     <svg viewBox="0 0 960 312" role="img" aria-label="Three stacked zone bands. Zone 1 Auto-Execute, brightest. Zone 2 Draft and Wait, dimmer. Zone 3 Never Automate, dim with a red edge. A footer line states the default: unlisted work falls to Draft and Wait.">
-      <rect class="slab" x="24" y="18" width="912" height="76" rx="9"/>
-      <rect class="acc" x="24" y="26" width="4" height="60" rx="2"/>
+      <rect class="slab" x="24" y="18" width="912" height="76"/>
+      <rect class="acc" x="24" y="26" width="4" height="60"/>
       <text class="mono acc" x="48" y="44" font-size="10" letter-spacing="2">ZONE 1</text>
       <text x="48" y="68" font-size="16" font-weight="600">Auto-Execute</text>
       <text class="mono acc" x="912" y="58" font-size="10" letter-spacing="2" text-anchor="end">ACTS</text>
       <text class="sub" x="330" y="52" font-size="12.5">Reversible, internal-only, no legal or financial exposure,</text>
       <text class="sub" x="330" y="70" font-size="12.5">no external communication.</text>
-      <rect class="slab-dim" x="24" y="108" width="912" height="76" rx="9"/>
-      <rect class="acc dim" x="24" y="116" width="4" height="60" rx="2"/>
+      <rect class="slab-dim" x="24" y="108" width="912" height="76"/>
+      <rect class="acc dim" x="24" y="116" width="4" height="60"/>
       <text class="mono acc dim" x="48" y="134" font-size="10" letter-spacing="2">ZONE 2</text>
       <text x="48" y="158" font-size="16" font-weight="600">Draft &amp; Wait</text>
       <text class="mono sub" x="912" y="148" font-size="10" letter-spacing="2" text-anchor="end">DRAFTS, THEN A HUMAN</text>
       <text class="sub" x="330" y="142" font-size="12.5">AI prepares the complete work product; a named human</text>
       <text class="sub" x="330" y="160" font-size="12.5">approves before anything leaves.</text>
-      <rect class="slab-danger" x="24" y="198" width="912" height="76" rx="9"/>
-      <rect class="danger" x="24" y="206" width="4" height="60" rx="2"/>
+      <rect class="slab-danger" x="24" y="198" width="912" height="76"/>
+      <rect class="danger" x="24" y="206" width="4" height="60"/>
       <text class="mono danger" x="48" y="224" font-size="10" letter-spacing="2">ZONE 3</text>
       <text x="48" y="248" font-size="16" font-weight="600">Never Automate</text>
       <text class="mono danger" x="912" y="238" font-size="10" letter-spacing="2" text-anchor="end">BRIEFS ONLY</text>

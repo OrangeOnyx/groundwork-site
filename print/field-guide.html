@@ -12,27 +12,27 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Besley:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <style>
   @page { size: letter; margin: 0.85in 0.9in 0.95in; }
   @page cover { margin: 0; }
   * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   :root {
-    --ink: #14162E;
-    --sub: #3A3F55;
-    --accent: #4A5BC4;
-    --panel: #F7F8FC;
-    --line: #D8DCEF;
-    --line-2: #C9CFEF;
-    --cover-bg: #131530;
-    --cover-ink: #EEF0FA;
-    --cover-sub: #A9AECC;
-    --cover-accent: #8FA3FF;
+    --ink: #1E1B16;
+    --sub: #4A443B;
+    --accent: #A44E12;
+    --panel: #F6F3EA;
+    --line: #D8D2C2;
+    --line-2: #C9BFA8;
+    --cover-bg: #F4EFE2;
+    --cover-ink: #1E1B16;
+    --cover-sub: #5C554A;
+    --cover-accent: #A44E12;
   }
   html, body { margin: 0; padding: 0; }
-  body { font-family: 'Public Sans', system-ui, sans-serif; font-size: 10.5pt; line-height: 1.55; color: var(--ink); }
+  body { font-family: Archivo, Arial, 'Helvetica Neue', sans-serif; font-weight: 500; font-size: 10.5pt; line-height: 1.55; color: var(--ink); }
   p { margin: 0 0 .65em; }
-  strong { font-weight: 600; }
+  strong { font-weight: 700; }
 
   /* ---------- cover ---------- */
   .cover {
@@ -45,91 +45,96 @@
   .cover .glyph { width: 44pt; height: 44pt; }
   .cover .push { flex: 1; }
   .cover .kicker { color: var(--cover-accent); }
+  .cover { border-bottom: 6pt solid var(--cover-ink); }
   .cover h1 {
-    font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400;
-    font-size: 46pt; line-height: 1.05; margin: 10pt 0 14pt; max-width: 5.6in;
+    font-family: Archivo, Arial, 'Helvetica Neue', sans-serif; font-weight: 900;
+    text-transform: uppercase; letter-spacing: -0.5pt;
+    font-size: 40pt; line-height: 1.02; margin: 10pt 0 14pt; max-width: 5.9in;
   }
-  .cover .rule { width: 40pt; height: 2.5pt; background: var(--cover-accent); margin: 0 0 16pt; }
-  .cover .lede { color: var(--cover-sub); font-size: 12pt; line-height: 1.55; max-width: 5.4in; }
-  .cover .site { font-family: 'IBM Plex Mono', monospace; font-size: 9pt; letter-spacing: .08em; color: var(--cover-accent); margin-top: 14pt; }
+  .cover .rule { width: 46pt; height: 3pt; background: var(--cover-accent); margin: 0 0 16pt; }
+  .cover .lede { font-family: Besley, Georgia, serif; font-style: italic; color: var(--cover-sub); font-size: 12pt; line-height: 1.55; max-width: 5.4in; }
+  .cover .site { font-family: Archivo, Arial, sans-serif; font-weight: 700; font-size: 9pt; letter-spacing: .12em; color: var(--cover-accent); margin-top: 14pt; text-transform: uppercase; }
   .cover .strip {
     display: flex; justify-content: space-between;
-    font-family: 'IBM Plex Mono', monospace; font-size: 8pt; letter-spacing: .18em;
+    font-family: Archivo, Arial, sans-serif; font-weight: 700; font-size: 8pt; letter-spacing: .18em;
     color: var(--cover-sub); margin-top: 26pt; text-transform: uppercase;
+    border-top: 1pt solid var(--cover-ink); padding-top: 10pt;
   }
 
   /* ---------- shared ---------- */
   .kicker {
-    font-family: 'IBM Plex Mono', monospace; font-size: 8pt; font-weight: 500;
+    font-family: Archivo, Arial, sans-serif; font-size: 8pt; font-weight: 700;
     letter-spacing: .18em; text-transform: uppercase; color: var(--accent);
     display: block; margin-bottom: 6pt;
   }
   .chapter { page-break-before: always; }
   h1.ch {
-    font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400;
-    font-size: 25pt; line-height: 1.12; margin: 0 0 8pt;
+    font-family: Archivo, Arial, 'Helvetica Neue', sans-serif; font-weight: 900;
+    text-transform: uppercase; letter-spacing: -0.3pt;
+    font-size: 22pt; line-height: 1.08; margin: 0 0 8pt;
+    border-top: 2pt solid var(--ink); padding-top: 10pt;
   }
-  h2 { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 15pt; margin: 16pt 0 6pt; page-break-after: avoid; }
-  h3 { font-size: 11pt; font-weight: 600; margin: 0 0 4pt; page-break-after: avoid; }
-  .lede { color: var(--sub); font-size: 11pt; max-width: 5.6in; margin-bottom: 10pt; }
+  h2 { font-family: Archivo, Arial, 'Helvetica Neue', sans-serif; font-weight: 800; font-size: 14pt; margin: 16pt 0 6pt; page-break-after: avoid; }
+  h3 { font-size: 11pt; font-weight: 700; margin: 0 0 4pt; page-break-after: avoid; }
+  .lede { font-family: Besley, Georgia, serif; font-style: italic; color: var(--sub); font-size: 11pt; max-width: 5.6in; margin-bottom: 10pt; }
   ul, ol { margin: 0 0 .65em; padding-left: 1.15em; }
   li { margin-bottom: 3pt; }
-  code { font-family: 'IBM Plex Mono', monospace; font-size: 8.6pt; color: #22264A; }
+  code { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 8.6pt; color: var(--ink); }
   pre {
-    font-family: 'IBM Plex Mono', monospace; font-size: 8.4pt; line-height: 1.5;
-    background: var(--panel); border: 1pt solid var(--line-2); border-radius: 4pt;
+    font-family: 'Courier Prime', 'Courier New', monospace; font-size: 8.4pt; line-height: 1.5;
+    background: var(--panel); border: 1pt solid var(--line-2);
     padding: 9pt 11pt; margin: 6pt 0 8pt; white-space: pre-wrap; word-break: break-word;
     page-break-inside: avoid;
   }
   .card {
-    background: var(--panel); border: 1pt solid var(--line); border-radius: 5pt;
+    background: var(--panel); border: 1pt solid var(--line);
     padding: 10pt 12pt; margin: 0 0 8pt; page-break-inside: avoid;
   }
   .card h3 { margin-top: 0; }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin: 8pt 0; }
   .grid2 .card { margin: 0; }
-  .callout { border-left: 2.5pt solid var(--accent); background: var(--panel); padding: 8pt 12pt; margin: 8pt 0; page-break-inside: avoid; }
+  .callout { border: 1.5pt solid var(--ink); background: var(--panel); padding: 8pt 12pt; margin: 8pt 0; page-break-inside: avoid; }
   .callout p:last-child { margin-bottom: 0; }
   .quiet { color: var(--sub); font-size: 9pt; }
 
   table { width: 100%; border-collapse: collapse; margin: 8pt 0; font-size: 9.5pt; page-break-inside: avoid; }
   th {
-    text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 7.5pt;
-    letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--accent);
-    padding: 6pt 8pt; border-bottom: 1pt solid var(--line-2);
+    text-align: left; font-family: Archivo, Arial, sans-serif; font-size: 7.5pt;
+    letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--sub);
+    padding: 6pt 8pt; border-bottom: 1pt solid var(--ink);
   }
   td { padding: 6pt 8pt; border-bottom: 1pt solid var(--line); vertical-align: top; }
-  td.n { font-family: 'IBM Plex Mono', monospace; font-size: 8.5pt; white-space: nowrap; }
+  td.n { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 8.5pt; white-space: nowrap; }
 
   /* contents */
   .toc { margin-top: 14pt; }
   .toc .row { display: flex; gap: 12pt; padding: 7pt 2pt; border-bottom: 1pt solid var(--line); }
-  .toc .num { font-family: 'IBM Plex Mono', monospace; font-size: 9pt; color: var(--accent); width: 20pt; }
-  .toc .t { font-weight: 600; }
+  .toc .num { font-family: Besley, Georgia, serif; font-weight: 900; font-size: 9pt; color: var(--accent); width: 20pt; }
+  .toc .t { font-weight: 700; }
 
   /* chapter 06 document blocks (injected) */
   .layerhead { margin: 0 0 10pt; page-break-after: avoid; }
   .layerhead h2 { margin-top: 0; font-size: 17pt; }
-  .doc { border: 1pt solid var(--line); border-radius: 5pt; padding: 11pt 13pt; margin: 0 0 10pt; page-break-inside: avoid; }
-  .doc .path { font-family: 'IBM Plex Mono', monospace; font-size: 8pt; color: var(--sub); margin: 0 0 5pt; }
+  .doc { border: 1pt solid var(--line); padding: 11pt 13pt; margin: 0 0 10pt; page-break-inside: avoid; }
+  .doc .path { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 8pt; color: var(--sub); margin: 0 0 5pt; }
   .doc .how { font-size: 9.5pt; color: var(--sub); margin-bottom: 0; }
 
   ul.check { list-style: none; padding-left: 0; }
   ul.check li { padding-left: 14pt; position: relative; }
-  ul.check li::before { content: "+"; position: absolute; left: 0; color: var(--accent); font-family: 'IBM Plex Mono', monospace; }
+  ul.check li::before { content: "+"; position: absolute; left: 0; color: var(--accent); font-family: Archivo, Arial, sans-serif; font-weight: 700; }
 
   /* colophon */
   .colophon { page-break-before: always; padding-top: 3.2in; }
   .colophon .rule { width: 40pt; height: 2pt; background: var(--accent); margin: 0 0 14pt; }
   .colophon p { color: var(--sub); max-width: 5.2in; }
-  .colophon .mono { font-family: 'IBM Plex Mono', monospace; font-size: 8.5pt; letter-spacing: .06em; }
+  .colophon .mono { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 8.5pt; letter-spacing: .06em; }
 </style>
 </head>
 <body>
 
 <!-- ============ COVER ============ -->
 <div class="cover">
-  <svg class="glyph" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 7.5 L16 14 L23 20.5" stroke="#39406E" stroke-width="1.6" fill="none"/><circle cx="9" cy="7.5" r="2.6" fill="#8FA3FF"/><circle cx="16" cy="14" r="2.6" fill="#8FA3FF"/><circle cx="23" cy="20.5" r="2.6" fill="#8FA3FF"/><path d="M6 26.5 H26" stroke="#EEF0FA" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <svg class="glyph" viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
   <div class="push"></div>
   <span class="kicker">The Groundwork Field Guide &middot; Version 1.1 &middot; by Adam Abdalla</span>
   <h1>The Groundwork Field Guide</h1>

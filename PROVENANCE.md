@@ -1,26 +1,24 @@
 # Asset Provenance
 
-The August 21 handover export (ASSETS.md) noted that the hero footage's generation records were not in the project archive. They exist, and this file is that record.
+Every raster shipped on this site is recorded here, and each carries its origin embedded in the file itself (PNG tEXt / JPEG COM chunk).
 
-## Hero footage and stills
-
-All six visual assets were generated on August 14, 2026 in Adam Abdalla's own Higgsfield account, for this project, in a Claude Code build session:
+## Current assets (the Annual Report world, August 2026)
 
 | File | How it was made |
 |---|---|
-| `assets/hero-scrub.mp4` | Three 6-second segments generated with **Seedance 2.0** (image-to-video, 1080p, 16:9, std mode, no audio), chained by feeding each segment's final frame in as the next segment's start image, then joined and re-encoded with ffmpeg (single encode, `-g 8` keyframes) into one 18-second scrub file. The starting frame was generated with **Nano Banana Pro** (16:9, 2k). |
-| `assets/hero-poster.jpg` | First frame of the joined video, extracted with ffmpeg. |
-| `assets/hero-ending.jpg` | Final frame of the joined video, extracted with ffmpeg. |
-| `assets/still-scatter.jpg` | Generated with Nano Banana Pro, same world and grade as the film. |
-| `assets/still-constellation.jpg` | Generated with Nano Banana Pro, same world and grade. |
-| `assets/still-ground.jpg` | Generated with Nano Banana Pro, same world and grade. |
+| `assets/og-card.png` | The social-share card (1200x630). Rendered August 26, 2026 from an HTML composition in the site's own design system (paper ground, Archivo 900 headline, Besley italic sub, the stacked-bars system mark) via headless Edge. Drawn, not AI-generated. |
+| `apple-touch-icon.png` | The Groundwork mark (three terracotta layer bars, mustard Operator disc, ink ground line on paper) rendered from inline SVG via headless Edge at 512px, scaled to 180px with ffmpeg. Drawn, not AI-generated. |
+| `favicon.ico` | Same mark, scaled to 48px with ffmpeg. The pages also carry the mark as an inline SVG favicon. |
+| `assets/atlas-spatial.jpg` | Screenshot of Atlas sheet A-2, the aerial reality view of the On The Boulevard shopping center inside the owner's private Atlas tool. Real property imagery, cleared by the owner for public use (August 2026). Not AI-generated. |
 
-The full generation prompts, the storyboard, and the model settings are preserved in the project design package (`design-package.md` in the private build archive, `Projects/Ai Onboarding` on Adam's machine, also in the private repo OrangeOnyx/groundwork).
+## Retired assets (the original film world, August 2026 and earlier)
+
+The site's first visual world was built around an 18-second scroll-scrubbed hero film and three stills, generated on August 14, 2026 in Adam Abdalla's own Higgsfield account for this project (Seedance 2.0 segments chained from Nano Banana Pro start frames, joined with ffmpeg). Those six assets (`hero-scrub.mp4`, `hero-poster.jpg`, `hero-ending.jpg`, `still-scatter.jpg`, `still-constellation.jpg`, `still-ground.jpg`) were retired with the August 2026 redesign and removed from the deploy; they remain in this repository's git history, and the full generation prompts, storyboard, and model settings are preserved in the project design package (`design-package.md` in the private build archive, also in the private repo OrangeOnyx/groundwork).
 
 ## Rights
 
-The footage was generated under Adam Abdalla's paid Higgsfield subscription for this project. It is owner-produced work, not third-party stock. No third-party footage, stock photography, or licensed imagery appears anywhere on the site.
+All imagery is owner-produced work or the owner's own property records. The retired footage was generated under Adam Abdalla's paid Higgsfield subscription for this project. No third-party footage, stock photography, or licensed imagery appears anywhere on the site.
 
 ## Fonts
 
-Libre Caslon Display, Public Sans, and IBM Plex Mono load from Google Fonts under the SIL Open Font License 1.1.
+Archivo, Besley, and Courier Prime load from Google Fonts under the SIL Open Font License 1.1.
