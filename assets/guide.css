@@ -108,6 +108,16 @@ footer.site{border-top:2px solid var(--ink);position:relative;padding:2.2rem cla
 footer.site::before{content:"";position:absolute;left:0;right:0;top:3px;height:1px;background:var(--ink)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;margin:1.4rem 0}
 .tag{display:inline-block;font-family:var(--display);font-weight:700;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);padding:.3em .9em;margin-right:.5em}
+.exhibit{margin:1.8rem 0}
+.exhibit .mat{background:var(--paper-deep);border:1px solid var(--ink);padding:clamp(.7rem,1.6vw,1.1rem)}
+.exhibit img{width:100%;height:auto;border:1px solid var(--rule)}
+.exhibit .cap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem 1rem;font-family:var(--display);font-weight:600;font-size:.72rem;letter-spacing:.06em;color:var(--ink-soft);padding-top:.65rem;text-transform:uppercase}
+.exhibit .cap b{color:var(--ink)}
+.workedcols{display:grid;grid-template-columns:1fr 1.7fr;gap:1rem;align-items:stretch}
+.workedcols>div{display:flex;flex-direction:column}
+.workedcols pre{margin:0;flex:1}
+.workedcols .colhead{display:block;font-family:var(--display);font-weight:700;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.45rem}
+@media (max-width:640px){.workedcols{grid-template-columns:1fr}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 
 /* Print: the guide as a paper document. Ink-friendly, nav stripped. */
