@@ -165,5 +165,10 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:3px;height:1
 .vw svg a{text-decoration:none}
 .vw svg a:hover .star{fill:var(--terra)}
 .journeystrip{margin:1.1rem 0 1.6rem;max-width:620px}
+@media (max-width:680px){
+  .vw.wide{overflow-x:auto;padding-bottom:.6rem}
+  .vw.wide svg{min-width:840px}
+  .vw.wide::before{content:"Continued across \2192 drag to read";display:block;font-family:var(--display);font-weight:700;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.6rem}
+}
 .journeystrip svg{display:block;width:100%;height:auto}
 @media print{.vw,.journeystrip{display:none!important}}
