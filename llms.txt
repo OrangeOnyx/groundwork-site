@@ -24,6 +24,7 @@ The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and
 - [Phase 2: The Operator](https://groundwork.adamabdalla.com/guide/operator.html): what the scoped AI Operator is and is not
 - [The Oldest Idea in Groundwork](https://groundwork.adamabdalla.com/guide/lineage.html): the Admiralty Code lineage of Authority Classification
 - [The Atlas Story](https://groundwork.adamabdalla.com/guide/atlas.html): a real command center running on these documents, ten features
+- [The Operator Dashboard](https://groundwork.adamabdalla.com/guide/dashboard.html): the morning-screen pattern over the vault and the Operator, drawn as a demonstration; Atlas is the lived version
 - [Field Guide PDF](https://groundwork.adamabdalla.com/assets/Groundwork-Program-Guide.pdf): the doctrine in one downloadable file
 
 ## The Curriculum
@@ -31,13 +32,14 @@ The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and
 The Groundwork Curriculum is the capability program beside the doctrine: five LEVELS of skill you climb as a person or team, distinct from the six LAYERS you build once for a business. The two axes never map one to one.
 
 - [The Curriculum](https://groundwork.adamabdalla.com/curriculum/): the hub, with the doctrine-versus-curriculum map
+- [The Reader](https://groundwork.adamabdalla.com/curriculum/read/): the whole curriculum readable on the site, one page per module, compiled verbatim from the repo
 - [Level 1: Essentials](https://groundwork.adamabdalla.com/curriculum/level-1.html): thirty days from novice to competent power user
 - [Level 2: Intermediate](https://groundwork.adamabdalla.com/curriculum/level-2.html): agents, RAG, MCP servers, evals, cost control
 - [Level 3: Advanced](https://groundwork.adamabdalla.com/curriculum/level-3.html): shipping AI to real users and keeping it standing
 - [Level 4: Professional](https://groundwork.adamabdalla.com/curriculum/level-4.html): leading AI teams, training, safety, red-teaming
 - [Level 5: Frontier](https://groundwork.adamabdalla.com/curriculum/level-5.html): contributing to the field
 - [Curriculum repo](https://github.com/OrangeOnyx/groundwork-curriculum): the living version, MIT licensed, credit Jake Van Clief
-- [The Curriculum as one book](https://github.com/OrangeOnyx/groundwork-curriculum/releases/latest/download/Groundwork-Curriculum.pdf): 608 pages, bookmarked, printable
+- [The Curriculum as one book](https://github.com/OrangeOnyx/groundwork-curriculum/releases/latest/download/Groundwork-Curriculum.pdf): 613 pages, illustrated, bookmarked, printable
 
 ## More
 - [Book the free audit](https://calendly.com/adam-adamabdalla): the one conversion on the site

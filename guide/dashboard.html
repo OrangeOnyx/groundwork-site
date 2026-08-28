@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Operator Dashboard | Groundwork Guide</title>
+<meta name="description" content="What an operator dashboard is: a morning view over your vault and your Operator's work. Signals, the signature queue, the trace, and the files. A pattern, drawn; Atlas is the lived proof.">
+<meta name="theme-color" content="#F4EFE2">
+<link rel="canonical" href="https://groundwork.adamabdalla.com/guide/dashboard.html">
+<meta property="og:image" content="https://groundwork.adamabdalla.com/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F4EFE2'/%3E%3Crect x='8' y='22' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='16' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='10' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Ccircle cx='16' cy='5.5' r='2.6' fill='%23D9A419'/%3E%3Cpath d='M5 29 H27' stroke='%231E1B16' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&family=Besley:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/guide.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Guide">
+  <a class="brand" href="../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <button class="navtoggle" aria-expanded="false" aria-label="Chapters" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
+  <div class="links">
+    <a href="index.html">Guide</a>
+    <a href="day-one.html">Day One</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="layer-1.html">L1</a>
+    <a href="layer-2.html">L2</a>
+    <a href="layer-3.html">L3</a>
+    <a href="operator.html">Operator</a>
+    <a href="layer-4.html">L4</a>
+    <a href="layer-5.html">L5</a>
+    <a href="layer-6.html">L6</a>
+    <a href="scorecard.html">Scorecard</a>
+    <a href="atlas.html">Atlas</a>
+    <a href="dashboard.html" aria-current="page">Dashboard</a>
+    <a href="lineage.html">Lineage</a>
+    <a class="keep" href="../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Notes</span>
+  <nav class="vw journeystrip" aria-label="Guide journey">
+  <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build Phase 1, activate the Operator, keep it standing.">
+    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD PHASE 1</text></a>
+    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a href="layer-6.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+  </svg>
+  </nav>
+  <header class="page">
+    <span class="kicker">WHAT YOURS COULD LOOK LIKE</span>
+    <h1>The operator dashboard.</h1>
+    <p class="lede">The <a href="atlas.html">Atlas story</a> shows what one owner built on a finished foundation: a command center for a 27-unit shopping center. This page is the same idea for everyone else. When your vault is real and your rules are written, a morning screen over your business is a cheap thing to build and an honest thing to trust. Here is the pattern.</p>
+  </header>
+
+  <h2>A view, never the record</h2>
+  <p>The first rule of any operator dashboard comes straight from the doctrine: your business lives in the vault, in plain files you own, and the dashboard only reads them. It is a view: disposable, regenerable, replaceable on a whim. If the screen died tonight, the business would not notice, because nothing lives there. The moment a dashboard starts holding facts the files do not, it has stopped being a dashboard and started being a second, ungoverned system of record. That is the failure to refuse.</p>
+  <p>Held to that rule, a dashboard earns its keep every morning. One screen answers the owner's four standing questions: what do the numbers say, what is waiting on me, what did the Operator do while I slept, and what is it reading. Each of those maps to a layer you have already built.</p>
+
+  <p class="quiet">About the picture: the exhibit below is a drawing, not a screenshot of a product. It shows the pattern for Prairie Lawn &amp; Grounds, the same clearly-fictional two-man lawn company from <a href="day-one.html">Day One</a>'s worked example, with fictional numbers throughout. For a real, running version of this idea, photographed from its own manual, read the <a href="atlas.html">Atlas story</a>.</p>
+
+  <figure class="exhibit">
+    <div class="mat">
+      <div class="vw wide">
+      <svg viewBox="0 0 1200 780" role="img" aria-label="A drawn operator dashboard for a fictional lawn company: a masthead, four signal blocks, a Draft and Wait signature queue, a trace of the Operator's last 24 hours, the vault file list it reads, and an oxblood Zone 3 panel with no buttons.">
+        <rect x="0" y="0" width="1200" height="780" fill="var(--paper)"/>
+        <text class="mono" x="40" y="46" font-size="20" letter-spacing="2">PRAIRIE LAWN &amp; GROUNDS</text>
+        <text class="mono sub" x="1160" y="46" font-size="12" letter-spacing="1.5" text-anchor="end">OPERATOR DASHBOARD &#183; TUESDAY 7:00 AM</text>
+        <line x1="40" y1="62" x2="1160" y2="62" stroke="var(--ink)" stroke-width="2"/>
+        <line x1="40" y1="67" x2="1160" y2="67" stroke="var(--ink)" stroke-width="1"/>
+
+        <!-- signals row: Layer 5 -->
+        <text class="mono sub" x="40" y="100" font-size="11" letter-spacing="1.5">THE SIGNALS &#183; LAYER 5</text>
+        <g>
+          <rect class="slab" x="40" y="112" width="262" height="92"/>
+          <text class="mono sub" x="58" y="140" font-size="10.5" letter-spacing="1">JOBS ON TODAY'S ROUTE</text>
+          <text x="58" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">6</text>
+          <rect class="slab" x="326" y="112" width="262" height="92"/>
+          <text class="mono sub" x="344" y="140" font-size="10.5" letter-spacing="1">INVOICES OUTSTANDING</text>
+          <text x="344" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">$4,310</text>
+          <rect class="slab" x="612" y="112" width="262" height="92"/>
+          <text class="mono sub" x="630" y="140" font-size="10.5" letter-spacing="1">CREW HOURS THIS WEEK</text>
+          <text x="630" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">61</text>
+          <rect class="slab" x="898" y="112" width="262" height="92"/>
+          <text class="mono sub" x="916" y="140" font-size="10.5" letter-spacing="1">MESSAGES WAITING</text>
+          <text x="916" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">3</text>
+        </g>
+
+        <!-- signature queue: Layer 3, Zone 2 -->
+        <g>
+          <rect class="slab" x="40" y="240" width="560" height="290"/>
+          <text class="mono" x="58" y="270" font-size="12" letter-spacing="1.5">WAITING FOR YOUR SIGNATURE</text>
+          <text class="mono acc" x="582" y="270" font-size="10.5" letter-spacing="1" text-anchor="end">ZONE 2 &#183; DRAFT &amp; WAIT</text>
+          <line x1="58" y1="282" x2="582" y2="282" stroke="var(--ink)" stroke-width="1.3"/>
+          <text x="58" y="310" font-size="13.5" font-weight="600" fill="var(--ink)">Quote: the Broussard backyard regrade</text>
+          <text class="sub" x="58" y="328" font-size="11.5">Drafted from the price sheet. $1,840, two visits.</text>
+          <rect x="472" y="300" width="110" height="26" fill="var(--ink)"/>
+          <text x="527" y="317" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">REVIEW</text>
+          <line x1="58" y1="344" x2="582" y2="344" stroke="var(--rule)" stroke-width="1"/>
+          <text x="58" y="372" font-size="13.5" font-weight="600" fill="var(--ink)">Reply: the missed-cut complaint on Elm Street</text>
+          <text class="sub" x="58" y="390" font-size="11.5">Apology drafted in your voice. Waiting on you.</text>
+          <rect x="472" y="362" width="110" height="26" fill="var(--ink)"/>
+          <text x="527" y="379" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">REVIEW</text>
+          <line x1="58" y1="406" x2="582" y2="406" stroke="var(--rule)" stroke-width="1"/>
+          <text x="58" y="434" font-size="13.5" font-weight="600" fill="var(--ink)">Notice: Thursday route moves for the rain window</text>
+          <text class="sub" x="58" y="452" font-size="11.5">Twelve customers, one text each, none sent yet.</text>
+          <rect x="472" y="424" width="110" height="26" fill="var(--ink)"/>
+          <text x="527" y="441" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">REVIEW</text>
+          <text class="mono sub" x="58" y="502" font-size="10" letter-spacing="1">NOTHING ON THIS SCREEN SENDS ITSELF. THE DEFAULT IS DRAFT &amp; WAIT.</text>
+        </g>
+
+        <!-- the trace: Layer 5 correction loop -->
+        <g>
+          <rect class="slab" x="640" y="240" width="520" height="290"/>
+          <text class="mono" x="658" y="270" font-size="12" letter-spacing="1.5">WHAT THE OPERATOR DID</text>
+          <text class="mono sub" x="1142" y="270" font-size="10.5" letter-spacing="1" text-anchor="end">LAST 24 HOURS &#183; EVERY STEP TRACEABLE</text>
+          <line x1="658" y1="282" x2="1142" y2="282" stroke="var(--ink)" stroke-width="1.3"/>
+          <circle class="star" cx="668" cy="306" r="4"/>
+          <text x="684" y="311" font-size="12.5" fill="var(--ink)">Filed four paid invoices into the vault, named to the standard</text>
+          <circle class="star" cx="668" cy="340" r="4"/>
+          <text x="684" y="345" font-size="12.5" fill="var(--ink)">Drafted two quotes from the price sheet for your review</text>
+          <circle class="star" cx="668" cy="374" r="4"/>
+          <text x="684" y="379" font-size="12.5" fill="var(--ink)">Flagged mower two: service interval passed last Friday</text>
+          <circle class="star" cx="668" cy="408" r="4"/>
+          <text x="684" y="413" font-size="12.5" fill="var(--ink)">Updated the customer list from yesterday's route notes</text>
+          <circle class="star" cx="668" cy="442" r="4"/>
+          <text x="684" y="447" font-size="12.5" fill="var(--ink)">Escalated one thing to the queue instead of guessing</text>
+          <text class="mono sub" x="658" y="502" font-size="10" letter-spacing="1">MISS SOMETHING? TRACE IT, EDIT THE FILE, RETEST. THE LOOP IS THE JOB.</text>
+        </g>
+
+        <!-- the vault: Layer 2 -->
+        <g>
+          <rect class="slab" x="40" y="566" width="560" height="170"/>
+          <text class="mono" x="58" y="596" font-size="12" letter-spacing="1.5">THE VAULT IT READS</text>
+          <text class="mono sub" x="582" y="596" font-size="10.5" letter-spacing="1" text-anchor="end">PLAIN FILES &#183; LAYER 2</text>
+          <line x1="58" y1="608" x2="582" y2="608" stroke="var(--ink)" stroke-width="1.3"/>
+          <text x="58" y="634" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)"><tspan fill="var(--terra-deep)" font-weight="700">01</tspan>  identity-charter.md</text>
+          <text x="58" y="656" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)"><tspan fill="var(--terra-deep)" font-weight="700">04</tspan>  authority-classification.md</text>
+          <text x="58" y="678" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)"><tspan fill="var(--terra-deep)" font-weight="700">07</tspan>  automation-decision-framework.md</text>
+          <text x="330" y="634" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">customers.md</text>
+          <text x="330" y="656" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">price-sheet.md</text>
+          <text x="330" y="678" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">jobs/2026-08-week-35.md</text>
+          <text class="mono sub" x="58" y="712" font-size="10" letter-spacing="1">THE RECORD LIVES HERE. THE DASHBOARD ONLY LOOKS AT IT.</text>
+        </g>
+
+        <!-- Zone 3: the quarantine -->
+        <g>
+          <rect class="slab-danger" x="640" y="566" width="520" height="170"/>
+          <text class="mono danger" x="658" y="596" font-size="12" letter-spacing="1.5">ZONE 3 &#183; NEVER AUTOMATE</text>
+          <text x="658" y="628" font-size="12.5" fill="var(--ink)">Money moving. Hiring and firing. The apology that decides</text>
+          <text x="658" y="646" font-size="12.5" fill="var(--ink)">whether the Broussards stay customers.</text>
+          <text x="658" y="682" font-size="12.5" font-weight="600" fill="var(--ink)">The dashboard shows these. It never gets a button for them.</text>
+          <text class="mono sub" x="658" y="712" font-size="10" letter-spacing="1">DRAWN DASHED ON PURPOSE. SOME LINES ARE THE POINT.</text>
+        </g>
+
+        <line x1="40" y1="762" x2="1160" y2="762" stroke="var(--ink)" stroke-width="2" opacity="0.85"/>
+      </svg>
+      </div>
+      <figcaption class="cap"><span><b>Exhibit OD-1</b> &middot; The operator dashboard pattern, drawn for a fictional two-man lawn company.</span><span>Drawn demonstration &middot; fictional data</span></figcaption>
+    </div>
+  </figure>
+
+  <h2>The four panels, and what each one stands on</h2>
+
+  <div class="card">
+    <h3>The signals <span class="tag">Layer 5 · Measurement</span></h3>
+    <p>Four numbers the owner actually steers by, computed from the files, not typed into a widget. If a number on the screen cannot be traced to a file in the vault, it does not belong on the screen.</p>
+    <p><strong>Stands on:</strong> the signals you chose in <a href="layer-5.html">Layer 5</a>, living in structured records a machine can count.</p>
+  </div>
+
+  <div class="card">
+    <h3>The signature queue <span class="tag">Layer 3 · Governance</span></h3>
+    <p>Everything the Operator drafted and parked, waiting for a human. This panel is your <a href="layer-3.html">Automation Decision Framework</a> made visible: Zone 2 work arrives here as drafts, and nothing on the screen sends itself. The queue is where the owner's judgment gets spent, on purpose, first thing in the morning.</p>
+    <p><strong>Stands on:</strong> written zones, so the machine knows what to draft and what to leave alone.</p>
+  </div>
+
+  <div class="card">
+    <h3>The trace <span class="tag">Layer 5 · The correction loop</span></h3>
+    <p>What the Operator did while you slept, one line per action, each traceable to the file it touched. When something looks wrong, you do not argue with the dashboard: you trace the miss, edit the file that caused it, and retest. The trace is what makes the correction loop possible.</p>
+    <p><strong>Stands on:</strong> an Operator that logs its work, and the miss, trace, edit, retest habit from <a href="operator.html">the Operator page</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>The vault panel <span class="tag">Layer 2 · Knowledge</span></h3>
+    <p>The files the whole screen is drawn from, named and graded. This panel exists as a reminder more than a control: the dashboard is downstream of the vault, always. Rebuild the dashboard any weekend; the vault is the thing you protect.</p>
+    <p><strong>Stands on:</strong> the <a href="layer-2.html">Context Vault and Authority Classification</a>, the same two documents everything else in this system stands on.</p>
+  </div>
+
+  <h2>How you get one</h2>
+  <p>Not by buying one. A dashboard like this is downstream of the documents, which means it is nearly free once Phase 1 exists, and nearly impossible before. Any competent AI builder, including the one in your pocket, can generate a working screen over your vault precisely because the vault is plain files with written rules: the hard part was never the dashboard. Building one yourself is squarely a <a href="../curriculum/level-2.html">Level 2 skill in the Curriculum</a>: an agent that reads your files, a screen that shows them, evals that keep it honest.</p>
+  <p>Hold every version, bought or built, to the same three rules: it reads the vault and never replaces it. Zone 3 never gets a button. And if it died tonight, the business would not notice by morning.</p>
+
+  <div class="callout">
+    <p><strong>The proof this is not theory:</strong> <a href="atlas.html">Atlas</a> is this exact pattern, grown to fourteen sheets for a real shopping center, running today on the documents this guide teaches. The dashboard scales with the business. The rules do not change.</p>
+  </div>
+
+  <div class="pnav">
+    <a href="atlas.html">← The Atlas story</a>
+    <a href="operator.html">Phase 2: The Operator →</a>
+  </div>
+</main>
+<footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
+Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

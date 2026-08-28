@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-Model Orchestration | Groundwork Curriculum Reader</title>
+<meta name="description" content="Level 2 · Intermediate · Individual Track: Multi-Model Orchestration. Compiled verbatim from the Groundwork Curriculum repository.">
+<meta name="theme-color" content="#F4EFE2">
+<link rel="canonical" href="https://groundwork.adamabdalla.com/curriculum/read/l2-individual-10-multi-model-orchestration.html">
+<meta property="og:image" content="https://groundwork.adamabdalla.com/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F4EFE2'/%3E%3Crect x='8' y='22' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='16' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Crect x='8' y='10' width='16' height='4' rx='1' fill='%23C7681D'/%3E%3Ccircle cx='16' cy='5.5' r='2.6' fill='%23D9A419'/%3E%3Cpath d='M5 29 H27' stroke='%231E1B16' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&family=Besley:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/guide.css">
+</head>
+<body class="reader">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Curriculum reader">
+  <a class="brand" href="../../index.html" aria-label="Groundwork home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
+    <b>GROUNDWORK</b>
+  </a>
+  <button class="navtoggle" aria-expanded="false" aria-label="Levels" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
+  <div class="links">
+    <a href="../index.html">Curriculum</a>
+    <a href="../level-1.html">L1</a>
+    <a href="../level-2.html" aria-current="page">L2</a>
+    <a href="../level-3.html">L3</a>
+    <a href="../level-4.html">L4</a>
+    <a href="../level-5.html">L5</a>
+    <a href="index.html">Reader</a>
+    <a class="keep" href="../../index.html">Main site</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <span class="crumb"><a href="../index.html">The Curriculum</a> / <a href="index.html">Reader</a> / Multi-Model Orchestration</span>
+
+<div class="gopen"><svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 38 H38" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="33" x2="22" y2="24" stroke="#C9BFA8" stroke-width="1.2"/><circle cx="22" cy="19" r="5" fill="#A44E12"/></svg><div><span class="kicker" style="margin-bottom:.15rem">LEVEL 2 · INTERMEDIATE · INDIVIDUAL TRACK</span><h1 style="margin:.1rem 0 0">Multi-Model Orchestration</h1></div></div>
+<p class="rnote">This page compiles 4 files from the repository, verbatim, in reading order. The living version: <a href="https://github.com/OrangeOnyx/groundwork-curriculum/tree/master/level-2-intermediate/individual/10-multi-model-orchestration">this folder on GitHub</a>.</p>
+<article class="doc"><p class="fcrumb"><svg width="16" height="16" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 38 H38" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="33" x2="22" y2="24" stroke="#C9BFA8" stroke-width="1.2"/><circle cx="22" cy="19" r="5" fill="#A44E12"/></svg><span>level-2-intermediate/individual/10-multi-model-orchestration/README.md</span></p>
+<h1>Multi-Model Orchestration</h1>
+<p>Different models are good at different jobs, but adding models is not the same as adding reliability. Orchestration should make a workflow cheaper, safer, or measurably more accurate. If it only makes the architecture more impressive, delete it.</p>
+<p>A practical Belle Realty stack has a fast structured classifier, an embedding/reranking path, a stronger evidence synthesizer, and deterministic policy services. Route by task and risk. Use a council only for bounded, high-value ambiguity where independent viewpoints can be judged against evidence. Run calls in parallel when they do not depend on one another; keep dependent evidence steps serial.</p>
+<p>Every route needs an observable reason, fallback, timeout, budget, and eval. Model names are configuration, not product logic. Pin versions where possible and route through a gateway so you can change providers without rewriting agents.</p>
+<p>The next documents cover router design, councils, and concurrency decisions. The default remains one capable model with a good retrieval and policy layer. Add another only when the eval tells you what it fixes.</p>
+<p>Before adding complexity, run this design through a small representative eval and inspect the trace with the operator who will own failures. Make the boundary, escalation, and rollback visible in the product. That discipline will expose more useful work than another round of prompt cleverness.</p>
+</article>
+<article class="doc"><p class="fcrumb"><svg width="16" height="16" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 38 H38" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="33" x2="22" y2="24" stroke="#C9BFA8" stroke-width="1.2"/><circle cx="22" cy="19" r="5" fill="#A44E12"/></svg><span>level-2-intermediate/individual/10-multi-model-orchestration/model-council.md</span></p>
+<h1>Model Council: Independent Views, One Accountable Decision</h1>
+<p>A model council asks several independent models or prompts to analyze the same bounded question, then has a judge compare their outputs against evidence. Use it sparingly for high-value ambiguity: conflicting lease addenda, a complicated diligence exception, or a draft where legal/policy risk requires multiple structured perspectives. Do not use it for tenant message routing or routine extraction.</p>
+<p>Make each member produce a compact structured claim set with citations, uncertainty, and recommended disposition. Independence matters: do not feed one member’s answer to another before the first vote. The judge receives the original evidence and blind member outputs, then selects, merges only supported claims, or escalates. A human owns the final decision for material risk.</p>
+<p>Councils fail when they become majority-vote theater. Three models repeating the same hallucination are not evidence. Weight source support above agreement. If no member cites an authoritative document, the correct outcome may be abstention. Limit the council to two or three members and a single judge; otherwise cost and latency rise faster than quality.</p>
+<p>Evaluate against a single-model baseline on the narrow slice it targets. Track consensus rate, judge agreement with humans, improved accuracy, unsupported-claim rate, cost, and latency. Keep the council behind a feature flag. The best council outcome is often a clearly documented “needs review,” not a forced answer.</p>
+</article>
+<article class="doc"><p class="fcrumb"><svg width="16" height="16" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 38 H38" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="33" x2="22" y2="24" stroke="#C9BFA8" stroke-width="1.2"/><circle cx="22" cy="19" r="5" fill="#A44E12"/></svg><span>level-2-intermediate/individual/10-multi-model-orchestration/parallel-vs-serial.md</span></p>
+<h1>Parallel vs. Serial Agent Calls</h1>
+<p>Run calls in parallel only when they are independent and their combined outputs can be validated together. Examples: classify a tenant message while retrieving open tickets; retrieve lexical and vector candidates simultaneously; extract financial, legal, and insurance checklist sections from separate documents. Parallelism lowers wall-clock latency but raises burst cost and can complicate cancellation.</p>
+<p>Use serial calls when later work depends on verified evidence from earlier work. A lease answer should identify the authorized active lease before retrieving clauses. A write proposal should pass policy validation before any draft is generated. A verifier should inspect the actual extractor output, not a competing guess. Serial steps preserve causality and reduce wasted requests.</p>
+<p>Design a join contract for parallel work: each branch has a deadline, schema, confidence, and failure state. The joiner knows how to proceed if a noncritical branch times out and when to fail closed. Cancel remaining work after an emergency rule fires or a human gate is required. Do not wait for decorative enrichments while a tenant needs an escalation.</p>
+<p>Measure p50/p95 latency, duplicate work, cancellation success, cost, and quality. Parallel calls are not free just because they are faster. Prefer a simple dependency graph you can trace over a swarm of agents that all read the same context.</p>
+</article>
+<article class="doc"><p class="fcrumb"><svg width="16" height="16" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 38 H38" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="33" x2="22" y2="24" stroke="#C9BFA8" stroke-width="1.2"/><circle cx="22" cy="19" r="5" fill="#A44E12"/></svg><span>level-2-intermediate/individual/10-multi-model-orchestration/router-models.md</span></p>
+<h1>Route Models by Task, Risk, and Evidence</h1>
+<p>A model router chooses an execution path from measurable inputs: task type, language, requested output, document quality, risk tier, estimated context size, prior confidence, latency target, and budget remaining. It returns a route ID and reason. Do not ask a general model to select its own unlimited tools and pricing tier.</p>
+<p>Start deterministic. A known JSON classifier can use the low-cost route; scanned leases or conflicting addenda use the high-accuracy extraction route; emergencies skip drafting and go to policy plus human escalation. Add model-based routing only for ambiguity after you label examples. Calibrate thresholds on the eval set, then monitor actual route outcomes.</p>
+<p>Implement fallbacks narrowly. If a primary model times out, retry once or use an approved fallback with the same schema. If structured output fails, return a review task rather than parsing free text creatively. Enforce maximum context, output, cost, and latency per route. A router that silently makes three expensive calls is a billing bug.</p>
+<p>Evaluate routing accuracy and system outcomes together: quality by route, escalation rate, cost per successful task, tail latency, and safety failures. Review cases that route cheaply but later require human correction. Routing is a policy decision, so version it, feature-flag it, and allow fast rollback.</p>
+</article>
+
+  <div class="pnav">
+    <a href="l2-individual-09-prompt-engineering-depth.html">← Prompt Engineering at Builder Depth</a>
+    <a href="l2-individual-11-data-pipelines.html">Data Pipelines: The Work Before AI Looks Smart →</a>
+  </div>
+</main>
+<footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="https://github.com/OrangeOnyx/groundwork-curriculum">Curriculum on GitHub</a></div>
+Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

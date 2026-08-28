@@ -172,3 +172,21 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:3px;height:1
 }
 .journeystrip svg{display:block;width:100%;height:auto}
 @media print{.vw,.journeystrip{display:none!important}}
+
+/* ---- curriculum reader: compiled repo content (curriculum/read/) ---- */
+.reader .gopen{display:flex;gap:.9rem;align-items:flex-start;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:.9rem 0;margin:0 0 1.2rem}
+.reader .gopen svg{flex:none;display:block}
+.reader .gopen h1{font-size:clamp(1.5rem,3vw,2.2rem)}
+.reader .rnote{font-size:.85rem;color:var(--ink-soft);max-width:64ch;margin:0 0 2rem}
+.reader article.doc{margin:0 0 2.4rem}
+.reader article.doc+article.doc{border-top:1px solid var(--rule);padding-top:1.7rem}
+.reader .fcrumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--ink-soft);margin:0 0 .7rem;display:flex;align-items:center;gap:.45rem;overflow-wrap:anywhere}
+.reader .fcrumb svg{display:block;flex:none}
+.reader .doc h1{font-size:1.45rem;text-transform:uppercase;border-top:2px solid var(--ink);padding-top:.65rem;margin:0 0 .6rem}
+.reader .doc h2{font-size:1.15rem;margin:1.4rem 0 .4rem}
+.reader .doc h3{font-size:1rem;margin:1.1rem 0 .3rem}
+.reader .doc img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.reader .trow{display:flex;gap:.8rem;align-items:center;padding:.55rem .1rem;border-bottom:1px solid var(--rule);font-size:.97rem}
+.reader .trow a{flex:1}
+.reader .tdev{flex:none;display:flex}
+.reader .tcount{font-family:var(--display);font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}

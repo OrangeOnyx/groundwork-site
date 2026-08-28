@@ -33,7 +33,9 @@ $links = python -X utf8 -c @"
 import io, glob, re, os, sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 missing = []
-for f in glob.glob('*.html') + glob.glob('guide/*.html') + glob.glob('curriculum/*.html'):
+# curriculum/read/*.html is generated verbatim from the curriculum repo (its own
+# voice, so the copy gates above deliberately skip it) but its links still get checked
+for f in glob.glob('*.html') + glob.glob('guide/*.html') + glob.glob('curriculum/*.html') + glob.glob('curriculum/read/*.html'):
     base = os.path.dirname(f)
     s = io.open(f, encoding='utf-8').read()
     for href in re.findall(r'href=\"([^\"#]+?)(?:#[^\"]*)?\"', s):
