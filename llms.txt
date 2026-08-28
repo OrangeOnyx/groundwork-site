@@ -26,8 +26,19 @@ The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and
 - [The Atlas Story](https://groundwork.adamabdalla.com/guide/atlas.html): a real command center running on these documents, ten features
 - [Field Guide PDF](https://groundwork.adamabdalla.com/assets/Groundwork-Program-Guide.pdf): the doctrine in one downloadable file
 
-## More
+## The Curriculum
 
-- [Groundwork Curriculum](https://github.com/OrangeOnyx/groundwork-curriculum): a free, MIT-licensed study path in five levels, Essentials to Frontier, a skills axis that pairs with the site's six layers
+The Groundwork Curriculum is the capability program beside the doctrine: five LEVELS of skill you climb as a person or team, distinct from the six LAYERS you build once for a business. The two axes never map one to one.
+
+- [The Curriculum](https://groundwork.adamabdalla.com/curriculum/): the hub, with the doctrine-versus-curriculum map
+- [Level 1: Essentials](https://groundwork.adamabdalla.com/curriculum/level-1.html): thirty days from novice to competent power user
+- [Level 2: Intermediate](https://groundwork.adamabdalla.com/curriculum/level-2.html): agents, RAG, MCP servers, evals, cost control
+- [Level 3: Advanced](https://groundwork.adamabdalla.com/curriculum/level-3.html): shipping AI to real users and keeping it standing
+- [Level 4: Professional](https://groundwork.adamabdalla.com/curriculum/level-4.html): leading AI teams, training, safety, red-teaming
+- [Level 5: Frontier](https://groundwork.adamabdalla.com/curriculum/level-5.html): contributing to the field
+- [Curriculum repo](https://github.com/OrangeOnyx/groundwork-curriculum): the living version, MIT licensed, credit Jake Van Clief
+- [The Curriculum as one book](https://github.com/OrangeOnyx/groundwork-curriculum/releases/latest/download/Groundwork-Curriculum.pdf): 608 pages, bookmarked, printable
+
+## More
 - [Book the free audit](https://calendly.com/adam-adamabdalla): the one conversion on the site
 - Contact: adam@adamabdalla.com

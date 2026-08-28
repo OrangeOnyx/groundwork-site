@@ -10,7 +10,7 @@ Write-Host "== Gate 1: copy and identity gates =="
 $gates = python -X utf8 -c @"
 import io, glob, re, sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-files = [f for f in glob.glob('*.html') + glob.glob('guide/*.html')]
+files = [f for f in glob.glob('*.html') + glob.glob('guide/*.html') + glob.glob('curriculum/*.html')]
 banned = re.compile(r'\bleverage|\bseamless|\bempower|\bunlock\b|\brobust\b|actionable|data-driven|game-changer|synergy|circle back|best practices|dive into|\bdelve|\belevate\b|testament', re.I)
 bad = []
 for f in files:
@@ -33,7 +33,7 @@ $links = python -X utf8 -c @"
 import io, glob, re, os, sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 missing = []
-for f in glob.glob('*.html') + glob.glob('guide/*.html'):
+for f in glob.glob('*.html') + glob.glob('guide/*.html') + glob.glob('curriculum/*.html'):
     base = os.path.dirname(f)
     s = io.open(f, encoding='utf-8').read()
     for href in re.findall(r'href=\"([^\"#]+?)(?:#[^\"]*)?\"', s):
@@ -54,7 +54,7 @@ npx vercel deploy --prod --yes
 if ($LASTEXITCODE -ne 0) { throw "Vercel deploy failed." }
 
 Write-Host "== Live verification =="
-$pages = @("", "guide/index.html", "guide/day-one.html", "guide/scorecard.html", "legal.html")
+$pages = @("", "guide/index.html", "guide/day-one.html", "guide/scorecard.html", "curriculum/index.html", "curriculum/level-1.html", "legal.html")
 $fail = $false
 foreach ($p in $pages) {
     $url = "https://groundwork.adamabdalla.com/$p"
