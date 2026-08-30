@@ -6,6 +6,7 @@
 <title>Groundwork | The AI Readiness System by Adam Abdalla</title>
 <meta name="description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later. Lafayette, Louisiana.">
 <meta name="theme-color" content="#F4EFE2">
+<script>(function(){var d=document.documentElement;try{if(localStorage.getItem('gw-theme')==='night')d.setAttribute('data-theme','night')}catch(e){}window.gwTheme=function(){var n=d.getAttribute('data-theme')==='night';if(n){d.removeAttribute('data-theme')}else{d.setAttribute('data-theme','night')}try{localStorage.setItem('gw-theme',n?'day':'night')}catch(e){}s()};function s(){var n=d.getAttribute('data-theme')==='night';document.querySelectorAll('.modeswitch').forEach(function(b){b.textContent=n?'DAY':'NIGHT';b.setAttribute('aria-pressed',n?'true':'false')});var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',n?'#1B1813':'#F4EFE2')}window.addEventListener('DOMContentLoaded',s)})()</script>
 <link rel="canonical" href="https://groundwork.adamabdalla.com/">
 <meta property="og:title" content="Groundwork | The AI Readiness System by Adam Abdalla">
 <meta property="og:description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later.">
@@ -349,6 +350,26 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
   .holdfield i{background:var(--terra-deep)}
   .holdfield svg line{opacity:.9}
 }
+
+/* ---- the Night Edition: owner-requested Aug 29. Same world, lamplight ink. ---- */
+html[data-theme="night"]{
+  --paper:#1B1813; --paper-deep:#26221B; --ink:#F4EFE2; --ink-soft:#BEB4A2;
+  --rule:#4E463A; --terra:#C7681D; --terra-deep:#D2802F; --mustard:#D9A419;
+  --mustard-deep:#CFA032; --olive:#7E8F6C; --olive-deep:#9AA989; --oxblood:#C96A55;
+}
+/* hex-drawn SVG plates route through the tokens so both themes re-ink them;
+   in day these equal the raw hex, so nothing changes */
+svg [fill="#C7681D"]{fill:var(--terra)} svg [fill="#A44E12"]{fill:var(--terra-deep)}
+svg [fill="#D9A419"]{fill:var(--mustard)} svg [fill="#1E1B16"]{fill:var(--ink)}
+svg [fill="#5C554A"]{fill:var(--ink-soft)} svg [fill="#EAE2CD"]{fill:var(--paper-deep)}
+svg [fill="#F4EFE2"]{fill:var(--paper)} svg [fill="#49573C"]{fill:var(--olive-deep)}
+svg [fill="#5A6B4A"]{fill:var(--olive)}
+svg [stroke="#1E1B16"]{stroke:var(--ink)} svg [stroke="#A44E12"]{stroke:var(--terra-deep)}
+svg [stroke="#C9BFA8"]{stroke:var(--rule)}
+.modeswitch{background:transparent;border:2px solid var(--ink);color:var(--ink);padding:.35em .8em;font-family:var(--display);font-weight:700;font-size:.68rem;letter-spacing:.12em;cursor:pointer;text-transform:uppercase;margin-left:.6rem;flex:none}
+.modeswitch:hover{background:var(--paper-deep)}
+/* paper prints as paper: night never reaches the printed page */
+@media print{html[data-theme="night"]{--paper:#F4EFE2;--paper-deep:#EAE2CD;--ink:#1E1B16;--ink-soft:#5C554A;--rule:#C9BFA8;--terra:#C7681D;--terra-deep:#A44E12;--mustard:#D9A419;--mustard-deep:#8F6D0C;--olive:#5A6B4A;--olive-deep:#49573C;--oxblood:#8A2F1F}}
 </style>
 </head>
 <body>
@@ -375,6 +396,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="22" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="16" width="16" height="4" rx="1" fill="#C7681D"/><rect x="8" y="10" width="16" height="4" rx="1" fill="#C7681D"/><circle cx="16" cy="5.5" r="2.6" fill="#D9A419"/><path d="M5 29 H27" stroke="#1E1B16" stroke-width="2" stroke-linecap="round"/></svg>
     <b>GROUNDWORK</b>
   </a>
+  <button class="modeswitch" onclick="gwTheme()" aria-pressed="false" aria-label="Switch between day and night">NIGHT</button>
   <button class="navtoggle" aria-expanded="false" aria-label="Menu" onclick="var l=this.nextElementSibling,o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">MENU</button>
   <div class="links">
     <a href="guide/day-one.html">Start Here</a>

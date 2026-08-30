@@ -190,3 +190,23 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:3px;height:1
 .reader .trow a{flex:1}
 .reader .tdev{flex:none;display:flex}
 .reader .tcount{font-family:var(--display);font-weight:700;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+
+/* ---- the Night Edition: owner-requested Aug 29. Same world, lamplight ink. ---- */
+html[data-theme="night"]{
+  --paper:#1B1813; --paper-deep:#26221B; --ink:#F4EFE2; --ink-soft:#BEB4A2;
+  --rule:#4E463A; --terra:#C7681D; --terra-deep:#D2802F; --mustard:#D9A419;
+  --mustard-deep:#CFA032; --olive:#7E8F6C; --olive-deep:#9AA989; --oxblood:#C96A55;
+}
+/* hex-drawn SVG plates route through the tokens so both themes re-ink them;
+   in day these equal the raw hex, so nothing changes */
+svg [fill="#C7681D"]{fill:var(--terra)} svg [fill="#A44E12"]{fill:var(--terra-deep)}
+svg [fill="#D9A419"]{fill:var(--mustard)} svg [fill="#1E1B16"]{fill:var(--ink)}
+svg [fill="#5C554A"]{fill:var(--ink-soft)} svg [fill="#EAE2CD"]{fill:var(--paper-deep)}
+svg [fill="#F4EFE2"]{fill:var(--paper)} svg [fill="#49573C"]{fill:var(--olive-deep)}
+svg [fill="#5A6B4A"]{fill:var(--olive)}
+svg [stroke="#1E1B16"]{stroke:var(--ink)} svg [stroke="#A44E12"]{stroke:var(--terra-deep)}
+svg [stroke="#C9BFA8"]{stroke:var(--rule)}
+.modeswitch{background:transparent;border:2px solid var(--ink);color:var(--ink);padding:.35em .8em;font-family:var(--display);font-weight:700;font-size:.68rem;letter-spacing:.12em;cursor:pointer;text-transform:uppercase;margin-left:.6rem;flex:none}
+.modeswitch:hover{background:var(--paper-deep)}
+/* paper prints as paper: night never reaches the printed page */
+@media print{html[data-theme="night"]{--paper:#F4EFE2;--paper-deep:#EAE2CD;--ink:#1E1B16;--ink-soft:#5C554A;--rule:#C9BFA8;--terra:#C7681D;--terra-deep:#A44E12;--mustard:#D9A419;--mustard-deep:#8F6D0C;--olive:#5A6B4A;--olive-deep:#49573C;--oxblood:#8A2F1F}}
