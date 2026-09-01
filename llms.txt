@@ -1,10 +1,10 @@
 # Groundwork
 
-> Groundwork is a free, ungated AI readiness system for owners and operators of small and mid-sized businesses. Six layers, built in three phases, produce fifteen plain-text documents your business owns; then one scoped AI Operator goes to work on top of them. Foundation first. Agents later.
+> Groundwork is a free, ungated AI readiness system for owners and operators of small and mid-sized businesses. Six standing orders you give any AI, built in sequence, produce fifteen plain-text documents your business owns; one scoped AI Operator activates at order four and runs on top of them. Foundation first. Agents later.
 
 Groundwork was built by Adam Abdalla, an operator in Lafayette, Louisiana who runs a 27-unit shopping center and built the system for his own businesses before publishing it. Everything on this site is open: no signup, no paywall, no gated downloads, no prices. The only call to action is a free AI readiness audit.
 
-The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and Operating Rhythm. Inside Layer 2 sits Authority Classification: the only named, graded document-authority system built for non-technical owners, in plain files you own. Its grading logic descends from the Admiralty Code, the source-reliability system used in naval intelligence.
+The six standing orders are Know me (Identity), Know my information (Knowledge), Know your limits (Governance), Help me operate (the Operator), Remember (Continuity), and Improve. From activation on, the system runs one loop: capture, understand, decide, act, verify, remember, improve. Inside Order 2 sits Authority Classification: the only named, graded document-authority system built for non-technical owners, in plain files you own. Its grading logic descends from the Admiralty Code, the source-reliability system used in naval intelligence.
 
 ## Start here
 
@@ -14,14 +14,13 @@ The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and
 
 ## The guide
 
-- [Foundations](https://groundwork.adamabdalla.com/guide/foundations.html): the concepts under every layer
-- [Layer 1: Identity](https://groundwork.adamabdalla.com/guide/layer-1.html)
-- [Layer 2: Knowledge](https://groundwork.adamabdalla.com/guide/layer-2.html): includes Authority Classification
-- [Layer 3: Governance](https://groundwork.adamabdalla.com/guide/layer-3.html)
-- [Layer 4: Continuity](https://groundwork.adamabdalla.com/guide/layer-4.html)
-- [Layer 5: Measurement](https://groundwork.adamabdalla.com/guide/layer-5.html)
-- [Layer 6: Operating Rhythm](https://groundwork.adamabdalla.com/guide/layer-6.html)
-- [Phase 2: The Operator](https://groundwork.adamabdalla.com/guide/operator.html): what the scoped AI Operator is and is not
+- [Foundations](https://groundwork.adamabdalla.com/guide/foundations.html): the concepts under every order
+- [Order 1: Know me](https://groundwork.adamabdalla.com/guide/identity.html): Identity
+- [Order 2: Know my information](https://groundwork.adamabdalla.com/guide/knowledge.html): Knowledge, including Authority Classification
+- [Order 3: Know your limits](https://groundwork.adamabdalla.com/guide/limits.html): Governance, the three zones
+- [Order 4: Help me operate](https://groundwork.adamabdalla.com/guide/operator.html): the scoped AI Operator, its scope, package, and prompt
+- [Order 5: Remember](https://groundwork.adamabdalla.com/guide/remember.html): Continuity
+- [Order 6: Improve](https://groundwork.adamabdalla.com/guide/improve.html): Measurement and the Operating Rhythm, merged
 - [The Oldest Idea in Groundwork](https://groundwork.adamabdalla.com/guide/lineage.html): the Admiralty Code lineage of Authority Classification
 - [The Atlas Story](https://groundwork.adamabdalla.com/guide/atlas.html): a real command center running on these documents, ten features
 - [The Operator Dashboard](https://groundwork.adamabdalla.com/guide/dashboard.html): the morning-screen pattern over the vault and the Operator, drawn as a demonstration; Atlas is the lived version
@@ -29,7 +28,7 @@ The six layers are Identity, Knowledge, Governance, Continuity, Measurement, and
 
 ## The Curriculum
 
-The Groundwork Curriculum is the capability program beside the doctrine: five LEVELS of skill you climb as a person or team, distinct from the six LAYERS you build once for a business. The two axes never map one to one.
+The Groundwork Curriculum is the capability program beside the doctrine: five LEVELS of skill you climb as a person or team, distinct from the six standing ORDERS you build once for a business. The two axes never map one to one.
 
 - [The Curriculum](https://groundwork.adamabdalla.com/curriculum/): the hub, with the doctrine-versus-curriculum map
 - [The Reader](https://groundwork.adamabdalla.com/curriculum/read/): the whole curriculum readable on the site, one page per module, compiled verbatim from the repo

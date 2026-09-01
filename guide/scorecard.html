@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Readiness Scorecard | Groundwork Guide</title>
-<meta name="description" content="A weighted self-assessment across the six Groundwork layers: Identity, Knowledge, Governance, Continuity, Measurement, and Operating Rhythm. Runs entirely in your browser.">
+<meta name="description" content="A weighted self-assessment across the six Groundwork standing orders: Know me, Know my information, Know your limits, Help me operate, Remember, and Improve. Runs entirely in your browser.">
 <meta name="theme-color" content="#F4EFE2">
 <script>(function(){var d=document.documentElement;try{if(localStorage.getItem('gw-theme')==='night')d.setAttribute('data-theme','night')}catch(e){}window.gwTheme=function(){var n=d.getAttribute('data-theme')==='night';if(n){d.removeAttribute('data-theme')}else{d.setAttribute('data-theme','night')}try{localStorage.setItem('gw-theme',n?'day':'night')}catch(e){}s()};function s(){var n=d.getAttribute('data-theme')==='night';document.querySelectorAll('.modeswitch').forEach(function(b){b.textContent=n?'DAY':'NIGHT';b.setAttribute('aria-pressed',n?'true':'false')});var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',n?'#1B1813':'#F4EFE2')}window.addEventListener('DOMContentLoaded',s)})()</script>
 <link rel="canonical" href="https://groundwork.adamabdalla.com/guide/scorecard.html">
@@ -30,13 +30,12 @@
     <a href="index.html">Guide</a>
     <a href="day-one.html">Day One</a>
     <a href="foundations.html">Foundations</a>
-    <a href="layer-1.html">L1</a>
-    <a href="layer-2.html">L2</a>
-    <a href="layer-3.html">L3</a>
+    <a href="identity.html">Identity</a>
+    <a href="knowledge.html">Knowledge</a>
+    <a href="limits.html">Limits</a>
     <a href="operator.html">Operator</a>
-    <a href="layer-4.html">L4</a>
-    <a href="layer-5.html">L5</a>
-    <a href="layer-6.html">L6</a>
+    <a href="remember.html">Remember</a>
+    <a href="improve.html">Improve</a>
     <a href="scorecard.html" aria-current="page">Scorecard</a>
     <a href="atlas.html">Atlas</a>
     <a href="dashboard.html">Dashboard</a>
@@ -47,19 +46,19 @@
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Scorecard</span>
   <nav class="vw journeystrip" aria-label="Guide journey">
-  <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build Phase 1, activate the Operator, keep it standing. You are at: Score yourself.">
+  <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing. You are at: Score yourself.">
     <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
     <a href="scorecard.html"><circle class="star-halo" cx="40" cy="26" r="8.5"/><circle class="star" cx="40" cy="26" r="4"/><text class="mono acc" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
     <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD PHASE 1</text></a>
+    <a href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
     <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="layer-6.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <a href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
   <header class="page">
     <span class="kicker">WHERE DO YOU STAND</span>
     <h1>The AI Readiness Scorecard.</h1>
-    <p class="lede">Twenty-four questions across the six layers: the same diagnostic Adam uses in audit sessions. Five minutes, honest answers, a named weakest layer.</p>
+    <p class="lede">Twenty-four questions across the six standing orders: the same diagnostic Adam uses in audit sessions. Five minutes, honest answers, a named weakest order.</p>
   </header>
 
   <style>
@@ -79,18 +78,18 @@
 
   <h2>How the scoring works</h2>
   <div class="card">
-    <p>Twenty-four questions, four per layer. About five minutes. Answer honestly: the value is in knowing exactly where you stand, not in getting a high score.</p>
+    <p>Twenty-four questions, four per order. About five minutes. Answer honestly: the value is in knowing exactly where you stand, not in getting a high score.</p>
     <p>Every question is weighted. Standard questions count one point. High impact questions count two and carry a tag. Yes earns the full weight. Partial earns half. No earns zero. Thirty-six points total.</p>
-    <p>Open the note under any question to see why it matters and what the fix is. Results show your overall percentage, a layer-by-layer breakdown, your top priorities, and the recommended next move.</p>
-    <p class="quiet">The Field Guide PDF carries a one-page 0 to 5 version of this same diagnostic, for scoring a layer out loud in a meeting. This is the full instrument.</p>
+    <p>Open the note under any question to see why it matters and what the fix is. Results show your overall percentage, an order-by-order breakdown, your top priorities, and the recommended next move.</p>
+    <p class="quiet">The Field Guide PDF carries a one-page 0 to 5 version of this same diagnostic, for scoring an order out loud in a meeting. This is the full instrument.</p>
   </div>
 
   <noscript><div class="callout">This scorecard needs JavaScript to compute your score. The questions read fine without it, so you can still work through them on paper.</div></noscript>
 
   <form id="scorecard">
 
-    <h2>Layer 1: Identity</h2>
-    <p>Would a stranger write like you, and decide like you, after reading your files? The fixes live in <a href="layer-1.html">Layer 1</a>.</p>
+    <h2>Order 1: Know me</h2>
+    <p>Would a stranger write like you, and decide like you, after reading your files? The fixes live in <a href="identity.html">Order 1</a>.</p>
 
     <fieldset class="q" data-weight="2" data-layer="1">
       <legend><span class="qn">1.</span> <span class="qt">Do you have a written Identity Charter, including what you will never become?</span> <span class="tag">High impact</span></legend>
@@ -144,8 +143,8 @@
       </div></details>
     </fieldset>
 
-    <h2>Layer 2: Knowledge</h2>
-    <p>Can the system tell doctrine from a draft? The fixes live in <a href="layer-2.html">Layer 2</a>.</p>
+    <h2>Order 2: Know my information</h2>
+    <p>Can the system tell doctrine from a draft? The fixes live in <a href="knowledge.html">Order 2</a>.</p>
 
     <fieldset class="q" data-weight="2" data-layer="2">
       <legend><span class="qn">5.</span> <span class="qt">Does information you rely on carry an authority level (0&ndash;4), so doctrine outranks drafts?</span> <span class="tag">High impact</span></legend>
@@ -199,8 +198,8 @@
       </div></details>
     </fieldset>
 
-    <h2>Layer 3: Governance</h2>
-    <p>Does the system know when to act, when to draft, and when to stop? The fixes live in <a href="layer-3.html">Layer 3</a>.</p>
+    <h2>Order 3: Know your limits</h2>
+    <p>Does the system know when to act, when to draft, and when to stop? The fixes live in <a href="limits.html">Order 3</a>.</p>
 
     <fieldset class="q" data-weight="2" data-layer="3">
       <legend><span class="qn">9.</span> <span class="qt">Is every AI task assigned a zone in writing: Auto-Execute, Draft &amp; Wait, or Never Automate?</span> <span class="tag">High impact</span></legend>
@@ -250,19 +249,74 @@
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
         <p><strong>Why it matters.</strong> &ldquo;Someone reviews it&rdquo; means nobody reviews it. Draft &amp; Wait only works if the wait is real.</p>
-        <p><strong>The fix.</strong> <span class="fix">Name the approver per category in Agent_Scope.md and keep a one-line approval log: date, item, approver.</span></p>
+        <p><strong>The fix.</strong> <span class="fix">Name the approver per Zone 2 category in Automation_Framework.md and keep a one-line approval log: date, item, approver.</span></p>
       </div></details>
     </fieldset>
 
-    <h2>Layer 4: Continuity</h2>
-    <p>Would this survive the founder being gone for ninety days? The fixes live in <a href="layer-4.html">Layer 4</a>.</p>
+    <h2>Order 4: Help me operate</h2>
+    <p>Is one scoped Operator actually working inside the rules? The fixes live in <a href="operator.html">Order 4</a>.</p>
 
     <fieldset class="q" data-weight="2" data-layer="4">
-      <legend><span class="qn">13.</span> <span class="qt">Would your AI system keep behaving as designed if you were gone for ninety days?</span> <span class="tag">High impact</span></legend>
+      <legend><span class="qn">13.</span> <span class="qt">Is your first Operator's scope written: one role, one sentence, with an explicit out-of-scope list?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q13" value="yes"> Yes</label>
         <label><input type="radio" name="q13" value="partial"> Partial</label>
         <label><input type="radio" name="q13" value="no"> No</label>
+      </div>
+      <details><summary>Why it matters, and the fix</summary><div class="inner">
+        <p><strong>Why it matters.</strong> Narrow wins. &ldquo;Handles tenant communication drafts&rdquo; produces a competent operator; &ldquo;helps with the business&rdquo; produces an improviser.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 04_Capabilities/Agent_Scope.md before activation: one role, a short in-scope list, everything else out of scope.</span></p>
+      </div></details>
+    </fieldset>
+
+    <fieldset class="q" data-weight="2" data-layer="4">
+      <legend><span class="qn">14.</span> <span class="qt">Is the Operator live on real work: loading the package, drafting inside Draft &amp; Wait, citing authority levels?</span> <span class="tag">High impact</span></legend>
+      <div class="opts">
+        <label><input type="radio" name="q14" value="yes"> Yes</label>
+        <label><input type="radio" name="q14" value="partial"> Partial</label>
+        <label><input type="radio" name="q14" value="no"> No</label>
+      </div>
+      <details><summary>Why it matters, and the fix</summary><div class="inner">
+        <p><strong>Why it matters.</strong> The foundation pays for itself the day one scoped agent runs on top of it. Files without an Operator are readiness without the payoff.</p>
+        <p><strong>The fix.</strong> <span class="fix">Activate per the Operator page: load the fifteen files in order, paste the Operator prompt, run the two-week shakedown starting with Zone 1 work.</span></p>
+      </div></details>
+    </fieldset>
+
+    <fieldset class="q" data-weight="1" data-layer="4">
+      <legend><span class="qn">15.</span> <span class="qt">Does the Operator escalate cleanly: refusing Zone 3 work and stating what it needs instead of guessing?</span></legend>
+      <div class="opts">
+        <label><input type="radio" name="q15" value="yes"> Yes</label>
+        <label><input type="radio" name="q15" value="partial"> Partial</label>
+        <label><input type="radio" name="q15" value="no"> No</label>
+      </div>
+      <details><summary>Why it matters, and the fix</summary><div class="inner">
+        <p><strong>Why it matters.</strong> A clean refusal is the system working. An Operator that guesses under uncertainty is more dangerous than one that stops.</p>
+        <p><strong>The fix.</strong> <span class="fix">Keep Escalation Rules in the loaded package and the prompt. Do not proceed on silence, and treat &ldquo;the sources do not answer this&rdquo; as a success.</span></p>
+      </div></details>
+    </fieldset>
+
+    <fieldset class="q" data-weight="1" data-layer="4">
+      <legend><span class="qn">16.</span> <span class="qt">Is it still one Operator, one package, one human in the loop: no self-expanding fleet?</span></legend>
+      <div class="opts">
+        <label><input type="radio" name="q16" value="yes"> Yes</label>
+        <label><input type="radio" name="q16" value="partial"> Partial</label>
+        <label><input type="radio" name="q16" value="no"> No</label>
+      </div>
+      <details><summary>Why it matters, and the fix</summary><div class="inner">
+        <p><strong>Why it matters.</strong> The default is one. Agents that create agents, or shared memory without classification, turn a governed system into an improvised one.</p>
+        <p><strong>The fix.</strong> <span class="fix">Add a second role only for a clearly different job, by human decision, with its own scope and the same escalation rules.</span></p>
+      </div></details>
+    </fieldset>
+
+    <h2>Order 5: Remember</h2>
+    <p>Would this survive the founder being gone for ninety days? The fixes live in <a href="remember.html">Order 5</a>.</p>
+
+    <fieldset class="q" data-weight="2" data-layer="5">
+      <legend><span class="qn">17.</span> <span class="qt">Would your AI system keep behaving as designed if you were gone for ninety days?</span> <span class="tag">High impact</span></legend>
+      <div class="opts">
+        <label><input type="radio" name="q17" value="yes"> Yes</label>
+        <label><input type="radio" name="q17" value="partial"> Partial</label>
+        <label><input type="radio" name="q17" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
         <p><strong>Why it matters.</strong> Most setups fail this on day one because everything lives in one head and one vendor's chat history.</p>
@@ -270,12 +324,12 @@
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="2" data-layer="4">
-      <legend><span class="qn">14.</span> <span class="qt">Is your operating context in portable files you control, not trapped in one vendor's history?</span> <span class="tag">High impact</span></legend>
+    <fieldset class="q" data-weight="2" data-layer="5">
+      <legend><span class="qn">18.</span> <span class="qt">Is your operating context in portable files you control, not trapped in one vendor's history?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
-        <label><input type="radio" name="q14" value="yes"> Yes</label>
-        <label><input type="radio" name="q14" value="partial"> Partial</label>
-        <label><input type="radio" name="q14" value="no"> No</label>
+        <label><input type="radio" name="q18" value="yes"> Yes</label>
+        <label><input type="radio" name="q18" value="partial"> Partial</label>
+        <label><input type="radio" name="q18" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
         <p><strong>Why it matters.</strong> Platform independence is continuity. Markdown in a folder you control works with any AI; no platform owns it.</p>
@@ -283,12 +337,12 @@
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="4">
-      <legend><span class="qn">15.</span> <span class="qt">Are succession and override rules written with real names, and does the successor have access?</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="5">
+      <legend><span class="qn">19.</span> <span class="qt">Are succession and override rules written with real names, and does the successor have access?</span></legend>
       <div class="opts">
-        <label><input type="radio" name="q15" value="yes"> Yes</label>
-        <label><input type="radio" name="q15" value="partial"> Partial</label>
-        <label><input type="radio" name="q15" value="no"> No</label>
+        <label><input type="radio" name="q19" value="yes"> Yes</label>
+        <label><input type="radio" name="q19" value="partial"> Partial</label>
+        <label><input type="radio" name="q19" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
         <p><strong>Why it matters.</strong> A succession rule naming a role you hope to hire is fiction. Names, access, and a known off-switch are the real thing.</p>
@@ -296,12 +350,12 @@
       </div></details>
     </fieldset>
 
-    <fieldset class="q" data-weight="1" data-layer="4">
-      <legend><span class="qn">16.</span> <span class="qt">Is working memory cleared regularly, promoted into real documents instead of hoarded?</span></legend>
+    <fieldset class="q" data-weight="1" data-layer="5">
+      <legend><span class="qn">20.</span> <span class="qt">Is working memory cleared regularly, promoted into real documents instead of hoarded?</span></legend>
       <div class="opts">
-        <label><input type="radio" name="q16" value="yes"> Yes</label>
-        <label><input type="radio" name="q16" value="partial"> Partial</label>
-        <label><input type="radio" name="q16" value="no"> No</label>
+        <label><input type="radio" name="q20" value="yes"> Yes</label>
+        <label><input type="radio" name="q20" value="partial"> Partial</label>
+        <label><input type="radio" name="q20" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
         <p><strong>Why it matters.</strong> Session notes that never get cleared become a second, contradictory source of truth.</p>
@@ -309,74 +363,19 @@
       </div></details>
     </fieldset>
 
-    <h2>Layer 5: Measurement</h2>
-    <p>How would you know this is working next month? The fixes live in <a href="layer-5.html">Layer 5</a>.</p>
-
-    <fieldset class="q" data-weight="2" data-layer="5">
-      <legend><span class="qn">17.</span> <span class="qt">Could you answer &ldquo;is this working?&rdquo; with evidence rather than a feeling?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q17" value="yes"> Yes</label>
-        <label><input type="radio" name="q17" value="partial"> Partial</label>
-        <label><input type="radio" name="q17" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Without evidence you either over-trust (drift goes unnoticed) or under-trust (you redo work the system did well).</p>
-        <p><strong>The fix.</strong> <span class="fix">Write 06_Output_Standards/Measurement_Notes.md with the four signals: on-voice, cites authority, appropriate escalations, trusted drafts.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="2" data-layer="5">
-      <legend><span class="qn">18.</span> <span class="qt">Do you run a monthly review: what broke, what was wrong, what context was missing?</span> <span class="tag">High impact</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q18" value="yes"> Yes</label>
-        <label><input type="radio" name="q18" value="partial"> Partial</label>
-        <label><input type="radio" name="q18" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> The review is where drift gets caught before a tenant or client catches it for you.</p>
-        <p><strong>The fix.</strong> <span class="fix">Put thirty minutes on the calendar monthly. Answer the four review questions and write one dated entry.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="5">
-      <legend><span class="qn">19.</span> <span class="qt">Do findings actually change the documents: miss, trace, edit, retest?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q19" value="yes"> Yes</label>
-        <label><input type="radio" name="q19" value="partial"> Partial</label>
-        <label><input type="radio" name="q19" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Measurement that never edits a file is theater. Three misses with one root cause is a standing order to fix the document.</p>
-        <p><strong>The fix.</strong> <span class="fix">Trace every miss to the file that caused it: tone to Brand Voice, invented policy to doctrine, wrong action to zones or scope.</span></p>
-      </div></details>
-    </fieldset>
-
-    <fieldset class="q" data-weight="1" data-layer="5">
-      <legend><span class="qn">20.</span> <span class="qt">Do you know what share of drafts ship with light edits versus quiet rewrites?</span></legend>
-      <div class="opts">
-        <label><input type="radio" name="q20" value="yes"> Yes</label>
-        <label><input type="radio" name="q20" value="partial"> Partial</label>
-        <label><input type="radio" name="q20" value="no"> No</label>
-      </div>
-      <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> This is the bluntest signal there is. If you quietly rewrite everything, some document is lying to the system.</p>
-        <p><strong>The fix.</strong> <span class="fix">Track it roughly from your approval log: shipped as-is, light edits, or rewritten. The trend matters more than the number.</span></p>
-      </div></details>
-    </fieldset>
-
-    <h2>Layer 6: Operating Rhythm</h2>
-    <p>Who owns each layer, and when is it reviewed? The fixes live in <a href="layer-6.html">Layer 6</a>.</p>
+    <h2>Order 6: Improve</h2>
+    <p>How would you know this is working, and who keeps it true? The fixes live in <a href="improve.html">Order 6</a>.</p>
 
     <fieldset class="q" data-weight="2" data-layer="6">
-      <legend><span class="qn">21.</span> <span class="qt">Does every layer have a named owner?</span> <span class="tag">High impact</span></legend>
+      <legend><span class="qn">21.</span> <span class="qt">Could you answer &ldquo;is this working?&rdquo; with evidence rather than a feeling?</span> <span class="tag">High impact</span></legend>
       <div class="opts">
         <label><input type="radio" name="q21" value="yes"> Yes</label>
         <label><input type="radio" name="q21" value="partial"> Partial</label>
         <label><input type="radio" name="q21" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> A foundation nobody owns quietly becomes fiction while the Operator keeps citing it with full confidence.</p>
-        <p><strong>The fix.</strong> <span class="fix">Write 06_Output_Standards/Operating_Rhythm.md. In a small operation every line may say the same name. That is fine, as long as it is written.</span></p>
+        <p><strong>Why it matters.</strong> Without evidence you either over-trust (drift goes unnoticed) or under-trust (you redo work the system did well).</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 06_Output_Standards/Measurement_Notes.md with the four signals: on-voice, cites authority, appropriate escalations, trusted drafts.</span></p>
       </div></details>
     </fieldset>
 
@@ -388,37 +387,36 @@
         <label><input type="radio" name="q22" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Rhythm is minutes per week, not hours. Without dates, decay wins by default.</p>
-        <p><strong>The fix.</strong> <span class="fix">Fifteen minutes weekly (clear session notes), thirty monthly (measurement review), an hour quarterly (re-score, audit zones, verify succession).</span></p>
+        <p><strong>Why it matters.</strong> Rhythm is minutes per week, not hours. Without dates, decay wins by default, and drift gets caught by a tenant or client instead of a review.</p>
+        <p><strong>The fix.</strong> <span class="fix">Fifteen minutes weekly (clear session notes), thirty monthly (the four measurement questions, one dated entry), an hour quarterly (re-score, audit zones, verify succession).</span></p>
       </div></details>
     </fieldset>
 
     <fieldset class="q" data-weight="1" data-layer="6">
-      <legend><span class="qn">23.</span> <span class="qt">Is there a written update protocol: changes proposed, approved by the owner, versioned?</span></legend>
+      <legend><span class="qn">23.</span> <span class="qt">Does every order have a named owner, and a written update protocol: proposed, approved, versioned?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q23" value="yes"> Yes</label>
         <label><input type="radio" name="q23" value="partial"> Partial</label>
         <label><input type="radio" name="q23" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> Foundation edits are Draft &amp; Wait work. The Operator may propose; it may never apply.</p>
-        <p><strong>The fix.</strong> <span class="fix">Add the update protocol to Operating_Rhythm.md: proposed in writing, approved by the layer's owner, versioned with a dated changelog line.</span></p>
+        <p><strong>Why it matters.</strong> A foundation nobody owns quietly becomes fiction while the Operator keeps citing it with full confidence. Foundation edits are Draft &amp; Wait work: the Operator may propose, it may never apply.</p>
+        <p><strong>The fix.</strong> <span class="fix">Write 06_Output_Standards/Operating_Rhythm.md: a name on every ownership line, plus the protocol: proposed in writing, approved by the order's owner, versioned with a dated changelog line.</span></p>
       </div></details>
     </fieldset>
 
     <fieldset class="q" data-weight="1" data-layer="6">
-      <legend><span class="qn">24.</span> <span class="qt">Have you re-scored or audited the whole system in the last quarter?</span></legend>
+      <legend><span class="qn">24.</span> <span class="qt">Do findings actually change the documents: miss, trace, edit, retest?</span></legend>
       <div class="opts">
         <label><input type="radio" name="q24" value="yes"> Yes</label>
         <label><input type="radio" name="q24" value="partial"> Partial</label>
         <label><input type="radio" name="q24" value="no"> No</label>
       </div>
       <details><summary>Why it matters, and the fix</summary><div class="inner">
-        <p><strong>Why it matters.</strong> The score trend is itself a measurement. A foundation that is not re-checked quarterly is drifting unobserved.</p>
-        <p><strong>The fix.</strong> <span class="fix">Re-run this scorecard at each quarterly review and compare layer by layer against last quarter.</span></p>
+        <p><strong>Why it matters.</strong> Measurement that never edits a file is theater. Three misses with one root cause is a standing order to fix the document.</p>
+        <p><strong>The fix.</strong> <span class="fix">Trace every miss to the file that caused it: tone to Brand Voice, invented policy to doctrine, wrong action to zones or scope.</span></p>
       </div></details>
     </fieldset>
-
     <div class="card">
       <p><span id="progress">0</span> of 24 answered.</p>
       <div id="warn" class="callout" role="alert" hidden></div>
@@ -438,15 +436,15 @@
       <p class="quiet" id="r-points"></p>
     </div>
 
-    <h3>Layer by layer</h3>
+    <h3>Order by order</h3>
     <div class="tablewrap">
       <table>
-        <thead><tr><th>Layer</th><th>Score</th><th>Status</th></tr></thead>
+        <thead><tr><th>Order</th><th>Score</th><th>Status</th></tr></thead>
         <tbody id="r-layers"></tbody>
       </table>
     </div>
     <p id="r-weakest"></p>
-    <p class="quiet">Strong means 80 percent or more of the layer's points. Partial means 50 to 79. Weak means under 50.</p>
+    <p class="quiet">Strong means 80 percent or more of the order's points. Partial means 50 to 79. Weak means under 50.</p>
 
     <h3>Your top priorities</h3>
     <p class="quiet">Your biggest gaps, heaviest weight first. Up to five.</p>
@@ -461,7 +459,7 @@
   </section>
 
   <div class="pnav">
-    <a href="layer-6.html">&larr; Layer 6: Operating Rhythm</a>
+    <a href="improve.html">&larr; Order 6: Improve</a>
     <a href="../index.html">Back to the main site &rarr;</a>
   </div>
 </main>
@@ -472,12 +470,12 @@ Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a hr
   "use strict";
 
   var LAYERS = [
-    { key: "1", name: "Layer 1: Identity", href: "layer-1.html" },
-    { key: "2", name: "Layer 2: Knowledge", href: "layer-2.html" },
-    { key: "3", name: "Layer 3: Governance", href: "layer-3.html" },
-    { key: "4", name: "Layer 4: Continuity", href: "layer-4.html" },
-    { key: "5", name: "Layer 5: Measurement", href: "layer-5.html" },
-    { key: "6", name: "Layer 6: Operating Rhythm", href: "layer-6.html" }
+    { key: "1", name: "Order 1: Know me", href: "identity.html" },
+    { key: "2", name: "Order 2: Know my information", href: "knowledge.html" },
+    { key: "3", name: "Order 3: Know your limits", href: "limits.html" },
+    { key: "4", name: "Order 4: Help me operate", href: "operator.html" },
+    { key: "5", name: "Order 5: Remember", href: "remember.html" },
+    { key: "6", name: "Order 6: Improve", href: "improve.html" }
   ];
 
   var form = document.getElementById("scorecard");
@@ -503,7 +501,7 @@ Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a hr
     if (pct >= 85) { return { label: "AI-Ready", desc: "Exceptional foundation. Your system is compounding. Hold the rhythm: weekly notes, monthly measurement, quarterly re-score." }; }
     if (pct >= 65) { return { label: "Nearly There", desc: "Strong foundation with specific gaps. The layer breakdown below names them. Close them with the guide, one layer at a time." }; }
     if (pct >= 40) { return { label: "Foundation Needed", desc: "Partial progress, but the gaps are costing you time and quality daily. Work the layers in order, starting with your weakest." }; }
-    return { label: "Not Ready", desc: "Your AI is flying blind. You are getting generic answers because you have not given it your context. Start Phase 1 today: Identity, then Knowledge, then Governance." };
+    return { label: "Not Ready", desc: "Your AI is flying blind. You are getting generic answers because you have not given it your context. Start today with the first three orders: Know me, then Know my information, then Know your limits." };
   }
 
   function layerStatus(pct) {
@@ -517,8 +515,8 @@ Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a hr
       return {
         intro: "Your foundation needs significant work. Recommended path:",
         steps: [
-          "Start Layer 1 today. Three identity documents, one honest afternoon.",
-          "Follow the layers in order. Do not try to do everything at once, and do not activate an agent yet.",
+          "Start Order 1 today. Three identity files, one honest afternoon.",
+          "Follow the orders in sequence. Do not try to do everything at once, and do not activate an agent yet.",
           "If you want a second set of eyes, book the free Audit: 60 to 90 minutes mapping your exact starting point."
         ]
       };
@@ -527,8 +525,8 @@ Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a hr
       return {
         intro: "You have a partial foundation. Recommended path:",
         steps: [
-          "Focus on your weakest layer first (see the breakdown above).",
-          "Complete one layer fully before moving to the next.",
+          "Focus on your weakest order first (see the breakdown above).",
+          "Complete one order fully before moving to the next.",
           "Re-run this scorecard when you finish. The trend is the measurement."
         ]
       };
@@ -537,8 +535,8 @@ Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a hr
       intro: "Strong foundation. Recommended path:",
       steps: [
         "Close the specific gaps identified above.",
-        "Make sure Phase 3 is real: continuity tested, measurement running, rhythm on the calendar.",
-        "Re-score quarterly and compare layer by layer against last quarter."
+        "Make sure the standing half is real: continuity tested, the loop running, reviews on the calendar.",
+        "Re-score quarterly and compare order by order against last quarter."
       ]
     };
   }
@@ -615,8 +613,8 @@ Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a hr
       tbody.appendChild(tr);
     });
     document.getElementById("r-weakest").textContent = pct === 100
-      ? "No weak layers. Every item is passing."
-      : "Weakest layer: " + weakest.name + ". Start there.";
+      ? "No weak orders. Every item is passing."
+      : "Weakest order: " + weakest.name + ". Start there.";
 
     var list = document.getElementById("r-priorities");
     list.innerHTML = "";

@@ -26,14 +26,15 @@ DOC_RE = re.compile(
 HEAD_RE = re.compile(r"<span class=\"kicker\">(.*?)</span>\s*<h1>(.*?)</h1>\s*<p class=\"lede\">(.*?)</p>", re.S)
 
 out, total = [], 0
-for n in range(1, 7):
-    page = read("guide/layer-%d.html" % n)
+PAGES = ["identity", "knowledge", "limits", "operator", "remember", "improve"]
+for name in PAGES:
+    page = read("guide/%s.html" % name)
     kicker, h1, lede = HEAD_RE.search(page).groups()
     out.append("<div class=\"layerhead\"><span class=\"kicker\">%s</span><h2>%s</h2><p class=\"lede\">%s</p></div>"
                % (kicker, h1, strip_links(lede)))
     docs = DOC_RE.findall(page)
     if not docs:
-        print("FAIL: no document sections found in guide/layer-%d.html" % n); sys.exit(1)
+        print("FAIL: no document sections found in guide/%s.html" % name); sys.exit(1)
     for num, title, path, desc, tpl, label, how in docs:
         total += 1
         descblock = "<p>%s</p>" % strip_links(desc) if desc else ""
@@ -47,19 +48,21 @@ if total != 15:
 
 op = read("guide/operator.html")
 pres = re.findall(r"<pre><code>(.*?)</code></pre>", op, re.S)
-if len(pres) != 2:
-    print("FAIL: expected 2 pre blocks in operator.html, found %d" % len(pres)); sys.exit(1)
+pkg = [p for p in pres if "01_Operator/" in p and "00_CONTEXT.md" in p]
+prm = [p for p in pres if "You are now the Operator" in p]
+if len(pkg) != 1 or len(prm) != 1:
+    print("FAIL: could not identify the package and prompt blocks in operator.html (found %d pre blocks)" % len(pres)); sys.exit(1)
 
 shell = read("print/field-guide.html")
 for marker, frag in (("<!-- INJECT:DOCUMENTS -->", "\n".join(out)),
-                     ("<!-- INJECT:PACKAGE -->", "<pre><code>%s</code></pre>" % pres[0]),
-                     ("<!-- INJECT:PROMPT -->", "<pre><code>%s</code></pre>" % pres[1])):
+                     ("<!-- INJECT:PACKAGE -->", "<pre><code>%s</code></pre>" % pkg[0]),
+                     ("<!-- INJECT:PROMPT -->", "<pre><code>%s</code></pre>" % prm[0])):
     if marker not in shell:
         print("FAIL: marker missing from print shell: %s" % marker); sys.exit(1)
     shell = shell.replace(marker, frag)
 
 io.open("print/field-guide.build.html", "w", encoding="utf-8").write(shell)
-print("assembled: 15 documents across 6 layers, package + prompt from operator.html")
+print("assembled: 15 documents across 6 orders, package + prompt from operator.html")
 '@
 if ($LASTEXITCODE -ne 0) { Write-Host $assemble; throw "Assembly failed." }
 Write-Host $assemble

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Groundwork | The AI Readiness System by Adam Abdalla</title>
-<meta name="description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later. Lafayette, Louisiana.">
+<meta name="description" content="Free, ungated AI readiness for owners and operators. Six standing orders, fifteen documents, one Operator, one loop. Foundation first. Agents later. Lafayette, Louisiana.">
 <meta name="theme-color" content="#F4EFE2">
 <script>(function(){var d=document.documentElement;try{if(localStorage.getItem('gw-theme')==='night')d.setAttribute('data-theme','night')}catch(e){}window.gwTheme=function(){var n=d.getAttribute('data-theme')==='night';if(n){d.removeAttribute('data-theme')}else{d.setAttribute('data-theme','night')}try{localStorage.setItem('gw-theme',n?'day':'night')}catch(e){}s()};function s(){var n=d.getAttribute('data-theme')==='night';document.querySelectorAll('.modeswitch').forEach(function(b){b.textContent=n?'DAY':'NIGHT';b.setAttribute('aria-pressed',n?'true':'false')});var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',n?'#1B1813':'#F4EFE2')}window.addEventListener('DOMContentLoaded',s)})()</script>
 <link rel="canonical" href="https://groundwork.adamabdalla.com/">
 <meta property="og:title" content="Groundwork | The AI Readiness System by Adam Abdalla">
-<meta property="og:description" content="Free, ungated AI readiness for owners and operators. Six layers, fifteen documents, one Operator. Foundation first. Agents later.">
+<meta property="og:description" content="Free, ungated AI readiness for owners and operators. Six standing orders, fifteen documents, one Operator, one loop. Foundation first. Agents later.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://groundwork.adamabdalla.com/">
 <meta property="og:image" content="https://groundwork.adamabdalla.com/assets/og-card.png">
@@ -44,10 +44,10 @@
     {"@type": "Question", "name": "Where does my data go?", "acceptedAnswer": {"@type": "Answer", "text": "Into folders on your machine. The vault is plain text files you own. Nothing is uploaded anywhere unless you choose it, and the governance layer writes that choice down."}},
     {"@type": "Question", "name": "I can't risk made-up answers.", "acceptedAnswer": {"@type": "Answer", "text": "Neither can we. The Authority Classification tags every document Level 0 through 4 so the AI knows what to obey, cite, and ignore. The Governance layer keeps a human sign-off on anything that matters. AI drafts. You decide."}},
     {"@type": "Question", "name": "I'm not technical.", "acceptedAnswer": {"@type": "Answer", "text": "You don't need to be. If you can name a folder and fill in a form, you can do this. The Field Guide was written for owners, not engineers."}},
-    {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Phase 1 (Identity, Knowledge, Governance) in a weekend if you focus. Phase 2 (one Operator) in a week. Phase 3 (Continuity, Measurement, Rhythm) is ongoing. That's the point."}},
+    {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "The foundation (orders 1 to 3: Identity, Knowledge, Limits) in a weekend if you focus. Order 4, one Operator, in a week. The standing half (Remember and Improve) is ongoing. That's the point."}},
     {"@type": "Question", "name": "What happens when the AI companies change everything again?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing happens to you. Your vault is plain text on your machine. If every AI company disappeared tomorrow, you would still own a perfectly organized set of readable files. Zero dependency."}},
     {"@type": "Question", "name": "Is this a course?", "acceptedAnswer": {"@type": "Answer", "text": "No. Courses end with notes. Groundwork ends with a working system: files organized, context written, vault classified, Operator running under rules you set. The Field Guide is the doctrine: what you build. The Curriculum is a separate five-level skill path: what you learn. Both are free."}},
-    {"@type": "Question", "name": "What is the difference between the Field Guide and the Curriculum?", "acceptedAnswer": {"@type": "Answer", "text": "Different jobs. The Field Guide is the doctrine in one printable PDF: six layers you build once for your business, generated from this site's guide so the two never disagree. The Curriculum is the skill path: five levels, two tracks, from novice to builder and beyond. Build the layers with the Field Guide. Climb the levels with the Curriculum."}}
+    {"@type": "Question", "name": "What is the difference between the Field Guide and the Curriculum?", "acceptedAnswer": {"@type": "Answer", "text": "Different jobs. The Field Guide is the doctrine in one printable PDF: six standing orders you build once for your business, generated from this site's guide so the two never disagree. The Curriculum is the skill path: five levels, two tracks, from novice to builder and beyond. Build the orders with the Field Guide. Climb the levels with the Curriculum."}}
   ]
 }
 </script>
@@ -221,7 +221,7 @@ section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
 .holdbtn{margin-top:1.2rem;position:relative;overflow:hidden}
 .holdbtn .fill{position:absolute;inset:0;background:var(--terra-deep);transform-origin:left;transform:scaleX(var(--p,0))}
 .holdbtn span{position:relative}
-/* ============ method: the six layers as a ruled schedule ============ */
+/* ============ method: the six standing orders as a ruled schedule ============ */
 .layer{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.2rem,3vw,2.2rem);padding:1.8rem 0;border-bottom:1px solid var(--rule);align-items:start}
 .layer:last-child{border-bottom:0}
 .layer .lnum{font-family:var(--slab);font-weight:900;font-size:2.6rem;line-height:1;color:var(--paper);background:var(--terra-deep);min-width:4.6rem;text-align:center;padding:.55rem 0 .4rem}
@@ -230,6 +230,8 @@ section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
 .layer h3{font-size:1.5rem;letter-spacing:-.01em}
 .layer .promise{font-family:var(--slab);font-style:italic;color:var(--terra-deep);font-size:1.05rem;margin-top:.25rem}
 .layer.ph3 .promise{color:var(--olive-deep)}
+.layer.op .lnum{background:var(--mustard-deep)}
+.layer.op .promise{color:var(--mustard-deep)}
 .layer p{color:var(--ink-soft);font-size:.97rem;margin-top:.55rem;max-width:58ch}
 .layer .out{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.02em;color:var(--ink);margin-top:.8rem;display:inline-block;border:1px solid var(--ink);padding:.4em 1em}
 .layer .lmore{display:inline-block;margin-top:.8rem;margin-left:.8rem;font-size:.85rem;font-weight:600}
@@ -287,11 +289,13 @@ section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
 .schedule td{padding:1.05rem .9rem 1.05rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 .schedule .sq{width:.85rem;height:.85rem;display:inline-block;background:var(--terra);vertical-align:baseline}
 .schedule tr.ph3 .sq{background:var(--olive)}
+.schedule tr.op .sq{background:var(--mustard)}
 .schedule .ln{font-family:var(--display);font-weight:700;font-size:1.02rem;white-space:nowrap}
 .schedule .ph{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.06em;color:var(--ink-soft);white-space:nowrap;text-transform:uppercase}
 .schedule .files{font-family:var(--mono);font-size:.86rem;line-height:1.9;color:var(--ink)}
 .schedule .files b{color:var(--terra-deep);font-weight:700}
 .schedule tr.ph3 .files b{color:var(--olive-deep)}
+.schedule tr.op .files b{color:var(--mustard-deep)}
 @media (max-width:680px){
   .schedule{min-width:0}
   .schedule thead{display:none}
@@ -417,10 +421,10 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
         <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
       </div>
-      <svg class="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark: three terracotta layer bars stacked on an ink ground line, one mustard Operator disc above them, and an olive durability frame around the whole.">
+      <svg class="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark: three terracotta bars for the first three orders stacked on an ink ground line, one mustard Operator disc above them, and an olive frame for the standing half around the whole.">
         <line class="plate pg" x1="24" y1="392" x2="376" y2="392" stroke="#1E1B16" stroke-width="4" stroke-linecap="round"/>
         <rect class="plate pf" x="64" y="130" width="272" height="238" fill="none" stroke="#5A6B4A" stroke-width="2.5"/>
-        <text class="plate pf" x="200" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5A6B4A">CONTINUITY &middot; MEASUREMENT &middot; RHYTHM</text>
+        <text class="plate pf" x="200" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5A6B4A">REMEMBER &middot; IMPROVE</text>
         <rect class="plate p1" x="100" y="322" width="200" height="38" fill="#A44E12"/>
         <rect class="plate p2" x="100" y="276" width="200" height="38" fill="#A44E12"/>
         <rect class="plate p3" x="100" y="230" width="200" height="38" fill="#A44E12"/>
@@ -450,7 +454,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <div class="argrow part"><span class="n">02</span><p>So we go deeper.</p></div>
       <div class="argrow part"><span class="n">03</span><p>Everything your business knows is in here.<small>Scattered across drives, inboxes, and your head.</small></p></div>
       <div class="argrow part"><span class="n">04</span><p>The fix isn't a better prompt. It's a better foundation.</p></div>
-      <div class="argrow part"><span class="n">05</span><p>Six layers. Built in order. Owned by you.</p></div>
+      <div class="argrow part"><span class="n">05</span><p>Six standing orders. Built in sequence. Owned by you.</p></div>
       <div class="argrow part"><span class="n">06</span><p>The result: an AI that finally knows your business.</p></div>
     </div>
   </section>
@@ -460,7 +464,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <div class="runhead part"><span>The whole thing, in one picture</span></div>
       <h2 class="part" id="h-nutshell">Here is the whole system.</h2>
       <div class="vw wide part" style="margin-top:1.6rem">
-        <svg viewBox="0 0 1000 400" role="img" aria-label="Build sequence: scattered knowledge today, then Phase 1 stacks Identity, Knowledge, and Governance into a foundation, Phase 2 places one Operator on top, Phase 3 wraps the whole in a durable shell.">
+        <svg viewBox="0 0 1000 400" role="img" aria-label="Build sequence: scattered knowledge today, then orders one to three stack Identity, Knowledge, and Limits into a foundation, order four places one Operator on top, orders five and six wrap the whole in a standing shell.">
           <defs>
             <marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
               <path d="M0,0 L10,5 L0,10 z" class="mk"/>
@@ -484,7 +488,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
             <text class="sub" x="112" y="374" text-anchor="middle" font-size="10.5">scattered &middot; undocumented</text>
           </a>
           <line class="arrowline" x1="196" y1="252" x2="238" y2="252" marker-end="url(#mA)"/>
-          <a href="#method" aria-label="Phase 1, the foundation: Identity, Knowledge, Governance. Read the method.">
+          <a href="#method" aria-label="Orders one to three, the foundation: Identity, Knowledge, Limits. Read the method.">
             <g>
               <rect class="slab" x="266" y="294" width="170" height="30"/>
               <rect class="slab" x="266" y="258" width="170" height="30"/>
@@ -493,11 +497,11 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <text x="351" y="277" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">02</tspan><tspan dx="7">Knowledge</tspan></text>
               <text x="351" y="241" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">03</tspan><tspan dx="7">Governance</tspan></text>
             </g>
-            <text class="mono acc" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 1 &middot; THE FOUNDATION</text>
-            <text class="sub" x="351" y="374" text-anchor="middle" font-size="10.5">eleven documents &middot; a focused weekend</text>
+            <text class="mono acc" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDERS 01-03 &middot; THE FOUNDATION</text>
+            <text class="sub" x="351" y="374" text-anchor="middle" font-size="10.5">ten files &middot; a focused weekend</text>
           </a>
           <line class="arrowline" x1="452" y1="252" x2="494" y2="252" marker-end="url(#mA)"/>
-          <a href="#operator" aria-label="Phase 2, activation: one scoped Operator. Read about the Operator.">
+          <a href="#operator" aria-label="Order four, activation: one scoped Operator. Read about the Operator.">
             <g>
               <rect class="slab-dim" x="522" y="294" width="170" height="30"/>
               <rect class="slab-dim" x="522" y="258" width="170" height="30"/>
@@ -509,11 +513,11 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <line class="ln-acc" x1="587" y1="196" x2="579" y2="196"/>
               <text class="acc" x="651" y="200" font-size="11" font-weight="600">Operator</text>
             </g>
-            <text class="mono acc" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 2 &middot; ACTIVATION</text>
+            <text class="mono acc" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDER 04 &middot; ACTIVATION</text>
             <text class="sub" x="607" y="374" text-anchor="middle" font-size="10.5">one scoped agent &middot; about a week</text>
           </a>
           <line class="arrowline" x1="708" y1="252" x2="750" y2="252" marker-end="url(#mA)"/>
-          <a href="#docs" aria-label="Phase 3, durability: continuity, measurement, rhythm. See the fifteen documents.">
+          <a href="#docs" aria-label="Orders five and six, the standing half: remember and improve. See the fifteen documents.">
             <g>
               <rect class="ln-acc" x="770" y="164" width="206" height="166" fill="none" stroke-width="1.4"/>
               <rect class="slab-dim" x="788" y="294" width="170" height="30"/>
@@ -521,12 +525,12 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <rect class="slab-dim" x="788" y="222" width="170" height="30"/>
               <circle class="star-halo" cx="873" cy="196" r="13"/>
               <circle class="star" cx="873" cy="196" r="6"/>
-              <text class="sub mono" x="856" y="152" text-anchor="middle" font-size="9.5" letter-spacing="0.4">CONTINUITY &middot; MEASUREMENT &middot; RHYTHM</text>
+              <text class="sub mono" x="856" y="152" text-anchor="middle" font-size="9.5" letter-spacing="0.4">REMEMBER &middot; IMPROVE</text>
             </g>
-            <text class="mono acc" x="873" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">PHASE 3 &middot; DURABILITY</text>
-            <text class="sub" x="873" y="374" text-anchor="middle" font-size="10.5">four documents &middot; survives you gone 90 days</text>
+            <text class="mono acc" x="873" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDERS 05-06 &middot; THE STANDING HALF</text>
+            <text class="sub" x="873" y="374" text-anchor="middle" font-size="10.5">four files &middot; survives you gone 90 days</text>
           </a>
-          <text class="sub" x="500" y="80" text-anchor="middle" font-size="12.5">Fifteen plain-text documents you own, built in strict order, then one Operator standing on them.</text>
+          <text class="sub" x="500" y="80" text-anchor="middle" font-size="12.5">Fifteen plain-text documents you own, built in sequence, with one Operator standing on them from order four on.</text>
         </svg>
       </div>
     </div>
@@ -536,18 +540,18 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <div class="narrow">
       <div class="runhead part"><span>Where do you start</span></div>
       <h2 class="part" id="h-start">Three minutes tells you.</h2>
-      <p class="body part" style="margin-top:1.1rem">Six layers and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest layer, and that is where you start reading.</p>
+      <p class="body part" style="margin-top:1.1rem">Six standing orders and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest order, and that is where you start reading.</p>
       <p class="part btnrow" style="margin-top:1.4rem"><a class="btn" href="guide/scorecard.html">Take the 5-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
       <div class="vw wide part" style="margin-top:2.4rem">
-        <svg viewBox="0 0 1000 260" role="img" aria-label="Journey with five stops: the three-minute scorecard names your weakest layer, Day One puts the first files on disk, a weekend builds Phase 1's eleven documents, a week activates one governed Operator, and the rhythm keeps it standing.">
+        <svg viewBox="0 0 1000 260" role="img" aria-label="Journey with five stops: the three-minute scorecard names your weakest order, Day One puts the first files on disk, a weekend builds the foundation's ten files, a week activates one governed Operator, and the standing half keeps it true.">
           <polyline class="ln-acc" points="80,150 280,110 490,145 700,105 910,138" stroke-width="1.3" opacity="0.85"/>
-          <a href="guide/scorecard.html" aria-label="Score yourself: three minutes, leave with your weakest layer named.">
+          <a href="guide/scorecard.html" aria-label="Score yourself: three minutes, leave with your weakest order named.">
             <circle class="star-halo" cx="80" cy="150" r="11"/>
             <circle class="star" cx="80" cy="150" r="5"/>
             <text class="mono acc" x="80" y="182" text-anchor="middle" font-size="10">3 MIN</text>
             <text x="80" y="200" text-anchor="middle" font-size="12" font-weight="600">Score yourself</text>
             <text class="sub" x="102" y="217" text-anchor="middle" font-size="10.5">leave with: your weakest</text>
-            <text class="sub" x="102" y="231" text-anchor="middle" font-size="10.5">layer, named</text>
+            <text class="sub" x="102" y="231" text-anchor="middle" font-size="10.5">order, named</text>
           </a>
           <a href="guide/day-one.html" aria-label="Day One: thirty minutes, leave with the first files on your disk.">
             <circle class="star-halo" cx="280" cy="110" r="11"/>
@@ -557,12 +561,12 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
             <text class="sub" x="280" y="140" text-anchor="middle" font-size="10.5">leave with: the first</text>
             <text class="sub" x="280" y="154" text-anchor="middle" font-size="10.5">files on your disk</text>
           </a>
-          <a href="guide/foundations.html" aria-label="Build Phase 1: a weekend, leave with eleven documents, the foundation installed.">
+          <a href="guide/foundations.html" aria-label="Build orders one to three: a weekend, leave with ten files, the foundation installed.">
             <circle class="star-halo" cx="490" cy="145" r="11"/>
             <circle class="star" cx="490" cy="145" r="5"/>
             <text class="mono acc" x="490" y="177" text-anchor="middle" font-size="10">A WEEKEND</text>
-            <text x="490" y="195" text-anchor="middle" font-size="12" font-weight="600">Build Phase 1</text>
-            <text class="sub" x="490" y="212" text-anchor="middle" font-size="10.5">leave with: eleven documents,</text>
+            <text x="490" y="195" text-anchor="middle" font-size="12" font-weight="600">Build 01-03</text>
+            <text class="sub" x="490" y="212" text-anchor="middle" font-size="10.5">leave with: ten files,</text>
             <text class="sub" x="490" y="226" text-anchor="middle" font-size="10.5">the foundation installed</text>
           </a>
           <a href="guide/operator.html" aria-label="Activate the Operator: a week, leave with one governed agent live on real work.">
@@ -573,7 +577,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
             <text class="sub" x="700" y="135" text-anchor="middle" font-size="10.5">leave with: one governed</text>
             <text class="sub" x="700" y="149" text-anchor="middle" font-size="10.5">agent, live on real work</text>
           </a>
-          <a href="guide/layer-6.html" aria-label="Keep it standing: ongoing, leave with a rhythm, not a one-time build.">
+          <a href="guide/improve.html" aria-label="Keep it standing: ongoing, leave with a rhythm, not a one-time build.">
             <circle class="star-halo" cx="910" cy="138" r="11"/>
             <circle class="star" cx="910" cy="138" r="5"/>
             <text class="mono acc" x="910" y="170" text-anchor="middle" font-size="10">ONGOING</text>
@@ -625,37 +629,37 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <div class="act a2 part">
         <div><span class="numeral" aria-hidden="true">02</span><span class="numcap">The method</span></div>
         <div>
-          <h2 id="h-method">Six layers, built in order. Three phases.</h2>
-          <p class="promise"><b>What you get here:</b> the build order, what each layer produces, and why skipping one means automating chaos.</p>
+          <h2 id="h-method">Six standing orders, built in sequence.</h2>
+          <p class="promise"><b>What you get here:</b> the build sequence, what each order produces, and why skipping one means automating chaos.</p>
           <a class="xref" href="#atlas">NEXT ACT: THE PROOF &#8594;</a>
         </div>
       </div>
-      <p class="lede part">Phase 1 is required first: Identity, Knowledge, Governance. Phase 2 activates one Operator, not a swarm. Phase 3 makes it durable. Skip a layer and you are automating chaos.</p>
+      <p class="lede part">The first three orders come first: Identity, Knowledge, Limits. Order 4 activates one Operator, not a swarm. Orders 5 and 6 keep it standing. Skip an order and you are automating chaos.</p>
       <p class="part btnrow" style="margin-top:1.3rem"><a class="btn btn-ghost" href="guide/index.html">Open the full Field Guide</a> <a class="lmore" href="assets/Groundwork-Program-Guide.pdf" download style="font-size:.9rem;white-space:nowrap">or download it as a PDF</a></p>
       <div style="margin-top:1.8rem;border-top:2px solid var(--ink)">
         <div class="layer part" id="layer1">
-          <div class="lnum"><span class="phase">Phase 1</span>01</div>
-          <div><h3>Identity</h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/layer-1.html">Read the full layer</a></div>
+          <div class="lnum"><span class="phase">Order 1</span>01</div>
+          <div><h3>Know me</h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/identity.html">Read the full order</a></div>
         </div>
         <div class="layer part" id="layer2">
-          <div class="lnum"><span class="phase">Phase 1</span>02</div>
-          <div><h3>Knowledge</h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0&ndash;4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/layer-2.html">Read the full layer</a></div>
+          <div class="lnum"><span class="phase">Order 2</span>02</div>
+          <div><h3>Know my information</h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0&ndash;4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/knowledge.html">Read the full order</a></div>
         </div>
         <div class="layer part" id="layer3">
-          <div class="lnum"><span class="phase">Phase 1</span>03</div>
-          <div><h3>Governance</h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules, allowed tools, and Agent Scope. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/layer-3.html">Read the full layer</a></div>
+          <div class="lnum"><span class="phase">Order 3</span>03</div>
+          <div><h3>Know your limits</h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules and allowed tools. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/limits.html">Read the full order</a></div>
         </div>
-        <div class="layer ph3 part" id="layer4">
-          <div class="lnum"><span class="phase">Phase 3</span>04</div>
-          <div><h3>Continuity</h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/layer-4.html">Read the full layer</a></div>
+        <div class="layer op part" id="layer4">
+          <div class="lnum"><span class="phase">Order 4</span>04</div>
+          <div><h3>Help me operate</h3><p class="promise">One scoped agent, activated on the foundation.</p><p>The Agent Scope written first, the context package loaded in order, one Operator drafting inside the zones. Not autonomous, not a swarm: one agent, one human in the loop.</p><span class="out">One governed Operator, live on real work.</span><a class="lmore" href="guide/operator.html">Read the full order</a></div>
         </div>
         <div class="layer ph3 part" id="layer5">
-          <div class="lnum"><span class="phase">Phase 3</span>05</div>
-          <div><h3>Measurement</h3><p class="promise">Whether the foundation is actually working.</p><p>Signals of a working foundation: output stays on-voice without prompting, escalations are appropriate not constant, humans trust the drafts enough to use them.</p><span class="out">You know when it is working, and when it is drifting.</span><a class="lmore" href="guide/layer-5.html">Read the full layer</a></div>
+          <div class="lnum"><span class="phase">Order 5</span>05</div>
+          <div><h3>Remember</h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/remember.html">Read the full order</a></div>
         </div>
         <div class="layer ph3 part" id="layer6">
-          <div class="lnum"><span class="phase">Phase 3</span>06</div>
-          <div><h3>Operating Rhythm</h3><p class="promise">How the foundation is maintained so it does not decay.</p><p>Weekly, monthly, and quarterly reviews. Who owns each layer. How changes get proposed, approved, and versioned. Order is made, not bought, and it stays that way with rhythm.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/layer-6.html">Read the full layer</a></div>
+          <div class="lnum"><span class="phase">Order 6</span>06</div>
+          <div><h3>Improve</h3><p class="promise">Whether it works, and how it stays true.</p><p>The signals of a working foundation, the monthly review, the correction loop, and the weekly-monthly-quarterly rhythm: who owns each order, and how changes get proposed, approved, and versioned.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/improve.html">Read the full order</a></div>
         </div>
       </div>
     </div>
@@ -769,36 +773,41 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <p class="lede part">Not a course. Not a subscription. Fifteen plain-text files you write once and own forever: the working system Adam runs his own businesses on.</p>
       <div class="tablewrap part">
         <table class="schedule">
-          <caption class="skip">Schedule of the fifteen documents by layer and phase</caption>
+          <caption class="skip">Schedule of the fifteen documents by standing order</caption>
           <thead>
-            <tr><th scope="col">Layer</th><th scope="col">Phase</th><th scope="col">Documents</th></tr>
+            <tr><th scope="col">Order</th><th scope="col">Name</th><th scope="col">Documents</th></tr>
           </thead>
           <tbody>
             <tr>
-              <td class="ln"><span class="sq" aria-hidden="true"></span> Layer 01</td>
-              <td class="ph">Phase 1 &middot; Identity</td>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Order 01</td>
+              <td class="ph">Know me &middot; Identity</td>
               <td class="files"><b>01.</b> Identity Charter &nbsp;&middot;&nbsp; <b>02.</b> Brand Voice &nbsp;&middot;&nbsp; <b>03.</b> Decision Principles</td>
             </tr>
             <tr>
-              <td class="ln"><span class="sq" aria-hidden="true"></span> Layer 02</td>
-              <td class="ph">Phase 1 &middot; Knowledge</td>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Order 02</td>
+              <td class="ph">Know my information &middot; Knowledge</td>
               <td class="files"><b>04.</b> Authority Classification &nbsp;&middot;&nbsp; <b>05.</b> Context Vault &nbsp;&middot;&nbsp; <b>06.</b> Strategic Priorities &nbsp;&middot;&nbsp; <b>07.</b> Active Constraints</td>
             </tr>
             <tr>
-              <td class="ln"><span class="sq" aria-hidden="true"></span> Layer 03</td>
-              <td class="ph">Phase 1 &middot; Governance</td>
-              <td class="files"><b>08.</b> Automation Decision Framework &nbsp;&middot;&nbsp; <b>09.</b> Escalation Rules &nbsp;&middot;&nbsp; <b>10.</b> Allowed Tools &amp; Access &nbsp;&middot;&nbsp; <b>11.</b> Agent Scope</td>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Order 03</td>
+              <td class="ph">Know your limits &middot; Governance</td>
+              <td class="files"><b>08.</b> Automation Decision Framework &nbsp;&middot;&nbsp; <b>09.</b> Escalation Rules &nbsp;&middot;&nbsp; <b>10.</b> Allowed Tools &amp; Access</td>
+            </tr>
+            <tr class="op">
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Order 04</td>
+              <td class="ph">Help me operate &middot; the Operator</td>
+              <td class="files"><b>11.</b> Agent Scope, then the activation</td>
             </tr>
             <tr class="ph3">
-              <td class="ln"><span class="sq" aria-hidden="true"></span> Layers 04&ndash;06</td>
-              <td class="ph">Phase 3 &middot; Durability</td>
+              <td class="ln"><span class="sq" aria-hidden="true"></span> Orders 05&ndash;06</td>
+              <td class="ph">Remember &middot; Improve</td>
               <td class="files"><b>12.</b> Continuity &amp; Succession &nbsp;&middot;&nbsp; <b>13.</b> Session Notes &nbsp;&middot;&nbsp; <b>14.</b> Measurement Notes &nbsp;&middot;&nbsp; <b>15.</b> Operating Rhythm</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="part" style="margin-top:1.8rem"><a class="btn" href="assets/Groundwork-Program-Guide.pdf" download>Download the Field Guide PDF</a></p>
-      <p class="part" style="margin-top:.9rem;font-size:.9rem;color:var(--ink-soft)">Eleven documents in Phase 1, four in Phase 3. The Field Guide carries the doctrine and the core templates on paper; every one of the fifteen is taught in full, with its template, in <a href="guide/index.html">the guide</a>.</p>
+      <p class="part" style="margin-top:.9rem;font-size:.9rem;color:var(--ink-soft)">Ten files in the first three orders, the scope at order four, four more in the standing half. The Field Guide carries the doctrine and the core templates on paper; every one of the fifteen is taught in full, with its template, in <a href="guide/index.html">the guide</a>.</p>
     </div>
   </section>
 
@@ -806,7 +815,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <div class="narrow">
       <div class="runhead part"><span>The Operator</span></div>
       <h2 class="part" id="h-operator">One assistant. Scoped. Yours.</h2>
-      <p class="lede part" style="max-width:58ch;margin-top:1.1rem">Phase 2 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and governance you wrote in Phase 1. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p>
+      <p class="lede part" style="max-width:58ch;margin-top:1.1rem">Order 4 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and limits you wrote in the first three orders. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p>
       <pre class="prompt part" style="margin-top:1.4rem">You are now the Operator for this organization.
 
 Load the files in this package in order. Do not
@@ -831,7 +840,7 @@ Rules
     <div class="wrap">
       <div class="runhead part"><span>The Curriculum</span></div>
       <h2 class="part" id="h-curriculum" style="font-size:clamp(1.3rem,2.3vw,1.75rem);color:var(--ink-soft)">The guide builds your business. The Curriculum builds you.</h2>
-      <p class="lede part" style="max-width:64ch;margin-top:1rem">The Groundwork Curriculum is the skill path that runs beside the doctrine: five levels, from your first serious prompt to work at the edge of the field, with an Individual track and a Company track at every step. The guide's six layers you build once; the Curriculum's five levels you climb. MIT licensed. Free forever.</p>
+      <p class="lede part" style="max-width:64ch;margin-top:1rem">The Groundwork Curriculum is the skill path that runs beside the doctrine: five levels, from your first serious prompt to work at the edge of the field, with an Individual track and a Company track at every step. The guide's six standing orders you build once; the Curriculum's five levels you climb. MIT licensed. Free forever.</p>
       <p class="part btnrow" style="margin-top:1.3rem">
         <a class="btn" href="curriculum/index.html">Open the Curriculum</a>
         <a href="assets/Groundwork-Program-Guide.pdf" download style="font-size:.9rem;white-space:nowrap">or read the Field Guide first</a>
@@ -870,10 +879,10 @@ Rules
         <details><summary>Where does my data go?</summary><p>Into folders on your machine. The vault is plain text files you own. Nothing is uploaded anywhere unless you choose it, and the governance layer writes that choice down.</p></details>
         <details><summary>I can't risk made-up answers.</summary><p>Neither can we. The Authority Classification tags every document Level 0 through 4 so the AI knows what to obey, cite, and ignore. The Governance layer keeps a human sign-off on anything that matters. AI drafts. You decide.</p></details>
         <details><summary>I'm not technical.</summary><p>You don't need to be. If you can name a folder and fill in a form, you can do this. The Field Guide was written for owners, not engineers.</p></details>
-        <details><summary>How long does it take?</summary><p>Phase 1 (Identity, Knowledge, Governance) in a weekend if you focus. Phase 2 (one Operator) in a week. Phase 3 (Continuity, Measurement, Rhythm) is ongoing. That's the point.</p></details>
+        <details><summary>How long does it take?</summary><p>The foundation (orders 1 to 3: Identity, Knowledge, Limits) in a weekend if you focus. Order 4, one Operator, in a week. The standing half (Remember and Improve) is ongoing. That's the point.</p></details>
         <details><summary>What happens when the AI companies change everything again?</summary><p>Nothing happens to you. Your vault is plain text on your machine. If every AI company disappeared tomorrow, you would still own a perfectly organized set of readable files. Zero dependency.</p></details>
         <details><summary>Is this a course?</summary><p>No. Courses end with notes. Groundwork ends with a working system: files organized, context written, vault classified, Operator running under rules you set. The Field Guide is the doctrine: what you build. The Curriculum is a separate five-level skill path: what you learn. Both are free.</p></details>
-        <details><summary>What is the difference between the Field Guide and the Curriculum?</summary><p>Different jobs. The Field Guide is the doctrine in one printable PDF: six layers you build once for your business, generated from this site's guide so the two never disagree. The Curriculum is the skill path: five levels, two tracks, from novice to builder and beyond. Build the layers with the Field Guide. Climb the levels with the Curriculum.</p></details>
+        <details><summary>What is the difference between the Field Guide and the Curriculum?</summary><p>Different jobs. The Field Guide is the doctrine in one printable PDF: six standing orders you build once for your business, generated from this site's guide so the two never disagree. The Curriculum is the skill path: five levels, two tracks, from novice to builder and beyond. Build the orders with the Field Guide. Climb the levels with the Curriculum.</p></details>
       </div>
     </div>
   </section>
