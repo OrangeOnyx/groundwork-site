@@ -148,15 +148,28 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 .cover .sub{font-family:var(--slab);font-style:italic;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink-soft);margin-top:1.3rem;max-width:38ch}
 .cover .ctarow{margin-top:2rem}
 .ctarow,.btnrow{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
-.covermark{width:100%;max-width:460px;margin-left:auto;display:block}
-.covermark .plate{animation:register .9s var(--ease-out) both}
-.covermark .p1{--rx:-16px;--ry:8px;animation-delay:.1s}
-.covermark .p2{--rx:12px;--ry:-6px;animation-delay:.22s}
-.covermark .p3{--rx:-9px;--ry:-9px;animation-delay:.34s}
-.covermark .pd{--rx:0px;--ry:-18px;animation-delay:.48s}
-.covermark .pf{--rx:6px;--ry:6px;animation-delay:.62s}
-.covermark .pg{--rx:0px;--ry:0px;animation-delay:0s}
-@keyframes register{from{transform:translate(var(--rx),var(--ry));opacity:.55}to{transform:translate(0,0);opacity:1}}
+.markwrap{margin-left:auto;max-width:460px;width:100%}
+.covermark{width:100%;display:block;cursor:pointer}
+.markcap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:.7rem;font-family:var(--display);font-weight:700;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.markcap .rebuild{background:transparent;border:0;border-bottom:1px solid var(--terra);color:var(--terra-deep);font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;padding:0 0 .1em}
+.markcap .rebuild:hover{color:var(--ink);border-bottom-color:var(--ink)}
+/* the mark builds itself: ground, then the three orders in sequence, then the Operator, then the standing frame */
+.covermark .cm{--d:0s}
+.covermark.run .scatter{animation:cm-scatter .7s var(--ease-out) .55s both}
+.covermark .scatter{opacity:0}
+.covermark.run .ground{animation:cm-draw .6s var(--ease-inout) both}
+.covermark.run .bar{animation:cm-land .55s var(--ease-out) var(--d) both}
+.covermark .b1{--d:.55s}.covermark .b2{--d:.85s}.covermark .b3{--d:1.15s}
+.covermark .op{transform-box:fill-box;transform-origin:center}
+.covermark.run .op{animation:cm-settle .6s var(--ease-out) 1.55s both}
+.covermark.run .oplabel{animation:cm-fade .5s var(--ease-out) 1.85s both}
+.covermark.run .frame{animation:cm-draw .9s var(--ease-inout) 2.05s both}
+.covermark.run .cap{animation:cm-fade .5s var(--ease-out) 2.75s both}
+@keyframes cm-draw{from{stroke-dasharray:1;stroke-dashoffset:1}to{stroke-dasharray:1;stroke-dashoffset:0}}
+@keyframes cm-land{from{transform:translateY(-46px);opacity:0}to{transform:none;opacity:1}}
+@keyframes cm-settle{from{transform:translateY(-30px) scale(.92);opacity:0}to{transform:none;opacity:1}}
+@keyframes cm-fade{from{opacity:0}to{opacity:1}}
+@keyframes cm-scatter{from{opacity:.85}to{opacity:0}}
 .contents{border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:.85rem 0;display:flex;flex-wrap:wrap;gap:.4rem 2.2rem}
 .contents a{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
 .contents a b{color:var(--terra-deep);margin-right:.5em;font-family:var(--slab);font-weight:900}
@@ -164,7 +177,7 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 @media (max-width:860px){
   .cover{padding-top:7rem}
   .cover .grid{grid-template-columns:1fr;align-items:start}
-  .covermark{margin-left:0;max-width:320px}
+  .markwrap{margin-left:0;max-width:320px}
 }
 /* ============ sections ============ */
 main{position:relative;background:var(--paper)}
@@ -235,7 +248,83 @@ section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
 .layer p{color:var(--ink-soft);font-size:.97rem;margin-top:.55rem;max-width:58ch}
 .layer .out{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.02em;color:var(--ink);margin-top:.8rem;display:inline-block;border:1px solid var(--ink);padding:.4em 1em}
 .layer .lmore{display:inline-block;margin-top:.8rem;margin-left:.8rem;font-size:.85rem;font-weight:600}
-@media (max-width:560px){.layer{grid-template-columns:1fr}.layer .lnum{min-width:3.8rem;display:inline-block;padding:.45rem .9rem .35rem;font-size:2rem}}
+/* ============ order plates: exhibit drawings that ink themselves in ============ */
+.layer{grid-template-columns:auto 1fr 168px}
+.layer .fig{width:168px;margin:0;color:var(--terra-deep)}
+.layer.op .fig{color:var(--mustard-deep)}
+.layer.ph3 .fig{color:var(--olive-deep)}
+.fig svg{display:block;width:100%;height:auto;overflow:visible}
+.fig .bg{fill:var(--paper-deep);stroke:var(--rule);stroke-width:1}
+.fig .pl{font-family:var(--display);font-weight:700;font-size:6.5px;letter-spacing:1.4px;text-transform:uppercase;fill:var(--ink-soft)}
+.fig .s{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .7s var(--ease-inout);transition-delay:calc(var(--i,0)*90ms)}
+.fig .s.lt{stroke:var(--ink-soft);stroke-width:1.2}
+.fig .s.acc{stroke:currentColor;stroke-width:2.4}
+.fig .f{opacity:0;transform:scale(.9);transform-box:fill-box;transform-origin:center;transition:opacity .45s var(--ease-out),transform .45s var(--ease-out);transition-delay:calc(var(--i,0)*90ms + .3s)}
+.fig .m{transform:translateX(-14px);transition:transform .7s var(--ease-inout);transition-delay:calc(var(--i,0)*90ms + .5s)}
+.fig .n{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;opacity:0;transform:rotate(-82deg);transform-origin:80px 96px;transition:transform .9s var(--ease-inout) .5s,opacity .3s var(--ease-out) .5s}
+.fig .t{font-family:var(--display);font-weight:700;font-size:7px;letter-spacing:1.1px;fill:var(--ink-soft);opacity:0;transition:opacity .4s var(--ease-out);transition-delay:calc(var(--i,0)*90ms + .35s)}
+.fig .t.onfill{fill:var(--paper)}
+.fig.ink .s{stroke-dashoffset:0}
+.fig.ink .f{opacity:1;transform:none}
+.fig.ink .m{transform:none}
+.fig.ink .n{opacity:1;transform:none}
+.fig.ink .t{opacity:1}
+@media (max-width:720px){.layer{grid-template-columns:auto 1fr 116px}.layer .fig{width:116px}}
+/* ============ illustration layer: figures beyond the order plates ============ */
+.inkzone .s{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset var(--dur,.8s) var(--ease-out);transition-delay:calc(var(--i,0)*90ms)}
+.inkzone.ink .s{stroke-dashoffset:0}
+.inkzone .d{opacity:0;transform:translateY(-8px);transition:opacity .45s var(--ease-out),transform .55s var(--ease-out);transition-delay:calc(var(--i,0)*90ms)}
+.inkzone.ink .d{opacity:1;transform:none}
+.fig4 .d{transition-delay:calc(var(--i,0)*60ms + .1s)}
+@media print{.fig .s,.inkzone .s{stroke-dashoffset:0}.fig .f,.fig .t,.fig .n,.fig .d,.inkzone .d{opacity:1;transform:none}.fig .m{transform:none}.prompt .ln{opacity:1}.schedule tbody tr{opacity:1}.covermark .cm{animation:none!important}.covermark .scatter{opacity:0}}
+.fig{margin:0;color:var(--terra-deep)}
+.fig.wide{width:100%}
+.fig .t.big{font-family:var(--slab);font-style:italic;font-weight:600;font-size:18px;letter-spacing:0;fill:var(--ink-soft)}
+.fig .t.acc{fill:currentColor}
+.fig .s.thick{stroke-width:3}
+.fig .d{opacity:0;transform:translateY(-12px);transition:opacity .4s var(--ease-out),transform .5s var(--ease-out);transition-delay:calc(var(--i,0)*90ms + .15s)}
+.fig.ink .d{opacity:1;transform:none}
+.fig.glyph{width:64px;color:var(--terra-deep)}
+.fig.glyph svg{overflow:visible}
+.fig.ico{display:block;width:34px;margin-bottom:.55rem}
+.gwrow{display:grid;grid-template-columns:34px 1fr;gap:1rem;align-items:start}
+.gwrow .fig.ico{margin:.15rem 0 0}
+.fig.onolive{color:var(--mustard)}
+.fig.onolive .s,.fig.onolive .s.lt{stroke:var(--paper)}
+.fig.onolive .s.lt{opacity:.75}
+.fig.onolive .t,.fig.onolive .pl{fill:var(--paper)}
+.fig.onolive .bg{fill:transparent;stroke:var(--paper);opacity:.55}
+.fig.onterra .s,.fig.onterra .s.lt{stroke:var(--paper)}
+.fig.onterra .t,.fig.onterra .pl{fill:var(--paper)}
+.fig.onterra .bg{fill:transparent;stroke:var(--paper);opacity:.55}
+.rowfig{display:grid;grid-template-columns:1fr auto;gap:clamp(1.4rem,3vw,2.6rem);align-items:start}
+.rowfig .fig{width:var(--w,168px)}
+.entry{grid-template-columns:64px 1fr 1.2fr}
+.letter{display:grid;grid-template-columns:1fr 300px;column-gap:clamp(1.6rem,3vw,2.8rem)}
+.letter .runhead{grid-column:1/-1}
+.letter .fig{grid-column:2;grid-row:2/6;align-self:end;width:100%}
+#audit .narrow{max-width:960px;display:grid;grid-template-columns:1fr 220px;column-gap:clamp(1.6rem,3vw,2.8rem)}
+#audit .runhead{grid-column:1/-1}
+#audit .fig{grid-column:2;grid-row:2/6;align-self:end;width:100%}
+#audit .btn.part{justify-self:start}
+.prompt .ln{opacity:0;transition:opacity .35s var(--ease-out);transition-delay:calc(var(--i,0)*70ms)}
+.prompt.ink .ln{opacity:1}
+.exhibit.strip{margin-top:1rem}
+.strip-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.strip-grid figure{margin:0;background:var(--paper-deep);border:1px solid var(--ink);padding:.5rem}
+.strip-grid img{width:100%;height:auto;border:1px solid var(--rule)}
+.strip-grid figcaption{font-family:var(--display);font-weight:600;font-size:.68rem;letter-spacing:.03em;color:var(--ink-soft);padding-top:.5rem;line-height:1.45}
+.strip-grid figcaption b{color:var(--ink);display:block;text-transform:uppercase;letter-spacing:.08em}
+@media (max-width:900px){.strip-grid{grid-template-columns:repeat(3,1fr)}.letter{grid-template-columns:1fr 240px}}
+@media (max-width:680px){
+  .entry{grid-template-columns:64px 1fr}.entry p{grid-column:2}
+  .rowfig{grid-template-columns:1fr}.rowfig .fig{width:min(var(--w,168px),100%)}
+  .letter{grid-template-columns:1fr}.letter .fig{grid-column:1;grid-row:auto;max-width:320px;margin-top:1.6rem}
+  #audit .narrow{grid-template-columns:1fr}#audit .fig{grid-column:1;grid-row:auto;max-width:200px;margin-top:2rem}
+}
+@media (max-width:560px){.fig4{display:none}.strip-grid{grid-template-columns:repeat(2,1fr)}.fig.glyph{width:48px}.entry{grid-template-columns:48px 1fr}}
+
+@media (max-width:560px){.layer{grid-template-columns:1fr auto;grid-template-areas:"num fig" "body body";row-gap:1rem}.layer .lnum{grid-area:num;justify-self:start;align-self:end;min-width:3.8rem;display:inline-block;padding:.45rem .9rem .35rem;font-size:2rem}.layer .fig{grid-area:fig;width:104px}.layer .lbody{grid-area:body}}
 /* ============ operator letter (who) ============ */
 .letter{background:var(--olive);color:var(--paper);padding:clamp(2.4rem,5vw,3.8rem)}
 .letter .runhead{border-top-color:var(--paper)}
@@ -286,6 +375,9 @@ section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
 .tablewrap{overflow-x:auto;margin-top:2rem}
 .schedule{width:100%;min-width:640px;border-collapse:collapse;border-top:2px solid var(--ink)}
 .schedule th{font-family:var(--display);font-weight:700;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;text-align:left;color:var(--ink-soft);padding:.7rem .9rem .7rem 0;border-bottom:1px solid var(--ink)}
+.schedule tbody tr{opacity:0;transition:opacity .5s var(--ease-out)}
+.reveal.in .schedule tbody tr{opacity:1}
+.reveal.in .schedule tbody tr:nth-child(2){transition-delay:.12s}.reveal.in .schedule tbody tr:nth-child(3){transition-delay:.24s}.reveal.in .schedule tbody tr:nth-child(4){transition-delay:.36s}.reveal.in .schedule tbody tr:nth-child(5){transition-delay:.48s}
 .schedule td{padding:1.05rem .9rem 1.05rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 .schedule .sq{width:.85rem;height:.85rem;display:inline-block;background:var(--terra);vertical-align:baseline}
 .schedule tr.ph3 .sq{background:var(--olive)}
@@ -349,7 +441,9 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
   .reveal .part{opacity:1;transform:none}
-  .covermark .plate{animation:none;transform:none;opacity:1}
+  .covermark .cm{animation:none!important}
+  .fig .s,.inkzone .s{stroke-dashoffset:0}.fig .f,.fig .t,.fig .n,.fig .d,.inkzone .d{opacity:1;transform:none}.fig .m{transform:none}.prompt .ln{opacity:1}.schedule tbody tr{opacity:1}
+  .covermark .scatter{opacity:0}
   .holdfield{--p:1}
   .holdfield i{background:var(--terra-deep)}
   .holdfield svg line{opacity:.9}
@@ -375,6 +469,7 @@ svg [stroke="#C9BFA8"]{stroke:var(--rule)}
 /* paper prints as paper: night never reaches the printed page */
 @media print{html[data-theme="night"]{--paper:#F4EFE2;--paper-deep:#EAE2CD;--ink:#1E1B16;--ink-soft:#5C554A;--rule:#C9BFA8;--terra:#C7681D;--terra-deep:#A44E12;--mustard:#D9A419;--mustard-deep:#8F6D0C;--olive:#5A6B4A;--olive-deep:#49573C;--oxblood:#8A2F1F}}
 </style>
+<noscript><style>.fig .s,.inkzone .s{stroke-dashoffset:0}.fig .f,.fig .t,.fig .n,.fig .d,.inkzone .d{opacity:1;transform:none}.fig .m{transform:none}.prompt .ln{opacity:1}.schedule tbody tr{opacity:1}</style></noscript>
 </head>
 <body>
 <!--
@@ -421,20 +516,22 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
         <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
       </div>
-      <svg class="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark: three terracotta bars for the first three orders stacked on an ink ground line, one mustard Operator disc above them, and an olive frame for the standing half around the whole.">
-        <line class="plate pg" x1="24" y1="392" x2="376" y2="392" stroke="#1E1B16" stroke-width="4" stroke-linecap="round"/>
-        <rect class="plate pf" x="64" y="130" width="272" height="238" fill="none" stroke="#5A6B4A" stroke-width="2.5"/>
-        <text class="plate pf" x="200" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5A6B4A">REMEMBER &middot; IMPROVE</text>
-        <rect class="plate p1" x="100" y="322" width="200" height="38" fill="#A44E12"/>
-        <rect class="plate p2" x="100" y="276" width="200" height="38" fill="#A44E12"/>
-        <rect class="plate p3" x="100" y="230" width="200" height="38" fill="#A44E12"/>
-        <text class="plate p1" x="200" y="346" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">01 IDENTITY</text>
-        <text class="plate p2" x="200" y="300" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">02 KNOWLEDGE</text>
-        <text class="plate p3" x="200" y="254" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">03 GOVERNANCE</text>
-        <circle class="plate pd" cx="200" cy="185" r="24" fill="#D9A419"/>
-        <circle class="plate pd" cx="200" cy="185" r="7" fill="#1E1B16"/>
-        <text class="plate pd" x="164" y="190" text-anchor="end" font-family="Besley,Georgia,serif" font-style="italic" font-weight="600" font-size="13.5" fill="#1E1B16">the Operator</text>
+      <div class="markwrap">
+      <svg class="covermark" id="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark, built in sequence: scattered points settle as three terracotta bars for the first three orders stack on an ink ground line, one mustard Operator disc lands above them, and an olive frame for the standing half draws itself around the whole.">
+        <g class="cm scatter" aria-hidden="true" fill="#5C554A">
+          <circle cx="92" cy="236" r="3"/><circle cx="141" cy="318" r="2.6"/><circle cx="176" cy="262" r="3.2"/><circle cx="214" cy="344" r="2.4"/><circle cx="238" cy="292" r="3"/><circle cx="286" cy="330" r="2.6"/><circle cx="118" cy="356" r="2.4"/><circle cx="196" cy="210" r="2.6"/><circle cx="262" cy="242" r="2.4"/><circle cx="310" cy="276" r="3"/><circle cx="160" cy="372" r="2.4"/><circle cx="330" cy="356" r="2.4"/><circle cx="76" cy="300" r="2.4"/><circle cx="228" cy="184" r="2.6"/>
+        </g>
+        <line class="cm ground" pathLength="1" x1="24" y1="392" x2="376" y2="392" stroke="#1E1B16" stroke-width="4" stroke-linecap="round"/>
+        <g class="cm bar b1"><rect x="100" y="322" width="200" height="38" fill="#A44E12"/><text x="200" y="346" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">01 IDENTITY</text></g>
+        <g class="cm bar b2"><rect x="100" y="276" width="200" height="38" fill="#A44E12"/><text x="200" y="300" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">02 KNOWLEDGE</text></g>
+        <g class="cm bar b3"><rect x="100" y="230" width="200" height="38" fill="#A44E12"/><text x="200" y="254" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="13" letter-spacing="2.5" fill="#F4EFE2">03 GOVERNANCE</text></g>
+        <g class="cm op"><circle cx="200" cy="185" r="24" fill="#D9A419"/><circle cx="200" cy="185" r="7" fill="#1E1B16"/></g>
+        <text class="cm oplabel" x="164" y="190" text-anchor="end" font-family="Besley,Georgia,serif" font-style="italic" font-weight="600" font-size="13.5" fill="#1E1B16">the Operator</text>
+        <rect class="cm frame" pathLength="1" x="64" y="130" width="272" height="238" fill="none" stroke="#5A6B4A" stroke-width="2.5"/>
+        <text class="cm cap" x="200" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5A6B4A">REMEMBER &middot; IMPROVE</text>
       </svg>
+      <p class="markcap"><span>Fig. 1 &middot; Built in sequence.</span><button type="button" class="rebuild" id="rebuild">Build it again</button></p>
+      </div>
     </div>
     <div class="contents" aria-label="In this report">
       <a href="#sound-familiar"><b>01</b>The problem</a>
@@ -463,16 +560,16 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <div class="wrap">
       <div class="runhead part"><span>The whole thing, in one picture</span></div>
       <h2 class="part" id="h-nutshell">Here is the whole system.</h2>
-      <div class="vw wide part" style="margin-top:1.6rem">
+      <div class="vw inkzone wide part" data-ink style="margin-top:1.6rem">
         <svg viewBox="0 0 1000 400" role="img" aria-label="Build sequence: scattered knowledge today, then orders one to three stack Identity, Knowledge, and Limits into a foundation, order four places one Operator on top, orders five and six wrap the whole in a standing shell.">
           <defs>
             <marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
               <path d="M0,0 L10,5 L0,10 z" class="mk"/>
             </marker>
           </defs>
-          <line class="ground" x1="24" y1="330" x2="976" y2="330"/>
+          <line class="ground s" pathLength="1" style="--i:0" x1="24" y1="330" x2="976" y2="330"/>
           <a href="#sound-familiar" aria-label="Today: scattered and undocumented. Read the problem.">
-            <g>
+            <g class="d" style="--i:1">
               <circle class="star" cx="66"  cy="212" r="3" opacity="0.85"/>
               <circle class="star" cx="118" cy="188" r="2.4" opacity="0.5"/>
               <circle class="star" cx="152" cy="238" r="3.4" opacity="0.9"/>
@@ -484,12 +581,12 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <circle class="star" cx="86"  cy="172" r="2.4" opacity="0.6"/>
               <circle class="star" cx="146" cy="264" r="2" opacity="0.5"/>
             </g>
-            <text class="mono acc" x="112" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">TODAY</text>
-            <text class="sub" x="112" y="374" text-anchor="middle" font-size="10.5">scattered &middot; undocumented</text>
+            <text class="mono acc d" style="--i:2" x="112" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">TODAY</text>
+            <text class="sub d" style="--i:2" x="112" y="374" text-anchor="middle" font-size="10.5">scattered &middot; undocumented</text>
           </a>
-          <line class="arrowline" x1="196" y1="252" x2="238" y2="252" marker-end="url(#mA)"/>
+          <line class="arrowline s" pathLength="1" style="--i:3" x1="196" y1="252" x2="238" y2="252" marker-end="url(#mA)"/>
           <a href="#method" aria-label="Orders one to three, the foundation: Identity, Knowledge, Limits. Read the method.">
-            <g>
+            <g class="d" style="--i:4">
               <rect class="slab" x="266" y="294" width="170" height="30"/>
               <rect class="slab" x="266" y="258" width="170" height="30"/>
               <rect class="slab" x="266" y="222" width="170" height="30"/>
@@ -497,12 +594,12 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <text x="351" y="277" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">02</tspan><tspan dx="7">Knowledge</tspan></text>
               <text x="351" y="241" text-anchor="middle" font-size="11.5"><tspan class="mono acc" font-size="10">03</tspan><tspan dx="7">Governance</tspan></text>
             </g>
-            <text class="mono acc" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDERS 01-03 &middot; THE FOUNDATION</text>
-            <text class="sub" x="351" y="374" text-anchor="middle" font-size="10.5">ten files &middot; a focused weekend</text>
+            <text class="mono acc d" style="--i:5" x="351" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDERS 01-03 &middot; THE FOUNDATION</text>
+            <text class="sub d" style="--i:5" x="351" y="374" text-anchor="middle" font-size="10.5">ten files &middot; a focused weekend</text>
           </a>
-          <line class="arrowline" x1="452" y1="252" x2="494" y2="252" marker-end="url(#mA)"/>
+          <line class="arrowline s" pathLength="1" style="--i:6" x1="452" y1="252" x2="494" y2="252" marker-end="url(#mA)"/>
           <a href="#operator" aria-label="Order four, activation: one scoped Operator. Read about the Operator.">
-            <g>
+            <g class="d" style="--i:7">
               <rect class="slab-dim" x="522" y="294" width="170" height="30"/>
               <rect class="slab-dim" x="522" y="258" width="170" height="30"/>
               <rect class="slab-dim" x="522" y="222" width="170" height="30"/>
@@ -513,12 +610,12 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <line class="ln-acc" x1="587" y1="196" x2="579" y2="196"/>
               <text class="acc" x="651" y="200" font-size="11" font-weight="600">Operator</text>
             </g>
-            <text class="mono acc" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDER 04 &middot; ACTIVATION</text>
-            <text class="sub" x="607" y="374" text-anchor="middle" font-size="10.5">one scoped agent &middot; about a week</text>
+            <text class="mono acc d" style="--i:8" x="607" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDER 04 &middot; ACTIVATION</text>
+            <text class="sub d" style="--i:8" x="607" y="374" text-anchor="middle" font-size="10.5">one scoped agent &middot; about a week</text>
           </a>
-          <line class="arrowline" x1="708" y1="252" x2="750" y2="252" marker-end="url(#mA)"/>
+          <line class="arrowline s" pathLength="1" style="--i:9" x1="708" y1="252" x2="750" y2="252" marker-end="url(#mA)"/>
           <a href="#docs" aria-label="Orders five and six, the standing half: remember and improve. See the fifteen documents.">
-            <g>
+            <g class="d" style="--i:10">
               <rect class="ln-acc" x="770" y="164" width="206" height="166" fill="none" stroke-width="1.4"/>
               <rect class="slab-dim" x="788" y="294" width="170" height="30"/>
               <rect class="slab-dim" x="788" y="258" width="170" height="30"/>
@@ -527,10 +624,10 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
               <circle class="star" cx="873" cy="196" r="6"/>
               <text class="sub mono" x="856" y="152" text-anchor="middle" font-size="9.5" letter-spacing="0.4">REMEMBER &middot; IMPROVE</text>
             </g>
-            <text class="mono acc" x="873" y="356" text-anchor="middle" font-size="10.5" letter-spacing="1.5">ORDERS 05-06 &middot; THE STANDING HALF</text>
-            <text class="sub" x="873" y="374" text-anchor="middle" font-size="10.5">four files &middot; survives you gone 90 days</text>
+            <text class="mono acc d" style="--i:11" x="994" y="356" text-anchor="end" font-size="10.5" letter-spacing="1.5">ORDERS 05-06 &middot; THE STANDING HALF</text>
+            <text class="sub d" style="--i:11" x="873" y="374" text-anchor="middle" font-size="10.5">four files &middot; survives you gone 90 days</text>
           </a>
-          <text class="sub" x="500" y="80" text-anchor="middle" font-size="12.5">Fifteen plain-text documents you own, built in sequence, with one Operator standing on them from order four on.</text>
+          <text class="sub d" style="--i:13" x="500" y="80" text-anchor="middle" font-size="12.5">Fifteen plain-text documents you own, built in sequence, with one Operator standing on them from order four on.</text>
         </svg>
       </div>
     </div>
@@ -602,10 +699,11 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         </div>
       </div>
       <p class="lede part" style="max-width:58ch">It didn't know your clients, your history, or how you talk. So it guessed. Every owner has the same story: the AI wasn't bad. It was uninformed.</p>
+      <div class="part" style="max-width:640px;margin-top:1.8rem"><figure class="fig wide" aria-hidden="true"><svg viewBox="0 0 480 180"><rect class="bg" x=".5" y=".5" width="479" height="179"/><path class="s lt" pathLength="1" style="--i:0" d="M30 40H76V134H30Z"/><text class="t" style="--i:1" x="53" y="92" text-anchor="middle">EMPTY</text><path class="s" pathLength="1" style="--i:2" d="M80 87H104M100 83L104 87L100 91"/><g class="f" style="--i:3"><circle cx="120" cy="87" r="14" fill="#5C554A"/><circle cx="120" cy="87" r="4" fill="#F4EFE2"/></g><path class="s" pathLength="1" style="--i:4" d="M138 87H160M156 83L160 87L156 91"/><path class="s" pathLength="1" style="--i:5" d="M166 44H222V130H166Z"/><path class="s lt" pathLength="1" style="--i:6" d="M176 62q6-5 12 0t12 0t12 0"/><path class="s lt" pathLength="1" style="--i:7" d="M176 76q6-5 12 0t12 0t12 0"/><path class="s lt" pathLength="1" style="--i:8" d="M176 90q6-5 12 0t12 0t12 0"/><text class="t big" style="--i:9" x="232" y="58" text-anchor="middle">?</text><text class="t big" style="--i:10" x="236" y="96" text-anchor="middle">?</text><text class="t" style="--i:11" x="130" y="156" text-anchor="middle">GUESSING</text><path class="s lt" pathLength="1" style="--i:0" d="M240 30V146"/><path class="s" pathLength="1" style="--i:0" d="M270 40H316V134H270Z"/><path class="s" pathLength="1" style="--i:1" d="M270 64H316M270 88H316M270 112H316"/><path class="s lt" pathLength="1" style="--i:2" d="M288 52H298M288 76H298M288 100H298M288 124H298"/><path class="s" pathLength="1" style="--i:3" d="M320 87H344M340 83L344 87L340 91"/><g class="f" style="--i:4"><circle cx="360" cy="87" r="14" fill="#D9A419"/><circle cx="360" cy="87" r="4" fill="#1E1B16"/></g><path class="s" pathLength="1" style="--i:5" d="M378 87H400M396 83L400 87L396 91"/><path class="s" pathLength="1" style="--i:6" d="M406 44H462V130H406Z"/><path class="s lt" pathLength="1" style="--i:7" d="M416 62H452"/><path class="s lt" pathLength="1" style="--i:8" d="M416 74H452"/><path class="s lt" pathLength="1" style="--i:9" d="M416 86H444"/><text class="t acc" style="--i:10" x="456" y="122" text-anchor="end">[L1]</text><text class="t" style="--i:11" x="370" y="156" text-anchor="middle">INFORMED</text><text class="pl" x="10" y="173">Fig. 2 &middot; Same AI. The difference is what it was given.</text></svg></figure></div>
       <div class="ledger">
-        <div class="entry part"><q>I don't know where to start.</q><p>There are too many tools and they change weekly. You don't need another tool. You need a sequence.</p></div>
-        <div class="entry part"><q>It doesn't sound like me.</q><p>Generic AI writes like everyone in your market. Your voice is an asset. Write it down once and every draft after sounds like you.</p></div>
-        <div class="entry part"><q>Everything is in my head.</q><p>If it lives only in your head, the business stops when you do. That's not a tech problem. It's a continuity problem.</p></div>
+        <div class="entry part"><figure class="fig glyph" aria-hidden="true"><svg viewBox="0 0 80 80"><path class="s lt" pathLength="1" style="--i:0" d="M10 14h10v10h-10zM30 8h10v10h-10zM20 30h10v10h-10zM8 44h10v10h-10z"/><path class="s" pathLength="1" style="--i:1" d="M44 40H56M52 36L56 40L52 44"/><g class="f" style="--i:2"><rect x="62" y="12" width="10" height="10" fill="currentColor"/></g><g class="f" style="--i:3"><rect x="62" y="32" width="10" height="10" fill="currentColor"/></g><g class="f" style="--i:4"><rect x="62" y="52" width="10" height="10" fill="currentColor"/></g><path class="s" pathLength="1" style="--i:5" d="M67 22V32M67 42V52"/></svg></figure><q>I don't know where to start.</q><p>There are too many tools and they change weekly. You don't need another tool. You need a sequence.</p></div>
+        <div class="entry part"><figure class="fig glyph" aria-hidden="true"><svg viewBox="0 0 80 80"><path class="s lt" pathLength="1" style="--i:0" d="M6 10H46V38H6Z"/><path class="s lt" pathLength="1" style="--i:1" d="M14 20q5-4 10 0t10 0M14 29q5-4 10 0t8 0"/><path class="s" pathLength="1" style="--i:2" d="M26 42H74V70H26ZM34 70L30 78L42 70"/><g class="f" style="--i:3"><text x="50" y="76" text-anchor="middle" font-family="Besley,Georgia,serif" font-weight="900" font-size="34" fill="currentColor">&#8221;</text></g></svg></figure><q>It doesn't sound like me.</q><p>Generic AI writes like everyone in your market. Your voice is an asset. Write it down once and every draft after sounds like you.</p></div>
+        <div class="entry part"><figure class="fig glyph" aria-hidden="true"><svg viewBox="0 0 80 80"><path class="s" pathLength="1" style="--i:0" d="M16 46C6 46 6 32 16 31C15 20 32 16 38 25C48 22 52 38 43 44Z"/><path class="s lt" pathLength="1" style="--i:1" d="M14 54a3 3 0 1 0 0.1 0M8 62a2 2 0 1 0 0.1 0"/><g class="f" style="--i:2"><circle cx="20" cy="36" r="2.2" fill="currentColor"/><circle cx="28" cy="30" r="2.2" fill="currentColor"/><circle cx="34" cy="38" r="2.2" fill="currentColor"/></g><path class="s" pathLength="1" style="--i:3" d="M48 36H58M54 32L58 36L54 40"/><path class="s" pathLength="1" style="--i:4" d="M60 26H76V56H60ZM60 26V22H68V26"/><g class="f" style="--i:5"><rect x="64" y="34" width="8" height="2" fill="currentColor"/><rect x="64" y="40" width="8" height="2" fill="currentColor"/><rect x="64" y="46" width="8" height="2" fill="currentColor"/></g></svg></figure><q>Everything is in my head.</q><p>If it lives only in your head, the business stops when you do. That's not a tech problem. It's a continuity problem.</p></div>
       </div>
     </div>
   </section>
@@ -639,27 +737,33 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <div style="margin-top:1.8rem;border-top:2px solid var(--ink)">
         <div class="layer part" id="layer1">
           <div class="lnum"><span class="phase">Order 1</span>01</div>
-          <div><h3>Know me</h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/identity.html">Read the full order</a></div>
+          <div class="lbody"><h3>Know me</h3><p class="promise">Who you are and how you are allowed to behave.</p><p>Charter, brand voice, and decision principles, in a form both people and machines can read. AI is already answering questions about you. This layer makes it answer correctly.</p><span class="out">A context file any AI can load.</span><a class="lmore" href="guide/identity.html">Read the full order</a></div>
+          <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><path class="s" pathLength="1" style="--i:0" d="M42 22H102L118 38V126H42Z"/><path class="s" pathLength="1" style="--i:1" d="M102 22V38H118"/><path class="s" pathLength="1" style="--i:2" d="M54 46H90"/><path class="s lt" pathLength="1" style="--i:3" d="M54 58H106"/><path class="s lt" pathLength="1" style="--i:4" d="M54 68H106"/><path class="s lt" pathLength="1" style="--i:5" d="M54 78H96"/><g class="f" style="--i:6"><circle cx="98" cy="104" r="13" fill="currentColor"/><circle cx="98" cy="104" r="7.5" fill="none" stroke="#F4EFE2" stroke-width="1.4"/></g><path class="s acc" pathLength="1" style="--i:7" d="M92 115L88 130M104 115L108 130"/><text class="pl" x="10" y="151">Pl. 01 &middot; Identity</text></svg></figure>
         </div>
         <div class="layer part" id="layer2">
           <div class="lnum"><span class="phase">Order 2</span>02</div>
-          <div><h3>Know my information</h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0&ndash;4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/knowledge.html">Read the full order</a></div>
+          <div class="lbody"><h3>Know my information</h3><p class="promise">What the system is allowed to trust.</p><p>A structured vault of your files with Authority Levels 0&ndash;4: doctrine, standards, validated, working, untrusted. Stops the system from treating a rumor and a contract as equal.</p><span class="out">An AI that cites your files, not the internet's guesses.</span><a class="lmore" href="guide/knowledge.html">Read the full order</a></div>
+          <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g class="f" style="--i:0"><rect x="44.5" y="20.5" width="71" height="23" fill="currentColor"/></g><path class="s" pathLength="1" style="--i:0" d="M44 20H116V140H44Z"/><path class="s" pathLength="1" style="--i:1" d="M44 44H116"/><path class="s" pathLength="1" style="--i:2" d="M44 68H116"/><path class="s" pathLength="1" style="--i:3" d="M44 92H116"/><path class="s" pathLength="1" style="--i:4" d="M44 116H116"/><path class="s" pathLength="1" style="--i:5" d="M92 32H104"/><path class="s" pathLength="1" style="--i:6" d="M92 56H104"/><path class="s" pathLength="1" style="--i:7" d="M92 80H104"/><path class="s" pathLength="1" style="--i:8" d="M92 104H104"/><path class="s" pathLength="1" style="--i:9" d="M92 128H104"/><text class="t onfill" style="--i:5" x="52" y="35">L0</text><text class="t" style="--i:6" x="52" y="59">L1</text><text class="t" style="--i:7" x="52" y="83">L2</text><text class="t" style="--i:8" x="52" y="107">L3</text><text class="t" style="--i:9" x="52" y="131">L4</text><text class="pl" x="10" y="151">Pl. 02 &middot; Knowledge</text></svg></figure>
         </div>
         <div class="layer part" id="layer3">
           <div class="lnum"><span class="phase">Order 3</span>03</div>
-          <div><h3>Know your limits</h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules and allowed tools. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/limits.html">Read the full order</a></div>
+          <div class="lbody"><h3>Know your limits</h3><p class="promise">What the system is allowed to do.</p><p>Three zones: Auto-Execute, Draft &amp; Wait, Never Automate. Escalation rules and allowed tools. A human signs off where it matters.</p><span class="out">Three to five routine tasks off your plate.</span><a class="lmore" href="guide/limits.html">Read the full order</a></div>
+          <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-10)"><path class="s" pathLength="1" style="--i:0" d="M28 30H60V102H28Z"/><path class="s" pathLength="1" style="--i:1" d="M64 30H96V102H64Z"/><path class="s" pathLength="1" style="--i:2" d="M100 30H132V102H100Z"/><path class="s" pathLength="1" style="--i:3" d="M44 40V86M36 78L44 86L52 78"/><path class="s" pathLength="1" style="--i:4" d="M80 40V60"/><path class="s acc" pathLength="1" style="--i:5" d="M70 66H90"/><path class="s acc" pathLength="1" style="--i:6" d="M108 44L124 60M124 44L108 60"/><g class="f" style="--i:7"><rect x="100" y="94" width="32" height="8" fill="currentColor"/></g><text class="t" style="--i:8" x="44" y="118" text-anchor="middle">AUTO</text><text class="t" style="--i:9" x="80" y="118" text-anchor="middle">WAIT</text><text class="t" style="--i:10" x="116" y="118" text-anchor="middle">NEVER</text><path class="s lt" pathLength="1" style="--i:11" d="M64 132H96"/><text class="t" style="--i:12" x="80" y="141" text-anchor="middle">HUMAN SIGNS</text></g><text class="pl" x="10" y="151">Pl. 03 &middot; Limits</text></svg></figure>
         </div>
         <div class="layer op part" id="layer4">
           <div class="lnum"><span class="phase">Order 4</span>04</div>
-          <div><h3>Help me operate</h3><p class="promise">One scoped agent, activated on the foundation.</p><p>The Agent Scope written first, the context package loaded in order, one Operator drafting inside the zones. Not autonomous, not a swarm: one agent, one human in the loop.</p><span class="out">One governed Operator, live on real work.</span><a class="lmore" href="guide/operator.html">Read the full order</a></div>
+          <div class="lbody"><h3>Help me operate</h3><p class="promise">One scoped agent, activated on the foundation.</p><p>The Agent Scope written first, the context package loaded in order, one Operator drafting inside the zones. Not autonomous, not a swarm: one agent, one human in the loop.</p><span class="out">One governed Operator, live on real work.</span><a class="lmore" href="guide/operator.html">Read the full order</a></div>
+          <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><path class="s" pathLength="1" style="--i:0" d="M22 122H138"/><g class="f" style="--i:1"><rect x="30" y="110" width="44" height="9" fill="#A44E12"/></g><g class="f" style="--i:2"><rect x="30" y="98" width="44" height="9" fill="#A44E12"/></g><g class="f" style="--i:3"><rect x="30" y="86" width="44" height="9" fill="#A44E12"/></g><g class="f" style="--i:5"><circle cx="52" cy="62" r="12" fill="#D9A419"/><circle cx="52" cy="62" r="3.5" fill="#1E1B16"/></g><path class="s" pathLength="1" style="--i:6" d="M68 62H80M76 58L80 62L76 66"/><path class="s" pathLength="1" style="--i:7" d="M86 44H126V118H86Z"/><path class="s lt" pathLength="1" style="--i:8" d="M94 58H118"/><path class="s lt" pathLength="1" style="--i:9" d="M94 68H118"/><path class="s lt" pathLength="1" style="--i:10" d="M94 78H112"/><text class="t" style="--i:11" x="106" y="108" text-anchor="middle">DRAFT</text><text class="t" style="--i:4" x="52" y="134" text-anchor="middle">01 02 03</text><text class="pl" x="10" y="151">Pl. 04 &middot; Operator</text></svg></figure>
         </div>
         <div class="layer ph3 part" id="layer5">
           <div class="lnum"><span class="phase">Order 5</span>05</div>
-          <div><h3>Remember</h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/remember.html">Read the full order</a></div>
+          <div class="lbody"><h3>Remember</h3><p class="promise">What survives time, people, and failure.</p><p>Succession rules, override authority, and a digital estate plan so the people you trust can reach what matters. If you were gone for ninety days, would the system still work?</p><span class="out">A foundation that outlives any one operator.</span><a class="lmore" href="guide/remember.html">Read the full order</a></div>
+          <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-14)"><path class="s" pathLength="1" style="--i:0" d="M26 44H80V126H26Z"/><path class="s" pathLength="1" style="--i:1" d="M80 44H134V126H80Z"/><path class="s lt" pathLength="1" style="--i:2" d="M26 126l4 6H78l2-6M80 126l2 6H130l4-6"/><path class="s lt" pathLength="1" style="--i:3" d="M36 60H70"/><path class="s lt" pathLength="1" style="--i:4" d="M36 70H70"/><path class="s lt" pathLength="1" style="--i:5" d="M36 80H70"/><path class="s lt" pathLength="1" style="--i:6" d="M36 90H70"/><path class="s lt" pathLength="1" style="--i:7" d="M36 100H70"/><path class="s lt" pathLength="1" style="--i:3" d="M90 60H124"/><path class="s lt" pathLength="1" style="--i:4" d="M90 70H124"/><path class="s lt" pathLength="1" style="--i:5" d="M90 80H124"/><g class="f" style="--i:8"><path d="M76 44h8v40l-4-5l-4 5z" fill="currentColor"/></g><g class="f" style="--i:9"><rect x="134" y="52" width="6" height="10" fill="#A44E12"/><rect x="134" y="66" width="6" height="10" fill="#A44E12"/><rect x="134" y="80" width="6" height="10" fill="#D9A419"/></g><text class="t" style="--i:10" x="107" y="116" text-anchor="middle">HANDED ON</text><path class="s lt" pathLength="1" style="--i:11" d="M36 142H132"/><path class="s lt" pathLength="1" style="--i:12" d="M36 138V146M60 138V146M84 138V146M108 138V146M132 138V146"/><text class="t" style="--i:13" x="84" y="156" text-anchor="middle">GONE 90 DAYS &middot; STILL RUNS</text></g><text class="pl" x="10" y="151">Pl. 05 &middot; Remember</text></svg></figure>
         </div>
         <div class="layer ph3 part" id="layer6">
           <div class="lnum"><span class="phase">Order 6</span>06</div>
-          <div><h3>Improve</h3><p class="promise">Whether it works, and how it stays true.</p><p>The signals of a working foundation, the monthly review, the correction loop, and the weekly-monthly-quarterly rhythm: who owns each order, and how changes get proposed, approved, and versioned.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/improve.html">Read the full order</a></div>
+          <div class="lbody"><h3>Improve</h3><p class="promise">Whether it works, and how it stays true.</p><p>The signals of a working foundation, the monthly review, the correction loop, and the weekly-monthly-quarterly rhythm: who owns each order, and how changes get proposed, approved, and versioned.</p><span class="out">A living foundation, not a one-time build.</span><a class="lmore" href="guide/improve.html">Read the full order</a></div>
+          <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-10)"><path class="s" pathLength="1" style="--i:0" d="M30 96A50 50 0 0 1 130 96"/><path class="s" pathLength="1" style="--i:1" d="M36.7 71L41.9 74M80 46V52M123.3 71L118.1 74"/><text class="t" style="--i:2" x="28" y="64" text-anchor="middle">W</text><text class="t" style="--i:2" x="80" y="40" text-anchor="middle">M</text><text class="t" style="--i:2" x="132" y="64" text-anchor="middle">Q</text><path class="n acc" d="M80 96L99 63"/><g class="f" style="--i:3"><circle cx="80" cy="96" r="5" fill="#1E1B16"/></g><path class="s" pathLength="1" style="--i:4" d="M52 124A28 14 0 1 0 108 124"/><path class="s" pathLength="1" style="--i:5" d="M104 116L108 124L100 126"/><text class="t" style="--i:6" x="80" y="144" text-anchor="middle">REVIEW &middot; CORRECT</text></g><text class="pl" x="10" y="151">Pl. 06 &middot; Improve</text></svg></figure>
         </div>
       </div>
     </div>
@@ -673,6 +777,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         <p>Adam Abdalla runs a 70,000 square foot commercial shopping center in Lafayette, Louisiana: leases, vendors, tenants, and decades of records. He built Groundwork for himself first, spent a year refining his own system, and now runs his properties on it daily. This program is that system, taught.</p>
         <p>He is not selling AI tools. There are no subscriptions to him and no lock-in. He builds foundations you own outright.</p>
         <p class="sig"><b>Adam Abdalla</b> &middot; Lafayette, Louisiana</p>
+        <figure class="fig onolive" aria-hidden="true"><svg viewBox="0 0 320 170"><rect class="bg" x=".5" y=".5" width="319" height="169"/><path class="s" pathLength="1" style="--i:0" d="M10 138H310"/><path class="s" pathLength="1" style="--i:1" d="M30 56H290V138H30Z"/><path class="s" pathLength="1" style="--i:2" d="M30 68H290"/><path class="s" pathLength="1" style="--i:3" d="M108 38H212V56"/><text class="t" style="--i:4" x="160" y="49" text-anchor="middle">27 UNITS &middot; 70,000 SQ FT</text><path class="s lt" pathLength="1" style="--i:5" d="M62.5 68V138"/><path class="s lt" pathLength="1" style="--i:5" d="M95.0 68V138"/><path class="s lt" pathLength="1" style="--i:5" d="M127.5 68V138"/><path class="s lt" pathLength="1" style="--i:5" d="M160.0 68V138"/><path class="s lt" pathLength="1" style="--i:5" d="M192.5 68V138"/><path class="s lt" pathLength="1" style="--i:5" d="M225.0 68V138"/><path class="s lt" pathLength="1" style="--i:5" d="M257.5 68V138"/><path class="s lt" pathLength="1" style="--i:6" d="M35.0 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:7" d="M67.5 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:7" d="M78.7 92V126"/><g class="f" style="--i:8"><rect x="100.0" y="80" width="22.5" height="46" fill="#D9A419"/></g><path class="s lt" pathLength="1" style="--i:9" d="M132.5 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:9" d="M143.7 92V126"/><path class="s lt" pathLength="1" style="--i:10" d="M165.0 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:11" d="M197.5 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:11" d="M208.7 92V126"/><path class="s lt" pathLength="1" style="--i:12" d="M230.0 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:13" d="M262.5 80h22.5v46h-22.5z"/><path class="s lt" pathLength="1" style="--i:13" d="M273.7 92V126"/><path class="s lt" pathLength="1" style="--i:14" d="M52 144l-3 8M112 144l-3 8M172 144l-3 8M232 144l-3 8M292 144l-3 8"/><text class="pl" x="10" y="164">Fig. 3 &middot; The shopping center that needed it first</text></svg></figure>
       </div>
     </div>
   </section>
@@ -703,50 +808,60 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     </div>
   </div>
 
+  <div class="exhibit strip reveal" aria-label="More Atlas exhibits">
+    <div class="strip-grid">
+      <figure class="part"><img src="assets/atlas/atlas-a1-siteplan.png" alt="Exhibit A-1: The site plan, drawn from the recorded plat, with the tenant directory as its title block." loading="lazy" width="1400" height="875"><figcaption><b>Exhibit A-1</b> The site plan, drawn from the recorded plat, with the tenant directory as its title block.</figcaption></figure>
+      <figure class="part"><img src="assets/atlas/atlas-a2-spatial.png" alt="Exhibit A-2: The Spatial sheet in its isometric lens, one of the four ways to see the property." loading="lazy" width="1400" height="875"><figcaption><b>Exhibit A-2</b> The Spatial sheet in its isometric lens, one of the four ways to see the property.</figcaption></figure>
+      <figure class="part"><img src="assets/atlas/atlas-r1-unit-drawer.png" alt="Exhibit R-1: One click on a unit: the whole file opens beside the rent roll." loading="lazy" width="1400" height="875"><figcaption><b>Exhibit R-1</b> One click on a unit: the whole file opens beside the rent roll.</figcaption></figure>
+      <figure class="part"><img src="assets/atlas/atlas-w1-action-board.png" alt="Exhibit W-1: The Action Board seeding its own cards from renewal windows, vacancies, and flags." loading="lazy" width="1400" height="875"><figcaption><b>Exhibit W-1</b> The Action Board seeding its own cards from renewal windows, vacancies, and flags.</figcaption></figure>
+      <figure class="part"><img src="assets/atlas/atlas-ai1-concierge.png" alt="Exhibit AI-1: The Concierge: grounded in the dossier and live state, and it will not invent numbers." loading="lazy" width="1400" height="875"><figcaption><b>Exhibit AI-1</b> The Concierge: grounded in the dossier and live state, and it will not invent numbers.</figcaption></figure>
+    </div>
+  </div>
+
   <section id="authority" class="reveal" aria-labelledby="h-authority">
     <div class="wrap">
       <div class="runhead part"><span>Authority Classification</span></div>
       <h2 class="part" id="h-authority">Not every document is equal. Your AI should know which is which.</h2>
       <p class="lede part" style="margin-top:1.1rem">Most AI failures are trust failures: the system treats a rumor and a contract as the same weight. Groundwork tags every document Level 0 through Level 4, so the system knows what to obey, what to check, and what to ignore.</p>
-      <div class="vw ladder part" style="max-width:760px;margin-top:1.8rem">
+      <div class="vw ladder part inkzone" data-ink style="max-width:760px;margin-top:1.8rem">
         <svg viewBox="0 0 720 330" role="img" aria-label="Vertical ladder of five authority levels from Level 0 Core Doctrine, which the AI obeys, down to Level 4 Untrusted, which is never quoted as truth. Stroke weight descends with trust.">
           <defs>
             <marker id="mL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
               <path d="M0,0 L10,5 L0,10 z" class="mk"/>
             </marker>
           </defs>
-          <line class="arrowline" x1="96" y1="56" x2="96" y2="284" marker-end="url(#mL)"/>
-          <text class="sub" x="82" y="52" text-anchor="end" font-size="10.5">the AI obeys</text>
-          <text class="sub" x="82" y="292" text-anchor="end" font-size="10.5">the AI ignores</text>
-          <g>
+          <line class="arrowline s" pathLength="1" style="--i:0;--dur:1.4s" x1="96" y1="56" x2="96" y2="284" marker-end="url(#mL)"/>
+          <text class="sub d" style="--i:1" x="82" y="52" text-anchor="end" font-size="10.5">the AI obeys</text>
+          <text class="sub d" style="--i:8.5" x="82" y="292" text-anchor="end" font-size="10.5">the AI ignores</text>
+          <g class="d" style="--i:1">
             <rect x="130" y="40" width="520" height="42" fill="var(--paper-deep)" stroke="var(--ink)" stroke-width="2.4"/>
             <text class="mono acc" x="148" y="59" font-size="10">L0</text>
             <text x="178" y="60" font-size="12.5" font-weight="600">Core Doctrine</text>
             <text class="sub" x="178" y="75" font-size="9.5">Charter, principles, non-negotiables.</text>
             <text class="mono" x="634" y="65" text-anchor="end" font-size="9.5" fill="var(--ink)">OBEYED</text>
           </g>
-          <g>
+          <g class="d" style="--i:2.5">
             <rect x="130" y="96" width="520" height="42" fill="var(--paper-deep)" stroke="var(--terra-deep)" stroke-width="1.6"/>
             <text class="mono acc" x="148" y="115" font-size="10">L1</text>
             <text x="178" y="116" font-size="12.5" font-weight="600">Institutional Standards</text>
             <text class="sub" x="178" y="131" font-size="9.5">Internal policies, approval thresholds, communication standards.</text>
             <text class="mono sub" x="634" y="121" text-anchor="end" font-size="9.5">TRUSTED</text>
           </g>
-          <g>
+          <g class="d" style="--i:4">
             <rect x="130" y="152" width="520" height="42" fill="var(--paper-deep)" stroke="var(--rule)" stroke-width="1.4"/>
             <text class="mono acc" x="148" y="171" font-size="10">L2</text>
             <text x="178" y="172" font-size="12.5" font-weight="600">Validated Knowledge</text>
             <text class="sub" x="178" y="187" font-size="9.5">Executed contracts, cleaned data, completed reports.</text>
             <text class="mono sub" x="634" y="177" text-anchor="end" font-size="9.5">USED</text>
           </g>
-          <g>
+          <g class="d" style="--i:5.5">
             <rect x="130" y="208" width="520" height="42" fill="var(--paper-deep)" stroke="var(--rule)" stroke-width="1" opacity="0.85"/>
             <text class="mono acc" x="148" y="227" font-size="10" opacity="0.85">L3</text>
             <text x="178" y="228" font-size="12.5" font-weight="600" opacity="0.9">Working Material</text>
             <text class="sub" x="178" y="243" font-size="9.5">Drafts, notes, transcripts. Useful, not yet doctrine.</text>
             <text class="mono sub" x="634" y="233" text-anchor="end" font-size="9.5">NEVER FINAL</text>
           </g>
-          <g>
+          <g class="d" style="--i:7">
             <rect x="130" y="264" width="520" height="42" fill="none" stroke="var(--oxblood)" stroke-width="1.2" stroke-dasharray="5 4"/>
             <text class="mono" x="148" y="283" font-size="10" fill="var(--oxblood)">L4</text>
             <text x="178" y="284" font-size="12.5" font-weight="600" fill="var(--oxblood)">Untrusted / Raw</text>
@@ -771,6 +886,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         </div>
       </div>
       <p class="lede part">Not a course. Not a subscription. Fifteen plain-text files you write once and own forever: the working system Adam runs his own businesses on.</p>
+      <div class="part" style="margin-top:1.8rem"><figure class="fig wide fig4" aria-hidden="true"><svg viewBox="0 0 640 130"><rect class="bg" x=".5" y=".5" width="639" height="129"/><path class="s" pathLength="1" style="--i:0" d="M20 100H620"/><g class="d" style="--i:0"><rect x="30" y="46" width="28" height="54" fill="#A44E12"/><text x="44" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">01</text></g><g class="d" style="--i:1"><rect x="62" y="46" width="28" height="54" fill="#A44E12"/><text x="76" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">02</text></g><g class="d" style="--i:2"><rect x="94" y="46" width="28" height="54" fill="#A44E12"/><text x="108" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">03</text></g><path class="s lt" pathLength="1" style="--i:15" d="M30 108H122"/><text class="t" style="--i:16" x="76.0" y="120" text-anchor="middle">01 &middot; IDENTITY</text><g class="d" style="--i:3"><rect x="150" y="46" width="28" height="54" fill="#A44E12"/><text x="164" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">04</text></g><g class="d" style="--i:4"><rect x="182" y="46" width="28" height="54" fill="#A44E12"/><text x="196" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">05</text></g><g class="d" style="--i:5"><rect x="214" y="46" width="28" height="54" fill="#A44E12"/><text x="228" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">06</text></g><g class="d" style="--i:6"><rect x="246" y="46" width="28" height="54" fill="#A44E12"/><text x="260" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">07</text></g><path class="s lt" pathLength="1" style="--i:15" d="M150 108H274"/><text class="t" style="--i:16" x="212.0" y="120" text-anchor="middle">02 &middot; KNOWLEDGE</text><g class="d" style="--i:7"><rect x="302" y="46" width="28" height="54" fill="#A44E12"/><text x="316" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">08</text></g><g class="d" style="--i:8"><rect x="334" y="46" width="28" height="54" fill="#A44E12"/><text x="348" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">09</text></g><g class="d" style="--i:9"><rect x="366" y="46" width="28" height="54" fill="#A44E12"/><text x="380" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">10</text></g><path class="s lt" pathLength="1" style="--i:15" d="M302 108H394"/><text class="t" style="--i:16" x="348.0" y="120" text-anchor="middle">03 &middot; GOVERNANCE</text><g class="d" style="--i:10"><rect x="422" y="46" width="28" height="54" fill="#D9A419"/><text x="436" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">11</text></g><path class="s lt" pathLength="1" style="--i:15" d="M422 108H450"/><text class="t" style="--i:16" x="436.0" y="120" text-anchor="middle">04 &middot; OPERATOR</text><g class="d" style="--i:11"><rect x="478" y="46" width="28" height="54" fill="#49573C"/><text x="492" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">12</text></g><g class="d" style="--i:12"><rect x="510" y="46" width="28" height="54" fill="#49573C"/><text x="524" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">13</text></g><g class="d" style="--i:13"><rect x="542" y="46" width="28" height="54" fill="#49573C"/><text x="556" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">14</text></g><g class="d" style="--i:14"><rect x="574" y="46" width="28" height="54" fill="#49573C"/><text x="588" y="66" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="9" fill="#F4EFE2">15</text></g><path class="s lt" pathLength="1" style="--i:15" d="M478 108H602"/><text class="t" style="--i:16" x="540.0" y="120" text-anchor="middle">05&ndash;06 &middot; STANDING</text><text class="pl" x="10" y="16">Fig. 4 &middot; Fifteen files. Five shelves. Plain text, in order.</text></svg></figure></div>
       <div class="tablewrap part">
         <table class="schedule">
           <caption class="skip">Schedule of the fifteen documents by standing order</caption>
@@ -815,23 +931,23 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <div class="narrow">
       <div class="runhead part"><span>The Operator</span></div>
       <h2 class="part" id="h-operator">One assistant. Scoped. Yours.</h2>
-      <p class="lede part" style="max-width:58ch;margin-top:1.1rem">Order 4 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and limits you wrote in the first three orders. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p>
-      <pre class="prompt part" style="margin-top:1.4rem">You are now the Operator for this organization.
+      <div class="rowfig part" style="--w:168px;margin-top:1.1rem"><p class="lede part" style="max-width:58ch">Order 4 is not "launch a swarm of agents." It is one Operator, given exactly the identity, knowledge, and limits you wrote in the first three orders. Here is the opening of the Operator prompt, exactly as the guide teaches it.</p><figure class="fig " aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-10)"><path class="s" pathLength="1" style="--i:0" d="M36 144H124"/><g class="d" style="--i:1"><rect x="44" y="136" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:2"><rect x="44" y="128" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:3"><rect x="44" y="120" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:4"><rect x="44" y="112" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:5"><rect x="44" y="104" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:6"><rect x="44" y="96" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:7"><rect x="44" y="88" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:8"><rect x="44" y="80" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:9"><rect x="44" y="72" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:10"><rect x="44" y="64" width="72" height="6" fill="#A44E12"/></g><g class="d" style="--i:11"><rect x="44" y="56" width="72" height="6" fill="#D9A419"/></g><text class="t" style="--i:1" x="38" y="141" text-anchor="end">01</text><text class="t" style="--i:10" x="38" y="69" text-anchor="end">10</text><text class="t" style="--i:11" x="38" y="61" text-anchor="end">11</text><g class="f" style="--i:13"><circle cx="80" cy="36" r="12" fill="#D9A419"/><circle cx="80" cy="36" r="3.5" fill="#1E1B16"/></g><text class="t" style="--i:14" x="80" y="20" text-anchor="middle">THE OPERATOR</text></g><text class="pl" x="10" y="151">Fig. 5 &middot; Loaded in order</text></svg></figure></div>
+      <pre class="prompt part" data-ink style="margin-top:1.4rem"><span class="ln" style="--i:0">You are now the Operator for this organization.</span>
 
-Load the files in this package in order. Do not
-invent policy. Do not expand your authority.
+<span class="ln" style="--i:1">Load the files in this package in order. Do not</span>
+<span class="ln" style="--i:2">invent policy. Do not expand your authority.</span>
 
-Primary directive: raise the quality of thinking
-and output while protecting standards.
+<span class="ln" style="--i:3">Primary directive: raise the quality of thinking</span>
+<span class="ln" style="--i:4">and output while protecting standards.</span>
 
-Rules
-- Stay on-voice at all times.
-- Cite Authority Level on material claims.
-- If the request is Auto-Execute, do it.
-- If the request is Draft &amp; Wait, produce the
-  complete draft and stop.
-- If the request is Never Automate, refuse and
-  escalate.</pre>
+<span class="ln" style="--i:5">Rules</span>
+<span class="ln" style="--i:6">- Stay on-voice at all times.</span>
+<span class="ln" style="--i:7">- Cite Authority Level on material claims.</span>
+<span class="ln" style="--i:8">- If the request is Auto-Execute, do it.</span>
+<span class="ln" style="--i:9">- If the request is Draft &amp; Wait, produce the</span>
+<span class="ln" style="--i:10">  complete draft and stop.</span>
+<span class="ln" style="--i:11">- If the request is Never Automate, refuse and</span>
+<span class="ln" style="--i:12">  escalate.</span></pre>
       <p class="part" style="margin-top:1.2rem;font-size:.9rem;color:var(--ink-soft)">The full prompt, the context package, and the activation gate are in <a href="guide/operator.html">the Operator chapter of the guide</a>.</p>
     </div>
   </section>
@@ -840,7 +956,7 @@ Rules
     <div class="wrap">
       <div class="runhead part"><span>The Curriculum</span></div>
       <h2 class="part" id="h-curriculum" style="font-size:clamp(1.3rem,2.3vw,1.75rem);color:var(--ink-soft)">The guide builds your business. The Curriculum builds you.</h2>
-      <p class="lede part" style="max-width:64ch;margin-top:1rem">The Groundwork Curriculum is the skill path that runs beside the doctrine: five levels, from your first serious prompt to work at the edge of the field, with an Individual track and a Company track at every step. The guide's six standing orders you build once; the Curriculum's five levels you climb. MIT licensed. Free forever.</p>
+      <div class="rowfig part" style="--w:240px;margin-top:1rem"><p class="lede part" style="max-width:64ch">The Groundwork Curriculum is the skill path that runs beside the doctrine: five levels, from your first serious prompt to work at the edge of the field, with an Individual track and a Company track at every step. The guide's six standing orders you build once; the Curriculum's five levels you climb. MIT licensed. Free forever.</p><figure class="fig " aria-hidden="true"><svg viewBox="0 0 240 160"><rect class="bg" x=".5" y=".5" width="239" height="159"/><path class="s" pathLength="1" style="--i:0" d="M10 130H230"/><path class="s" pathLength="1" style="--i:1" d="M20 130V110H60V90H100V70H140V50H180V30H220"/><text class="t" style="--i:2" x="40" y="124" text-anchor="middle">L1</text><text class="t" style="--i:3" x="80" y="104" text-anchor="middle">L2</text><text class="t" style="--i:4" x="120" y="84" text-anchor="middle">L3</text><text class="t" style="--i:5" x="160" y="64" text-anchor="middle">L4</text><text class="t" style="--i:6" x="200" y="44" text-anchor="middle">L5</text><g class="f" style="--i:7"><circle cx="120" cy="61" r="7" fill="#A44E12"/></g><g class="f" style="--i:8"><circle cx="160" cy="41" r="7" fill="#49573C"/></g><g class="f" style="--i:9"><rect x="20" y="16" width="8" height="8" fill="#A44E12"/></g><text class="t" style="--i:9" x="32" y="23" text-anchor="start">INDIVIDUAL TRACK</text><g class="f" style="--i:10"><rect x="20" y="30" width="8" height="8" fill="#49573C"/></g><text class="t" style="--i:10" x="32" y="37" text-anchor="start">COMPANY TRACK</text><text class="pl" x="10" y="152">Fig. 6 &middot; Five levels you climb</text></svg></figure></div>
       <p class="part btnrow" style="margin-top:1.3rem">
         <a class="btn" href="curriculum/index.html">Open the Curriculum</a>
         <a href="assets/Groundwork-Program-Guide.pdf" download style="font-size:.9rem;white-space:nowrap">or read the Field Guide first</a>
@@ -856,7 +972,7 @@ Rules
       <p class="lede part" style="max-width:58ch;margin-top:1rem">We looked hard at what else is out there. Free readiness quizzes are everywhere. Complete systems are not. As far as we can tell, nobody else gives the whole thing away.</p>
       <table class="compare part">
         <thead>
-          <tr><th scope="col">A score</th><th scope="col">A course</th><th scope="col">A retainer</th></tr>
+          <tr><th scope="col"><figure class="fig ico" aria-hidden="true"><svg viewBox="0 0 40 40"><path class="s" pathLength="1" style="--i:0" d="M6 26A14 14 0 0 1 34 26"/><path class="s acc" pathLength="1" style="--i:1" d="M20 26L29 15"/><g class="f" style="--i:2"><circle cx="20" cy="26" r="3" fill="#1E1B16"/></g></svg></figure>A score</th><th scope="col"><figure class="fig ico" aria-hidden="true"><svg viewBox="0 0 40 40"><path class="s" pathLength="1" style="--i:0" d="M6 8H34V30H6Z"/><path class="s lt" pathLength="1" style="--i:1" d="M12 15H28M12 20H24"/><g class="f" style="--i:2"><circle cx="28" cy="27" r="4" fill="currentColor"/></g></svg></figure>A course</th><th scope="col"><figure class="fig ico" aria-hidden="true"><svg viewBox="0 0 40 40"><path class="s" pathLength="1" style="--i:0" d="M10 4H30V36H10Z"/><path class="s lt" pathLength="1" style="--i:1" d="M15 12H25M15 18H25M15 24H21"/><g class="f" style="--i:2"><circle cx="26" cy="29" r="5" fill="currentColor"/></g></svg></figure>A retainer</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -866,7 +982,7 @@ Rules
           </tr>
         </tbody>
       </table>
-      <p class="body part" style="margin-top:1.6rem">Groundwork hands you the fifteen working documents and one governed Operator, free, in plain files you own. If you want it built with you, <a href="#audit">the audit</a> is where that conversation starts.</p>
+      <p class="body part gwrow" style="margin-top:1.6rem"><span class="fig ico" aria-hidden="true"><svg viewBox="0 0 40 40"><g class="f" style="--i:0"><rect x="8" y="12" width="9" height="24" fill="currentColor"/></g><g class="f" style="--i:1"><rect x="19" y="8" width="9" height="28" fill="currentColor"/></g><g class="f" style="--i:2"><rect x="30" y="14" width="6" height="22" fill="currentColor"/></g><path class="s" pathLength="1" style="--i:3" d="M4 36H38"/></svg></span><span>Groundwork hands you the fifteen working documents and one governed Operator, free, in plain files you own. If you want it built with you, <a href="#audit">the audit</a> is where that conversation starts.</span></p>
     </div>
   </section>
 
@@ -900,6 +1016,7 @@ Rules
       <p class="body part">The Field Guide and Curriculum are free: read them, build it yourself, no ask. But if you want Adam in the room: sixty to ninety minutes together, no cost. You leave with a map of your current state, the gaps costing you most, and a plan. In Lafayette, across the Gulf South, or virtual anywhere.</p>
       <a class="btn part" href="https://calendly.com/adam-adamabdalla" target="_blank" rel="noopener">Book your AI Readiness Audit</a>
       <span class="alt part">Prefer email? <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a></span>
+      <figure class="fig onterra" aria-hidden="true"><svg viewBox="0 0 220 240"><rect class="bg" x=".5" y=".5" width="219" height="239"/><path class="s thick" pathLength="1" style="--i:0" d="M14 214H206"/><path class="s" pathLength="1" style="--i:1" d="M50 178H170V202H50Z"/><path class="s" pathLength="1" style="--i:2" d="M50 148H170V172H50Z"/><path class="s" pathLength="1" style="--i:3" d="M50 118H170V142H50Z"/><text class="t" style="--i:2" x="110" y="194" text-anchor="middle">01 IDENTITY</text><text class="t" style="--i:3" x="110" y="164" text-anchor="middle">02 KNOWLEDGE</text><text class="t" style="--i:4" x="110" y="134" text-anchor="middle">03 GOVERNANCE</text><g class="f" style="--i:5"><circle cx="110" cy="84" r="16" fill="#D9A419"/><circle cx="110" cy="84" r="5" fill="#1E1B16"/></g><path class="s" pathLength="1" style="--i:7" d="M30 52H190V208H30Z"/><text class="t" style="--i:9" x="110" y="44" text-anchor="middle">REMEMBER &middot; IMPROVE</text><text class="pl" x="10" y="232">Fig. 7 &middot; The finished foundation. Yours.</text></svg></figure>
     </div>
   </section>
 
@@ -937,9 +1054,36 @@ const revealIO = new IntersectionObserver(entries => {
 }, { threshold: 0.16 });
 document.querySelectorAll('.reveal').forEach(s => revealIO.observe(s));
 
+/* ================= order plates ink in as each card arrives ================= */
+const plateIO = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('ink'); plateIO.unobserve(en.target); }
+  });
+}, { threshold: 0.45 });
+document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
+
+/* ================= the mark: build it again ================= */
+(function () {
+  const mark = document.getElementById('covermark');
+  const btn = document.getElementById('rebuild');
+  if (!mark) return;
+  function rebuild() {
+    mark.classList.remove('run');
+    void mark.getBoundingClientRect();
+    mark.classList.add('run');
+  }
+  const markIO = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { mark.classList.add('run'); markIO.unobserve(mark); } });
+  }, { threshold: 0.4 });
+  markIO.observe(mark);
+  mark.addEventListener('click', rebuild);
+  if (btn) btn.addEventListener('click', rebuild);
+})();
+
 /* ================= reduced motion: pin final states ================= */
 function pinToFinalStates() {
   document.querySelectorAll('.reveal').forEach(s => s.classList.add('in', 'settled'));
+  document.querySelectorAll('.fig, [data-ink]').forEach(f => f.classList.add('ink'));
   const hf = document.getElementById('holdfield');
   if (hf) { hf.style.setProperty('--p', '1'); hf.classList.add('done'); }
 }
