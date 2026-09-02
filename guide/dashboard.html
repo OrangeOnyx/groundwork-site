@@ -45,20 +45,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Notes</span>
-  <nav class="vw journeystrip" aria-label="Guide journey">
+  <nav class="vw journeystrip inkzone" data-ink aria-label="Guide journey">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing.">
-    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
-    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
-    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
-    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a class="d" style="--i:2" href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a class="d" style="--i:3" href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
+    <a class="d" style="--i:4" href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a class="d" style="--i:5" href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">WHAT YOURS COULD LOOK LIKE</span>
     <h1>The operator dashboard.</h1>
     <p class="lede">The <a href="atlas.html">Atlas story</a> shows what one owner built on a finished foundation: a command center for a 27-unit shopping center. This page is the same idea for everyone else. When your vault is real and your rules are written, a morning screen over your business is a cheap thing to build and an honest thing to trust. Here is the pattern.</p>
+    <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><path class="s" pathLength="1" style="--i:0" d="M22 28H138V132H22Z"/><path class="s" pathLength="1" style="--i:1" d="M22 42H138"/><path class="s lt" pathLength="1" style="--i:2" d="M39 50H55V64H39ZM61 50H77V64H61ZM83 50H99V64H83ZM105 50H121V64H105Z"/><path class="s" pathLength="1" style="--i:3" d="M30 72H92V124H30Z"/><path class="s lt" pathLength="1" style="--i:4" d="M36 84H84M36 96H84M36 108H68"/><g class="f" style="--i:5"><rect x="72" y="104" width="14" height="6" fill="currentColor"/></g><path class="s ox" pathLength="1" style="--i:6" d="M98 72H134V124H98Z"/><text class="t ox" style="--i:7" x="116" y="94" text-anchor="middle">ZONE 3</text><text class="t ox" style="--i:8" x="116" y="105" text-anchor="middle">BRIEFS</text><text class="t ox" style="--i:8" x="116" y="115" text-anchor="middle">ONLY</text><text class="t" style="--i:9" x="80" y="141" text-anchor="middle">A VIEW &middot; NEVER THE RECORD</text><text class="pl" x="10" y="151">Dashboard &middot; The operator&#8217;s console</text></svg></figure>
   </header>
 
   <h2>A view, never the record</h2>
@@ -69,99 +70,99 @@
 
   <figure class="exhibit">
     <div class="mat">
-      <div class="vw wide">
+      <div class="vw wide inkzone" data-ink>
       <svg viewBox="0 0 1200 780" role="img" aria-label="A drawn operator dashboard for a fictional lawn company: a masthead, four signal blocks, a Draft and Wait signature queue, a trace of the Operator's last 24 hours, the vault file list it reads, and an oxblood Zone 3 panel with no buttons.">
         <rect x="0" y="0" width="1200" height="780" fill="var(--paper)"/>
-        <text class="mono" x="40" y="46" font-size="20" letter-spacing="2">PRAIRIE LAWN &amp; GROUNDS</text>
-        <text class="mono sub" x="1160" y="46" font-size="12" letter-spacing="1.5" text-anchor="end">OPERATOR DASHBOARD &#183; TUESDAY 7:00 AM</text>
-        <line x1="40" y1="62" x2="1160" y2="62" stroke="var(--ink)" stroke-width="2"/>
-        <line x1="40" y1="67" x2="1160" y2="67" stroke="var(--ink)" stroke-width="1"/>
+        <text class="mono d" x="40" y="46" font-size="20" letter-spacing="2" style="--i:0">PRAIRIE LAWN &amp; GROUNDS</text>
+        <text class="mono sub d" x="1160" y="46" font-size="12" letter-spacing="1.5" text-anchor="end" style="--i:0">OPERATOR DASHBOARD &#183; TUESDAY 7:00 AM</text>
+        <line class="s" x1="40" y1="62" x2="1160" y2="62" stroke="var(--ink)" stroke-width="2" pathLength="1" style="--i:1"/>
+        <line class="s" x1="40" y1="67" x2="1160" y2="67" stroke="var(--ink)" stroke-width="1" pathLength="1" style="--i:1"/>
 
         <!-- signals row: Order 6 -->
-        <text class="mono sub" x="40" y="100" font-size="11" letter-spacing="1.5">THE SIGNALS &#183; ORDER 6</text>
+        <text class="mono sub d" x="40" y="100" font-size="11" letter-spacing="1.5" style="--i:2">THE SIGNALS &#183; ORDER 6</text>
         <g>
-          <rect class="slab" x="40" y="112" width="262" height="92"/>
-          <text class="mono sub" x="58" y="140" font-size="10.5" letter-spacing="1">JOBS ON TODAY'S ROUTE</text>
-          <text x="58" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">6</text>
-          <rect class="slab" x="326" y="112" width="262" height="92"/>
-          <text class="mono sub" x="344" y="140" font-size="10.5" letter-spacing="1">INVOICES OUTSTANDING</text>
-          <text x="344" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">$4,310</text>
-          <rect class="slab" x="612" y="112" width="262" height="92"/>
-          <text class="mono sub" x="630" y="140" font-size="10.5" letter-spacing="1">CREW HOURS THIS WEEK</text>
-          <text x="630" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">61</text>
-          <rect class="slab" x="898" y="112" width="262" height="92"/>
-          <text class="mono sub" x="916" y="140" font-size="10.5" letter-spacing="1">MESSAGES WAITING</text>
-          <text x="916" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)">3</text>
+          <rect class="slab d" x="40" y="112" width="262" height="92" style="--i:2"/>
+          <text class="mono sub d" x="58" y="140" font-size="10.5" letter-spacing="1" style="--i:2">JOBS ON TODAY'S ROUTE</text>
+          <text class="d" x="58" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)" style="--i:3">6</text>
+          <rect class="slab d" x="326" y="112" width="262" height="92" style="--i:2"/>
+          <text class="mono sub d" x="344" y="140" font-size="10.5" letter-spacing="1" style="--i:2">INVOICES OUTSTANDING</text>
+          <text class="d" x="344" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)" style="--i:3">$4,310</text>
+          <rect class="slab d" x="612" y="112" width="262" height="92" style="--i:2"/>
+          <text class="mono sub d" x="630" y="140" font-size="10.5" letter-spacing="1" style="--i:2">CREW HOURS THIS WEEK</text>
+          <text class="d" x="630" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)" style="--i:3">61</text>
+          <rect class="slab d" x="898" y="112" width="262" height="92" style="--i:2"/>
+          <text class="mono sub d" x="916" y="140" font-size="10.5" letter-spacing="1" style="--i:2">MESSAGES WAITING</text>
+          <text class="d" x="916" y="184" font-family="Besley, Georgia, serif" font-weight="900" font-size="34" fill="var(--ink)" style="--i:3">3</text>
         </g>
 
         <!-- signature queue: Order 3, Zone 2 -->
         <g>
-          <rect class="slab" x="40" y="240" width="560" height="290"/>
-          <text class="mono" x="58" y="270" font-size="12" letter-spacing="1.5">WAITING FOR YOUR SIGNATURE</text>
-          <text class="mono acc" x="582" y="270" font-size="10.5" letter-spacing="1" text-anchor="end">ZONE 2 &#183; DRAFT &amp; WAIT</text>
-          <line x1="58" y1="282" x2="582" y2="282" stroke="var(--ink)" stroke-width="1.3"/>
-          <text x="58" y="310" font-size="13.5" font-weight="600" fill="var(--ink)">Quote: the Broussard backyard regrade</text>
-          <text class="sub" x="58" y="328" font-size="11.5">Drafted from the price sheet. $1,840, two visits.</text>
-          <rect x="472" y="300" width="110" height="26" fill="var(--ink)"/>
-          <text x="527" y="317" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">REVIEW</text>
-          <line x1="58" y1="344" x2="582" y2="344" stroke="var(--rule)" stroke-width="1"/>
-          <text x="58" y="372" font-size="13.5" font-weight="600" fill="var(--ink)">Reply: the missed-cut complaint on Elm Street</text>
-          <text class="sub" x="58" y="390" font-size="11.5">Apology drafted in your voice. Waiting on you.</text>
-          <rect x="472" y="362" width="110" height="26" fill="var(--ink)"/>
-          <text x="527" y="379" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">REVIEW</text>
-          <line x1="58" y1="406" x2="582" y2="406" stroke="var(--rule)" stroke-width="1"/>
-          <text x="58" y="434" font-size="13.5" font-weight="600" fill="var(--ink)">Notice: Thursday route moves for the rain window</text>
-          <text class="sub" x="58" y="452" font-size="11.5">Twelve customers, one text each, none sent yet.</text>
-          <rect x="472" y="424" width="110" height="26" fill="var(--ink)"/>
-          <text x="527" y="441" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">REVIEW</text>
-          <text class="mono sub" x="58" y="502" font-size="10" letter-spacing="1">NOTHING ON THIS SCREEN SENDS ITSELF. THE DEFAULT IS DRAFT &amp; WAIT.</text>
+          <rect class="slab d" x="40" y="240" width="560" height="290" style="--i:5"/>
+          <text class="mono d" x="58" y="270" font-size="12" letter-spacing="1.5" style="--i:5">WAITING FOR YOUR SIGNATURE</text>
+          <text class="mono acc d" x="582" y="270" font-size="10.5" letter-spacing="1" text-anchor="end" style="--i:5">ZONE 2 &#183; DRAFT &amp; WAIT</text>
+          <line class="s" x1="58" y1="282" x2="582" y2="282" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:5"/>
+          <text class="d" x="58" y="310" font-size="13.5" font-weight="600" fill="var(--ink)" style="--i:6">Quote: the Broussard backyard regrade</text>
+          <text class="sub d" x="58" y="328" font-size="11.5" style="--i:6">Drafted from the price sheet. $1,840, two visits.</text>
+          <rect class="d" x="472" y="300" width="110" height="26" fill="var(--ink)" style="--i:6"/>
+          <text class="d" x="527" y="317" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle" style="--i:6">REVIEW</text>
+          <line class="s" x1="58" y1="344" x2="582" y2="344" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:7"/>
+          <text class="d" x="58" y="372" font-size="13.5" font-weight="600" fill="var(--ink)" style="--i:7">Reply: the missed-cut complaint on Elm Street</text>
+          <text class="sub d" x="58" y="390" font-size="11.5" style="--i:8">Apology drafted in your voice. Waiting on you.</text>
+          <rect class="d" x="472" y="362" width="110" height="26" fill="var(--ink)" style="--i:7"/>
+          <text class="d" x="527" y="379" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle" style="--i:7">REVIEW</text>
+          <line class="s" x1="58" y1="406" x2="582" y2="406" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:8"/>
+          <text class="d" x="58" y="434" font-size="13.5" font-weight="600" fill="var(--ink)" style="--i:9">Notice: Thursday route moves for the rain window</text>
+          <text class="sub d" x="58" y="452" font-size="11.5" style="--i:9">Twelve customers, one text each, none sent yet.</text>
+          <rect class="d" x="472" y="424" width="110" height="26" fill="var(--ink)" style="--i:8"/>
+          <text class="d" x="527" y="441" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle" style="--i:9">REVIEW</text>
+          <text class="mono sub d" x="58" y="502" font-size="10" letter-spacing="1" style="--i:10">NOTHING ON THIS SCREEN SENDS ITSELF. THE DEFAULT IS DRAFT &amp; WAIT.</text>
         </g>
 
         <!-- the trace: Order 6 correction loop -->
         <g>
-          <rect class="slab" x="640" y="240" width="520" height="290"/>
-          <text class="mono" x="658" y="270" font-size="12" letter-spacing="1.5">WHAT THE OPERATOR DID</text>
-          <text class="mono sub" x="1142" y="270" font-size="10.5" letter-spacing="1" text-anchor="end">LAST 24 HOURS &#183; EVERY STEP TRACEABLE</text>
-          <line x1="658" y1="282" x2="1142" y2="282" stroke="var(--ink)" stroke-width="1.3"/>
-          <circle class="star" cx="668" cy="306" r="4"/>
-          <text x="684" y="311" font-size="12.5" fill="var(--ink)">Filed four paid invoices into the vault, named to the standard</text>
-          <circle class="star" cx="668" cy="340" r="4"/>
-          <text x="684" y="345" font-size="12.5" fill="var(--ink)">Drafted two quotes from the price sheet for your review</text>
-          <circle class="star" cx="668" cy="374" r="4"/>
-          <text x="684" y="379" font-size="12.5" fill="var(--ink)">Flagged mower two: service interval passed last Friday</text>
-          <circle class="star" cx="668" cy="408" r="4"/>
-          <text x="684" y="413" font-size="12.5" fill="var(--ink)">Updated the customer list from yesterday's route notes</text>
-          <circle class="star" cx="668" cy="442" r="4"/>
-          <text x="684" y="447" font-size="12.5" fill="var(--ink)">Escalated one thing to the queue instead of guessing</text>
-          <text class="mono sub" x="658" y="502" font-size="10" letter-spacing="1">MISS SOMETHING? TRACE IT, EDIT THE FILE, RETEST. THE LOOP IS THE JOB.</text>
+          <rect class="slab d" x="640" y="240" width="520" height="290" style="--i:5"/>
+          <text class="mono d" x="658" y="270" font-size="12" letter-spacing="1.5" style="--i:5">WHAT THE OPERATOR DID</text>
+          <text class="mono sub d" x="1142" y="270" font-size="10.5" letter-spacing="1" text-anchor="end" style="--i:5">LAST 24 HOURS &#183; EVERY STEP TRACEABLE</text>
+          <line class="s" x1="658" y1="282" x2="1142" y2="282" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:5"/>
+          <circle class="star d" cx="668" cy="306" r="4" style="--i:6"/>
+          <text class="d" x="684" y="311" font-size="12.5" fill="var(--ink)" style="--i:6">Filed four paid invoices into the vault, named to the standard</text>
+          <circle class="star d" cx="668" cy="340" r="4" style="--i:7"/>
+          <text class="d" x="684" y="345" font-size="12.5" fill="var(--ink)" style="--i:7">Drafted two quotes from the price sheet for your review</text>
+          <circle class="star d" cx="668" cy="374" r="4" style="--i:7"/>
+          <text class="d" x="684" y="379" font-size="12.5" fill="var(--ink)" style="--i:7">Flagged mower two: service interval passed last Friday</text>
+          <circle class="star d" cx="668" cy="408" r="4" style="--i:8"/>
+          <text class="d" x="684" y="413" font-size="12.5" fill="var(--ink)" style="--i:8">Updated the customer list from yesterday's route notes</text>
+          <circle class="star d" cx="668" cy="442" r="4" style="--i:9"/>
+          <text class="d" x="684" y="447" font-size="12.5" fill="var(--ink)" style="--i:9">Escalated one thing to the queue instead of guessing</text>
+          <text class="mono sub d" x="658" y="502" font-size="10" letter-spacing="1" style="--i:10">MISS SOMETHING? TRACE IT, EDIT THE FILE, RETEST. THE LOOP IS THE JOB.</text>
         </g>
 
         <!-- the vault: Order 2 -->
         <g>
-          <rect class="slab" x="40" y="566" width="560" height="170"/>
-          <text class="mono" x="58" y="596" font-size="12" letter-spacing="1.5">THE VAULT IT READS</text>
-          <text class="mono sub" x="582" y="596" font-size="10.5" letter-spacing="1" text-anchor="end">PLAIN FILES &#183; ORDER 2</text>
-          <line x1="58" y1="608" x2="582" y2="608" stroke="var(--ink)" stroke-width="1.3"/>
-          <text x="58" y="634" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)"><tspan fill="var(--terra-deep)" font-weight="700">01</tspan>  identity-charter.md</text>
-          <text x="58" y="656" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)"><tspan fill="var(--terra-deep)" font-weight="700">04</tspan>  authority-classification.md</text>
-          <text x="58" y="678" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)"><tspan fill="var(--terra-deep)" font-weight="700">07</tspan>  automation-decision-framework.md</text>
-          <text x="330" y="634" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">customers.md</text>
-          <text x="330" y="656" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">price-sheet.md</text>
-          <text x="330" y="678" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">jobs/2026-08-week-35.md</text>
-          <text class="mono sub" x="58" y="712" font-size="10" letter-spacing="1">THE RECORD LIVES HERE. THE DASHBOARD ONLY LOOKS AT IT.</text>
+          <rect class="slab d" x="40" y="566" width="560" height="170" style="--i:11"/>
+          <text class="mono d" x="58" y="596" font-size="12" letter-spacing="1.5" style="--i:12">THE VAULT IT READS</text>
+          <text class="mono sub d" x="582" y="596" font-size="10.5" letter-spacing="1" text-anchor="end" style="--i:12">PLAIN FILES &#183; ORDER 2</text>
+          <line class="s" x1="58" y1="608" x2="582" y2="608" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:12"/>
+          <text class="d" x="58" y="634" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:13"><tspan fill="var(--terra-deep)" font-weight="700">01</tspan>  identity-charter.md</text>
+          <text class="d" x="58" y="656" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:13"><tspan fill="var(--terra-deep)" font-weight="700">04</tspan>  authority-classification.md</text>
+          <text class="d" x="58" y="678" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:14"><tspan fill="var(--terra-deep)" font-weight="700">07</tspan>  automation-decision-framework.md</text>
+          <text class="d" x="330" y="634" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:13">customers.md</text>
+          <text class="d" x="330" y="656" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:13">price-sheet.md</text>
+          <text class="d" x="330" y="678" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:14">jobs/2026-08-week-35.md</text>
+          <text class="mono sub d" x="58" y="712" font-size="10" letter-spacing="1" style="--i:14">THE RECORD LIVES HERE. THE DASHBOARD ONLY LOOKS AT IT.</text>
         </g>
 
         <!-- Zone 3: the quarantine -->
         <g>
-          <rect class="slab-danger" x="640" y="566" width="520" height="170"/>
-          <text class="mono danger" x="658" y="596" font-size="12" letter-spacing="1.5">ZONE 3 &#183; NEVER AUTOMATE</text>
-          <text x="658" y="628" font-size="12.5" fill="var(--ink)">Money moving. Hiring and firing. The apology that decides</text>
-          <text x="658" y="646" font-size="12.5" fill="var(--ink)">whether the Broussards stay customers.</text>
-          <text x="658" y="682" font-size="12.5" font-weight="600" fill="var(--ink)">The dashboard shows these. It never gets a button for them.</text>
-          <text class="mono sub" x="658" y="712" font-size="10" letter-spacing="1">DRAWN DASHED ON PURPOSE. SOME LINES ARE THE POINT.</text>
+          <rect class="slab-danger d" x="640" y="566" width="520" height="170" style="--i:11"/>
+          <text class="mono danger d" x="658" y="596" font-size="12" letter-spacing="1.5" style="--i:12">ZONE 3 &#183; NEVER AUTOMATE</text>
+          <text class="d" x="658" y="628" font-size="12.5" fill="var(--ink)" style="--i:13">Money moving. Hiring and firing. The apology that decides</text>
+          <text class="d" x="658" y="646" font-size="12.5" fill="var(--ink)" style="--i:13">whether the Broussards stay customers.</text>
+          <text class="d" x="658" y="682" font-size="12.5" font-weight="600" fill="var(--ink)" style="--i:14">The dashboard shows these. It never gets a button for them.</text>
+          <text class="mono sub d" x="658" y="712" font-size="10" letter-spacing="1" style="--i:14">DRAWN DASHED ON PURPOSE. SOME LINES ARE THE POINT.</text>
         </g>
 
-        <line x1="40" y1="762" x2="1160" y2="762" stroke="var(--ink)" stroke-width="2" opacity="0.85"/>
+        <line class="s" x1="40" y1="762" x2="1160" y2="762" stroke="var(--ink)" stroke-width="2" opacity="0.85" pathLength="1" style="--i:15"/>
       </svg>
       </div>
       <figcaption class="cap"><span><b>Exhibit OD-1</b> &middot; The operator dashboard pattern, drawn for a fictional two-man lawn company.</span><span>Drawn demonstration &middot; fictional data</span></figcaption>
@@ -200,157 +201,157 @@
 
   <figure class="exhibit">
     <div class="mat">
-      <div class="vw wide">
+      <div class="vw wide inkzone" data-ink>
       <svg viewBox="0 0 1200 1000" role="img" aria-label="A drawn schematic of the owner's real console: masthead reading see the truth, control the handoff; program tracker; governed-document counters; folder governance and review-queue panels; ask-the-vault and one-current-answer panels; the tool wiring board; the action gate with an oxblood Zone 3 stub; and the closing line, the vault remembers, the model is replaceable.">
         <rect x="0" y="0" width="1200" height="1000" fill="var(--paper)"/>
-        <text class="mono" x="40" y="44" font-size="19" letter-spacing="1.5">SEE THE TRUTH. CONTROL THE HANDOFF.</text>
-        <text class="mono sub" x="1160" y="44" font-size="11" letter-spacing="1.5" text-anchor="end">THE OWNER'S CONSOLE &#183; DRAWN &#183; DATA GENERICIZED</text>
-        <line x1="40" y1="60" x2="1160" y2="60" stroke="var(--ink)" stroke-width="2"/>
-        <line x1="40" y1="65" x2="1160" y2="65" stroke="var(--ink)" stroke-width="1"/>
+        <text class="mono d" x="40" y="44" font-size="19" letter-spacing="1.5" style="--i:0">SEE THE TRUTH. CONTROL THE HANDOFF.</text>
+        <text class="mono sub d" x="1160" y="44" font-size="11" letter-spacing="1.5" text-anchor="end" style="--i:0">THE OWNER'S CONSOLE &#183; DRAWN &#183; DATA GENERICIZED</text>
+        <line class="s" x1="40" y1="60" x2="1160" y2="60" stroke="var(--ink)" stroke-width="2" pathLength="1" style="--i:1"/>
+        <line class="s" x1="40" y1="65" x2="1160" y2="65" stroke="var(--ink)" stroke-width="1" pathLength="1" style="--i:1"/>
 
         <!-- program tracker -->
         <g>
-          <rect class="slab" x="40" y="92" width="740" height="104"/>
-          <text class="mono" x="58" y="120" font-size="11.5" letter-spacing="1.5">THE COMPLETE OPERATOR PROGRAM</text>
-          <text class="mono sub" x="762" y="120" font-size="10" letter-spacing="1" text-anchor="end">EVERY STEP TRACKED ON THE SCREEN ITSELF</text>
+          <rect class="slab d" x="40" y="92" width="740" height="104" style="--i:1"/>
+          <text class="mono d" x="58" y="120" font-size="11.5" letter-spacing="1.5" style="--i:2">THE COMPLETE OPERATOR PROGRAM</text>
+          <text class="mono sub d" x="762" y="120" font-size="10" letter-spacing="1" text-anchor="end" style="--i:2">EVERY STEP TRACKED ON THE SCREEN ITSELF</text>
           <g>
-            <rect x="58" y="138" width="44" height="34" fill="var(--terra-deep)"/>
-            <rect x="110" y="138" width="44" height="34" fill="var(--terra-deep)"/>
-            <rect x="162" y="138" width="44" height="34" fill="var(--terra-deep)"/>
-            <rect x="214" y="138" width="44" height="34" fill="var(--terra-deep)"/>
-            <rect x="266" y="138" width="44" height="34" fill="var(--terra-deep)"/>
-            <rect x="318" y="138" width="44" height="34" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
-            <rect x="370" y="138" width="44" height="34" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
-            <rect x="422" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="474" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="526" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="578" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="630" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
+            <rect class="d" x="58" y="138" width="44" height="34" fill="var(--terra-deep)" style="--i:2"/>
+            <rect class="d" x="110" y="138" width="44" height="34" fill="var(--terra-deep)" style="--i:2"/>
+            <rect class="d" x="162" y="138" width="44" height="34" fill="var(--terra-deep)" style="--i:2"/>
+            <rect class="d" x="214" y="138" width="44" height="34" fill="var(--terra-deep)" style="--i:2"/>
+            <rect class="d" x="266" y="138" width="44" height="34" fill="var(--terra-deep)" style="--i:2"/>
+            <rect class="d" x="318" y="138" width="44" height="34" fill="none" stroke="var(--ink)" stroke-width="1.3" style="--i:2"/>
+            <rect class="d" x="370" y="138" width="44" height="34" fill="none" stroke="var(--ink)" stroke-width="1.3" style="--i:2"/>
+            <rect class="d" x="422" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:2"/>
+            <rect class="d" x="474" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:2"/>
+            <rect class="d" x="526" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:2"/>
+            <rect class="d" x="578" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:2"/>
+            <rect class="d" x="630" y="138" width="44" height="34" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:2"/>
           </g>
         </g>
         <g>
-          <rect class="slab" x="804" y="92" width="356" height="104"/>
-          <text class="mono sub" x="822" y="120" font-size="10.5" letter-spacing="1">GOVERNED DOCUMENTS</text>
-          <text x="822" y="168" font-family="Besley, Georgia, serif" font-weight="900" font-size="36" fill="var(--ink)">412,806</text>
-          <text class="mono acc" x="1142" y="120" font-size="10.5" letter-spacing="1" text-anchor="end">LEDGER: VERIFIED</text>
-          <text class="mono sub" x="1142" y="168" font-size="10.5" letter-spacing="1" text-anchor="end">OPEN QUESTIONS: 14</text>
+          <rect class="slab d" x="804" y="92" width="356" height="104" style="--i:1"/>
+          <text class="mono sub d" x="822" y="120" font-size="10.5" letter-spacing="1" style="--i:2">GOVERNED DOCUMENTS</text>
+          <text class="d" x="822" y="168" font-family="Besley, Georgia, serif" font-weight="900" font-size="36" fill="var(--ink)" style="--i:3">412,806</text>
+          <text class="mono acc d" x="1142" y="120" font-size="10.5" letter-spacing="1" text-anchor="end" style="--i:2">LEDGER: VERIFIED</text>
+          <text class="mono sub d" x="1142" y="168" font-size="10.5" letter-spacing="1" text-anchor="end" style="--i:3">OPEN QUESTIONS: 14</text>
         </g>
 
         <!-- folder governance + review queue -->
         <g>
-          <rect class="slab" x="40" y="222" width="560" height="250"/>
-          <text class="mono" x="58" y="250" font-size="11.5" letter-spacing="1.5">OPEN ANY FOLDER. GOVERN WHAT IS THERE.</text>
-          <line x1="58" y1="262" x2="582" y2="262" stroke="var(--ink)" stroke-width="1.3"/>
-          <text x="58" y="290" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">/records/leases/</text>
-          <text x="58" y="312" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">/records/vendors/</text>
-          <text x="58" y="334" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)">/records/insurance/</text>
-          <text x="58" y="356" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink-soft)">/incoming/ungraded/</text>
-          <line class="arrowline" x1="240" y1="350" x2="380" y2="350"/>
-          <rect x="390" y="336" width="150" height="26" fill="var(--terra-deep)"/>
-          <text x="465" y="353" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">GOVERN THIS FOLDER</text>
-          <text class="mono sub" x="58" y="440" font-size="10" letter-spacing="1">POINT IT AT ANY FOLDER; WHAT IS THERE BECOMES CLASSIFIED, GRADED, LEDGERED.</text>
+          <rect class="slab d" x="40" y="222" width="560" height="250" style="--i:4"/>
+          <text class="mono d" x="58" y="250" font-size="11.5" letter-spacing="1.5" style="--i:4">OPEN ANY FOLDER. GOVERN WHAT IS THERE.</text>
+          <line class="s" x1="58" y1="262" x2="582" y2="262" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:5"/>
+          <text class="d" x="58" y="290" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:5">/records/leases/</text>
+          <text class="d" x="58" y="312" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:6">/records/vendors/</text>
+          <text class="d" x="58" y="334" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink)" style="--i:6">/records/insurance/</text>
+          <text class="d" x="58" y="356" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink-soft)" style="--i:6">/incoming/ungraded/</text>
+          <line class="arrowline s" x1="240" y1="350" x2="380" y2="350" pathLength="1" style="--i:6"/>
+          <rect class="d" x="390" y="336" width="150" height="26" fill="var(--terra-deep)" style="--i:6"/>
+          <text class="d" x="465" y="353" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle" style="--i:6">GOVERN THIS FOLDER</text>
+          <text class="mono sub d" x="58" y="440" font-size="10" letter-spacing="1" style="--i:8">POINT IT AT ANY FOLDER; WHAT IS THERE BECOMES CLASSIFIED, GRADED, LEDGERED.</text>
         </g>
         <g>
-          <rect class="slab" x="640" y="222" width="520" height="250"/>
-          <text class="mono" x="658" y="250" font-size="11.5" letter-spacing="1.5">TURN THE GRAY MASS INTO GOVERNED KNOWLEDGE</text>
-          <line x1="658" y1="262" x2="1142" y2="262" stroke="var(--ink)" stroke-width="1.3"/>
-          <rect x="658" y="282" width="140" height="120" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
-          <text class="mono sub" x="728" y="306" font-size="9.5" letter-spacing="1" text-anchor="middle">REVIEW QUEUE</text>
-          <line x1="672" y1="326" x2="784" y2="326" stroke="var(--rule)" stroke-width="1"/>
-          <line x1="672" y1="348" x2="784" y2="348" stroke="var(--rule)" stroke-width="1"/>
-          <line x1="672" y1="370" x2="784" y2="370" stroke="var(--rule)" stroke-width="1"/>
-          <line class="arrowline" x1="806" y1="342" x2="838" y2="342"/>
-          <rect x="844" y="282" width="140" height="120" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
-          <text class="mono sub" x="914" y="306" font-size="9.5" letter-spacing="1" text-anchor="middle">SOURCE CONTROL</text>
-          <line x1="858" y1="326" x2="970" y2="326" stroke="var(--rule)" stroke-width="1"/>
-          <line x1="858" y1="348" x2="970" y2="348" stroke="var(--rule)" stroke-width="1"/>
-          <line class="arrowline" x1="992" y1="342" x2="1024" y2="342"/>
-          <rect x="1030" y="282" width="112" height="120" fill="var(--paper-deep)" stroke="var(--terra-deep)" stroke-width="1.4"/>
-          <text class="mono acc" x="1086" y="306" font-size="9.5" letter-spacing="1" text-anchor="middle">DOCUMENT</text>
-          <text class="mono acc" x="1086" y="320" font-size="9.5" letter-spacing="1" text-anchor="middle">CARD</text>
-          <circle class="star" cx="1086" cy="360" r="5"/>
-          <text class="mono sub" x="658" y="440" font-size="10" letter-spacing="1">EVERY FILE EARNS ITS GRADE ON THE WAY IN. NOTHING STAYS GRAY.</text>
+          <rect class="slab d" x="640" y="222" width="520" height="250" style="--i:4"/>
+          <text class="mono d" x="658" y="250" font-size="11.5" letter-spacing="1.5" style="--i:4">TURN THE GRAY MASS INTO GOVERNED KNOWLEDGE</text>
+          <line class="s" x1="658" y1="262" x2="1142" y2="262" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:5"/>
+          <rect class="d" x="658" y="282" width="140" height="120" fill="none" stroke="var(--ink)" stroke-width="1.3" style="--i:5"/>
+          <text class="mono sub d" x="728" y="306" font-size="9.5" letter-spacing="1" text-anchor="middle" style="--i:5">REVIEW QUEUE</text>
+          <line class="s" x1="672" y1="326" x2="784" y2="326" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:6"/>
+          <line class="s" x1="672" y1="348" x2="784" y2="348" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:6"/>
+          <line class="s" x1="672" y1="370" x2="784" y2="370" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:7"/>
+          <line class="arrowline s" x1="806" y1="342" x2="838" y2="342" pathLength="1" style="--i:6"/>
+          <rect class="d" x="844" y="282" width="140" height="120" fill="none" stroke="var(--ink)" stroke-width="1.3" style="--i:5"/>
+          <text class="mono sub d" x="914" y="306" font-size="9.5" letter-spacing="1" text-anchor="middle" style="--i:5">SOURCE CONTROL</text>
+          <line class="s" x1="858" y1="326" x2="970" y2="326" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:6"/>
+          <line class="s" x1="858" y1="348" x2="970" y2="348" stroke="var(--rule)" stroke-width="1" pathLength="1" style="--i:6"/>
+          <line class="arrowline s" x1="992" y1="342" x2="1024" y2="342" pathLength="1" style="--i:6"/>
+          <rect class="d" x="1030" y="282" width="112" height="120" fill="var(--paper-deep)" stroke="var(--terra-deep)" stroke-width="1.4" style="--i:5"/>
+          <text class="mono acc d" x="1086" y="306" font-size="9.5" letter-spacing="1" text-anchor="middle" style="--i:5">DOCUMENT</text>
+          <text class="mono acc d" x="1086" y="320" font-size="9.5" letter-spacing="1" text-anchor="middle" style="--i:6">CARD</text>
+          <circle class="star d" cx="1086" cy="360" r="5" style="--i:6"/>
+          <text class="mono sub d" x="658" y="440" font-size="10" letter-spacing="1" style="--i:8">EVERY FILE EARNS ITS GRADE ON THE WAY IN. NOTHING STAYS GRAY.</text>
         </g>
 
         <!-- ask the vault + one current answer -->
         <g>
-          <rect class="slab" x="40" y="498" width="560" height="230"/>
-          <text class="mono" x="58" y="526" font-size="11.5" letter-spacing="1.5">ASK THE VAULT</text>
-          <line x1="58" y1="538" x2="582" y2="538" stroke="var(--ink)" stroke-width="1.3"/>
-          <rect x="58" y="554" width="420" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
-          <text x="70" y="574" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink-soft)">who holds the current service contract?</text>
-          <rect x="486" y="554" width="96" height="30" fill="var(--ink)"/>
-          <text x="534" y="574" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle">ASK</text>
-          <text x="58" y="620" font-size="12.5" fill="var(--ink)">The answer arrives with its receipts: the file, the grade,</text>
-          <text x="58" y="638" font-size="12.5" fill="var(--ink)">and the papers it outranks.</text>
-          <rect x="58" y="656" width="52" height="20" fill="none" stroke="var(--terra-deep)" stroke-width="1.2"/>
-          <text class="mono acc" x="84" y="670" font-size="9" letter-spacing="1" text-anchor="middle">L0 CITE</text>
-          <rect x="118" y="656" width="52" height="20" fill="none" stroke="var(--terra-deep)" stroke-width="1.2"/>
-          <text class="mono acc" x="144" y="670" font-size="9" letter-spacing="1" text-anchor="middle">L2 CITE</text>
-          <text class="mono sub" x="58" y="710" font-size="10" letter-spacing="1">THE ANSWER PATH STAYS VISIBLE. NO ORACLE, NO GUESSING.</text>
+          <rect class="slab d" x="40" y="498" width="560" height="230" style="--i:9"/>
+          <text class="mono d" x="58" y="526" font-size="11.5" letter-spacing="1.5" style="--i:10">ASK THE VAULT</text>
+          <line class="s" x1="58" y1="538" x2="582" y2="538" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:10"/>
+          <rect class="d" x="58" y="554" width="420" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2" style="--i:10"/>
+          <text class="d" x="70" y="574" font-family="'Courier Prime', 'Courier New', monospace" font-size="12" fill="var(--ink-soft)" style="--i:11">who holds the current service contract?</text>
+          <rect class="d" x="486" y="554" width="96" height="30" fill="var(--ink)" style="--i:10"/>
+          <text class="d" x="534" y="574" font-size="10.5" font-weight="700" letter-spacing="1" fill="var(--paper)" text-anchor="middle" style="--i:11">ASK</text>
+          <text class="d" x="58" y="620" font-size="12.5" fill="var(--ink)" style="--i:11">The answer arrives with its receipts: the file, the grade,</text>
+          <text class="d" x="58" y="638" font-size="12.5" fill="var(--ink)" style="--i:12">and the papers it outranks.</text>
+          <rect class="d" x="58" y="656" width="52" height="20" fill="none" stroke="var(--terra-deep)" stroke-width="1.2" style="--i:12"/>
+          <text class="mono acc d" x="84" y="670" font-size="9" letter-spacing="1" text-anchor="middle" style="--i:12">L0 CITE</text>
+          <rect class="d" x="118" y="656" width="52" height="20" fill="none" stroke="var(--terra-deep)" stroke-width="1.2" style="--i:12"/>
+          <text class="mono acc d" x="144" y="670" font-size="9" letter-spacing="1" text-anchor="middle" style="--i:12">L2 CITE</text>
+          <text class="mono sub d" x="58" y="710" font-size="10" letter-spacing="1" style="--i:13">THE ANSWER PATH STAYS VISIBLE. NO ORACLE, NO GUESSING.</text>
         </g>
         <g>
-          <rect class="slab" x="640" y="498" width="520" height="230"/>
-          <text class="mono" x="658" y="526" font-size="11.5" letter-spacing="1.5">EVERY UNIT. EVERY ERA. ONE CURRENT ANSWER.</text>
-          <line x1="658" y1="538" x2="1142" y2="538" stroke="var(--ink)" stroke-width="1.3"/>
+          <rect class="slab d" x="640" y="498" width="520" height="230" style="--i:9"/>
+          <text class="mono d" x="658" y="526" font-size="11.5" letter-spacing="1.5" style="--i:10">EVERY UNIT. EVERY ERA. ONE CURRENT ANSWER.</text>
+          <line class="s" x1="658" y1="538" x2="1142" y2="538" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:10"/>
           <g>
-            <rect x="658" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="740" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="822" y="556" width="74" height="44" fill="var(--paper-deep)" stroke="var(--terra-deep)" stroke-width="1.5"/>
-            <rect x="904" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="986" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="1068" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="658" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="740" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="822" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="904" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="986" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="1068" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
+            <rect class="d" x="658" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:10"/>
+            <rect class="d" x="740" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:10"/>
+            <rect class="d" x="822" y="556" width="74" height="44" fill="var(--paper-deep)" stroke="var(--terra-deep)" stroke-width="1.5" style="--i:10"/>
+            <rect class="d" x="904" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:10"/>
+            <rect class="d" x="986" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:10"/>
+            <rect class="d" x="1068" y="556" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:10"/>
+            <rect class="d" x="658" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:11"/>
+            <rect class="d" x="740" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:11"/>
+            <rect class="d" x="822" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:11"/>
+            <rect class="d" x="904" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:11"/>
+            <rect class="d" x="986" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:11"/>
+            <rect class="d" x="1068" y="608" width="74" height="44" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:11"/>
           </g>
-          <text class="mono sub" x="859" y="586" font-size="9" letter-spacing="1" text-anchor="middle">UNIT 12</text>
-          <text class="mono sub" x="658" y="686" font-size="10" letter-spacing="1">ONE CURRENT ANSWER PER UNIT. SUPERSEDED PAPERS STAY KEPT AND MARKED,</text>
-          <text class="mono sub" x="658" y="702" font-size="10" letter-spacing="1">NEVER CONFUSED FOR CURRENT.</text>
+          <text class="mono sub d" x="859" y="586" font-size="9" letter-spacing="1" text-anchor="middle" style="--i:11">UNIT 12</text>
+          <text class="mono sub d" x="658" y="686" font-size="10" letter-spacing="1" style="--i:13">ONE CURRENT ANSWER PER UNIT. SUPERSEDED PAPERS STAY KEPT AND MARKED,</text>
+          <text class="mono sub d" x="658" y="702" font-size="10" letter-spacing="1" style="--i:13">NEVER CONFUSED FOR CURRENT.</text>
         </g>
 
         <!-- wiring board + action gate -->
         <g>
-          <rect class="slab" x="40" y="754" width="740" height="170"/>
-          <text class="mono" x="58" y="782" font-size="11.5" letter-spacing="1.5">WIRE THE WHOLE OPERATING FIELD</text>
-          <text class="mono sub" x="762" y="782" font-size="10" letter-spacing="1" text-anchor="end">ORDER 3 &#183; ALLOWED TOOLS, MADE VISIBLE</text>
-          <line x1="58" y1="794" x2="762" y2="794" stroke="var(--ink)" stroke-width="1.3"/>
+          <rect class="slab d" x="40" y="754" width="740" height="170" style="--i:14"/>
+          <text class="mono d" x="58" y="782" font-size="11.5" letter-spacing="1.5" style="--i:15">WIRE THE WHOLE OPERATING FIELD</text>
+          <text class="mono sub d" x="762" y="782" font-size="10" letter-spacing="1" text-anchor="end" style="--i:15">ORDER 3 &#183; ALLOWED TOOLS, MADE VISIBLE</text>
+          <line class="s" x1="58" y1="794" x2="762" y2="794" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:15"/>
           <g>
-            <rect x="58" y="812" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="146" y="812" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="234" y="812" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="322" y="812" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
-            <rect x="410" y="812" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="498" y="812" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
-            <rect x="586" y="812" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="674" y="812" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="58" y="850" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="146" y="850" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
-            <rect x="234" y="850" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="322" y="850" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="410" y="850" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
-            <rect x="498" y="850" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
-            <rect x="586" y="850" width="80" height="30" fill="var(--terra-deep)"/>
-            <rect x="674" y="850" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2"/>
+            <rect class="d" x="58" y="812" width="80" height="30" fill="var(--terra-deep)" style="--i:15"/>
+            <rect class="d" x="146" y="812" width="80" height="30" fill="var(--terra-deep)" style="--i:15"/>
+            <rect class="d" x="234" y="812" width="80" height="30" fill="var(--terra-deep)" style="--i:15"/>
+            <rect class="d" x="322" y="812" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2" style="--i:15"/>
+            <rect class="d" x="410" y="812" width="80" height="30" fill="var(--terra-deep)" style="--i:15"/>
+            <rect class="d" x="498" y="812" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2" style="--i:15"/>
+            <rect class="d" x="586" y="812" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:15"/>
+            <rect class="d" x="674" y="812" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:15"/>
+            <rect class="d" x="58" y="850" width="80" height="30" fill="var(--terra-deep)" style="--i:16"/>
+            <rect class="d" x="146" y="850" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2" style="--i:16"/>
+            <rect class="d" x="234" y="850" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:16"/>
+            <rect class="d" x="322" y="850" width="80" height="30" fill="var(--terra-deep)" style="--i:16"/>
+            <rect class="d" x="410" y="850" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:16"/>
+            <rect class="d" x="498" y="850" width="80" height="30" fill="none" stroke="var(--ink)" stroke-width="1.2" style="--i:16"/>
+            <rect class="d" x="586" y="850" width="80" height="30" fill="var(--terra-deep)" style="--i:16"/>
+            <rect class="d" x="674" y="850" width="80" height="30" fill="none" stroke="var(--rule)" stroke-width="1.2" style="--i:16"/>
           </g>
-          <text class="mono sub" x="58" y="908" font-size="10" letter-spacing="1">EVERY ACCOUNT AND TOOL THE BUSINESS RUNS ON: VISIBLE, ASSIGNED, BOUNDED.</text>
+          <text class="mono sub d" x="58" y="908" font-size="10" letter-spacing="1" style="--i:17">EVERY ACCOUNT AND TOOL THE BUSINESS RUNS ON: VISIBLE, ASSIGNED, BOUNDED.</text>
         </g>
         <g>
-          <rect class="slab" x="804" y="754" width="356" height="170"/>
-          <text class="mono" x="822" y="782" font-size="11.5" letter-spacing="1.5">THE ACTION GATE</text>
-          <line x1="822" y1="794" x2="1142" y2="794" stroke="var(--ink)" stroke-width="1.3"/>
-          <text x="822" y="820" font-size="12" fill="var(--ink)">Zone 1 runs. Zone 2 waits for you.</text>
-          <rect class="slab-danger" x="822" y="836" width="320" height="52"/>
-          <text class="mono danger" x="838" y="858" font-size="10.5" letter-spacing="1.5">ZONE 3 &#183; NEVER AUTOMATE</text>
-          <text x="838" y="878" font-size="11.5" fill="var(--ink)">Shown on screen. No button exists.</text>
-          <text class="mono sub" x="822" y="908" font-size="10" letter-spacing="1">EVERY OUTBOUND ACTION PASSES THE GATE.</text>
+          <rect class="slab d" x="804" y="754" width="356" height="170" style="--i:14"/>
+          <text class="mono d" x="822" y="782" font-size="11.5" letter-spacing="1.5" style="--i:15">THE ACTION GATE</text>
+          <line class="s" x1="822" y1="794" x2="1142" y2="794" stroke="var(--ink)" stroke-width="1.3" pathLength="1" style="--i:15"/>
+          <text class="d" x="822" y="820" font-size="12" fill="var(--ink)" style="--i:15">Zone 1 runs. Zone 2 waits for you.</text>
+          <rect class="slab-danger d" x="822" y="836" width="320" height="52" style="--i:16"/>
+          <text class="mono danger d" x="838" y="858" font-size="10.5" letter-spacing="1.5" style="--i:16">ZONE 3 &#183; NEVER AUTOMATE</text>
+          <text class="d" x="838" y="878" font-size="11.5" fill="var(--ink)" style="--i:16">Shown on screen. No button exists.</text>
+          <text class="mono sub d" x="822" y="908" font-size="10" letter-spacing="1" style="--i:17">EVERY OUTBOUND ACTION PASSES THE GATE.</text>
         </g>
 
-        <line x1="40" y1="952" x2="1160" y2="952" stroke="var(--ink)" stroke-width="2" opacity="0.85"/>
-        <text class="mono" x="600" y="982" font-size="13" letter-spacing="2" text-anchor="middle">THE VAULT REMEMBERS. THE MODEL IS REPLACEABLE.</text>
+        <line class="s" x1="40" y1="952" x2="1160" y2="952" stroke="var(--ink)" stroke-width="2" opacity="0.85" pathLength="1" style="--i:18"/>
+        <text class="mono d" x="600" y="982" font-size="13" letter-spacing="2" text-anchor="middle" style="--i:18">THE VAULT REMEMBERS. THE MODEL IS REPLACEABLE.</text>
       </svg>
       </div>
       <figcaption class="cap"><span><b>Exhibit OD-2</b> &middot; The owner's console, drawn as a schematic: the doctrine running at full scale.</span><span>Drawn from the real screen &middot; data genericized</span></figcaption>
@@ -372,6 +373,7 @@
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
 Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

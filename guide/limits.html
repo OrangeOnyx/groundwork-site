@@ -45,20 +45,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Order 3</span>
-  <nav class="vw journeystrip" aria-label="Guide journey">
+  <nav class="vw journeystrip inkzone" data-ink aria-label="Guide journey">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing. You are at: Build orders one to three.">
-    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
-    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
-    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star-halo" cx="360" cy="28" r="8.5"/><circle class="star" cx="360" cy="28" r="4"/><text class="mono acc" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
-    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a class="d" style="--i:2" href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a class="d" style="--i:3" href="foundations.html"><circle class="star-halo" cx="360" cy="28" r="8.5"/><circle class="star" cx="360" cy="28" r="4"/><text class="mono acc" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
+    <a class="d" style="--i:4" href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a class="d" style="--i:5" href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">ORDER THREE · KNOW YOUR LIMITS · BUILD FIRST</span>
     <h1>Know your limits.</h1>
     <p class="lede">The third standing order. What the system may do: Governance, three files that decide, in writing and before the fact, when AI acts, when it drafts, and when it must stop.</p>
+    <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-10)"><path class="s" pathLength="1" style="--i:0" d="M28 30H60V102H28Z"/><path class="s" pathLength="1" style="--i:1" d="M64 30H96V102H64Z"/><path class="s" pathLength="1" style="--i:2" d="M100 30H132V102H100Z"/><path class="s" pathLength="1" style="--i:3" d="M44 40V86M36 78L44 86L52 78"/><path class="s" pathLength="1" style="--i:4" d="M80 40V60"/><path class="s acc" pathLength="1" style="--i:5" d="M70 66H90"/><path class="s acc" pathLength="1" style="--i:6" d="M108 44L124 60M124 44L108 60"/><g class="f" style="--i:7"><rect x="100" y="94" width="32" height="8" fill="currentColor"/></g><text class="t" style="--i:8" x="44" y="118" text-anchor="middle">AUTO</text><text class="t" style="--i:9" x="80" y="118" text-anchor="middle">WAIT</text><text class="t" style="--i:10" x="116" y="118" text-anchor="middle">NEVER</text><path class="s lt" pathLength="1" style="--i:11" d="M64 132H96"/><text class="t" style="--i:12" x="80" y="141" text-anchor="middle">HUMAN SIGNS</text></g><text class="pl" x="10" y="151">Pl. 03 &middot; Limits</text></svg></figure>
   </header>
 
   <h2>Why rules come before agents</h2>
@@ -70,30 +71,30 @@
 
   <h2>The Automation Decision Framework</h2>
   <p>Every task the system touches falls into exactly one of three zones. The zone assignment is a human decision, made in advance, recorded in a file.</p>
-  <div class="vw" style="margin:1.2rem 0 1.4rem">
+  <div class="vw inkzone" data-ink style="margin:1.2rem 0 1.4rem">
     <svg viewBox="0 0 960 312" role="img" aria-label="Three stacked zone bands. Zone 1 Auto-Execute, brightest. Zone 2 Draft and Wait, dimmer. Zone 3 Never Automate, dim with a red edge. A footer line states the default: unlisted work falls to Draft and Wait.">
-      <rect class="slab" x="24" y="18" width="912" height="76"/>
-      <rect class="acc" x="24" y="26" width="4" height="60"/>
-      <text class="mono acc" x="48" y="44" font-size="10" letter-spacing="2">ZONE 1</text>
-      <text x="48" y="68" font-size="16" font-weight="600">Auto-Execute</text>
-      <text class="mono acc" x="912" y="58" font-size="10" letter-spacing="2" text-anchor="end">ACTS</text>
-      <text class="sub" x="330" y="52" font-size="12.5">Reversible, internal-only, no legal or financial exposure,</text>
-      <text class="sub" x="330" y="70" font-size="12.5">no external communication.</text>
-      <rect class="slab-dim" x="24" y="108" width="912" height="76"/>
-      <rect class="acc dim" x="24" y="116" width="4" height="60"/>
-      <text class="mono acc dim" x="48" y="134" font-size="10" letter-spacing="2">ZONE 2</text>
-      <text x="48" y="158" font-size="16" font-weight="600">Draft &amp; Wait</text>
-      <text class="mono sub" x="912" y="148" font-size="10" letter-spacing="2" text-anchor="end">DRAFTS, THEN A HUMAN</text>
-      <text class="sub" x="330" y="142" font-size="12.5">AI prepares the complete work product; a named human</text>
-      <text class="sub" x="330" y="160" font-size="12.5">approves before anything leaves.</text>
-      <rect class="slab-danger" x="24" y="198" width="912" height="76"/>
-      <rect class="danger" x="24" y="206" width="4" height="60"/>
-      <text class="mono danger" x="48" y="224" font-size="10" letter-spacing="2">ZONE 3</text>
-      <text x="48" y="248" font-size="16" font-weight="600">Never Automate</text>
-      <text class="mono danger" x="912" y="238" font-size="10" letter-spacing="2" text-anchor="end">BRIEFS ONLY</text>
-      <text class="sub" x="330" y="232" font-size="12.5">AI may brief you. It may not act, draft-to-send,</text>
-      <text class="sub" x="330" y="250" font-size="12.5">or decide.</text>
-      <text class="mono sub" x="480" y="300" font-size="10.5" letter-spacing="1" text-anchor="middle">THE DEFAULT: UNLISTED WORK FALLS TO DRAFT &amp; WAIT, NEVER TO AUTO-EXECUTE</text>
+      <rect class="slab d" x="24" y="18" width="912" height="76" style="--i:0"/>
+      <rect class="acc d" x="24" y="26" width="4" height="60" style="--i:0"/>
+      <text class="mono acc d" x="48" y="44" font-size="10" letter-spacing="2" style="--i:0">ZONE 1</text>
+      <text class="d" x="48" y="68" font-size="16" font-weight="600" style="--i:1">Auto-Execute</text>
+      <text class="mono acc d" x="912" y="58" font-size="10" letter-spacing="2" text-anchor="end" style="--i:0">ACTS</text>
+      <text class="sub d" x="330" y="52" font-size="12.5" style="--i:0">Reversible, internal-only, no legal or financial exposure,</text>
+      <text class="sub d" x="330" y="70" font-size="12.5" style="--i:1">no external communication.</text>
+      <rect class="slab-dim d" x="24" y="108" width="912" height="76" style="--i:2"/>
+      <rect class="acc dim d" x="24" y="116" width="4" height="60" style="--i:2"/>
+      <text class="mono acc dim d" x="48" y="134" font-size="10" letter-spacing="2" style="--i:2">ZONE 2</text>
+      <text class="d" x="48" y="158" font-size="16" font-weight="600" style="--i:3">Draft &amp; Wait</text>
+      <text class="mono sub d" x="912" y="148" font-size="10" letter-spacing="2" text-anchor="end" style="--i:2">DRAFTS, THEN A HUMAN</text>
+      <text class="sub d" x="330" y="142" font-size="12.5" style="--i:2">AI prepares the complete work product; a named human</text>
+      <text class="sub d" x="330" y="160" font-size="12.5" style="--i:3">approves before anything leaves.</text>
+      <rect class="slab-danger d" x="24" y="198" width="912" height="76" style="--i:4"/>
+      <rect class="danger d" x="24" y="206" width="4" height="60" style="--i:4"/>
+      <text class="mono danger d" x="48" y="224" font-size="10" letter-spacing="2" style="--i:4">ZONE 3</text>
+      <text class="d" x="48" y="248" font-size="16" font-weight="600" style="--i:5">Never Automate</text>
+      <text class="mono danger d" x="912" y="238" font-size="10" letter-spacing="2" text-anchor="end" style="--i:4">BRIEFS ONLY</text>
+      <text class="sub d" x="330" y="232" font-size="12.5" style="--i:4">AI may brief you. It may not act, draft-to-send,</text>
+      <text class="sub d" x="330" y="250" font-size="12.5" style="--i:5">or decide.</text>
+      <text class="mono sub d" x="480" y="300" font-size="10.5" letter-spacing="1" text-anchor="middle" style="--i:6">THE DEFAULT: UNLISTED WORK FALLS TO DRAFT &amp; WAIT, NEVER TO AUTO-EXECUTE</text>
     </svg>
   </div>
   <div class="grid2">
@@ -228,6 +229,7 @@ failure. Never fill a gap with a guess.</code></pre>
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
 Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

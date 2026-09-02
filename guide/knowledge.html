@@ -45,20 +45,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Order 2</span>
-  <nav class="vw journeystrip" aria-label="Guide journey">
+  <nav class="vw journeystrip inkzone" data-ink aria-label="Guide journey">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing. You are at: Build orders one to three.">
-    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
-    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
-    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star-halo" cx="360" cy="28" r="8.5"/><circle class="star" cx="360" cy="28" r="4"/><text class="mono acc" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
-    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a class="d" style="--i:2" href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a class="d" style="--i:3" href="foundations.html"><circle class="star-halo" cx="360" cy="28" r="8.5"/><circle class="star" cx="360" cy="28" r="4"/><text class="mono acc" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
+    <a class="d" style="--i:4" href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a class="d" style="--i:5" href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">ORDER TWO · KNOW MY INFORMATION · BUILD FIRST</span>
     <h1>Know my information.</h1>
     <p class="lede">The second standing order. What the system may trust and use: Knowledge, four files that stop your AI from treating a rumor and a contract as equal.</p>
+    <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g class="f" style="--i:0"><rect x="44.5" y="20.5" width="71" height="23" fill="currentColor"/></g><path class="s" pathLength="1" style="--i:0" d="M44 20H116V140H44Z"/><path class="s" pathLength="1" style="--i:1" d="M44 44H116"/><path class="s" pathLength="1" style="--i:2" d="M44 68H116"/><path class="s" pathLength="1" style="--i:3" d="M44 92H116"/><path class="s" pathLength="1" style="--i:4" d="M44 116H116"/><path class="s" pathLength="1" style="--i:5" d="M92 32H104"/><path class="s" pathLength="1" style="--i:6" d="M92 56H104"/><path class="s" pathLength="1" style="--i:7" d="M92 80H104"/><path class="s" pathLength="1" style="--i:8" d="M92 104H104"/><path class="s" pathLength="1" style="--i:9" d="M92 128H104"/><text class="t onfill" style="--i:5" x="52" y="35">L0</text><text class="t" style="--i:6" x="52" y="59">L1</text><text class="t" style="--i:7" x="52" y="83">L2</text><text class="t" style="--i:8" x="52" y="107">L3</text><text class="t" style="--i:9" x="52" y="131">L4</text><text class="pl" x="10" y="151">Pl. 02 &middot; Knowledge</text></svg></figure>
   </header>
 
   <h2>Why this layer exists</h2>
@@ -223,6 +224,7 @@ Last updated: [date]
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
 Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

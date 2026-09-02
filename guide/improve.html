@@ -45,20 +45,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Order 6</span>
-  <nav class="vw journeystrip" aria-label="Guide journey">
+  <nav class="vw journeystrip inkzone" data-ink aria-label="Guide journey">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing. You are at: Keep it standing.">
-    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
-    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
-    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
-    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="improve.html"><circle class="star-halo" cx="680" cy="24" r="8.5"/><circle class="star" cx="680" cy="24" r="4"/><text class="mono acc" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a class="d" style="--i:2" href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a class="d" style="--i:3" href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
+    <a class="d" style="--i:4" href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a class="d" style="--i:5" href="improve.html"><circle class="star-halo" cx="680" cy="24" r="8.5"/><circle class="star" cx="680" cy="24" r="4"/><text class="mono acc" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">ORDER SIX · IMPROVE · THE STANDING HALF</span>
     <h1>Improve.</h1>
     <p class="lede">The sixth standing order, and the half that never finishes. Two files, Measurement Notes and Operating Rhythm, that tell you whether the system works and keep it from decaying.</p>
+    <figure class="fig keep" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-10)"><path class="s" pathLength="1" style="--i:0" d="M30 96A50 50 0 0 1 130 96"/><path class="s" pathLength="1" style="--i:1" d="M36.7 71L41.9 74M80 46V52M123.3 71L118.1 74"/><text class="t" style="--i:2" x="28" y="64" text-anchor="middle">W</text><text class="t" style="--i:2" x="80" y="40" text-anchor="middle">M</text><text class="t" style="--i:2" x="132" y="64" text-anchor="middle">Q</text><path class="n acc" d="M80 96L99 63"/><g class="f" style="--i:3"><circle cx="80" cy="96" r="5" fill="#1E1B16"/></g><path class="s" pathLength="1" style="--i:4" d="M52 124A28 14 0 1 0 108 124"/><path class="s" pathLength="1" style="--i:5" d="M104 116L108 124L100 126"/><text class="t" style="--i:6" x="80" y="144" text-anchor="middle">REVIEW &middot; CORRECT</text></g><text class="pl" x="10" y="151">Pl. 06 &middot; Improve</text></svg></figure>
   </header>
 
   <h2>Trust needs evidence</h2>
@@ -175,6 +176,7 @@
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
 Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

@@ -45,20 +45,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Foundations</span>
-  <nav class="vw journeystrip" aria-label="Guide journey">
+  <nav class="vw journeystrip inkzone" data-ink aria-label="Guide journey">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing. You are at: Build orders one to three.">
-    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
-    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
-    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star-halo" cx="360" cy="28" r="8.5"/><circle class="star" cx="360" cy="28" r="4"/><text class="mono acc" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
-    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a class="d" style="--i:2" href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a class="d" style="--i:3" href="foundations.html"><circle class="star-halo" cx="360" cy="28" r="8.5"/><circle class="star" cx="360" cy="28" r="4"/><text class="mono acc" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
+    <a class="d" style="--i:4" href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a class="d" style="--i:5" href="improve.html"><circle class="star" cx="680" cy="24" r="4"/><text class="mono sub" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">BEFORE ORDER ONE</span>
     <h1>Understand the machine you're feeding.</h1>
     <p class="lede">Before you scan a single document, you should know what you're feeding it into. Four building blocks, in plain language: the model, the agents, the instructions, and the data. No technical background needed. Then, how to actually talk to the thing once it knows your business.</p>
+    <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><path class="s" pathLength="1" style="--i:0" d="M26 26H74V74H26Z"/><path class="s" pathLength="1" style="--i:1" d="M86 26H134V74H86Z"/><path class="s" pathLength="1" style="--i:2" d="M26 86H74V134H26Z"/><path class="s" pathLength="1" style="--i:3" d="M86 86H134V134H86Z"/><text class="t" style="--i:0" x="50" y="53" text-anchor="middle">LLM</text><text class="t" style="--i:1" x="110" y="53" text-anchor="middle">AGENTS</text><text class="t" style="--i:2" x="50" y="113" text-anchor="middle">PROMPT</text><text class="t" style="--i:3" x="110" y="113" text-anchor="middle">DATA</text><path class="s acc" pathLength="1" style="--i:5" d="M74 50H86"/><path class="s acc" pathLength="1" style="--i:6" d="M110 74V86"/><path class="s acc" pathLength="1" style="--i:7" d="M86 110H74"/><path class="s acc" pathLength="1" style="--i:8" d="M50 86V74"/><g class="f" style="--i:9"><circle cx="80" cy="80" r="4" fill="currentColor"/></g><text class="pl" x="10" y="151">Foundations &middot; Four blocks, one machine</text></svg></figure>
   </header>
 
   <p>AI is not magic and it is not a black box. It is a system with parts, and every part depends on what you put into it. Once you see the four parts clearly, every decision in the six orders ahead of you makes sense. This page gives you that picture.</p>
@@ -397,6 +398,7 @@
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
 Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

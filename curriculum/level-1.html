@@ -39,20 +39,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Curriculum</a> / Level 1</span>
-<nav class="vw journeystrip" aria-label="Curriculum levels">
+<nav class="vw journeystrip inkzone" data-ink aria-label="Curriculum levels">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five levels of the curriculum, climbing: Essentials, Intermediate, Advanced, Professional, Frontier. You are at level 1.">
-    <polyline class="ln-acc" points="40,40 200,34 360,28 520,21 680,14" stroke-width="1" opacity="0.7"/>
-    <a href="level-1.html"><circle class="star-halo" cx="40" cy="40" r="9" stroke-width="1.5"/><circle class="star" cx="40" cy="40" r="4"/><text class="mono sub" x="40" y="58" text-anchor="middle" font-size="9" letter-spacing="1">ESSENTIALS</text></a>
-    <a href="level-2.html"><circle class="star" cx="200" cy="34" r="4"/><text class="mono sub" x="200" y="58" text-anchor="middle" font-size="9" letter-spacing="1">INTERMEDIATE</text></a>
-    <a href="level-3.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="58" text-anchor="middle" font-size="9" letter-spacing="1">ADVANCED</text></a>
-    <a href="level-4.html"><circle class="star" cx="520" cy="21" r="4"/><text class="mono sub" x="520" y="58" text-anchor="middle" font-size="9" letter-spacing="1">PROFESSIONAL</text></a>
-    <a href="level-5.html"><circle class="star" cx="680" cy="14" r="4"/><text class="mono sub" x="680" y="58" text-anchor="middle" font-size="9" letter-spacing="1">FRONTIER</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,40 200,34 360,28 520,21 680,14" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="level-1.html"><circle class="star-halo" cx="40" cy="40" r="9" stroke-width="1.5"/><circle class="star" cx="40" cy="40" r="4"/><text class="mono sub" x="40" y="58" text-anchor="middle" font-size="9" letter-spacing="1">ESSENTIALS</text></a>
+    <a class="d" style="--i:2" href="level-2.html"><circle class="star" cx="200" cy="34" r="4"/><text class="mono sub" x="200" y="58" text-anchor="middle" font-size="9" letter-spacing="1">INTERMEDIATE</text></a>
+    <a class="d" style="--i:3" href="level-3.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="58" text-anchor="middle" font-size="9" letter-spacing="1">ADVANCED</text></a>
+    <a class="d" style="--i:4" href="level-4.html"><circle class="star" cx="520" cy="21" r="4"/><text class="mono sub" x="520" y="58" text-anchor="middle" font-size="9" letter-spacing="1">PROFESSIONAL</text></a>
+    <a class="d" style="--i:5" href="level-5.html"><circle class="star" cx="680" cy="14" r="4"/><text class="mono sub" x="680" y="58" text-anchor="middle" font-size="9" letter-spacing="1">FRONTIER</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">LEVEL 1 · ESSENTIALS</span>
     <h1>Get genuinely good with AI in thirty days.</h1>
     <p class="lede">You are new to AI, or an occasional user without a system. Level 1 makes you a competent power user: you know the jargon, you carry your own prompt library, you route each task to the right model, and you ship real work with AI. Thirty days, at thirty to sixty minutes a day.</p>
+    <figure class="fig" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><path class="s" pathLength="1" style="--i:0" d="M12 132H148"/><path class="s" pathLength="1" style="--i:1" d="M20 132V112H46V92H72V72H98V52H124V32H148"/><text class="t" style="--i:2" x="33" y="126" text-anchor="middle">L1</text><text class="t" style="--i:3" x="59" y="106" text-anchor="middle">L2</text><text class="t" style="--i:4" x="85" y="86" text-anchor="middle">L3</text><text class="t" style="--i:5" x="111" y="66" text-anchor="middle">L4</text><text class="t" style="--i:6" x="136" y="46" text-anchor="middle">L5</text><g class="f" style="--i:7"><circle cx="33" cy="103" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="33" cy="103" r="4" fill="currentColor"/></g><text class="t acc" style="--i:8" x="20" y="24">YOU ARE HERE</text><text class="pl" x="10" y="151">Level 1 &middot; Essentials</text></svg></figure>
   </header>
 
   <h2>What you can do when you finish</h2>
@@ -88,6 +89,7 @@
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="https://github.com/OrangeOnyx/groundwork-curriculum">Curriculum on GitHub</a></div>
 Groundwork. The free, ungated AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

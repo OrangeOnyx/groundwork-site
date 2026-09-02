@@ -45,20 +45,21 @@
 </nav>
 <main id="main" tabindex="-1">
   <span class="crumb"><a href="index.html">The Groundwork Guide</a> / Order 5</span>
-  <nav class="vw journeystrip" aria-label="Guide journey">
+  <nav class="vw journeystrip inkzone" data-ink aria-label="Guide journey">
   <svg viewBox="0 0 720 64" role="img" aria-label="The five stops of the guide: score yourself, Day One, build orders one to three, activate the Operator, keep it standing. You are at: Keep it standing.">
-    <polyline class="ln-acc" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
-    <a href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
-    <a href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
-    <a href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
-    <a href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
-    <a href="improve.html"><circle class="star-halo" cx="680" cy="24" r="8.5"/><circle class="star" cx="680" cy="24" r="4"/><text class="mono acc" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
+    <polyline class="ln-acc s" pathLength="1" style="--i:0;--dur:1.2s" points="40,26 200,20 360,28 520,18 680,24" stroke-width="1" opacity="0.7"/>
+    <a class="d" style="--i:1" href="scorecard.html"><circle class="star" cx="40" cy="26" r="4"/><text class="mono sub" x="40" y="52" text-anchor="middle" font-size="9" letter-spacing="1">SCORE</text></a>
+    <a class="d" style="--i:2" href="day-one.html"><circle class="star" cx="200" cy="20" r="4"/><text class="mono sub" x="200" y="52" text-anchor="middle" font-size="9" letter-spacing="1">DAY ONE</text></a>
+    <a class="d" style="--i:3" href="foundations.html"><circle class="star" cx="360" cy="28" r="4"/><text class="mono sub" x="360" y="52" text-anchor="middle" font-size="9" letter-spacing="1">BUILD 01-03</text></a>
+    <a class="d" style="--i:4" href="operator.html"><circle class="star" cx="520" cy="18" r="4"/><text class="mono sub" x="520" y="52" text-anchor="middle" font-size="9" letter-spacing="1">OPERATOR</text></a>
+    <a class="d" style="--i:5" href="improve.html"><circle class="star-halo" cx="680" cy="24" r="8.5"/><circle class="star" cx="680" cy="24" r="4"/><text class="mono acc" x="680" y="52" text-anchor="middle" font-size="9" letter-spacing="1">KEEP IT STANDING</text></a>
   </svg>
   </nav>
-  <header class="page">
+  <header class="page pagehead">
     <span class="kicker">ORDER FIVE · REMEMBER · THE STANDING HALF</span>
     <h1>Remember.</h1>
     <p class="lede">The fifth standing order. What survives time, people, and failure: Continuity, two files that make the foundation outlive the founder being busy, absent, or gone.</p>
+    <figure class="fig keep" aria-hidden="true"><svg viewBox="0 0 160 160"><rect class="bg" x=".5" y=".5" width="159" height="159"/><g transform="translate(0,-14)"><path class="s" pathLength="1" style="--i:0" d="M26 44H80V126H26Z"/><path class="s" pathLength="1" style="--i:1" d="M80 44H134V126H80Z"/><path class="s lt" pathLength="1" style="--i:2" d="M26 126l4 6H78l2-6M80 126l2 6H130l4-6"/><path class="s lt" pathLength="1" style="--i:3" d="M36 60H70"/><path class="s lt" pathLength="1" style="--i:4" d="M36 70H70"/><path class="s lt" pathLength="1" style="--i:5" d="M36 80H70"/><path class="s lt" pathLength="1" style="--i:6" d="M36 90H70"/><path class="s lt" pathLength="1" style="--i:7" d="M36 100H70"/><path class="s lt" pathLength="1" style="--i:3" d="M90 60H124"/><path class="s lt" pathLength="1" style="--i:4" d="M90 70H124"/><path class="s lt" pathLength="1" style="--i:5" d="M90 80H124"/><g class="f" style="--i:8"><path d="M76 44h8v40l-4-5l-4 5z" fill="currentColor"/></g><g class="f" style="--i:9"><rect x="134" y="52" width="6" height="10" fill="#A44E12"/><rect x="134" y="66" width="6" height="10" fill="#A44E12"/><rect x="134" y="80" width="6" height="10" fill="#D9A419"/></g><text class="t" style="--i:10" x="107" y="116" text-anchor="middle">HANDED ON</text><path class="s lt" pathLength="1" style="--i:11" d="M36 142H132"/><path class="s lt" pathLength="1" style="--i:12" d="M36 138V146M60 138V146M84 138V146M108 138V146M132 138V146"/><text class="t" style="--i:13" x="84" y="156" text-anchor="middle">GONE 90 DAYS &middot; STILL RUNS</text></g><text class="pl" x="10" y="151">Pl. 05 &middot; Remember</text></svg></figure>
   </header>
 
   <h2>The ninety-day test</h2>
@@ -140,6 +141,7 @@ at the end of major sessions.*
 </main>
 <footer class="site"><div class="passiton">Pass it on: <button class="btn btn-ghost pbtn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied'">Copy link</button> <a href="mailto:?subject=Groundwork&amp;body=A free, ungated AI readiness system for owners and operators: https://groundwork.adamabdalla.com">Send to a fellow owner</a> · <a href="../curriculum/index.html">The Curriculum</a></div>
 Groundwork. The AI readiness system by Adam Abdalla. Lafayette, Louisiana. <a href="mailto:adam@adamabdalla.com">adam@adamabdalla.com</a> · <a href="../legal.html">Disclaimer &amp; Privacy</a></footer>
+<script defer src="../assets/motion.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
