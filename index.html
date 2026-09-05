@@ -1143,7 +1143,10 @@ document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
   if (poster) {
     poster.addEventListener('load', () => { if (wrap) wrap.classList.add('has-poster'); });
     poster.addEventListener('error', () => { poster.setAttribute('hidden', ''); if (wrap) wrap.classList.remove('has-poster'); });
-    if (poster.complete && poster.naturalWidth) wrap.classList.add('has-poster');
+    if (poster.complete) {
+      if (poster.naturalWidth) wrap.classList.add('has-poster');
+      else { poster.setAttribute('hidden', ''); if (wrap) wrap.classList.remove('has-poster'); }
+    }
   }
   if (reduce()) pinStill();
   else {
@@ -1155,7 +1158,9 @@ document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
       film.addEventListener('error', pinStill);
       const src = film.querySelector('source');
       if (src) src.addEventListener('error', pinStill);
-      film.addEventListener('canplay', playFilm, { once: true });
+      if (film.error || film.networkState === 3) pinStill();
+      else if (film.readyState >= 2) playFilm();
+      else film.addEventListener('canplay', playFilm, { once: true });
     }
   }
   function onRebuild() {
