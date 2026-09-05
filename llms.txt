@@ -23,7 +23,7 @@ The six standing orders are Know me (Identity), Know my information (Knowledge),
 - [Order 6: Improve](https://groundwork.adamabdalla.com/guide/improve.html): Measurement and the Operating Rhythm, merged
 - [The Oldest Idea in Groundwork](https://groundwork.adamabdalla.com/guide/lineage.html): the Admiralty Code lineage of Authority Classification
 - [The Atlas Story](https://groundwork.adamabdalla.com/guide/atlas.html): a real command center running on these documents, ten features
-- [The Operator Dashboard](https://groundwork.adamabdalla.com/guide/dashboard.html): the morning-screen pattern over the vault and the Operator, drawn as a demonstration; Atlas is the lived version
+- [The Operator Dashboard](https://groundwork.adamabdalla.com/guide/dashboard.html): the morning-screen pattern over the vault and the Operator, drawn as a demonstration, then the owner's own console photographed on a demonstration dataset; Atlas is the lived version
 - [Field Guide PDF](https://groundwork.adamabdalla.com/assets/Groundwork-Program-Guide.pdf): the doctrine in one downloadable file
 
 ## The Curriculum
