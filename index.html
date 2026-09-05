@@ -1128,6 +1128,13 @@ document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
     mark.classList.add('run');
     labelBtn('Build it again');
   }
+  function holdPoster() {
+    if (!wrap) return;
+    wrap.classList.add('is-still');
+    wrap.classList.remove('has-film');
+    if (film) try { film.pause(); } catch (e) {}
+    labelBtn('Play');
+  }
   function showFilm() {
     if (!wrap || !film || reduce()) return pinStill();
     wrap.classList.add('has-film');
@@ -1136,8 +1143,12 @@ document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
   }
   function playFilm() {
     if (!film || reduce()) return pinStill();
+    if (film.error || film.networkState === 3) return pinStill();
     const p = film.play();
-    if (p && p.then) p.then(showFilm).catch(pinStill);
+    if (p && p.then) p.then(showFilm).catch(() => {
+      if (film.readyState >= 2) holdPoster();
+      else pinStill();
+    });
     else showFilm();
   }
   if (poster) {
@@ -1164,12 +1175,16 @@ document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
     }
   }
   function onRebuild() {
-    if (wrap && wrap.classList.contains('has-film') && film) {
-      if (film.paused) { wrap.dataset.userPaused = ''; playFilm(); }
-      else { film.pause(); wrap.dataset.userPaused = '1'; labelBtn('Play'); }
+    if (reduce()) return;
+    if (film && film.readyState >= 2 && !film.error) {
+      if (wrap && wrap.classList.contains('has-film') && !film.paused) {
+        film.pause(); wrap.dataset.userPaused = '1'; labelBtn('Play');
+      } else {
+        wrap.dataset.userPaused = '';
+        playFilm();
+      }
       return;
     }
-    if (reduce()) return;
     rebuildMark();
   }
   mark.addEventListener('click', onRebuild);
