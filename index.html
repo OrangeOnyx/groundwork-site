@@ -124,7 +124,7 @@ nav .links a:hover{color:var(--terra-deep)}
 nav .links a.cta{color:var(--paper);background:var(--terra-deep);padding:.55em 1.1em;font-weight:700;letter-spacing:.03em;white-space:nowrap;transition:background .18s var(--ease-out)}
 nav .links a.cta:hover{background:var(--ink);color:var(--paper)}
 nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);color:var(--ink);padding:.4em .9em;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.1em;cursor:pointer}
-@media (max-width:720px){
+@media (max-width:980px){
   nav .links a:not(.cta){display:none}
   nav .navtoggle{display:inline-flex;align-items:center;margin-left:auto}
   nav .links{margin-left:.6rem}
@@ -144,7 +144,7 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 .folio{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--ink);padding-bottom:.55rem;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
 .folio .no{color:var(--terra-deep)}
 .cover .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:end;padding:clamp(2.5rem,6vh,4.5rem) 0 clamp(2.2rem,5vh,3.6rem)}
-.cover h1{font-size:clamp(2.6rem,5.6vw,5.1rem);text-transform:uppercase;letter-spacing:-.02em;max-width:14ch}
+.cover h1{font-size:clamp(2.6rem,5.6vw,5.1rem);text-transform:uppercase;letter-spacing:-.02em;max-width:22ch}
 .cover .sub{font-family:var(--slab);font-style:italic;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink-soft);margin-top:1.15rem;max-width:40ch}
 .cover .leave{margin-top:.7rem;max-width:42ch;font-size:1.02rem;line-height:1.45;color:var(--ink)}
 .cover .ctarow{margin-top:1.7rem}
@@ -181,8 +181,13 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 .contents a b{color:var(--terra-deep);margin-right:.5em;font-family:var(--slab);font-weight:900}
 .contents a:hover{color:var(--terra-deep)}
 @media (max-width:860px){
-  .cover{padding-top:7rem}
-  .cover .grid{grid-template-columns:1fr;align-items:start}
+  .cover{padding-top:6.4rem}
+  .cover .grid{grid-template-columns:1fr;align-items:start;padding:1.55rem 0 1.2rem}
+  .cover h1{font-size:clamp(2.15rem,10.5vw,3.2rem)}
+  .cover .sub{margin-top:.85rem}
+  .cover .leave{margin-top:.55rem}
+  .cover .ctarow{margin-top:1.25rem}
+  .cover .fork{margin-top:.85rem}
   .markwrap{margin-left:0;max-width:320px}
 }
 /* ============ sections ============ */
@@ -524,7 +529,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         <p class="sub">Groundwork is the free, ungated AI readiness system. You own the files.</p>
         <p class="leave">You leave with fifteen documents and one governed Operator, built in sequence.</p>
         <div class="ctarow"><a class="btn" href="guide/day-one.html">Start Day One</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
-        <p class="fork">Want to go deeper? The <a href="curriculum/index.html">Curriculum</a> is the five-level skill path beside the program.</p>
+        <p class="fork">If you want skill depth, the <a href="curriculum/index.html">Curriculum</a> is the five-level path beside the program.</p>
       </div>
       <div class="markwrap">
       <svg class="covermark" id="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark, built in sequence: scattered points settle as three terracotta bars for the first three orders stack on an ink ground line, one mustard Operator disc lands above them, and an olive frame for the standing half draws itself around the whole.">
