@@ -7,6 +7,8 @@ Every raster shipped on this site is recorded here, and each carries its origin 
 | File | How it was made |
 |---|---|
 | `assets/og-card.png` | The social-share card (1200x630). Rendered August 26, 2026 from an HTML composition in the site's own design system (paper ground, Archivo 900 headline, Besley italic sub, the stacked-bars system mark) via headless Edge. Drawn, not AI-generated. |
+| `assets/explainer/groundwork-hero-loop-15s.mp4` | Silent ~15s, 1920×1080, h264 cover loop. Mark-build language only (rule → scatter → stacked bars → Operator disc → Remember·Improve frame → leave-with). Approved cut; source of truth for humans is the shared explainer export. **Not yet in this repository** — cover markup expects this exact path. Do not substitute stock or a regenerated film. |
+| `assets/explainer/hero-loop-poster.png` | Still frame for the cover loop (reduced-motion and preload poster). **Not yet in this repository** — cover markup expects this exact path. |
 | `apple-touch-icon.png` | The Groundwork mark (three terracotta layer bars, mustard Operator disc, ink ground line on paper) rendered from inline SVG via headless Edge at 512px, scaled to 180px with ffmpeg. Drawn, not AI-generated. |
 | `favicon.ico` | Same mark, scaled to 48px with ffmpeg. The pages also carry the mark as an inline SVG favicon. |
 | `assets/atlas/atlas-*.png` (six sheets: D-1 dashboard, A-1 site plan, A-2 spatial, R-1 rent roll with unit drawer, W-1 action board, AI-1 concierge) | Screenshots from the Atlas operator manual. The tool, the sheet system, and the property geometry are real; tenant names and figures are the manual's demonstration dataset, kept separate from the live records. Cleared for public use (August 2026). Not AI-generated. |

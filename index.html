@@ -157,9 +157,22 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 .start-fork a{font-family:var(--display);font-style:normal;font-weight:700;text-decoration:none}
 .markwrap{margin-left:auto;max-width:460px;width:100%}
 .covermark{width:100%;display:block;cursor:pointer}
+/* Silent ~15s hero loop sits in the mark slot as a printed plate, not a player.
+   No native controls: chrome fights the Annual Report. Pause/replay lives in the
+   existing Fig. 1 caption button (WCAG 2.2.2). Reduced-motion and failed load
+   keep the drawn mark (or the poster still). */
+.herofilm,.heroposter{display:none;width:100%;height:auto;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--rule)}
+.heroplate{width:100%}
+.markwrap.has-film .heroplate,.markwrap.has-poster.is-still .heroplate{background:var(--paper-deep);border:1px solid var(--ink);padding:.45rem}
+.markwrap.has-film .herofilm{display:block}
+.markwrap.has-film .covermark,.markwrap.has-film .heroposter{display:none}
+.markwrap.has-poster.is-still .heroposter{display:block}
+.markwrap.has-poster.is-still .covermark,.markwrap.has-poster.is-still .herofilm{display:none}
+.markwrap.is-still:not(.has-poster) .herofilm,.markwrap.is-still:not(.has-poster) .heroposter{display:none}
 .markcap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:.7rem;font-family:var(--display);font-weight:700;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
 .markcap .rebuild{background:transparent;border:0;border-bottom:1px solid var(--terra);color:var(--terra-deep);font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;padding:0 0 .1em}
 .markcap .rebuild:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.markwrap.has-poster.is-still .rebuild{visibility:hidden}
 /* the mark builds itself: ground, then the three orders in sequence, then the Operator, then the standing frame */
 .covermark .cm{--d:0s}
 .covermark.run .scatter{animation:cm-scatter .7s var(--ease-out) .55s both}
@@ -191,6 +204,7 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
   .cover .ctarow{margin-top:1.25rem}
   .cover .fork{margin-top:.85rem}
   .markwrap{margin-left:0;max-width:320px}
+  .markwrap.has-film,.markwrap.has-poster.is-still{max-width:min(100%,420px)}
 }
 /* ============ sections ============ */
 main{position:relative;background:var(--paper)}
@@ -289,7 +303,7 @@ section h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:24ch}
 .inkzone .d{opacity:0;transform:translateY(-8px);transition:opacity .45s var(--ease-out),transform .55s var(--ease-out);transition-delay:calc(var(--i,0)*90ms)}
 .inkzone.ink .d{opacity:1;transform:none}
 .fig4 .d{transition-delay:calc(var(--i,0)*60ms + .1s)}
-@media print{.fig .s,.inkzone .s{stroke-dashoffset:0}.fig .f,.fig .t,.fig .n,.fig .d,.inkzone .d{opacity:1;transform:none}.fig .m{transform:none}.prompt .ln{opacity:1}.schedule tbody tr{opacity:1}.covermark .cm{animation:none!important}.covermark .scatter{opacity:0}}
+@media print{.fig .s,.inkzone .s{stroke-dashoffset:0}.fig .f,.fig .t,.fig .n,.fig .d,.inkzone .d{opacity:1;transform:none}.fig .m{transform:none}.prompt .ln{opacity:1}.schedule tbody tr{opacity:1}.covermark .cm{animation:none!important}.covermark .scatter{opacity:0}.herofilm,.heroposter{display:none!important}.covermark{display:block!important}.markwrap.has-film .heroplate,.markwrap.has-poster.is-still .heroplate{background:transparent;border:0;padding:0}}
 .fig{margin:0;color:var(--terra-deep)}
 .fig.wide{width:100%}
 .fig .t.big{font-family:var(--slab);font-style:italic;font-weight:600;font-size:18px;letter-spacing:0;fill:var(--ink-soft)}
@@ -457,6 +471,7 @@ footer .cols{display:flex;flex-direction:column;gap:.25rem;text-align:right}
   .covermark .cm{animation:none!important}
   .fig .s,.inkzone .s{stroke-dashoffset:0}.fig .f,.fig .t,.fig .n,.fig .d,.inkzone .d{opacity:1;transform:none}.fig .m{transform:none}.prompt .ln{opacity:1}.schedule tbody tr{opacity:1}
   .covermark .scatter{opacity:0}
+  .herofilm{display:none!important}
   .holdfield{--p:1}
   .holdfield i{background:var(--terra-deep)}
   .holdfield svg line{opacity:.9}
@@ -496,8 +511,8 @@ STORY: an owner sees a serious, complete, free system from a real operator; read
 scans the method, sees real proof, then starts Day One or books the audit.
 FIRST VIEWPORT: masthead rule and GROUNDWORK; left, 900-weight headline (what this is), italic
 slab (free / ungated / yours), roman leave-with line, two printed program buttons, quiet Curriculum
-fork; right, the registration-animated system mark (three terracotta bars, mustard Operator disc,
-olive durability frame, ink ground line); below, a ruled contents strip including Curriculum.
+fork; right, the silent ~15s hero loop in the mark slot (or the registration-animated system mark
+when motion is reduced or the film is missing); below, a ruled contents strip including Curriculum.
 FORM: The Annual Report, ranked candidate 1 of 7; seed c62d8482.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the
 verdict, DESIGN.md, and every shipping raster carrying its provenance.
@@ -534,7 +549,13 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         <div class="ctarow"><a class="btn" href="guide/day-one.html">Start Day One</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
         <p class="fork">If you want skill depth, the <a href="curriculum/index.html">Curriculum</a> is the five-level path beside the program.</p>
       </div>
-      <div class="markwrap">
+      <div class="markwrap" id="markwrap">
+      <div class="heroplate">
+      <!-- Silent mark-build loop. No native controls (design). Pause/replay is the caption button. -->
+      <video class="herofilm" id="herofilm" muted loop playsinline preload="metadata" width="1920" height="1080" poster="assets/explainer/hero-loop-poster.png" aria-label="The Groundwork mark, built in sequence: scattered points settle as three terracotta bars for the first three orders stack on an ink ground line, one mustard Operator disc lands above them, and an olive frame for the standing half draws itself around the whole.">
+        <source src="assets/explainer/groundwork-hero-loop-15s.mp4" type="video/mp4">
+      </video>
+      <img class="heroposter" id="heroposter" src="assets/explainer/hero-loop-poster.png" alt="The Groundwork mark at rest: three terracotta bars, Operator disc, Remember · Improve frame." width="1920" height="1080" decoding="async">
       <svg class="covermark" id="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark, built in sequence: scattered points settle as three terracotta bars for the first three orders stack on an ink ground line, one mustard Operator disc lands above them, and an olive frame for the standing half draws itself around the whole.">
         <g class="cm scatter" aria-hidden="true" fill="#5C554A">
           <circle cx="92" cy="236" r="3"/><circle cx="141" cy="318" r="2.6"/><circle cx="176" cy="262" r="3.2"/><circle cx="214" cy="344" r="2.4"/><circle cx="238" cy="292" r="3"/><circle cx="286" cy="330" r="2.6"/><circle cx="118" cy="356" r="2.4"/><circle cx="196" cy="210" r="2.6"/><circle cx="262" cy="242" r="2.4"/><circle cx="310" cy="276" r="3"/><circle cx="160" cy="372" r="2.4"/><circle cx="330" cy="356" r="2.4"/><circle cx="76" cy="300" r="2.4"/><circle cx="228" cy="184" r="2.6"/>
@@ -548,6 +569,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
         <rect class="cm frame" pathLength="1" x="64" y="130" width="272" height="238" fill="none" stroke="#5A6B4A" stroke-width="2.5"/>
         <text class="cm cap" x="200" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5A6B4A">REMEMBER &middot; IMPROVE</text>
       </svg>
+      </div>
       <p class="markcap"><span>Fig. 1 &middot; Built in sequence.</span><button type="button" class="rebuild" id="rebuild">Build it again</button></p>
       </div>
     </div>
@@ -1082,22 +1104,72 @@ const plateIO = new IntersectionObserver(entries => {
 }, { threshold: 0.45 });
 document.querySelectorAll('.fig, [data-ink]').forEach(f => plateIO.observe(f));
 
-/* ================= the mark: build it again ================= */
+/* ================= cover mark + silent hero loop ================= */
 (function () {
+  const wrap = document.getElementById('markwrap');
   const mark = document.getElementById('covermark');
+  const film = document.getElementById('herofilm');
+  const poster = document.getElementById('heroposter');
   const btn = document.getElementById('rebuild');
   if (!mark) return;
-  function rebuild() {
+  const reduceMQ = matchMedia('(prefers-reduced-motion: reduce)');
+  function reduce() { return reduceMQ.matches; }
+  function rebuildMark() {
     mark.classList.remove('run');
     void mark.getBoundingClientRect();
     mark.classList.add('run');
   }
-  const markIO = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) { mark.classList.add('run'); markIO.unobserve(mark); } });
-  }, { threshold: 0.4 });
-  markIO.observe(mark);
-  mark.addEventListener('click', rebuild);
-  if (btn) btn.addEventListener('click', rebuild);
+  function labelBtn(text) { if (btn) { btn.textContent = text; btn.disabled = false; } }
+  function pinStill() {
+    if (!wrap) return;
+    wrap.classList.add('is-still');
+    wrap.classList.remove('has-film');
+    if (film) try { film.pause(); } catch (e) {}
+    mark.classList.add('run');
+    labelBtn('Build it again');
+  }
+  function showFilm() {
+    if (!wrap || !film || reduce()) return pinStill();
+    wrap.classList.add('has-film');
+    wrap.classList.remove('is-still');
+    labelBtn('Pause');
+  }
+  function playFilm() {
+    if (!film || reduce()) return pinStill();
+    const p = film.play();
+    if (p && p.then) p.then(showFilm).catch(pinStill);
+    else showFilm();
+  }
+  if (poster) {
+    poster.addEventListener('load', () => { if (wrap) wrap.classList.add('has-poster'); });
+    poster.addEventListener('error', () => { poster.setAttribute('hidden', ''); if (wrap) wrap.classList.remove('has-poster'); });
+    if (poster.complete && poster.naturalWidth) wrap.classList.add('has-poster');
+  }
+  if (reduce()) pinStill();
+  else {
+    const markIO = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { mark.classList.add('run'); markIO.unobserve(mark); } });
+    }, { threshold: 0.4 });
+    markIO.observe(mark);
+    if (film) {
+      film.addEventListener('error', pinStill);
+      const src = film.querySelector('source');
+      if (src) src.addEventListener('error', pinStill);
+      film.addEventListener('canplay', playFilm, { once: true });
+    }
+  }
+  function onRebuild() {
+    if (wrap && wrap.classList.contains('has-film') && film) {
+      if (film.paused) { wrap.dataset.userPaused = ''; playFilm(); }
+      else { film.pause(); wrap.dataset.userPaused = '1'; labelBtn('Play'); }
+      return;
+    }
+    if (reduce()) return;
+    rebuildMark();
+  }
+  mark.addEventListener('click', onRebuild);
+  if (btn) btn.addEventListener('click', onRebuild);
+  reduceMQ.addEventListener('change', e => { if (e.matches) pinStill(); else playFilm(); });
 })();
 
 /* ================= reduced motion: pin final states ================= */
@@ -1115,6 +1187,13 @@ matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
 /* ================= pause on hidden tab ================= */
 document.addEventListener('visibilitychange', () => {
   document.body.classList.toggle('paused', document.hidden);
+  const film = document.getElementById('herofilm');
+  if (!film) return;
+  const wrap = document.getElementById('markwrap');
+  if (document.hidden) { try { film.pause(); } catch (e) {} }
+  else if (wrap && wrap.classList.contains('has-film') && wrap.dataset.userPaused !== '1' && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    film.play().catch(() => {});
+  }
 });
 
 /* ================= the hold moment ================= */
