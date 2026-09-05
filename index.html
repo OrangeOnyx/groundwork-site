@@ -118,13 +118,13 @@ nav::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;ba
 .brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none}
 .brand svg{width:26px;height:26px}
 .brand b{font-family:var(--display);font-weight:900;letter-spacing:.24em;font-size:.84rem}
-nav .links{margin-left:auto;display:flex;align-items:center;gap:1.5rem}
+nav .links{margin-left:auto;display:flex;align-items:center;gap:1.15rem}
 nav .links a{color:var(--ink);font-size:.85rem;font-weight:600;text-decoration:none;transition:color .18s var(--ease-out)}
 nav .links a:hover{color:var(--terra-deep)}
 nav .links a.cta{color:var(--paper);background:var(--terra-deep);padding:.55em 1.1em;font-weight:700;letter-spacing:.03em;white-space:nowrap;transition:background .18s var(--ease-out)}
 nav .links a.cta:hover{background:var(--ink);color:var(--paper)}
 nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);color:var(--ink);padding:.4em .9em;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.1em;cursor:pointer}
-@media (max-width:720px){
+@media (max-width:980px){
   nav .links a:not(.cta){display:none}
   nav .navtoggle{display:inline-flex;align-items:center;margin-left:auto}
   nav .links{margin-left:.6rem}
@@ -144,10 +144,17 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 .folio{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--ink);padding-bottom:.55rem;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
 .folio .no{color:var(--terra-deep)}
 .cover .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:end;padding:clamp(2.5rem,6vh,4.5rem) 0 clamp(2.2rem,5vh,3.6rem)}
-.cover h1{font-size:clamp(2.6rem,5.6vw,5.1rem);text-transform:uppercase;letter-spacing:-.02em;max-width:13ch}
-.cover .sub{font-family:var(--slab);font-style:italic;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink-soft);margin-top:1.3rem;max-width:38ch}
-.cover .ctarow{margin-top:2rem}
+.cover h1{font-size:clamp(2.6rem,5.6vw,5.1rem);text-transform:uppercase;letter-spacing:-.02em;max-width:22ch}
+.cover .desc{margin-top:1rem;max-width:46ch;font-size:1.02rem;line-height:1.5;font-weight:500;color:var(--ink)}
+.cover .sub{font-family:var(--slab);font-style:italic;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink-soft);margin-top:1.15rem;max-width:40ch}
+.cover .leave{margin-top:.7rem;max-width:42ch;font-size:1.02rem;line-height:1.45;color:var(--ink)}
+.cover .ctarow{margin-top:1.7rem}
+.cover .fork{margin-top:1.05rem;max-width:44ch;font-family:var(--slab);font-style:italic;font-size:.98rem;color:var(--ink-soft)}
+.cover .fork a{font-family:var(--display);font-style:normal;font-weight:700;letter-spacing:.03em;text-decoration:none;color:var(--ink)}
+.cover .fork a:hover{color:var(--terra-deep)}
 .ctarow,.btnrow{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.start-fork{margin-top:1.1rem;font-family:var(--slab);font-style:italic;font-size:.98rem;color:var(--ink-soft);max-width:58ch}
+.start-fork a{font-family:var(--display);font-style:normal;font-weight:700;text-decoration:none}
 .markwrap{margin-left:auto;max-width:460px;width:100%}
 .covermark{width:100%;display:block;cursor:pointer}
 .markcap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:.7rem;font-family:var(--display);font-weight:700;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
@@ -175,8 +182,14 @@ nav .navtoggle{display:none;background:transparent;border:2px solid var(--ink);c
 .contents a b{color:var(--terra-deep);margin-right:.5em;font-family:var(--slab);font-weight:900}
 .contents a:hover{color:var(--terra-deep)}
 @media (max-width:860px){
-  .cover{padding-top:7rem}
-  .cover .grid{grid-template-columns:1fr;align-items:start}
+  .cover{padding-top:6.4rem}
+  .cover .grid{grid-template-columns:1fr;align-items:start;padding:1.55rem 0 1.2rem}
+  .cover h1{font-size:clamp(2.15rem,10.5vw,3.2rem)}
+  .cover .desc{margin-top:.7rem;font-size:.98rem;line-height:1.45}
+  .cover .sub{margin-top:.85rem}
+  .cover .leave{margin-top:.55rem}
+  .cover .ctarow{margin-top:1.25rem}
+  .cover .fork{margin-top:.85rem}
   .markwrap{margin-left:0;max-width:320px}
 }
 /* ============ sections ============ */
@@ -481,9 +494,10 @@ fifteen files and the Operator prompt; hairline ink rules, running heads, ruled 
 motion is print registration settling into place.
 STORY: an owner sees a serious, complete, free system from a real operator; reads the argument,
 scans the method, sees real proof, then starts Day One or books the audit.
-FIRST VIEWPORT: masthead rule and GROUNDWORK; left, 900-weight headline, italic slab sub, two
-printed buttons; right, the registration-animated system mark (three terracotta bars, mustard
-Operator disc, olive durability frame, ink ground line); below, a ruled contents strip of five acts.
+FIRST VIEWPORT: masthead rule and GROUNDWORK; left, 900-weight headline (what this is), italic
+slab (free / ungated / yours), roman leave-with line, two printed program buttons, quiet Curriculum
+fork; right, the registration-animated system mark (three terracotta bars, mustard Operator disc,
+olive durability frame, ink ground line); below, a ruled contents strip including Curriculum.
 FORM: The Annual Report, ranked candidate 1 of 7; seed c62d8482.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the
 verdict, DESIGN.md, and every shipping raster carrying its provenance.
@@ -501,6 +515,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <a href="guide/day-one.html">Start Here</a>
     <a href="#method">The Method</a>
     <a href="guide/index.html">The Guide</a>
+    <a href="curriculum/index.html">Curriculum</a>
     <a href="guide/scorecard.html">Scorecard</a>
     <a href="#faq">FAQ</a>
     <a class="cta" href="#audit">Book the Audit</a>
@@ -512,9 +527,12 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
     <div class="folio"><span>The AI Readiness Program &middot; Adam Abdalla</span><span class="no">No. 1 &middot; 2026</span></div>
     <div class="grid">
       <div>
-        <h1>Build the foundation your AI actually needs.</h1>
-        <p class="sub">Groundwork. The AI readiness system by Adam Abdalla. Free. Ungated. Yours.</p>
-        <div class="ctarow"><a class="btn" href="#audit">Book your AI Readiness Audit</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
+        <h1>The program you build to adopt AI for real.</h1>
+        <p class="desc">For the solo operator and the CEO. For the intern drafting under someone else's name, and the owner still carrying every job. Fifteen plain-text documents and one governed Operator, built in sequence on your machine. A focused weekend for the foundation, a week to activate. So the AI stops guessing and starts from what you actually know.</p>
+        <p class="sub">Groundwork is the free, ungated AI readiness system. You own the files.</p>
+        <p class="leave">You leave with fifteen documents and one governed Operator, built in sequence.</p>
+        <div class="ctarow"><a class="btn" href="guide/day-one.html">Start Day One</a> <a class="btn btn-ghost" href="guide/scorecard.html">Take the 5-minute scorecard</a></div>
+        <p class="fork">If you want skill depth, the <a href="curriculum/index.html">Curriculum</a> is the five-level path beside the program.</p>
       </div>
       <div class="markwrap">
       <svg class="covermark" id="covermark" viewBox="0 0 400 430" role="img" aria-label="The Groundwork mark, built in sequence: scattered points settle as three terracotta bars for the first three orders stack on an ink ground line, one mustard Operator disc lands above them, and an olive frame for the standing half draws itself around the whole.">
@@ -539,6 +557,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <a href="#atlas"><b>03</b>The proof</a>
       <a href="#docs"><b>04</b>What you get</a>
       <a href="#audit"><b>05</b>Start</a>
+      <a href="#curriculum"><b>06</b>Curriculum</a>
     </div>
   </div>
 </header>
@@ -639,6 +658,7 @@ verdict, DESIGN.md, and every shipping raster carrying its provenance.
       <h2 class="part" id="h-start">Three minutes tells you.</h2>
       <p class="body part" style="margin-top:1.1rem">Six standing orders and fifteen documents can look like a lot. You don't need to hold any of it in your head. Take the scorecard. It names your weakest order, and that is where you start reading.</p>
       <p class="part btnrow" style="margin-top:1.4rem"><a class="btn" href="guide/scorecard.html">Take the 5-minute scorecard</a> <a class="btn btn-ghost" href="guide/day-one.html">See your first 30 minutes</a></p>
+      <p class="part start-fork">The program is the path. If you want skill depth, the <a href="curriculum/index.html">Curriculum</a> is the five-level track beside it.</p>
       <div class="vw wide part" style="margin-top:2.4rem">
         <svg viewBox="0 0 1000 260" role="img" aria-label="Journey with five stops: the three-minute scorecard names your weakest order, Day One puts the first files on disk, a weekend builds the foundation's ten files, a week activates one governed Operator, and the standing half keeps it true.">
           <polyline class="ln-acc" points="80,150 280,110 490,145 700,105 910,138" stroke-width="1.3" opacity="0.85"/>
